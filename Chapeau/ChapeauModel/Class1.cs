@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChapeauLogic
+namespace ChapeauModel
 {
     public class Class1
     {

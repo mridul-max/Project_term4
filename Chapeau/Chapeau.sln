@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauUI", "Chapeau_UI\ChapeauUI.csproj", "{C351DE8E-7206-4245-94F0-6BB714F6CE92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChapeauUI", "Chapeau_UI\ChapeauUI.csproj", "{C351DE8E-7206-4245-94F0-6BB714F6CE92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauModel", "Chapeau_Model\ChapeauModel.csproj", "{0BC16D49-0A6B-4647-A85E-265164565E45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauDAL", "ChapeauDAL\ChapeauDAL.csproj", "{F4144716-E99A-4E0A-B1F7-AF4C6DF1DD9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauDAL", "Chapeau_DAL\ChapeauDAL.csproj", "{D3E5FAE8-A198-4478-B0FE-F8E1A83F39FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauLogic", "ChapeauLogic\ChapeauLogic.csproj", "{0DE9306E-1DE0-4D85-82E9-49F7CB7B5E05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauLogic", "ChapeauLogic\ChapeauLogic.csproj", "{14F01040-8856-48BE-9AF8-E7B59B20168C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChapeauModel", "ChapeauModel\ChapeauModel.csproj", "{9CA33D7B-94FC-4EC1-8666-EDA3116A667E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +21,18 @@ Global
 		{C351DE8E-7206-4245-94F0-6BB714F6CE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C351DE8E-7206-4245-94F0-6BB714F6CE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C351DE8E-7206-4245-94F0-6BB714F6CE92}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0BC16D49-0A6B-4647-A85E-265164565E45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BC16D49-0A6B-4647-A85E-265164565E45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BC16D49-0A6B-4647-A85E-265164565E45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BC16D49-0A6B-4647-A85E-265164565E45}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D3E5FAE8-A198-4478-B0FE-F8E1A83F39FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3E5FAE8-A198-4478-B0FE-F8E1A83F39FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3E5FAE8-A198-4478-B0FE-F8E1A83F39FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3E5FAE8-A198-4478-B0FE-F8E1A83F39FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14F01040-8856-48BE-9AF8-E7B59B20168C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14F01040-8856-48BE-9AF8-E7B59B20168C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14F01040-8856-48BE-9AF8-E7B59B20168C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14F01040-8856-48BE-9AF8-E7B59B20168C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4144716-E99A-4E0A-B1F7-AF4C6DF1DD9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4144716-E99A-4E0A-B1F7-AF4C6DF1DD9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4144716-E99A-4E0A-B1F7-AF4C6DF1DD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4144716-E99A-4E0A-B1F7-AF4C6DF1DD9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE9306E-1DE0-4D85-82E9-49F7CB7B5E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE9306E-1DE0-4D85-82E9-49F7CB7B5E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE9306E-1DE0-4D85-82E9-49F7CB7B5E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE9306E-1DE0-4D85-82E9-49F7CB7B5E05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CA33D7B-94FC-4EC1-8666-EDA3116A667E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CA33D7B-94FC-4EC1-8666-EDA3116A667E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CA33D7B-94FC-4EC1-8666-EDA3116A667E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CA33D7B-94FC-4EC1-8666-EDA3116A667E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

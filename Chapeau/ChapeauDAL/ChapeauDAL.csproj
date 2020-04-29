@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0DE9306E-1DE0-4D85-82E9-49F7CB7B5E05}</ProjectGuid>
+    <ProjectGuid>{F4144716-E99A-4E0A-B1F7-AF4C6DF1DD9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChapeauLogic</RootNamespace>
-    <AssemblyName>ChapeauLogic</AssemblyName>
+    <RootNamespace>ChapeauDAL</RootNamespace>
+    <AssemblyName>ChapeauDAL</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,14 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Base.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChapeauDAL\ChapeauDAL.csproj">
-      <Project>{f4144716-e99a-4e0a-b1f7-af4c6df1dd9b}</Project>
-      <Name>ChapeauDAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ChapeauModel\ChapeauModel.csproj">
       <Project>{9ca33d7b-94fc-4ec1-8666-eda3116a667e}</Project>
       <Name>ChapeauModel</Name>
