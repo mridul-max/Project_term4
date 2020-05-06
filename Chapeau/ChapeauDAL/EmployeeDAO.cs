@@ -77,12 +77,12 @@ namespace ChapeauDAL
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Close();
                 conn.Close();
-            }         
+            }
         }
-        public void CreateEmployee(bool isManager,string employeeTypeKey, string name, string username, string password)
+        public void CreateEmployee(bool isManager, string employeeTypeKey, string name, string username, string password)
         {
             //We validate this because only a manager can create accounts for employees.
-            if(isManager)
+            if (isManager)
             {
                 OpenConnection();
                 SqlCommand cmd = new SqlCommand(" INSERT INTO Employee VALUES('@employeeTypeKey', '@name', '@username', '@password');", conn);
@@ -94,7 +94,7 @@ namespace ChapeauDAL
                 reader.Close();
                 conn.Close();
             }
-           
+
         }
 
 

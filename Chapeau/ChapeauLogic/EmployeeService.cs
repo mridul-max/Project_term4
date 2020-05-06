@@ -14,15 +14,15 @@ namespace ChapeauLogic
 
         public void CreateEmployee(bool isManager, string employeeTypeKey, string name, string username, string password)
         {
-            employeeDao.CreateEmployee(isManager,employeeTypeKey,name,username,password);
+            employeeDao.CreateEmployee(isManager, employeeTypeKey, name, username, password);
         }
         public void RemoveEmployee(Employee employee, bool Ismanager)
         {
-            employeeDao.RemoveEmployee(employee,Ismanager);
+            employeeDao.RemoveEmployee(employee, Ismanager);
         }
         public Employee GetById(int id)
         {
-             Employee employee= employeeDao.GetById(id);
+            Employee employee = employeeDao.GetById(id);
             return employee;
         }
         public List<Employee> GetAllEmployees()
@@ -30,6 +30,6 @@ namespace ChapeauLogic
             List<Employee> employees = employeeDao.GetAllEmployees();
             return employees;
         }
-       
+
     }
 }
