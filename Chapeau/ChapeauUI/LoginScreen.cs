@@ -34,9 +34,9 @@ namespace ChapeauUI
             List<Employee> allEmployees = employeeService.GetAllEmployees();
             loggedEmployee = null;//it is null until user enter correct credentials.
             //if username or password textbox is empty, show a messagebox that indicates that they need to be filled.
-            if (txtUsername.Text == null || txtUsername.Text.Length<=3)
+            if (txtUsername.Text == null)
                 MessageBox.Show("Username section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if(txtPassword.Text==null ||txtPassword.Text.Length<=5)
+            else if(txtPassword.Text==null)
                 MessageBox.Show("Password section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -57,7 +57,14 @@ namespace ChapeauUI
             if (loggedEmployee == null)
                 MessageBox.Show("Wrong username or password", "Incorrect credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
-                applicationForm = new ChapeauApp(loggedEmployee);             
+            {
+                
+                applicationForm = new ChapeauApp(loggedEmployee);
+                
+            }
+                  
+            
+            
         }
     }
 }
