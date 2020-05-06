@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Chapeau"
+    "\\Chapeau",
+    "\\Chapeau\\ChapeauUI"
   ],
-  "SelectedNode": "\\Chapeau\\Chapeau.sln",
   "PreviewInSolutionExplorer": false
 }
