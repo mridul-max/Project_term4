@@ -37,6 +37,7 @@ namespace ChapeauUI
             }
 
         }
+        //fills the labels according to the information.
         void FillTableInformation()
         {
             lblTableNumber.Text = CurrentTable.TableNumber.ToString();

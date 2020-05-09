@@ -12,7 +12,7 @@ namespace ChapeauDAL
     {
         public ReservationDAO() : base() { }
 
-
+        //class for communication with the database.
         // Returns all drinks into a list from database.
         public List<Reservation> GetAllReservations()
         {

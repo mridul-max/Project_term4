@@ -36,7 +36,7 @@ namespace ChapeauUI
             }
 
         }
-
+        //verifies the information and applies if it works.
         private void btnAddReservation_Click(object sender, EventArgs e)
         {
             if(txtName.Text.Length <1)
@@ -51,7 +51,7 @@ namespace ChapeauUI
             {
                 MessageBox.Show("Please pick a date", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (cmbHour.SelectedIndex ==null || cmbMinute.SelectedIndex==null)
+            else if (cmbHour.SelectedIndex ==null || cmbMinute.SelectedIndex==null)//come back to this.
             {
                 MessageBox.Show("Please pick a time", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

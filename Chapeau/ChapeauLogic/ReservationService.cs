@@ -8,6 +8,7 @@ using ChapeauModel;
 
 namespace ChapeauLogic
 {
+    //class for communication with dao and ui layer.
     public class ReservationService
     {
         ReservationDAO reservationDao = new ReservationDAO();

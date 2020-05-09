@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ChapeauModel
 {
     public class Reservation
-    {
+    {  //class for tables.
         public int ReservationID { get; set; }
         public int TableNumber { get; set; }
         public DateTime ReservationDate { get; set; }

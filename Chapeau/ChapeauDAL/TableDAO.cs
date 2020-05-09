@@ -12,7 +12,7 @@ namespace ChapeauDAL
     {
         public TableDAO() : base() { }
 
-
+        //class for communication with the database.
         // Returns all tables into a list from database.
         public List<Table> GetAllTables()
         {

@@ -58,6 +58,7 @@ namespace ChapeauUI
                 MessageBox.Show("Wrong username or password", "Incorrect credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
+                //hides the login form to keep things clean.
                 this.Hide();
                 applicationForm = new ChapeauApp(loggedEmployee);
 
