@@ -21,7 +21,7 @@ namespace ChapeauUI
         public LoginScreen()
         {
             InitializeComponent();
-            employeeService =  new EmployeeService();
+            employeeService = new EmployeeService();
         }
 
         private void LoginScreen_Load(object sender, EventArgs e)
@@ -36,20 +36,20 @@ namespace ChapeauUI
             //if username or password textbox is empty, show a messagebox that indicates that they need to be filled.
             if (txtUsername.Text == null)
                 MessageBox.Show("Username section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if(txtPassword.Text==null)
+            else if (txtPassword.Text == null)
                 MessageBox.Show("Password section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                foreach(Employee employee in allEmployees)
+                foreach (Employee employee in allEmployees)
                 {
-                    if(employee.Username==txtUsername.Text)
+                    if (employee.Username == txtUsername.Text)
                     {
-                        if(employee.Password==txtPassword.Text)
+                        if (employee.Password == txtPassword.Text)
                         {
                             //if password and username is the same then assign this employee as new employee and stop the loop.
                             loggedEmployee = employee;
                             break;
-                        }                      
+                        }
                     }
                 }
             }
@@ -58,13 +58,13 @@ namespace ChapeauUI
                 MessageBox.Show("Wrong username or password", "Incorrect credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                
+                this.Hide();
                 applicationForm = new ChapeauApp(loggedEmployee);
-                
+
             }
-                  
-            
-            
+
+
+
         }
     }
 }

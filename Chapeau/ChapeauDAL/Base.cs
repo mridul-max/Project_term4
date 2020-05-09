@@ -99,12 +99,12 @@ namespace SomerenDAL
         }
 
         /* For Select Queries */
-        protected DataTable ExecuteSelectQuery(String query, params SqlParameter[] sqlParameters)
+        protected  DataTable ExecuteSelectQuery(String query, params SqlParameter[] sqlParameters)
         {
             SqlCommand command = new SqlCommand();
             DataTable dataTable;
             DataSet dataSet = new DataSet();
-
+            
             try
             {
                 command.Connection = OpenConnection();
@@ -127,5 +127,9 @@ namespace SomerenDAL
             }
             return dataTable;
         }
+       
+
+
+
     }
 }
