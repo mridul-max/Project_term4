@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    class MenuItem
+    public class MenuItem
     {
-        int ID;
-        public string Name { get; private set; }
-        public string Category { get; private set; }
-        public float Price { get; private set; }
-        public string description;
-        public int stock;
+        public string Name { get; set; }
+        public string Category { get; set; }
+        public CategoryType CategoryType { get; set; }
+        public float Price { get; set; }
+        //VAT as 0.06 or 0.21
+        public float VAT { get; set; }
+        public float PriceWithVAT 
+        { 
+            get
+            {
+                return Price + (Price * VAT);
+            } 
+        }
+        public string Description { get; set; }
+        public int Stock { get; set; }
     }
 }

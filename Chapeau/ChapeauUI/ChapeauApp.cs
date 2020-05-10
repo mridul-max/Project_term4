@@ -103,5 +103,11 @@ namespace ChapeauUI
         {
             pnl_tables.Show();
         }
+
+        private void orderingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderingScreen orderingScreen = new OrderingScreen();
+            orderingScreen.Show();
+        }
     }
 }
