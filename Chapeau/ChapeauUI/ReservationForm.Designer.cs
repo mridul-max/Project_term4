@@ -38,8 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.PhoneNM = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNM)).BeginInit();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // monthCalendar1
@@ -121,24 +120,19 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Minutes";
             // 
-            // PhoneNM
+            // txtPhone
             // 
-            this.PhoneNM.Location = new System.Drawing.Point(215, 97);
-            this.PhoneNM.Maximum = new decimal(new int[] {
-            276447232,
-            23283,
-            0,
-            0});
-            this.PhoneNM.Name = "PhoneNM";
-            this.PhoneNM.Size = new System.Drawing.Size(166, 22);
-            this.PhoneNM.TabIndex = 10;
+            this.txtPhone.Location = new System.Drawing.Point(215, 99);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(166, 22);
+            this.txtPhone.TabIndex = 10;
             // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 496);
-            this.Controls.Add(this.PhoneNM);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbMinute);
@@ -151,7 +145,6 @@
             this.Name = "ReservationForm";
             this.Text = "ReservationForm";
             this.Load += new System.EventHandler(this.ReservationForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +162,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.NumericUpDown PhoneNM;
+        private System.Windows.Forms.TextBox txtPhone;
     }
 }

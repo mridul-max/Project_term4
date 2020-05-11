@@ -17,7 +17,7 @@ namespace ChapeauUI
     {
         EmployeeService employeeService;
         Employee loggedEmployee;//will be generated and passed in as a parameter for chapeau app after login button is clicked.
-        RestaurantView applicationForm;// this will be assigned when user successfully logs in and opens itself
+        TableView applicationForm;// this will be assigned when user successfully logs in and opens itself
         public LoginScreen()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace ChapeauUI
                 else
                 {
                     this.Hide();
-                    applicationForm = new ChapeauApp(loggedEmployee);
+                    applicationForm = new TableView(loggedEmployee);
                 }
             }
         }

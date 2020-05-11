@@ -12,14 +12,14 @@ using ChapeauModel;
 
 namespace ChapeauUI
 {
-    public partial class ChapeauApp : Form
+    public partial class TableView : Form
     {
         Employee loggedEmployee;
         TableService tableService = new TableService();
         List<Table> allTables;
 
 
-        public ChapeauApp(Employee loggedEmployee)
+        public TableView(Employee loggedEmployee)
         {
             InitializeComponent();
             this.loggedEmployee = loggedEmployee;
@@ -32,7 +32,7 @@ namespace ChapeauUI
 
         private void ChapeauApp_Load(object sender, EventArgs e)
         {
-            
+
             allTables = tableService.GetAllTables();
             lblUsername.Text = loggedEmployee.Name;
         }
@@ -96,7 +96,7 @@ namespace ChapeauUI
             LoginScreen login = new LoginScreen();
             this.Hide();
             login.ShowDialog();
-           
+
         }
 
         private void restaurantViewToolStripMenuItem_Click(object sender, EventArgs e)

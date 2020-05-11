@@ -31,21 +31,21 @@ namespace ChapeauDAL
                     ReservationID = (int)dr["ReservationID"],
                     TableNumber = (int)dr["TableNumber"],
                     ReservationDate = (DateTime)dr["ReservationDate"],
-                    PhoneNumber = (long)dr["PhoneNumber"], 
+                    PhoneNumber = long.Parse((string)dr["PhoneNumber"]), 
                     ReserverName = (string)dr["ReserverName"]
                 };
                 reservations.Add(reservation);
             }
             return reservations;
         }
-        public void CreateReservation(int tableNumber,DateTime reservationDate,long phoneNumber,string reserverName)
+        public void CreateReservation(int tableNumber,string reservationDate,long phoneNumber,string reserverName)
         {
             //We validate this because only a manager can create accounts for employees.                       
                 OpenConnection();
                 SqlCommand cmd = new SqlCommand("INSERT INTO Reservation VALUES(@TableNumber, @ReservationDate, @PhoneNumber, @ReserverName); ", conn);
                 cmd.Parameters.AddWithValue("@TableNumber", tableNumber);
                 cmd.Parameters.AddWithValue("@ReservationDate", reservationDate);
-                cmd.Parameters.AddWithValue(" @PhoneNumber", phoneNumber);
+                cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber.ToString());
                 cmd.Parameters.AddWithValue("@ReserverName", reserverName);
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Close();
@@ -60,7 +60,7 @@ namespace ChapeauDAL
                 ReservationID = (int)reader["ReservationID"],
                 TableNumber = (int)reader["TableNumber"],
                 ReservationDate = (DateTime)reader["ReservationDate"],
-                PhoneNumber = (int)reader["PhoneNumber"], 
+                PhoneNumber = long.Parse((string)reader["PhoneNumber"]),
                 ReserverName = (string)reader["ReserverName"]
             };
             return reservation;

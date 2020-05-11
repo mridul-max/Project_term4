@@ -19,7 +19,7 @@ namespace ChapeauLogic
 
             return reservations;
         }
-        public void CreateReservation(int tableNumber, DateTime reservationDate, long phoneNumber, string reserverName)
+        public void CreateReservation(int tableNumber, string reservationDate, long phoneNumber, string reserverName)
         {
             reservationDao.CreateReservation(tableNumber, reservationDate, phoneNumber, reserverName);
         }
