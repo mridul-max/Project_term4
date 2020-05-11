@@ -51,7 +51,7 @@ namespace ChapeauUI
             {
                 MessageBox.Show("Please pick a date", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (cmbHour.SelectedIndex ==null || cmbMinute.SelectedIndex==null)//come back to this.
+            else if (cmbHour.SelectedIndex <0 || cmbMinute.SelectedIndex<0)//come back to this.
             {
                 MessageBox.Show("Please pick a time", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }

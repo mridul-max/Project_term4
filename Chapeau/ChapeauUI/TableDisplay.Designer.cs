@@ -97,9 +97,9 @@
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(7, 215);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 30);
+            this.label3.Size = new System.Drawing.Size(150, 30);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Occupation Status:";
+            this.label3.Text = "Occupancy:";
             // 
             // lblCapacity
             // 
@@ -193,6 +193,7 @@
             // 
             // BtnChout
             // 
+            this.BtnChout.Enabled = false;
             this.BtnChout.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChout.Location = new System.Drawing.Point(12, 618);
             this.BtnChout.Name = "BtnChout";
@@ -237,10 +238,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button Btnreserve;
-        private System.Windows.Forms.Button BtnAddOrder;
-        private System.Windows.Forms.Button BtnOrder;
-        private System.Windows.Forms.Button BtnCheckOut;
+        private System.Windows.Forms.Button Btnreserve;        
+        private System.Windows.Forms.Button BtnOrder;       
         private System.Windows.Forms.Button BtnChout;
     }
 }

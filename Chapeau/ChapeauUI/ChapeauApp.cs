@@ -39,7 +39,7 @@ namespace ChapeauUI
         void DisplayTableForm(int index)
         {
             TableDisplay tableDisplay = new TableDisplay(allTables[index]);
-            tableDisplay.Show();
+            tableDisplay.ShowDialog();
         }
         //one for each table.
         private void pictureBox1_Click(object sender, EventArgs e)

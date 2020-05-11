@@ -15,6 +15,7 @@ namespace ChapeauUI
     public partial class TableDisplay : Form
     {
         Table CurrentTable;
+        Payment CurrentTicket;
         
         ReservationService reservationService = new ReservationService();
         List<Reservation> reservations;
@@ -22,6 +23,9 @@ namespace ChapeauUI
         {
             InitializeComponent();
             this.CurrentTable = CurrentTable;
+            CurrentTicket = new Payment();
+            CurrentTicket.TableNumber = CurrentTable.TableNumber;
+
 
         }
 
@@ -34,6 +38,14 @@ namespace ChapeauUI
             {
                 if (reservation.TableNumber == CurrentTable.TableNumber && reservation.ReservationDate >= DateTime.Now)
                     comboBox1.Items.Add(reservation.ReserverName + reservation.ReservationDate.ToString());
+            }
+            if(CurrentTable.IsOccupied)
+            {
+                BtnChout.Enabled = true;
+            }
+            else
+            {
+                BtnChout.Enabled = false;
             }
 
         }
@@ -61,7 +73,8 @@ namespace ChapeauUI
 
         private void BtnChout_Click(object sender, EventArgs e)
         {
-
+            PaymentScreen screen = new PaymentScreen(CurrentTicket);
+            screen.ShowDialog();
         }
     }
 }
