@@ -8,6 +8,7 @@ namespace ChapeauModel
 {
     public class Reservation
     {  //class for tables.
+        //don't focus on this now.
         public int ReservationID { get; set; }
         public int TableNumber { get; set; }
         public DateTime ReservationDate { get; set; }

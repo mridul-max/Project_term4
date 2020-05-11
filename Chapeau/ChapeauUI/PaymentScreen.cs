@@ -36,7 +36,7 @@ namespace ChapeauUI
             //lblPriceVAT.Text = lblPriceVAT.Text + " " + CurrentPayment.TotalPriceVAT.ToString();
             
 
-            cmbPayment.Items.Add("Cash");
+            cmbPayment.Items.Add("Cash"); // radio button
             cmbPayment.Items.Add("Debit");
            
         }
@@ -58,6 +58,7 @@ namespace ChapeauUI
         {
             if(cmbPayment.SelectedIndex>0)
             {
+                // pas the complete object.
                 if(cmbPayment.SelectedItem.ToString()== "Cash")
                 paymentService.CreatePayment(CurrentPayment.PaymentID,CurrentPayment.TableNumber,CurrentPayment.EmployeeID,CurrentPayment.TotalPriceNoVAT,CurrentPayment.TotalPriceVAT,1,DateTime.Now);
                 else if (cmbPayment.SelectedItem.ToString()== "Debit")

@@ -9,7 +9,7 @@ namespace ChapeauModel
     public class Employee
     {
         public int EmployeeID { get; set; }
-        public string EmployeeTypeKey { get; set; }
+        public string EmployeeTypeKey { get; set; } //change it to enum.
         public string Name { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
