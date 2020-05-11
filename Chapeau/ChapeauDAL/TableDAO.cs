@@ -53,7 +53,7 @@ namespace ChapeauDAL
             conn.Close();
             return table;
         }
-        //for getbyid method.
+      
         private Table ReadTable(SqlDataReader reader)
         {
             Table table = new Table()

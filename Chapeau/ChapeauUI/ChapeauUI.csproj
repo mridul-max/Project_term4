@@ -70,11 +70,11 @@
     <Compile Include="OrderingScreen.Designer.cs">
       <DependentUpon>OrderingScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Payment.cs">
+    <Compile Include="PaymentScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Payment.Designer.cs">
-      <DependentUpon>Payment.cs</DependentUpon>
+    <Compile Include="PaymentScreen.Designer.cs">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="OrderingScreen.resx">
       <DependentUpon>OrderingScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payment.resx">
-      <DependentUpon>Payment.cs</DependentUpon>
+    <EmbeddedResource Include="PaymentScreen.resx">
+      <DependentUpon>PaymentScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
