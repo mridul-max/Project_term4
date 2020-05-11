@@ -106,8 +106,8 @@ namespace ChapeauUI
 
         private void orderingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OrderingScreen orderingScreen = new OrderingScreen();
-            orderingScreen.Show();
+            //OrderingScreen orderingScreen = new OrderingScreen();
+            //orderingScreen.Show();
         }
     }
 }

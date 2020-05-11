@@ -53,5 +53,15 @@ namespace ChapeauUI
             ReservationForm form = new ReservationForm(CurrentTable);
             form.ShowDialog();
         }
+        private void BtnOrder_Click(object sender, EventArgs e)
+        {
+            OrderingScreen screen = new OrderingScreen(CurrentTable);
+            screen.ShowDialog();
+        }   
+
+        private void BtnChout_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

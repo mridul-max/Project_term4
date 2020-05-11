@@ -36,9 +36,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 9);
+            this.label1.Location = new System.Drawing.Point(415, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 31);
+            this.label1.Size = new System.Drawing.Size(149, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ordering";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -48,21 +49,24 @@
             this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(157, 98);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(209, 121);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(444, 80);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(591, 98);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // OrderingScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.ClientSize = new System.Drawing.Size(1045, 1055);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "OrderingScreen";
             this.Text = "OrderingScreen";
+            this.Load += new System.EventHandler(this.OrderingScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
