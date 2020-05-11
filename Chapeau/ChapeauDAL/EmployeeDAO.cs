@@ -29,7 +29,7 @@ namespace ChapeauDAL
                 Employee employee = new Employee()
                 {
                     EmployeeID = (int)dr["EmployeeID"],
-                    EmployeeTypeKey = (string)dr["EmployeeTypeKey"],
+                    EmployeeType = ConvertToEnum((string)dr["EmployeeTypeKey"]),
                     Name = (string)dr["Name"],
                     Username = (string)dr["Username"],
                     Password = (string)dr["Password"]
@@ -54,13 +54,29 @@ namespace ChapeauDAL
             conn.Close();
             return employee;
         }
+        public Employee GetEmployeeByCredentials(string username, string password)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("SELECT EmployeeID,EmployeeTypeKey,[Name],Username,[Password] FROM Employee WHERE Username= @Username  AND [password]=@Password COLLATE Latin1_General_CS_AS; ", conn);
+            cmd.Parameters.AddWithValue("@Username", username);
+            cmd.Parameters.AddWithValue("@Password", password);
+            SqlDataReader reader = cmd.ExecuteReader();
+            Employee employee = null;
+
+            if (reader.Read())
+                employee = ReadEmployee(reader);
+
+            reader.Close();
+            conn.Close();
+            return employee;
+        }
         //for getbyid method.
         private Employee ReadEmployee(SqlDataReader reader)
         {
             Employee employee = new Employee()
             {
                 EmployeeID = (int)reader["EmployeeID"],
-                EmployeeTypeKey = (string)reader["EmployeeTypeKey"],
+                EmployeeType = ConvertToEnum((string)reader["EmployeeTypeKey"]),
                 Name = (string)reader["Name"],
                 Username = (string)reader["Username"],
                 Password = (string)reader["Password"]
@@ -95,6 +111,23 @@ namespace ChapeauDAL
                 conn.Close();
             }
 
+        }
+        private EmployeeType ConvertToEnum(string employeetype)
+        {
+            switch (employeetype)
+            {
+                case "MN":
+                    return EmployeeType.Manager;
+
+                case "BR":
+                    return EmployeeType.Bar;
+                case "KC":
+                    return EmployeeType.Kitchen;
+                case "WA":
+                    return EmployeeType.Waiter;
+                default:
+                    return EmployeeType.Waiter;
+            }
         }
 
 

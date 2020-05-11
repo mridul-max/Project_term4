@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChapeauApp.cs">
+    <Compile Include="RestaurantView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChapeauApp.Designer.cs">
-      <DependentUpon>ChapeauApp.cs</DependentUpon>
+    <Compile Include="RestaurantView.Designer.cs">
+      <DependentUpon>RestaurantView.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
@@ -90,8 +90,8 @@
     <Compile Include="TableDisplay.Designer.cs">
       <DependentUpon>TableDisplay.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChapeauApp.resx">
-      <DependentUpon>ChapeauApp.cs</DependentUpon>
+    <EmbeddedResource Include="RestaurantView.resx">
+      <DependentUpon>RestaurantView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>

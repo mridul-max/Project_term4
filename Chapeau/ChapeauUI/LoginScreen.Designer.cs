@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.ChPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -85,7 +86,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(447, 321);
+            this.btnLogin.Location = new System.Drawing.Point(492, 321);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(198, 66);
             this.btnLogin.TabIndex = 5;
@@ -96,18 +97,30 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(202, 321);
+            this.button1.Location = new System.Drawing.Point(237, 321);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 66);
             this.button1.TabIndex = 6;
             this.button1.Text = "I forgot my credentials";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // ChPassword
+            // 
+            this.ChPassword.AutoSize = true;
+            this.ChPassword.Location = new System.Drawing.Point(708, 220);
+            this.ChPassword.Name = "ChPassword";
+            this.ChPassword.Size = new System.Drawing.Size(141, 21);
+            this.ChPassword.TabIndex = 7;
+            this.ChPassword.Text = "Show password";
+            this.ChPassword.UseVisualStyleBackColor = true;
+            this.ChPassword.CheckedChanged += new System.EventHandler(this.ChPassword_CheckedChanged);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.ChPassword);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
@@ -134,6 +147,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox ChPassword;
     }
 }
 

@@ -22,13 +22,16 @@ namespace ChapeauLogic
         }
         public Employee GetById(int id)
         {
-            Employee employee = employeeDao.GetById(id);
-            return employee;
+            return employeeDao.GetById(id);        
         }
         public List<Employee> GetAllEmployees()
         {
-            List<Employee> employees = employeeDao.GetAllEmployees();
-            return employees;
+            return employeeDao.GetAllEmployees();         
+        }
+
+        public Employee GetEmployeeByCredentials(string username, string password)
+        {
+            return employeeDao.GetEmployeeByCredentials(username,password);
         }
 
     }
