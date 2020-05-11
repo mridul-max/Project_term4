@@ -15,10 +15,12 @@ namespace ChapeauUI
     public partial class OrderingScreen : Form
     {
         List<OrderingRow> itemRows;
-        public OrderingScreen()
+        Table CurrentTable;
+        public OrderingScreen(Table table)
         {
             InitializeComponent();
             MenuItemService service = new MenuItemService();
+            CurrentTable = table;
             Dictionary < string, Dictionary<string, List<ChapeauModel.MenuItem>>> menu = service.GetSortedMenu();
             itemRows = new List<OrderingRow>();
             Font headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
@@ -50,6 +52,9 @@ namespace ChapeauUI
             return label;
         }
 
-        
+        private void OrderingScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,6 +41,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Btnreserve = new System.Windows.Forms.Button();
+            this.BtnOrder = new System.Windows.Forms.Button();
+            this.BtnChout = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -178,11 +180,35 @@
             this.Btnreserve.UseVisualStyleBackColor = true;
             this.Btnreserve.Click += new System.EventHandler(this.Btnreserve_Click);
             // 
+            // BtnOrder
+            // 
+            this.BtnOrder.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOrder.Location = new System.Drawing.Point(225, 540);
+            this.BtnOrder.Name = "BtnOrder";
+            this.BtnOrder.Size = new System.Drawing.Size(190, 51);
+            this.BtnOrder.TabIndex = 3;
+            this.BtnOrder.Text = "Add Order";
+            this.BtnOrder.UseVisualStyleBackColor = true;
+            this.BtnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
+            // 
+            // BtnChout
+            // 
+            this.BtnChout.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnChout.Location = new System.Drawing.Point(12, 618);
+            this.BtnChout.Name = "BtnChout";
+            this.BtnChout.Size = new System.Drawing.Size(190, 51);
+            this.BtnChout.TabIndex = 4;
+            this.BtnChout.Text = "Check out";
+            this.BtnChout.UseVisualStyleBackColor = true;
+            this.BtnChout.Click += new System.EventHandler(this.BtnChout_Click);
+            // 
             // TableDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 953);
+            this.Controls.Add(this.BtnChout);
+            this.Controls.Add(this.BtnOrder);
             this.Controls.Add(this.Btnreserve);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -212,5 +238,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button Btnreserve;
+        private System.Windows.Forms.Button BtnAddOrder;
+        private System.Windows.Forms.Button BtnOrder;
+        private System.Windows.Forms.Button BtnCheckOut;
+        private System.Windows.Forms.Button BtnChout;
     }
 }
