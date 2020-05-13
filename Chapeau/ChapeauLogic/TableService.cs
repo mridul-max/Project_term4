@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using ChapeauDAL;
@@ -15,13 +16,31 @@ namespace ChapeauLogic
 
         public List<Table> GetAllTables()
         {
-            List<Table> tables = tabledao.GetAllTables();
-            return tables;
+            try
+            {
+                return tabledao.GetAllTables();
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't get the tables";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                return null;
+            }
+          
+            
         }
         public Table GetById(int id)
-        {
-            Table table = tabledao.GetById(id);
-            return table;
+        {          
+            try
+            {
+                return tabledao.GetById(id);
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't get the table";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                return null;
+            }
         }
     }
 }

@@ -55,18 +55,18 @@ namespace ChapeauDAL
             conn.Close();
             return payment;
         }
-        public void CreatePayment(int OrderID,int tableNumber,int EmployeeID, float TotalPriceNoVAT,float TotalPriceVAT, int PaymentMethod,DateTime PaymentDate)
+        public void CompletePayment(Payment payment)
         {
                                  
             OpenConnection();
             SqlCommand cmd = new SqlCommand("INSERT INTO [Order]VALUES(@OrderID,@TableNumber,@EmployeeID,@TotalPriceNoVAT,@TotalPriceVAT,@PaymentMethod,@PaymentDateTime);", conn);
-            cmd.Parameters.AddWithValue("@OrderID", OrderID);
-            cmd.Parameters.AddWithValue("@TableNumber", tableNumber);
-            cmd.Parameters.AddWithValue("@EmployeeID", EmployeeID);
-            cmd.Parameters.AddWithValue("@TotalPriceNoVAT", TotalPriceNoVAT);
-            cmd.Parameters.AddWithValue("@TotalPriceVAT", TotalPriceVAT);
-            cmd.Parameters.AddWithValue("@PaymentMethod", PaymentMethod);
-            cmd.Parameters.AddWithValue("@PaymentDateTime", PaymentDate);
+            cmd.Parameters.AddWithValue("@OrderID", payment.PaymentID);
+            cmd.Parameters.AddWithValue("@TableNumber", payment.TableNumber);
+            cmd.Parameters.AddWithValue("@EmployeeID", payment.EmployeeID);
+            cmd.Parameters.AddWithValue("@TotalPriceNoVAT", payment.TotalPriceNoVAT);
+            cmd.Parameters.AddWithValue("@TotalPriceVAT", payment.TotalPriceVAT);
+            cmd.Parameters.AddWithValue("@PaymentMethod", payment.PaymentMethod);
+            cmd.Parameters.AddWithValue("@PaymentDateTime", payment.PaymentDate);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();

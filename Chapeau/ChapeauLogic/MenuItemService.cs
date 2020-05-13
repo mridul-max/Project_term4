@@ -9,8 +9,20 @@ namespace ChapeauLogic
         MenuItemDAO DAO = new MenuItemDAO();
 
         public List<MenuItem> GetMenuItems()
-        {
-            return DAO.GetCompleteMenu();
+        { 
+            //I added try catch to your section I hope you don't mind this change. I appreciate it if you double check.
+            
+            try
+            {
+                return DAO.GetCompleteMenu();
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't get the menu items.";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                return null;
+            }
+            
         }
 
 

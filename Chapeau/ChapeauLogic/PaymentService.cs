@@ -11,17 +11,48 @@ namespace ChapeauLogic
     public class PaymentService
     {
         PaymentDAO paymentDao = new PaymentDAO();
-        public void CreatePayment(int OrderID, int tableNumber, int EmployeeID, float TotalPriceNoVAT, float TotalPriceVAT, int PaymentMethod, DateTime PaymentDate)
+        public void CompletePayment(Payment payment)
         {
-            paymentDao.CreatePayment(OrderID, tableNumber, EmployeeID ,TotalPriceNoVAT, TotalPriceVAT, PaymentMethod, PaymentDate);
+            try
+            {
+                paymentDao.CompletePayment(payment);
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't finish  the payment";
+                ErrorDAO error = new ErrorDAO(errorstr);
+               
+            }
+            
         }
         public Payment GetById(int id)
         {
-            return paymentDao.GetById(id);
+            try
+            {
+                return paymentDao.GetById(id);
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't get  the payment";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                return null;
+
+            }
+           
         }
         public List<Payment> GetAllPayments()
         {
-            return paymentDao.GetAllPayments();
+            try
+            {
+                return paymentDao.GetAllPayments();
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't get the payments";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                return null;
+            }
+            
         }
     }
 }

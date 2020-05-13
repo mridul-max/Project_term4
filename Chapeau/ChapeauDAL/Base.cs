@@ -3,6 +3,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data;
 using ChapeauModel;
+using ChapeauDAL;
 
 namespace SomerenDAL
 {
@@ -18,16 +19,33 @@ namespace SomerenDAL
 
         protected SqlConnection OpenConnection()
         {
-            if (conn.State == ConnectionState.Closed || conn.State == ConnectionState.Broken)
+            try
             {
-                conn.Open();
+                if (conn.State == ConnectionState.Closed || conn.State == ConnectionState.Broken)
+                {
+                    conn.Open();
+                }
+                return conn;
             }
-            return conn;
+            catch
+            {             
+                ErrorDAO error = new ErrorDAO("ChapeauApp Couldn't open the connection");
+                return null;
+            }
+           
         }
 
         private void CloseConnection()
         {
-            conn.Close();
+            try
+            {
+                conn.Close();
+            }
+            catch
+            {
+                ErrorDAO error = new ErrorDAO("ChapeauApp couldn't close the connection");
+            }
+           
         }
 
         /* For Insert/Update/Delete Queries with transaction */
@@ -40,10 +58,9 @@ namespace SomerenDAL
                 adapter.InsertCommand = command;
                 command.ExecuteNonQuery();
             }
-            catch (Exception e)
+            catch 
             {
-                //Print.ErrorLog(e);
-                throw e;
+                ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
             }
         }
 
@@ -62,8 +79,7 @@ namespace SomerenDAL
             }
             catch (SqlException e)
             {
-                // Print.ErrorLog(e);
-                throw e;
+                ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
             }
             finally
             {
@@ -87,8 +103,7 @@ namespace SomerenDAL
             }
             catch (SqlException e)
             {
-                // Print.ErrorLog(e);
-                throw e;
+                ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
             }
             finally
             {
@@ -117,9 +132,8 @@ namespace SomerenDAL
             }
             catch (SqlException e)
             {
-                //ErrorLog.Log(e.Message);
+                ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
                 return null;
-                throw e;
             }
             finally
             {

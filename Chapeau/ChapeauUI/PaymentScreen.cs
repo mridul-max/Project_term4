@@ -18,7 +18,7 @@ namespace ChapeauUI
         EmployeeService employeeService;
         PaymentService paymentService;
         Employee employee;
-        
+
         public PaymentScreen(Payment CurrentPayment)
         {
             InitializeComponent();
@@ -34,11 +34,11 @@ namespace ChapeauUI
             //lblEmployee.Text = lblEmployee.Text + " " + employee.Name;
             //lblNoVAT.Text = lblNoVAT.Text + " " + CurrentPayment.TotalPriceNoVAT.ToString();
             //lblPriceVAT.Text = lblPriceVAT.Text + " " + CurrentPayment.TotalPriceVAT.ToString();
-            
+
 
             cmbPayment.Items.Add("Cash"); // radio button
             cmbPayment.Items.Add("Debit");
-           
+
         }
         public void CalculateVatprice()
         {
@@ -56,13 +56,15 @@ namespace ChapeauUI
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if(cmbPayment.SelectedIndex>0)
+            if (cmbPayment.SelectedIndex > 0)
             {
                 // pas the complete object.
-                if(cmbPayment.SelectedItem.ToString()== "Cash")
-                paymentService.CreatePayment(CurrentPayment.PaymentID,CurrentPayment.TableNumber,CurrentPayment.EmployeeID,CurrentPayment.TotalPriceNoVAT,CurrentPayment.TotalPriceVAT,1,DateTime.Now);
-                else if (cmbPayment.SelectedItem.ToString()== "Debit")
-                    paymentService.CreatePayment(CurrentPayment.PaymentID, CurrentPayment.TableNumber, CurrentPayment.EmployeeID, CurrentPayment.TotalPriceNoVAT, CurrentPayment.TotalPriceVAT,0, DateTime.Now);
+                if (cmbPayment.SelectedItem.ToString() == "Cash")
+                    CurrentPayment.PaymentMethod = 0;
+                else if (cmbPayment.SelectedItem.ToString() == "Debit")
+                    CurrentPayment.PaymentMethod = 1;
+                
+                paymentService.CompletePayment(CurrentPayment);
             }
             else
             {
