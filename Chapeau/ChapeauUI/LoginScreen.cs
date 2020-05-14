@@ -33,17 +33,17 @@ namespace ChapeauUI
 
             //if username or password textbox is empty, show a label that indicates that they need to be filled.
             if (string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
-                lblWarning.Visible = true;
+                MessageBox.Show("Incorrect password or username","Invalid Credentials",MessageBoxButtons.OK,MessageBoxIcon.Error);
             else
             {
                 Employee loggedEmployee = employeeService.GetEmployeeByCredentials(txtUsername.Text, txtPassword.Text);
 
                 if (loggedEmployee == null)
-                    lblWarning.Visible = true;
+                    MessageBox.Show("Incorrect password or username", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
                     this.Hide();
-                   TableView applicationForm = new TableView(loggedEmployee);
+                    TableView applicationForm = new TableView(loggedEmployee);
                     //CheckEnumForForms(loggedEmployee);
                 }
             }

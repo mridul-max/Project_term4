@@ -35,7 +35,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.ChPassword = new System.Windows.Forms.CheckBox();
-            this.lblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -105,23 +104,11 @@
             this.ChPassword.UseVisualStyleBackColor = true;
             this.ChPassword.CheckedChanged += new System.EventHandler(this.ChPassword_CheckedChanged);
             // 
-            // lblWarning
-            // 
-            this.lblWarning.AutoSize = true;
-            this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWarning.Location = new System.Drawing.Point(354, 389);
-            this.lblWarning.Name = "lblWarning";
-            this.lblWarning.Size = new System.Drawing.Size(358, 25);
-            this.lblWarning.TabIndex = 8;
-            this.lblWarning.Text = "Username or password is incorrect!!";
-            this.lblWarning.Visible = false;
-            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
-            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.ChPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
@@ -148,7 +135,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.CheckBox ChPassword;
-        private System.Windows.Forms.Label lblWarning;
     }
 }
 
