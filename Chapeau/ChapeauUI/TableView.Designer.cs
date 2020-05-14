@@ -46,7 +46,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.restaurantViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_tables.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb9)).BeginInit();
@@ -246,8 +245,7 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.restaurantViewToolStripMenuItem,
-            this.orderingToolStripMenuItem});
+            this.restaurantViewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -261,13 +259,6 @@
             this.restaurantViewToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.restaurantViewToolStripMenuItem.Text = "Restaurant view";
             this.restaurantViewToolStripMenuItem.Click += new System.EventHandler(this.restaurantViewToolStripMenuItem_Click);
-            // 
-            // orderingToolStripMenuItem
-            // 
-            this.orderingToolStripMenuItem.Name = "orderingToolStripMenuItem";
-            this.orderingToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
-            this.orderingToolStripMenuItem.Text = "Ordering";
-            this.orderingToolStripMenuItem.Click += new System.EventHandler(this.orderingToolStripMenuItem_Click);
             // 
             // TableView
             // 
@@ -323,6 +314,5 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem restaurantViewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderingToolStripMenuItem;
     }
 }

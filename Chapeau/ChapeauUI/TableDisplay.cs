@@ -14,11 +14,11 @@ namespace ChapeauUI
 {
     public partial class TableDisplay : Form
     {
-        Table CurrentTable;
-        Payment CurrentTicket;
+        private Table CurrentTable;
+        private Payment CurrentTicket;
 
-        ReservationService reservationService = new ReservationService();
-        List<Reservation> reservations;
+        private ReservationService reservationService = new ReservationService();
+        private  List<Reservation> reservations;
         public TableDisplay(Table CurrentTable)
         {
             InitializeComponent();
@@ -41,7 +41,7 @@ namespace ChapeauUI
             foreach (Reservation reservation in reservations)
             {
                 if (reservation.TableNumber == CurrentTable.TableNumber && reservation.ReservationDate >= DateTime.Now)
-                    comboBox1.Items.Add(reservation.ReserverName + reservation.ReservationDate.ToString());
+                    comboBox1.Items.Add(reservation.ReserverName +"  "+ reservation.ReservationDate.ToString());
             }
             if (CurrentTable.IsOccupied)
             {
@@ -83,6 +83,6 @@ namespace ChapeauUI
             UpdateTableView();
         }
 
-     
+      
     }
 }

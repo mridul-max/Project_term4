@@ -19,12 +19,13 @@ namespace ChapeauLogic
             try
             {
                 return tabledao.GetAllTables();
+             
             }
             catch
             {
                 string errorstr = "Chapeau App couldn't get the tables";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
           
             
@@ -39,7 +40,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't get the table";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
         }
     }

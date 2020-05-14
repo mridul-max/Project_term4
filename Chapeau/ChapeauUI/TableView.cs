@@ -13,16 +13,17 @@ using ChapeauModel;
 namespace ChapeauUI
 {
     public partial class TableView : Form
-    {
-        Employee loggedEmployee;
-        TableService tableService = new TableService();
-        List<Table> allTables;
+    {//write private.
+        private Employee loggedEmployee;
+        private TableService tableService;
+        private List<Table> allTables;
 
 
         public TableView(Employee loggedEmployee)
         {
             InitializeComponent();
             this.loggedEmployee = loggedEmployee;
+            tableService = new TableService();
             this.ShowDialog();
         }
         private void ChapeauApp_FormClosing(object sender, FormClosingEventArgs e)

@@ -20,15 +20,15 @@ namespace ChapeauLogic
             {
                 return reservationDao.GetAllReservations();
             }
-            catch
+            catch 
             {
                 string errorstr = "Chapeau App couldn't get the reservations";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
-            
 
-           
+
+
         }
         public void CreateReservation(int tableNumber, string reservationDate, long phoneNumber, string reserverName)
         {
@@ -36,13 +36,13 @@ namespace ChapeauLogic
             {
                 reservationDao.CreateReservation(tableNumber, reservationDate, phoneNumber, reserverName);
             }
-            catch
+            catch 
             {
-                string errorstr = "Chapeau App couldn't create the reservations";
+                string errorstr = "Chapeau App couldn't create the reservation";
                 ErrorDAO error = new ErrorDAO(errorstr);
-              
+                throw;
             }
-           
+
         }
 
     }

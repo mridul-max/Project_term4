@@ -20,7 +20,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't get the menu items.";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
             
         }

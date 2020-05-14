@@ -12,16 +12,17 @@ namespace ChapeauLogic
     {
         EmployeeDAO employeeDao = new EmployeeDAO();
 
-        public void CreateEmployee(bool isManager, string employeeTypeKey, string name, string username, string password)
+        public void CreateEmployee(bool isManager,Employee employee)
         {
             try
             {
-                employeeDao.CreateEmployee(isManager, employeeTypeKey, name, username, password);
+                employeeDao.CreateEmployee(isManager,employee);
             }
             catch
             {
                 string errorstr = "Chapeau App couldn't create the employee account";
                 ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
             }
            
         }
@@ -35,6 +36,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't remove the employee account";
                 ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
             }
            
         }
@@ -48,7 +50,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't get the employee account";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
                  
         }
@@ -62,7 +64,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't return the employees";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
                  
         }
@@ -77,7 +79,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't return the employee with these credentials";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
             
         }

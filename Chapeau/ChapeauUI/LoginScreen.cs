@@ -15,9 +15,8 @@ namespace ChapeauUI
 {
     public partial class LoginScreen : Form
     {
-        EmployeeService employeeService;
-        Employee loggedEmployee;//will be generated and passed in as a parameter for chapeau app after login button is clicked.
-        TableView applicationForm;// this will be assigned when user successfully logs in and opens itself
+        private EmployeeService employeeService;
+       
         public LoginScreen()
         {
             InitializeComponent();
@@ -31,27 +30,30 @@ namespace ChapeauUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            List<Employee> allEmployees = employeeService.GetAllEmployees();
-            loggedEmployee = null;//it is null until user enter correct credentials.
-            //if username or password textbox is empty, show a messagebox that indicates that they need to be filled.
-            if (string.IsNullOrWhiteSpace(txtPassword.Text))
-                MessageBox.Show("Username section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if (string.IsNullOrWhiteSpace(txtPassword.Text))
-                MessageBox.Show("Password section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //if username or password textbox is empty, show a label that indicates that they need to be filled.
+            if (string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+                lblWarning.Visible = true;
             else
             {
-
-                loggedEmployee = employeeService.GetEmployeeByCredentials(txtUsername.Text, txtPassword.Text);
+                Employee loggedEmployee = employeeService.GetEmployeeByCredentials(txtUsername.Text, txtPassword.Text);
 
                 if (loggedEmployee == null)
-                    MessageBox.Show("Wrong username or password", "Incorrect credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    lblWarning.Visible = true;
                 else
                 {
                     this.Hide();
-                    applicationForm = new TableView(loggedEmployee);
+                   TableView applicationForm = new TableView(loggedEmployee);
+                    //CheckEnumForForms(loggedEmployee);
                 }
             }
         }
+        //Opens a different form for each type of employee.
+        private void CheckEnumForForms(Employee employee)
+        {
+           //..
+        }
+        
 
         private void ChPassword_CheckedChanged(object sender, EventArgs e)
         {

@@ -77,9 +77,10 @@ namespace SomerenDAL
                 adapter.InsertCommand = command;
                 command.ExecuteNonQuery();
             }
-            catch (SqlException e)
+            catch 
             {
                 ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
+                throw;
             }
             finally
             {
@@ -101,9 +102,10 @@ namespace SomerenDAL
 
                 autoIncrementedId = int.Parse(command.ExecuteScalar().ToString());
             }
-            catch (SqlException e)
+            catch 
             {
                 ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
+                throw;
             }
             finally
             {
@@ -130,10 +132,10 @@ namespace SomerenDAL
                 adapter.Fill(dataSet);
                 dataTable = dataSet.Tables[0];
             }
-            catch (SqlException e)
+            catch 
             {
                 ErrorDAO error = new ErrorDAO("ChapeauApp couldn't execute the query");
-                return null;
+                throw;
             }
             finally
             {

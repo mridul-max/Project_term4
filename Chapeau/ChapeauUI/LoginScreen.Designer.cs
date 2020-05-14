@@ -34,8 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.ChPassword = new System.Windows.Forms.CheckBox();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -86,23 +86,13 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(492, 321);
+            this.btnLogin.Location = new System.Drawing.Point(358, 283);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(198, 66);
+            this.btnLogin.Size = new System.Drawing.Size(332, 66);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(237, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(218, 66);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "I forgot my credentials";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // ChPassword
             // 
@@ -115,13 +105,24 @@
             this.ChPassword.UseVisualStyleBackColor = true;
             this.ChPassword.CheckedChanged += new System.EventHandler(this.ChPassword_CheckedChanged);
             // 
+            // lblWarning
+            // 
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWarning.Location = new System.Drawing.Point(354, 389);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(358, 25);
+            this.lblWarning.TabIndex = 8;
+            this.lblWarning.Text = "Username or password is incorrect!!";
+            this.lblWarning.Visible = false;
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 450);
+            this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.ChPassword);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -146,8 +147,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox ChPassword;
+        private System.Windows.Forms.Label lblWarning;
     }
 }
 

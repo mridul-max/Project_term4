@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using System.Windows.Forms;
+
 
 
 namespace ChapeauDAL
@@ -24,7 +24,7 @@ namespace ChapeauDAL
             //write the error into the error.log file
             writer.WriteLine($"Occurance time: {DateTime.Now.ToString()} Explanation: {explanation}");
             writer.Close();
-            MessageBox.Show(explanation, "Error Occured", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
 
 
 

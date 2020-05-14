@@ -15,8 +15,8 @@ namespace ChapeauUI
 {
     public partial class ReservationForm : Form
     {
-        ReservationService reservationService = new ReservationService();
-        Table CurrentTable;
+       private ReservationService reservationService = new ReservationService();
+       private  Table CurrentTable;
         public ReservationForm(Table CurrentTable)
         {
             InitializeComponent();

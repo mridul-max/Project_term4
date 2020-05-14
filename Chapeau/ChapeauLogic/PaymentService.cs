@@ -21,7 +21,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't finish  the payment";
                 ErrorDAO error = new ErrorDAO(errorstr);
-               
+                throw;
             }
             
         }
@@ -35,8 +35,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't get  the payment";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
-
+                throw;
             }
            
         }
@@ -50,7 +49,7 @@ namespace ChapeauLogic
             {
                 string errorstr = "Chapeau App couldn't get the payments";
                 ErrorDAO error = new ErrorDAO(errorstr);
-                return null;
+                throw;
             }
             
         }

@@ -14,10 +14,10 @@ namespace ChapeauUI
 {
     public partial class PaymentScreen : Form
     {
-        Payment CurrentPayment;
-        EmployeeService employeeService;
-        PaymentService paymentService;
-        Employee employee;
+       private Payment CurrentPayment;
+       private EmployeeService employeeService;
+       private PaymentService paymentService;
+       private Employee employee;
 
         public PaymentScreen(Payment CurrentPayment)
         {
