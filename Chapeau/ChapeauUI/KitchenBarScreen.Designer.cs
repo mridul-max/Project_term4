@@ -39,6 +39,7 @@
             // lblloggedemp
             // 
             this.lblloggedemp.AutoSize = true;
+            this.lblloggedemp.BackColor = System.Drawing.Color.Transparent;
             this.lblloggedemp.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblloggedemp.Location = new System.Drawing.Point(24, 51);
             this.lblloggedemp.Name = "lblloggedemp";
@@ -48,6 +49,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem});
@@ -70,14 +72,14 @@
             // managementToolStripMenuItem
             // 
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.managementToolStripMenuItem.Text = "Management";
             this.managementToolStripMenuItem.Click += new System.EventHandler(this.managementToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click_1);
             // 
@@ -85,6 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(632, 853);
             this.Controls.Add(this.lblloggedemp);
             this.Controls.Add(this.menuStrip1);

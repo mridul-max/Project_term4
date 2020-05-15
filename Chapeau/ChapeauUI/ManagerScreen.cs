@@ -22,7 +22,7 @@ namespace ChapeauUI
 
         private void ManagerScreen_Load(object sender, EventArgs e)
         {
-            lblLogged.Text = lblLogged.Text+ " "+ loggedEmployee.Name;
+            lblLogged.Text = lblLogged.Text + " " + loggedEmployee.Name;
         }
 
         private void ManagerScreen_FormClosing(object sender, FormClosingEventArgs e)
@@ -30,25 +30,25 @@ namespace ChapeauUI
             Application.Exit();
         }
 
-        private void btnLogoff_Click(object sender, EventArgs e)
+        private void kitchenbarScreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoginScreen login = new LoginScreen();
+            KitchenBarScreen kitchenBarView = new KitchenBarScreen(loggedEmployee);
             this.Hide();
-            login.ShowDialog();
+            kitchenBarView.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void tableViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TableView tableView = new TableView(loggedEmployee);
             this.Hide();
             tableView.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KitchenBarScreen kitchenBarView = new KitchenBarScreen(loggedEmployee);
+            LoginScreen login = new LoginScreen();
             this.Hide();
-            kitchenBarView.ShowDialog();
+            login.ShowDialog();
         }
     }
 }

@@ -49,11 +49,11 @@
             this.btnLogoff.TabIndex = 0;
             this.btnLogoff.Text = "Log off";
             this.btnLogoff.UseVisualStyleBackColor = true;
-            this.btnLogoff.Click += new System.EventHandler(this.btnLogoff_Click);
             // 
             // lblLogged
             // 
             this.lblLogged.AutoSize = true;
+            this.lblLogged.BackColor = System.Drawing.Color.Transparent;
             this.lblLogged.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogged.Location = new System.Drawing.Point(12, 42);
             this.lblLogged.Name = "lblLogged";
@@ -63,6 +63,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.managementToolStripMenuItem,
@@ -90,12 +91,14 @@
             this.kitchenbarScreenToolStripMenuItem.Name = "kitchenbarScreenToolStripMenuItem";
             this.kitchenbarScreenToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.kitchenbarScreenToolStripMenuItem.Text = "Kitchen/bar screen";
+            this.kitchenbarScreenToolStripMenuItem.Click += new System.EventHandler(this.kitchenbarScreenToolStripMenuItem_Click);
             // 
             // tableViewToolStripMenuItem
             // 
             this.tableViewToolStripMenuItem.Name = "tableViewToolStripMenuItem";
             this.tableViewToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.tableViewToolStripMenuItem.Text = "Table view";
+            this.tableViewToolStripMenuItem.Click += new System.EventHandler(this.tableViewToolStripMenuItem_Click);
             // 
             // editAccountsToolStripMenuItem
             // 
@@ -115,11 +118,14 @@
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
             this.logOffToolStripMenuItem.Size = new System.Drawing.Size(91, 26);
             this.logOffToolStripMenuItem.Text = "Log off";
+            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // ManagerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 903);
             this.Controls.Add(this.lblLogged);
             this.Controls.Add(this.btnLogoff);

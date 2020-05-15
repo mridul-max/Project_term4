@@ -41,6 +41,7 @@
             // lblTbnumber
             // 
             this.lblTbnumber.AutoSize = true;
+            this.lblTbnumber.BackColor = System.Drawing.Color.Transparent;
             this.lblTbnumber.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTbnumber.Location = new System.Drawing.Point(41, 32);
             this.lblTbnumber.Name = "lblTbnumber";
@@ -73,6 +74,7 @@
             // lblEmployee
             // 
             this.lblEmployee.AutoSize = true;
+            this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployee.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployee.Location = new System.Drawing.Point(41, 85);
             this.lblEmployee.Name = "lblEmployee";
@@ -83,6 +85,7 @@
             // lblPriceVAT
             // 
             this.lblPriceVAT.AutoSize = true;
+            this.lblPriceVAT.BackColor = System.Drawing.Color.Transparent;
             this.lblPriceVAT.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriceVAT.Location = new System.Drawing.Point(41, 209);
             this.lblPriceVAT.Name = "lblPriceVAT";
@@ -93,6 +96,7 @@
             // lblNoVAT
             // 
             this.lblNoVAT.AutoSize = true;
+            this.lblNoVAT.BackColor = System.Drawing.Color.Transparent;
             this.lblNoVAT.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoVAT.Location = new System.Drawing.Point(41, 156);
             this.lblNoVAT.Name = "lblNoVAT";
@@ -103,6 +107,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(41, 264);
             this.label1.Name = "label1";
@@ -122,6 +127,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(741, 435);
             this.Controls.Add(this.cmbPayment);
             this.Controls.Add(this.label1);
