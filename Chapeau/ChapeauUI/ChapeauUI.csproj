@@ -177,5 +177,38 @@
   <ItemGroup>
     <None Include="Resources\background.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chapeauLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableLogo10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

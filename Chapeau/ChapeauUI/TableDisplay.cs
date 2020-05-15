@@ -55,12 +55,12 @@ namespace ChapeauUI
         //fills the labels according to the information.
         void FillTableInformation()
         {
-            lblTableNumber.Text = CurrentTable.TableNumber.ToString();
-            lblCapacity.Text = CurrentTable.Capacity.ToString();
+            lblTableNumber.Text = lblTableNumber.Text + " " + CurrentTable.TableNumber.ToString();
+            lblCapacity.Text =lblCapacity.Text+ " " + CurrentTable.Capacity.ToString();
             if (CurrentTable.IsOccupied)
-                lblOccupy.Text = "Occupied";
+                lblOccupy.Text = lblOccupy.Text + " " + "Occupied";
             else
-                lblOccupy.Text = "Empty";
+                lblOccupy.Text = lblOccupy.Text + " " +"Empty";
         }
 
         private void Btnreserve_Click(object sender, EventArgs e)

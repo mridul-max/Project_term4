@@ -74,5 +74,6 @@ namespace ChapeauUI
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
         }
+
     }
 }
