@@ -84,7 +84,7 @@
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.lblName);
             this.Name = "OrderingRow";
-            this.Size = new System.Drawing.Size(443, 22);
+            this.Size = new System.Drawing.Size(339, 22);
             this.ResumeLayout(false);
             this.PerformLayout();
 
