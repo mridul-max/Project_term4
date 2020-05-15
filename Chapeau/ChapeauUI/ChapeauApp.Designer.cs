@@ -45,7 +45,6 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.restaurantViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orderingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_tables.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb9)).BeginInit();
@@ -73,7 +72,7 @@
             this.pnl_tables.Controls.Add(this.pcboxtb2);
             this.pnl_tables.Controls.Add(this.pcboxtb1);
             this.pnl_tables.Location = new System.Drawing.Point(9, 25);
-            this.pnl_tables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl_tables.Margin = new System.Windows.Forms.Padding(2);
             this.pnl_tables.Name = "pnl_tables";
             this.pnl_tables.Size = new System.Drawing.Size(413, 831);
             this.pnl_tables.TabIndex = 0;
@@ -83,7 +82,7 @@
             this.pcboxtb10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb10.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb10.Image")));
             this.pcboxtb10.Location = new System.Drawing.Point(250, 578);
-            this.pcboxtb10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb10.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb10.Name = "pcboxtb10";
             this.pcboxtb10.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -96,7 +95,7 @@
             this.pcboxtb9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb9.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb9.Image")));
             this.pcboxtb9.Location = new System.Drawing.Point(41, 578);
-            this.pcboxtb9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb9.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb9.Name = "pcboxtb9";
             this.pcboxtb9.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +108,7 @@
             this.pcboxtb8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb8.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb8.Image")));
             this.pcboxtb8.Location = new System.Drawing.Point(250, 435);
-            this.pcboxtb8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb8.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb8.Name = "pcboxtb8";
             this.pcboxtb8.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +121,7 @@
             this.pcboxtb7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb7.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb7.Image")));
             this.pcboxtb7.Location = new System.Drawing.Point(41, 435);
-            this.pcboxtb7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb7.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb7.Name = "pcboxtb7";
             this.pcboxtb7.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +134,7 @@
             this.pcboxtb6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb6.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb6.Image")));
             this.pcboxtb6.Location = new System.Drawing.Point(250, 306);
-            this.pcboxtb6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb6.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb6.Name = "pcboxtb6";
             this.pcboxtb6.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -148,7 +147,7 @@
             this.pcboxtb5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb5.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb5.Image")));
             this.pcboxtb5.Location = new System.Drawing.Point(41, 306);
-            this.pcboxtb5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb5.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb5.Name = "pcboxtb5";
             this.pcboxtb5.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +160,7 @@
             this.pcboxtb4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb4.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb4.Image")));
             this.pcboxtb4.Location = new System.Drawing.Point(250, 169);
-            this.pcboxtb4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb4.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb4.Name = "pcboxtb4";
             this.pcboxtb4.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -174,7 +173,7 @@
             this.pcboxtb3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb3.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb3.Image")));
             this.pcboxtb3.Location = new System.Drawing.Point(41, 169);
-            this.pcboxtb3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb3.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb3.Name = "pcboxtb3";
             this.pcboxtb3.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +186,7 @@
             this.pcboxtb2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb2.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb2.Image")));
             this.pcboxtb2.Location = new System.Drawing.Point(250, 33);
-            this.pcboxtb2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb2.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb2.Name = "pcboxtb2";
             this.pcboxtb2.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -200,7 +199,7 @@
             this.pcboxtb1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb1.Image = ((System.Drawing.Image)(resources.GetObject("pcboxtb1.Image")));
             this.pcboxtb1.Location = new System.Drawing.Point(41, 33);
-            this.pcboxtb1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pcboxtb1.Margin = new System.Windows.Forms.Padding(2);
             this.pcboxtb1.Name = "pcboxtb1";
             this.pcboxtb1.Size = new System.Drawing.Size(82, 80);
             this.pcboxtb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -212,7 +211,7 @@
             // 
             this.btlLogoff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btlLogoff.Location = new System.Drawing.Point(451, 135);
-            this.btlLogoff.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btlLogoff.Margin = new System.Windows.Forms.Padding(2);
             this.btlLogoff.Name = "btlLogoff";
             this.btlLogoff.Size = new System.Drawing.Size(93, 37);
             this.btlLogoff.TabIndex = 1;
@@ -246,12 +245,11 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.restaurantViewToolStripMenuItem,
-            this.orderingToolStripMenuItem});
+            this.restaurantViewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(736, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -262,29 +260,21 @@
             this.restaurantViewToolStripMenuItem.Text = "Restaurant view";
             this.restaurantViewToolStripMenuItem.Click += new System.EventHandler(this.restaurantViewToolStripMenuItem_Click);
             // 
-            // orderingToolStripMenuItem
-            // 
-            this.orderingToolStripMenuItem.Name = "orderingToolStripMenuItem";
-            this.orderingToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.orderingToolStripMenuItem.Text = "Ordering";
-            this.orderingToolStripMenuItem.Click += new System.EventHandler(this.orderingToolStripMenuItem_Click);
-            // 
             // ChapeauApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 774);
+            this.ClientSize = new System.Drawing.Size(800, 1280);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btlLogoff);
             this.Controls.Add(this.pnl_tables);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChapeauApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChapeauApp";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChapeauApp_FormClosing);
             this.Load += new System.EventHandler(this.ChapeauApp_Load);
             this.pnl_tables.ResumeLayout(false);
@@ -323,6 +313,5 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem restaurantViewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orderingToolStripMenuItem;
     }
 }

@@ -58,10 +58,16 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderingRow.cs">
+    <Compile Include="UserControlls\OrderingConfirmation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="OrderingRow.Designer.cs">
+    <Compile Include="UserControlls\OrderingConfirmation.Designer.cs">
+      <DependentUpon>OrderingConfirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlls\OrderingRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlls\OrderingRow.Designer.cs">
       <DependentUpon>OrderingRow.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderingScreen.cs">
@@ -96,7 +102,10 @@
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderingRow.resx">
+    <EmbeddedResource Include="UserControlls\OrderingConfirmation.resx">
+      <DependentUpon>OrderingConfirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlls\OrderingRow.resx">
       <DependentUpon>OrderingRow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderingScreen.resx">

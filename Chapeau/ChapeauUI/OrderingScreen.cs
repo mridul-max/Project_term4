@@ -14,32 +14,116 @@ namespace ChapeauUI
 {
     public partial class OrderingScreen : Form
     {
-        List<OrderingRow> itemRows;
+
+        List<OrderingRow> currentOrderItems;
+        List<OrderingRow> allOrderItems;
+        OrderingConfirmation confirmControll;
         Table CurrentTable;
+        Dictionary<string, Dictionary<string, List<ChapeauModel.MenuItem>>> menu;
+        Font headerFont;
+        Font subHeaderFont;
+
         public OrderingScreen(Table table)
         {
             InitializeComponent();
             MenuItemService service = new MenuItemService();
             CurrentTable = table;
-            Dictionary < string, Dictionary<string, List<ChapeauModel.MenuItem>>> menu = service.GetSortedMenu();
-            itemRows = new List<OrderingRow>();
-            Font headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
-            Font subHeaderFont = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
+            menu = service.GetSortedMenu();
+            currentOrderItems = new List<OrderingRow>();
+            allOrderItems = new List<OrderingRow>();
+            headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
+            subHeaderFont = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
 
+            FillAllItemsPanel();
+            FillCurrentItemsPanel();
+        }
+
+        void FillAllItemsPanel()
+        {
+            FlowLayoutPanel panel = null;
             foreach (var categoryType in menu)
             {
-                flowLayoutPanel1.Controls.Add(NewLabel("\n" + categoryType.Key, headerFont));
+                if (categoryType.Key == "Drinks")
+                {
+                    panel = flpDrinkItems;
+                }
+                else if(categoryType.Key == "Dinner")
+                {
+                    panel = flpDinnerItems;
+                }
+                else if(categoryType.Key == "Lunch")
+                {
+                    panel = flpLunchItems;
+                }
+
+                panel.Controls.Add(NewLabel(categoryType.Key, headerFont));
                 foreach (var category in categoryType.Value)
                 {
-                    flowLayoutPanel1.Controls.Add(NewLabel(category.Key, subHeaderFont));
+                    panel.Controls.Add(NewLabel(category.Key, subHeaderFont));
                     foreach (var menuItem in category.Value)
                     {
-                        OrderingRow row = new OrderingRow(menuItem);
-                        flowLayoutPanel1.Controls.Add(row);
-                        itemRows.Add(row);
+                        OrderingRow row = new OrderingRow(this, menuItem);
+                        panel.Controls.Add(row);
+                        allOrderItems.Add(row);
                     }
-                }                
+                }
             }
+        }
+
+        void FillCurrentItemsPanel()
+        {
+            flpCurrentOrderItems.Controls.Add(NewLabel("Current Order", headerFont));
+            confirmControll = new OrderingConfirmation(this);
+            flpCurrentOrderItems.Controls.Add(confirmControll);
+        }
+
+        public void UpdateCurrentOrderItem(OrderingRow orderingRow)
+        {
+            if (!containsMenuItem(currentOrderItems, orderingRow.MenuItem))
+            {                
+                orderingRow = new OrderingRow(this, orderingRow.MenuItem, orderingRow.Amount);
+                currentOrderItems.Add(orderingRow);
+                flpCurrentOrderItems.Controls.Remove(confirmControll);
+                flpCurrentOrderItems.Controls.Add(orderingRow);
+                flpCurrentOrderItems.Controls.Add(confirmControll);
+            }
+            else 
+            {
+
+                foreach (var row in allOrderItems)
+                {
+                    if (orderingRow.MenuItem == row.MenuItem)
+                    {
+                        row.Amount = orderingRow.Amount;
+                    }
+                }
+
+                foreach (var row in currentOrderItems)
+                {
+                    if (orderingRow.MenuItem == row.MenuItem)
+                    {
+                        row.Amount = orderingRow.Amount;
+                    }
+                }
+
+                if (orderingRow.Amount == 0)
+                {
+                    currentOrderItems.Remove(orderingRow);
+                    flpCurrentOrderItems.Controls.Remove(orderingRow);
+                }
+            }
+        }
+
+        bool containsMenuItem(List<OrderingRow> rows, ChapeauModel.MenuItem menuItem)
+        {
+            foreach (var row in rows)
+            {
+                if (menuItem == row.MenuItem)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         Label NewLabel(string text, Font font)
@@ -50,11 +134,6 @@ namespace ChapeauUI
             label.AutoSize = true;
 
             return label;
-        }
-
-        private void OrderingScreen_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
