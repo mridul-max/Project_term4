@@ -29,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableView));
             this.pnl_tables = new System.Windows.Forms.Panel();
             this.pcboxtb10 = new System.Windows.Forms.PictureBox();
             this.pcboxtb9 = new System.Windows.Forms.PictureBox();
@@ -200,7 +199,7 @@
             // pcboxtb1
             // 
             this.pcboxtb1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcboxtb1.ErrorImage")));
+            this.pcboxtb1.ErrorImage = null;
             this.pcboxtb1.Image = global::ChapeauUI.Properties.Resources.tableLogo11;
             this.pcboxtb1.Location = new System.Drawing.Point(208, 41);
             this.pcboxtb1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -209,7 +208,7 @@
             this.pcboxtb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb1.TabIndex = 0;
             this.pcboxtb1.TabStop = false;
-            this.pcboxtb1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pcboxtb1.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // lblEmployee
             // 
@@ -262,7 +261,6 @@
             this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.returnToManagementToolStripMenuItem.Text = "Management";
             this.returnToManagementToolStripMenuItem.Visible = false;
-            this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.returnToManagementToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 
@@ -270,7 +268,6 @@
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
             this.logOffToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.logOffToolStripMenuItem.Text = "Log off";
-            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // TableView
             // 
@@ -288,8 +285,8 @@
             this.Name = "TableView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChapeauApp";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChapeauApp_FormClosing);
-            this.Load += new System.EventHandler(this.ChapeauApp_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableView_FormClosing_1);
+            this.Load += new System.EventHandler(this.TableView_Load);
             this.pnl_tables.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb9)).EndInit();
