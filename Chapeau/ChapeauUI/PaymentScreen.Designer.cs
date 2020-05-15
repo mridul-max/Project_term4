@@ -43,20 +43,21 @@
             this.lblTbnumber.AutoSize = true;
             this.lblTbnumber.BackColor = System.Drawing.Color.Transparent;
             this.lblTbnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTbnumber.Location = new System.Drawing.Point(31, 26);
-            this.lblTbnumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTbnumber.Location = new System.Drawing.Point(41, 32);
             this.lblTbnumber.Name = "lblTbnumber";
-            this.lblTbnumber.Size = new System.Drawing.Size(125, 20);
+            this.lblTbnumber.Size = new System.Drawing.Size(155, 25);
             this.lblTbnumber.TabIndex = 0;
             this.lblTbnumber.Text = "Table Number:";
             // 
             // btnApply
             // 
+            this.btnApply.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApply.Location = new System.Drawing.Point(81, 309);
-            this.btnApply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApply.Location = new System.Drawing.Point(108, 380);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(92, 35);
+            this.btnApply.Size = new System.Drawing.Size(123, 43);
             this.btnApply.TabIndex = 1;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
@@ -64,11 +65,13 @@
             // 
             // btnBack
             // 
+            this.btnBack.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(334, 309);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Location = new System.Drawing.Point(445, 380);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(92, 35);
+            this.btnBack.Size = new System.Drawing.Size(123, 43);
             this.btnBack.TabIndex = 2;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -79,10 +82,9 @@
             this.lblEmployee.AutoSize = true;
             this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployee.Location = new System.Drawing.Point(31, 69);
-            this.lblEmployee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmployee.Location = new System.Drawing.Point(41, 85);
             this.lblEmployee.Name = "lblEmployee";
-            this.lblEmployee.Size = new System.Drawing.Size(135, 20);
+            this.lblEmployee.Size = new System.Drawing.Size(164, 25);
             this.lblEmployee.TabIndex = 3;
             this.lblEmployee.Text = "Host Employee:";
             // 
@@ -91,10 +93,9 @@
             this.lblPriceVAT.AutoSize = true;
             this.lblPriceVAT.BackColor = System.Drawing.Color.Transparent;
             this.lblPriceVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPriceVAT.Location = new System.Drawing.Point(31, 170);
-            this.lblPriceVAT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPriceVAT.Location = new System.Drawing.Point(41, 209);
             this.lblPriceVAT.Name = "lblPriceVAT";
-            this.lblPriceVAT.Size = new System.Drawing.Size(186, 20);
+            this.lblPriceVAT.Size = new System.Drawing.Size(231, 25);
             this.lblPriceVAT.TabIndex = 4;
             this.lblPriceVAT.Text = "Total price (with VAT):";
             // 
@@ -103,10 +104,9 @@
             this.lblNoVAT.AutoSize = true;
             this.lblNoVAT.BackColor = System.Drawing.Color.Transparent;
             this.lblNoVAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoVAT.Location = new System.Drawing.Point(31, 127);
-            this.lblNoVAT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoVAT.Location = new System.Drawing.Point(41, 156);
             this.lblNoVAT.Name = "lblNoVAT";
-            this.lblNoVAT.Size = new System.Drawing.Size(99, 20);
+            this.lblNoVAT.Size = new System.Drawing.Size(123, 25);
             this.lblNoVAT.TabIndex = 5;
             this.lblNoVAT.Text = "Total Price:";
             // 
@@ -115,29 +115,28 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 214);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(41, 263);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 20);
+            this.label1.Size = new System.Drawing.Size(262, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Selected payment method";
             // 
             // cmbPayment
             // 
             this.cmbPayment.FormattingEnabled = true;
-            this.cmbPayment.Location = new System.Drawing.Point(244, 214);
-            this.cmbPayment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPayment.Location = new System.Drawing.Point(325, 263);
+            this.cmbPayment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbPayment.Name = "cmbPayment";
-            this.cmbPayment.Size = new System.Drawing.Size(121, 21);
+            this.cmbPayment.Size = new System.Drawing.Size(160, 24);
             this.cmbPayment.TabIndex = 7;
             // 
             // PaymentScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(556, 353);
+            this.ClientSize = new System.Drawing.Size(741, 434);
             this.Controls.Add(this.cmbPayment);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNoVAT);
@@ -146,7 +145,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.lblTbnumber);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PaymentScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment";

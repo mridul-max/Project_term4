@@ -142,6 +142,8 @@
             // 
             // Btnreserve
             // 
+            this.Btnreserve.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.Btnreserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnreserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnreserve.Location = new System.Drawing.Point(12, 540);
             this.Btnreserve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -154,6 +156,8 @@
             // 
             // BtnOrder
             // 
+            this.BtnOrder.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.BtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOrder.Location = new System.Drawing.Point(240, 540);
             this.BtnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -166,7 +170,9 @@
             // 
             // BtnChout
             // 
+            this.BtnChout.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BtnChout.Enabled = false;
+            this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChout.Location = new System.Drawing.Point(12, 618);
             this.BtnChout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

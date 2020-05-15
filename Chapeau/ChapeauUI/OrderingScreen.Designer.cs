@@ -48,9 +48,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(311, 9);
+            this.label1.Location = new System.Drawing.Point(415, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 31);
+            this.label1.Size = new System.Drawing.Size(149, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ordering";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -61,9 +62,10 @@
             this.flpCurrentOrderItems.BackColor = System.Drawing.Color.Transparent;
             this.flpCurrentOrderItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpCurrentOrderItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpCurrentOrderItems.Location = new System.Drawing.Point(395, 113);
+            this.flpCurrentOrderItems.Location = new System.Drawing.Point(527, 139);
+            this.flpCurrentOrderItems.Margin = new System.Windows.Forms.Padding(4);
             this.flpCurrentOrderItems.Name = "flpCurrentOrderItems";
-            this.flpCurrentOrderItems.Size = new System.Drawing.Size(380, 80);
+            this.flpCurrentOrderItems.Size = new System.Drawing.Size(506, 98);
             this.flpCurrentOrderItems.TabIndex = 2;
             // 
             // tabAllItems
@@ -71,20 +73,22 @@
             this.tabAllItems.Controls.Add(this.tabDrinks);
             this.tabAllItems.Controls.Add(this.tabDinner);
             this.tabAllItems.Controls.Add(this.tabLunch);
-            this.tabAllItems.Location = new System.Drawing.Point(12, 88);
+            this.tabAllItems.Location = new System.Drawing.Point(16, 108);
+            this.tabAllItems.Margin = new System.Windows.Forms.Padding(4);
             this.tabAllItems.Name = "tabAllItems";
             this.tabAllItems.SelectedIndex = 0;
-            this.tabAllItems.Size = new System.Drawing.Size(377, 816);
+            this.tabAllItems.Size = new System.Drawing.Size(503, 1004);
             this.tabAllItems.TabIndex = 3;
             // 
             // tabDrinks
             // 
             this.tabDrinks.BackColor = System.Drawing.Color.Transparent;
             this.tabDrinks.Controls.Add(this.flpDrinkItems);
-            this.tabDrinks.Location = new System.Drawing.Point(4, 22);
+            this.tabDrinks.Location = new System.Drawing.Point(4, 25);
+            this.tabDrinks.Margin = new System.Windows.Forms.Padding(4);
             this.tabDrinks.Name = "tabDrinks";
-            this.tabDrinks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDrinks.Size = new System.Drawing.Size(369, 790);
+            this.tabDrinks.Padding = new System.Windows.Forms.Padding(4);
+            this.tabDrinks.Size = new System.Drawing.Size(495, 975);
             this.tabDrinks.TabIndex = 0;
             this.tabDrinks.Text = "Drinks";
             // 
@@ -93,20 +97,21 @@
             this.flpDrinkItems.AutoSize = true;
             this.flpDrinkItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpDrinkItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpDrinkItems.Location = new System.Drawing.Point(3, 3);
-            this.flpDrinkItems.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.flpDrinkItems.Location = new System.Drawing.Point(4, 4);
+            this.flpDrinkItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.flpDrinkItems.Name = "flpDrinkItems";
-            this.flpDrinkItems.Size = new System.Drawing.Size(357, 80);
+            this.flpDrinkItems.Size = new System.Drawing.Size(475, 98);
             this.flpDrinkItems.TabIndex = 1;
             // 
             // tabDinner
             // 
             this.tabDinner.BackColor = System.Drawing.Color.Transparent;
             this.tabDinner.Controls.Add(this.flpDinnerItems);
-            this.tabDinner.Location = new System.Drawing.Point(4, 22);
+            this.tabDinner.Location = new System.Drawing.Point(4, 25);
+            this.tabDinner.Margin = new System.Windows.Forms.Padding(4);
             this.tabDinner.Name = "tabDinner";
-            this.tabDinner.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDinner.Size = new System.Drawing.Size(369, 790);
+            this.tabDinner.Padding = new System.Windows.Forms.Padding(4);
+            this.tabDinner.Size = new System.Drawing.Size(495, 975);
             this.tabDinner.TabIndex = 1;
             this.tabDinner.Text = "Dinner";
             // 
@@ -115,20 +120,21 @@
             this.flpDinnerItems.AutoSize = true;
             this.flpDinnerItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpDinnerItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpDinnerItems.Location = new System.Drawing.Point(3, 3);
-            this.flpDinnerItems.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.flpDinnerItems.Location = new System.Drawing.Point(4, 4);
+            this.flpDinnerItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.flpDinnerItems.Name = "flpDinnerItems";
-            this.flpDinnerItems.Size = new System.Drawing.Size(357, 80);
+            this.flpDinnerItems.Size = new System.Drawing.Size(475, 98);
             this.flpDinnerItems.TabIndex = 2;
             // 
             // tabLunch
             // 
             this.tabLunch.BackColor = System.Drawing.Color.Transparent;
             this.tabLunch.Controls.Add(this.flpLunchItems);
-            this.tabLunch.Location = new System.Drawing.Point(4, 22);
+            this.tabLunch.Location = new System.Drawing.Point(4, 25);
+            this.tabLunch.Margin = new System.Windows.Forms.Padding(4);
             this.tabLunch.Name = "tabLunch";
-            this.tabLunch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLunch.Size = new System.Drawing.Size(369, 790);
+            this.tabLunch.Padding = new System.Windows.Forms.Padding(4);
+            this.tabLunch.Size = new System.Drawing.Size(495, 975);
             this.tabLunch.TabIndex = 2;
             this.tabLunch.Text = "Lunch";
             // 
@@ -137,23 +143,24 @@
             this.flpLunchItems.AutoSize = true;
             this.flpLunchItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpLunchItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpLunchItems.Location = new System.Drawing.Point(3, 3);
-            this.flpLunchItems.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
+            this.flpLunchItems.Location = new System.Drawing.Point(4, 4);
+            this.flpLunchItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 25);
             this.flpLunchItems.Name = "flpLunchItems";
-            this.flpLunchItems.Size = new System.Drawing.Size(357, 80);
+            this.flpLunchItems.Size = new System.Drawing.Size(475, 98);
             this.flpLunchItems.TabIndex = 2;
             // 
             // OrderingScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.ClientSize = new System.Drawing.Size(1150, 1055);
             this.Controls.Add(this.tabAllItems);
             this.Controls.Add(this.flpCurrentOrderItems);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OrderingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderingScreen";

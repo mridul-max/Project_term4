@@ -65,6 +65,7 @@ namespace ChapeauUI
                     CurrentPayment.PaymentMethod = 1;
                 
                 paymentService.CompletePayment(CurrentPayment);
+                
             }
             else
             {
