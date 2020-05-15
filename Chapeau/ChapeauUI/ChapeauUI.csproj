@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChapeauApp.cs">
+    <Compile Include="KitchenBarScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChapeauApp.Designer.cs">
-      <DependentUpon>ChapeauApp.cs</DependentUpon>
+    <Compile Include="KitchenBarScreen.Designer.cs">
+      <DependentUpon>KitchenBarScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
@@ -65,6 +65,13 @@
       <DependentUpon>OrderingConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlls\OrderingRow.cs">
+    <Compile Include="ManagerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerScreen.Designer.cs">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderingRow.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlls\OrderingRow.Designer.cs">
@@ -96,8 +103,14 @@
     <Compile Include="TableDisplay.Designer.cs">
       <DependentUpon>TableDisplay.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChapeauApp.resx">
-      <DependentUpon>ChapeauApp.cs</DependentUpon>
+    <Compile Include="TableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableView.Designer.cs">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="KitchenBarScreen.resx">
+      <DependentUpon>KitchenBarScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
@@ -106,6 +119,10 @@
       <DependentUpon>OrderingConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlls\OrderingRow.resx">
+    <EmbeddedResource Include="ManagerScreen.resx">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderingRow.resx">
       <DependentUpon>OrderingRow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderingScreen.resx">
@@ -122,12 +139,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableDisplay.resx">
       <DependentUpon>TableDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableView.resx">
+      <DependentUpon>TableView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,6 +172,9 @@
       <Project>{9ca33d7b-94fc-4ec1-8666-eda3116a667e}</Project>
       <Name>ChapeauModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

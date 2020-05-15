@@ -70,6 +70,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(466, 24);
             this.comboBox1.TabIndex = 7;
+           
             // 
             // label4
             // 

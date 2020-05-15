@@ -15,8 +15,8 @@ namespace ChapeauUI
 {
     public partial class ReservationForm : Form
     {
-        ReservationService reservationService = new ReservationService();
-        Table CurrentTable;
+       private ReservationService reservationService = new ReservationService();
+       private  Table CurrentTable;
         public ReservationForm(Table CurrentTable)
         {
             InitializeComponent();
@@ -39,37 +39,34 @@ namespace ChapeauUI
         //verifies the information and applies if it works.
         private void btnAddReservation_Click(object sender, EventArgs e)
         {
-            if(txtName.Text.Length <1)
+            if(string.IsNullOrEmpty(txtName.Text))
             {
                 MessageBox.Show("Please enter a reserver name", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(PhoneNM == null)
+            else if(string.IsNullOrEmpty(txtPhone.Text)|| System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]")) 
             {
                 MessageBox.Show("Please enter a proper phone number", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if(monthCalendar1.SelectionStart.Date==null)
-            {
-                MessageBox.Show("Please pick a date", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (cmbHour.SelectedIndex <0 || cmbMinute.SelectedIndex<0)//come back to this.
+            }           
+            else if (cmbHour.SelectedIndex <0 || cmbMinute.SelectedIndex<0)
             {
                 MessageBox.Show("Please pick a time", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                //come back to this
-                DateTime Time = new DateTime(monthCalendar1.SelectionStart.Year,monthCalendar1.SelectionStart.Month, monthCalendar1.SelectionStart.Day,cmbHour.SelectedIndex,cmbMinute.SelectedIndex,0,DateTimeKind.Unspecified);
-                reservationService.CreateReservation(CurrentTable.TableNumber, Time, int.Parse(PhoneNM.ToString()),txtName.Text);
+                // database needed this in a string format.
+                string reservationDate = monthCalendar1.SelectionStart.Year.ToString() + "-"
+                   + monthCalendar1.SelectionStart.Month.ToString("00") + "-"
+                   + monthCalendar1.SelectionStart.Day.ToString("00") + " " + cmbHour.SelectedItem.ToString() + ":" + cmbMinute.SelectedItem.ToString() + ":" + "00";
+
+                reservationService.CreateReservation(CurrentTable.TableNumber,reservationDate,long.Parse(txtPhone.Text),txtName.Text);
+                MessageBox.Show("Reservation is created", "Reservation status", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();          
             }
         }
-
-       
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
-
-       
     }
 }

@@ -15,9 +15,8 @@ namespace ChapeauUI
 {
     public partial class LoginScreen : Form
     {
-        EmployeeService employeeService;
-        Employee loggedEmployee;//will be generated and passed in as a parameter for chapeau app after login button is clicked.
-        ChapeauApp applicationForm;// this will be assigned when user successfully logs in and opens itself
+        private EmployeeService employeeService;
+
         public LoginScreen()
         {
             InitializeComponent();
@@ -31,41 +30,49 @@ namespace ChapeauUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            List<Employee> allEmployees = employeeService.GetAllEmployees();
-            loggedEmployee = null;//it is null until user enter correct credentials.
-            //if username or password textbox is empty, show a messagebox that indicates that they need to be filled.
-            if (txtUsername.Text == null)
-                MessageBox.Show("Username section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else if (txtPassword.Text == null)
-                MessageBox.Show("Password section needs to be properly filled!!", "Missing credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            //if username or password textbox is empty, show a label that indicates that they need to be filled.
+            if (string.IsNullOrWhiteSpace(txtPassword.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+                MessageBox.Show("Incorrect password or username", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                foreach (Employee employee in allEmployees)
+                Employee loggedEmployee = employeeService.GetEmployeeByCredentials(txtUsername.Text, txtPassword.Text);
+
+                if (loggedEmployee == null)
+                    MessageBox.Show("Incorrect password or username", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
                 {
-                    if (employee.Username == txtUsername.Text)
-                    {
-                        if (employee.Password == txtPassword.Text)
-                        {
-                            //if password and username is the same then assign this employee as new employee and stop the loop.
-                            loggedEmployee = employee;
-                            break;
-                        }
-                    }
+                    this.Hide();
+
+                    CheckEnumForForms(loggedEmployee);
                 }
             }
-
-            if (loggedEmployee == null)
-                MessageBox.Show("Wrong username or password", "Incorrect credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
+        }
+        //Opens a different form for each type of employee.
+        private void CheckEnumForForms(Employee employee)
+        {
+            switch (employee.EmployeeType)
             {
-                //hides the login form to keep things clean.
-                this.Hide();
-                applicationForm = new ChapeauApp(loggedEmployee);
-
+                case EmployeeType.Waiter:
+                    TableView tableForm = new TableView(employee);
+                    tableForm.ShowDialog();
+                    break;
+                case EmployeeType.Manager:
+                    ManagerScreen managerForm = new ManagerScreen(employee);
+                    managerForm.ShowDialog();
+                    break;
+                default: // since it can only be kitchen or bar after manager and waiter.
+                    KitchenBarScreen KitchenBarForm = new KitchenBarScreen(employee);
+                    KitchenBarForm.ShowDialog();
+                    break;
+ 
             }
+        }
 
 
-
+        private void ChPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
         }
     }
 }

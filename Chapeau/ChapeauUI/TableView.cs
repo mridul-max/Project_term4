@@ -12,18 +12,18 @@ using ChapeauModel;
 
 namespace ChapeauUI
 {
-    public partial class ChapeauApp : Form
-    {
-        Employee loggedEmployee;
-        TableService tableService = new TableService();
-        List<Table> allTables;
+    public partial class TableView : Form
+    {//write private.
+        private Employee loggedEmployee;
+        private TableService tableService;
+        private List<Table> allTables;
 
 
-        public ChapeauApp(Employee loggedEmployee)
+        public TableView(Employee loggedEmployee)
         {
             InitializeComponent();
             this.loggedEmployee = loggedEmployee;
-            this.ShowDialog();
+            tableService = new TableService();         
         }
         private void ChapeauApp_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -32,9 +32,12 @@ namespace ChapeauUI
 
         private void ChapeauApp_Load(object sender, EventArgs e)
         {
-            
             allTables = tableService.GetAllTables();
-            lblUsername.Text = loggedEmployee.Name;
+            lblEmployee.Text = lblEmployee.Text + " " + loggedEmployee.Name;
+            if(loggedEmployee.EmployeeType==EmployeeType.Manager)
+            {
+                returnToManagementToolStripMenuItem.Visible = true;
+            }
         }
         void DisplayTableForm(int index)
         {
@@ -91,17 +94,18 @@ namespace ChapeauUI
             DisplayTableForm(9);
         }
 
-        private void btlLogoff_Click(object sender, EventArgs e)
+        private void returnToManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManagerScreen managementScreen = new ManagerScreen(loggedEmployee);
+            this.Hide();
+            managementScreen.ShowDialog();
+        }
+
+        private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoginScreen login = new LoginScreen();
             this.Hide();
             login.ShowDialog();
-           
-        }
-
-        private void restaurantViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pnl_tables.Show();
         }
     }
 }

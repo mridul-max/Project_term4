@@ -38,13 +38,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.PhoneNM = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNM)).BeginInit();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(422, 18);
+            this.monthCalendar1.Location = new System.Drawing.Point(34, 168);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
@@ -79,7 +78,7 @@
             // btnAddReservation
             // 
             this.btnAddReservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddReservation.Location = new System.Drawing.Point(64, 260);
+            this.btnAddReservation.Location = new System.Drawing.Point(68, 565);
             this.btnAddReservation.Name = "btnAddReservation";
             this.btnAddReservation.Size = new System.Drawing.Size(192, 48);
             this.btnAddReservation.TabIndex = 5;
@@ -90,7 +89,7 @@
             // cmbHour
             // 
             this.cmbHour.FormattingEnabled = true;
-            this.cmbHour.Location = new System.Drawing.Point(459, 257);
+            this.cmbHour.Location = new System.Drawing.Point(86, 425);
             this.cmbHour.Name = "cmbHour";
             this.cmbHour.Size = new System.Drawing.Size(57, 24);
             this.cmbHour.TabIndex = 6;
@@ -98,7 +97,7 @@
             // cmbMinute
             // 
             this.cmbMinute.FormattingEnabled = true;
-            this.cmbMinute.Location = new System.Drawing.Point(627, 257);
+            this.cmbMinute.Location = new System.Drawing.Point(235, 425);
             this.cmbMinute.Name = "cmbMinute";
             this.cmbMinute.Size = new System.Drawing.Size(57, 24);
             this.cmbMinute.TabIndex = 7;
@@ -106,7 +105,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(391, 260);
+            this.label3.Location = new System.Drawing.Point(34, 425);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 17);
             this.label3.TabIndex = 8;
@@ -115,30 +114,25 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(550, 260);
+            this.label4.Location = new System.Drawing.Point(172, 428);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Minutes";
             // 
-            // PhoneNM
+            // txtPhone
             // 
-            this.PhoneNM.Location = new System.Drawing.Point(215, 97);
-            this.PhoneNM.Maximum = new decimal(new int[] {
-            276447232,
-            23283,
-            0,
-            0});
-            this.PhoneNM.Name = "PhoneNM";
-            this.PhoneNM.Size = new System.Drawing.Size(166, 22);
-            this.PhoneNM.TabIndex = 10;
+            this.txtPhone.Location = new System.Drawing.Point(215, 99);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(166, 22);
+            this.txtPhone.TabIndex = 10;
             // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 496);
-            this.Controls.Add(this.PhoneNM);
+            this.ClientSize = new System.Drawing.Size(582, 903);
+            this.Controls.Add(this.txtPhone);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbMinute);
@@ -151,7 +145,6 @@
             this.Name = "ReservationForm";
             this.Text = "ReservationForm";
             this.Load += new System.EventHandler(this.ReservationForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.PhoneNM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +162,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.NumericUpDown PhoneNM;
+        private System.Windows.Forms.TextBox txtPhone;
     }
 }

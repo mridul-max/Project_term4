@@ -15,13 +15,34 @@ namespace ChapeauLogic
 
         public List<Reservation> GetAllReservations()
         {
-            List<Reservation> reservations = reservationDao.GetAllReservations();
 
-            return reservations;
+            try
+            {
+                return reservationDao.GetAllReservations();
+            }
+            catch 
+            {
+                string errorstr = "Chapeau App couldn't get the reservations";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
+
+
+
         }
-        public void CreateReservation(int tableNumber, DateTime reservationDate, long phoneNumber, string reserverName)
+        public void CreateReservation(int tableNumber, string reservationDate, long phoneNumber, string reserverName)
         {
-            reservationDao.CreateReservation(tableNumber, reservationDate, phoneNumber, reserverName);
+            try
+            {
+                reservationDao.CreateReservation(tableNumber, reservationDate, phoneNumber, reserverName);
+            }
+            catch 
+            {
+                string errorstr = "Chapeau App couldn't create the reservation";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
+
         }
 
     }

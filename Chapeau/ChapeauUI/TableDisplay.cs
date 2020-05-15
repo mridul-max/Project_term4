@@ -14,11 +14,11 @@ namespace ChapeauUI
 {
     public partial class TableDisplay : Form
     {
-        Table CurrentTable;
-        Payment CurrentTicket;
-        
-        ReservationService reservationService = new ReservationService();
-        List<Reservation> reservations;
+        private Table CurrentTable;
+        private Payment CurrentTicket;
+
+        private ReservationService reservationService = new ReservationService();
+        private  List<Reservation> reservations;
         public TableDisplay(Table CurrentTable)
         {
             InitializeComponent();
@@ -32,14 +32,18 @@ namespace ChapeauUI
         private void TableDisplay_Load(object sender, EventArgs e)
         {
             FillTableInformation();
+            UpdateTableView();
+        }
+        private void UpdateTableView()
+        {
             reservations = reservationService.GetAllReservations();
             comboBox1.Items.Clear();
             foreach (Reservation reservation in reservations)
             {
                 if (reservation.TableNumber == CurrentTable.TableNumber && reservation.ReservationDate >= DateTime.Now)
-                    comboBox1.Items.Add(reservation.ReserverName + reservation.ReservationDate.ToString());
+                    comboBox1.Items.Add(reservation.ReserverName +"  "+ reservation.ReservationDate.ToString());
             }
-            if(CurrentTable.IsOccupied)
+            if (CurrentTable.IsOccupied)
             {
                 BtnChout.Enabled = true;
             }
@@ -47,7 +51,6 @@ namespace ChapeauUI
             {
                 BtnChout.Enabled = false;
             }
-
         }
         //fills the labels according to the information.
         void FillTableInformation()
@@ -64,17 +67,22 @@ namespace ChapeauUI
         {
             ReservationForm form = new ReservationForm(CurrentTable);
             form.ShowDialog();
+            UpdateTableView();
         }
         private void BtnOrder_Click(object sender, EventArgs e)
         {
             OrderingScreen screen = new OrderingScreen(CurrentTable);
             screen.ShowDialog();
-        }   
+            UpdateTableView();
+        }
 
         private void BtnChout_Click(object sender, EventArgs e)
         {
             PaymentScreen screen = new PaymentScreen(CurrentTicket);
             screen.ShowDialog();
+            UpdateTableView();
         }
+
+      
     }
 }
