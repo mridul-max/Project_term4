@@ -199,7 +199,7 @@
             // 
             // pcboxtb1
             // 
-            this.pcboxtb1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.pcboxtb1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcboxtb1.ErrorImage")));
             this.pcboxtb1.Image = global::ChapeauUI.Properties.Resources.tableLogo11;
             this.pcboxtb1.Location = new System.Drawing.Point(55, 41);
@@ -209,7 +209,6 @@
             this.pcboxtb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb1.TabIndex = 0;
             this.pcboxtb1.TabStop = false;
-            this.pcboxtb1.UseWaitCursor = true;
             this.pcboxtb1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblEmployee
@@ -289,7 +288,6 @@
             this.Name = "TableView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChapeauApp";
-            this.UseWaitCursor = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChapeauApp_FormClosing);
             this.Load += new System.EventHandler(this.ChapeauApp_Load);
             this.pnl_tables.ResumeLayout(false);
