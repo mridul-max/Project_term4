@@ -65,14 +65,13 @@
       <DependentUpon>OrderingConfirmation.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlls\OrderingRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ManagerScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagerScreen.Designer.cs">
       <DependentUpon>ManagerScreen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OrderingRow.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlls\OrderingRow.Designer.cs">
       <DependentUpon>OrderingRow.cs</DependentUpon>
@@ -119,11 +118,10 @@
       <DependentUpon>OrderingConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlls\OrderingRow.resx">
+      <DependentUpon>OrderingRow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManagerScreen.resx">
       <DependentUpon>ManagerScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrderingRow.resx">
-      <DependentUpon>OrderingRow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderingScreen.resx">
       <DependentUpon>OrderingScreen.cs</DependentUpon>
