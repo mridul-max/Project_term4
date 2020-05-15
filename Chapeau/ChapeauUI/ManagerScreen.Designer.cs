@@ -42,10 +42,11 @@
             // 
             // btnLogoff
             // 
-            this.btnLogoff.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogoff.Location = new System.Drawing.Point(409, 36);
+            this.btnLogoff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogoff.Location = new System.Drawing.Point(307, 29);
+            this.btnLogoff.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogoff.Name = "btnLogoff";
-            this.btnLogoff.Size = new System.Drawing.Size(120, 35);
+            this.btnLogoff.Size = new System.Drawing.Size(90, 28);
             this.btnLogoff.TabIndex = 0;
             this.btnLogoff.Text = "Log off";
             this.btnLogoff.UseVisualStyleBackColor = true;
@@ -54,10 +55,11 @@
             // 
             this.lblLogged.AutoSize = true;
             this.lblLogged.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogged.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogged.Location = new System.Drawing.Point(12, 42);
+            this.lblLogged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogged.Location = new System.Drawing.Point(9, 34);
+            this.lblLogged.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogged.Name = "lblLogged";
-            this.lblLogged.Size = new System.Drawing.Size(130, 22);
+            this.lblLogged.Size = new System.Drawing.Size(117, 20);
             this.lblLogged.TabIndex = 2;
             this.lblLogged.Text = "Logged in as:";
             // 
@@ -70,7 +72,8 @@
             this.logOffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(582, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,57 +84,59 @@
             this.tableViewToolStripMenuItem,
             this.editAccountsToolStripMenuItem,
             this.editStockToolStripMenuItem});
-            this.managementToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.managementToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
             this.managementToolStripMenuItem.Text = "Management";
             // 
             // kitchenbarScreenToolStripMenuItem
             // 
             this.kitchenbarScreenToolStripMenuItem.Name = "kitchenbarScreenToolStripMenuItem";
-            this.kitchenbarScreenToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.kitchenbarScreenToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.kitchenbarScreenToolStripMenuItem.Text = "Kitchen/bar screen";
             this.kitchenbarScreenToolStripMenuItem.Click += new System.EventHandler(this.kitchenbarScreenToolStripMenuItem_Click);
             // 
             // tableViewToolStripMenuItem
             // 
             this.tableViewToolStripMenuItem.Name = "tableViewToolStripMenuItem";
-            this.tableViewToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.tableViewToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.tableViewToolStripMenuItem.Text = "Table view";
             this.tableViewToolStripMenuItem.Click += new System.EventHandler(this.tableViewToolStripMenuItem_Click);
             // 
             // editAccountsToolStripMenuItem
             // 
             this.editAccountsToolStripMenuItem.Name = "editAccountsToolStripMenuItem";
-            this.editAccountsToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.editAccountsToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.editAccountsToolStripMenuItem.Text = "Edit accounts";
             // 
             // editStockToolStripMenuItem
             // 
             this.editStockToolStripMenuItem.Name = "editStockToolStripMenuItem";
-            this.editStockToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.editStockToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
             this.editStockToolStripMenuItem.Text = "Edit stock";
             // 
             // logOffToolStripMenuItem
             // 
-            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(91, 26);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // ManagerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(582, 903);
+            this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.lblLogged);
             this.Controls.Add(this.btnLogoff);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManagerScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerScreen_FormClosing);
             this.Load += new System.EventHandler(this.ManagerScreen_Load);

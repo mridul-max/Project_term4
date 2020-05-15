@@ -155,6 +155,7 @@
             this.Controls.Add(this.flpCurrentOrderItems);
             this.Controls.Add(this.label1);
             this.Name = "OrderingScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderingScreen";
             this.tabAllItems.ResumeLayout(false);
             this.tabDrinks.ResumeLayout(false);
