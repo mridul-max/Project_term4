@@ -23,10 +23,7 @@ namespace ChapeauDAL
             }
             //write the error into the error.log file
             writer.WriteLine($"Occurance time: {DateTime.Now.ToString()} Explanation: {explanation}");
-            writer.Close();
-            
-
-
+            writer.Close();           
 
         }
     }

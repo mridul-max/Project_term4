@@ -74,20 +74,20 @@
             this.pnl_tables.Controls.Add(this.pcboxtb3);
             this.pnl_tables.Controls.Add(this.pcboxtb2);
             this.pnl_tables.Controls.Add(this.pcboxtb1);
-            this.pnl_tables.Location = new System.Drawing.Point(236, 68);
+            this.pnl_tables.Location = new System.Drawing.Point(12, 68);
             this.pnl_tables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_tables.Name = "pnl_tables";
-            this.pnl_tables.Size = new System.Drawing.Size(540, 930);
+            this.pnl_tables.Size = new System.Drawing.Size(1021, 976);
             this.pnl_tables.TabIndex = 0;
             // 
             // pcboxtb10
             // 
             this.pcboxtb10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb10.Image = global::ChapeauUI.Properties.Resources.tableLogo102;
-            this.pcboxtb10.Location = new System.Drawing.Point(333, 711);
+            this.pcboxtb10.Location = new System.Drawing.Point(628, 791);
             this.pcboxtb10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb10.Name = "pcboxtb10";
-            this.pcboxtb10.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb10.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb10.TabIndex = 9;
             this.pcboxtb10.TabStop = false;
@@ -97,10 +97,10 @@
             // 
             this.pcboxtb9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb9.Image = global::ChapeauUI.Properties.Resources.tableLogo91;
-            this.pcboxtb9.Location = new System.Drawing.Point(55, 711);
+            this.pcboxtb9.Location = new System.Drawing.Point(208, 791);
             this.pcboxtb9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb9.Name = "pcboxtb9";
-            this.pcboxtb9.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb9.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb9.TabIndex = 8;
             this.pcboxtb9.TabStop = false;
@@ -110,10 +110,10 @@
             // 
             this.pcboxtb8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb8.Image = global::ChapeauUI.Properties.Resources.tableLogo81;
-            this.pcboxtb8.Location = new System.Drawing.Point(333, 535);
+            this.pcboxtb8.Location = new System.Drawing.Point(628, 606);
             this.pcboxtb8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb8.Name = "pcboxtb8";
-            this.pcboxtb8.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb8.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb8.TabIndex = 7;
             this.pcboxtb8.TabStop = false;
@@ -123,10 +123,10 @@
             // 
             this.pcboxtb7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb7.Image = global::ChapeauUI.Properties.Resources.tableLogo71;
-            this.pcboxtb7.Location = new System.Drawing.Point(55, 535);
+            this.pcboxtb7.Location = new System.Drawing.Point(208, 606);
             this.pcboxtb7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb7.Name = "pcboxtb7";
-            this.pcboxtb7.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb7.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb7.TabIndex = 6;
             this.pcboxtb7.TabStop = false;
@@ -136,10 +136,10 @@
             // 
             this.pcboxtb6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb6.Image = global::ChapeauUI.Properties.Resources.tableLogo61;
-            this.pcboxtb6.Location = new System.Drawing.Point(333, 377);
+            this.pcboxtb6.Location = new System.Drawing.Point(628, 419);
             this.pcboxtb6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb6.Name = "pcboxtb6";
-            this.pcboxtb6.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb6.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb6.TabIndex = 5;
             this.pcboxtb6.TabStop = false;
@@ -149,10 +149,10 @@
             // 
             this.pcboxtb5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb5.Image = global::ChapeauUI.Properties.Resources.tableLogo51;
-            this.pcboxtb5.Location = new System.Drawing.Point(55, 377);
+            this.pcboxtb5.Location = new System.Drawing.Point(208, 419);
             this.pcboxtb5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb5.Name = "pcboxtb5";
-            this.pcboxtb5.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb5.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb5.TabIndex = 4;
             this.pcboxtb5.TabStop = false;
@@ -162,10 +162,10 @@
             // 
             this.pcboxtb4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb4.Image = global::ChapeauUI.Properties.Resources.tableLogo41;
-            this.pcboxtb4.Location = new System.Drawing.Point(333, 208);
+            this.pcboxtb4.Location = new System.Drawing.Point(628, 232);
             this.pcboxtb4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb4.Name = "pcboxtb4";
-            this.pcboxtb4.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb4.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb4.TabIndex = 3;
             this.pcboxtb4.TabStop = false;
@@ -175,10 +175,10 @@
             // 
             this.pcboxtb3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb3.Image = global::ChapeauUI.Properties.Resources.tableLogo31;
-            this.pcboxtb3.Location = new System.Drawing.Point(55, 208);
+            this.pcboxtb3.Location = new System.Drawing.Point(208, 232);
             this.pcboxtb3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb3.Name = "pcboxtb3";
-            this.pcboxtb3.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb3.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb3.TabIndex = 2;
             this.pcboxtb3.TabStop = false;
@@ -188,10 +188,10 @@
             // 
             this.pcboxtb2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb2.Image = global::ChapeauUI.Properties.Resources.tableLogo21;
-            this.pcboxtb2.Location = new System.Drawing.Point(333, 41);
+            this.pcboxtb2.Location = new System.Drawing.Point(628, 41);
             this.pcboxtb2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb2.Name = "pcboxtb2";
-            this.pcboxtb2.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb2.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb2.TabIndex = 1;
             this.pcboxtb2.TabStop = false;
@@ -202,10 +202,10 @@
             this.pcboxtb1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcboxtb1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pcboxtb1.ErrorImage")));
             this.pcboxtb1.Image = global::ChapeauUI.Properties.Resources.tableLogo11;
-            this.pcboxtb1.Location = new System.Drawing.Point(55, 41);
+            this.pcboxtb1.Location = new System.Drawing.Point(208, 41);
             this.pcboxtb1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcboxtb1.Name = "pcboxtb1";
-            this.pcboxtb1.Size = new System.Drawing.Size(109, 98);
+            this.pcboxtb1.Size = new System.Drawing.Size(130, 130);
             this.pcboxtb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcboxtb1.TabIndex = 0;
             this.pcboxtb1.TabStop = false;
@@ -216,7 +216,7 @@
             this.lblEmployee.AutoSize = true;
             this.lblEmployee.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployee.Location = new System.Drawing.Point(12, 44);
+            this.lblEmployee.Location = new System.Drawing.Point(778, 33);
             this.lblEmployee.Name = "lblEmployee";
             this.lblEmployee.Size = new System.Drawing.Size(123, 20);
             this.lblEmployee.TabIndex = 2;
