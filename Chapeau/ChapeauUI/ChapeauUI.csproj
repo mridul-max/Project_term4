@@ -128,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
@@ -160,6 +161,9 @@
       <Project>{9ca33d7b-94fc-4ec1-8666-eda3116a667e}</Project>
       <Name>ChapeauModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

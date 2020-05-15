@@ -32,11 +32,11 @@
             this.lblLogged = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kitchenbarScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,13 +85,6 @@
             this.managementToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.managementToolStripMenuItem.Text = "Management";
             // 
-            // logOffToolStripMenuItem
-            // 
-            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(91, 26);
-            this.logOffToolStripMenuItem.Text = "Log off";
-            // 
             // kitchenbarScreenToolStripMenuItem
             // 
             this.kitchenbarScreenToolStripMenuItem.Name = "kitchenbarScreenToolStripMenuItem";
@@ -115,6 +108,13 @@
             this.editStockToolStripMenuItem.Name = "editStockToolStripMenuItem";
             this.editStockToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.editStockToolStripMenuItem.Text = "Edit stock";
+            // 
+            // logOffToolStripMenuItem
+            // 
+            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(91, 26);
+            this.logOffToolStripMenuItem.Text = "Log off";
             // 
             // ManagerScreen
             // 
