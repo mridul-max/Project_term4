@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KitchenBarScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitchenBarScreen.Designer.cs">
+      <DependentUpon>KitchenBarScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerScreen.Designer.cs">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="OrderingRow.cs">
       <SubType>UserControl</SubType>
@@ -90,8 +102,14 @@
     <Compile Include="TableView.Designer.cs">
       <DependentUpon>TableView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="KitchenBarScreen.resx">
+      <DependentUpon>KitchenBarScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerScreen.resx">
+      <DependentUpon>ManagerScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderingRow.resx">
       <DependentUpon>OrderingRow.cs</DependentUpon>

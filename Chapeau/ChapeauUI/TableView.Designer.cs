@@ -41,11 +41,12 @@
             this.pcboxtb3 = new System.Windows.Forms.PictureBox();
             this.pcboxtb2 = new System.Windows.Forms.PictureBox();
             this.pcboxtb1 = new System.Windows.Forms.PictureBox();
-            this.btlLogoff = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEmployee = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.restaurantViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_tables.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcboxtb9)).BeginInit();
@@ -72,10 +73,10 @@
             this.pnl_tables.Controls.Add(this.pcboxtb3);
             this.pnl_tables.Controls.Add(this.pcboxtb2);
             this.pnl_tables.Controls.Add(this.pcboxtb1);
-            this.pnl_tables.Location = new System.Drawing.Point(12, 31);
+            this.pnl_tables.Location = new System.Drawing.Point(27, 92);
             this.pnl_tables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_tables.Name = "pnl_tables";
-            this.pnl_tables.Size = new System.Drawing.Size(551, 1023);
+            this.pnl_tables.Size = new System.Drawing.Size(551, 949);
             this.pnl_tables.TabIndex = 0;
             // 
             // pcboxtb10
@@ -209,68 +210,72 @@
             this.pcboxtb1.TabStop = false;
             this.pcboxtb1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // btlLogoff
+            // lblEmployee
             // 
-            this.btlLogoff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btlLogoff.Location = new System.Drawing.Point(601, 166);
-            this.btlLogoff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btlLogoff.Name = "btlLogoff";
-            this.btlLogoff.Size = new System.Drawing.Size(124, 46);
-            this.btlLogoff.TabIndex = 1;
-            this.btlLogoff.Text = "Log off";
-            this.btlLogoff.UseVisualStyleBackColor = true;
-            this.btlLogoff.Click += new System.EventHandler(this.btlLogoff_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(595, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Logged in as:";
+            this.lblEmployee.AutoSize = true;
+            this.lblEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployee.Location = new System.Drawing.Point(22, 54);
+            this.lblEmployee.Name = "lblEmployee";
+            this.lblEmployee.Size = new System.Drawing.Size(123, 20);
+            this.lblEmployee.TabIndex = 2;
+            this.lblEmployee.Text = "Logged in as:";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(767, 90);
+            this.lblUsername.Location = new System.Drawing.Point(22, 49);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(18, 25);
-            this.lblUsername.TabIndex = 3;
-            this.lblUsername.Text = " ";
+            this.lblUsername.Size = new System.Drawing.Size(143, 25);
+            this.lblUsername.TabIndex = 2;
+            this.lblUsername.Text = "Logged in as:";
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.restaurantViewToolStripMenuItem});
+            this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(981, 28);
-            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.Size = new System.Drawing.Size(782, 30);
+            this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // restaurantViewToolStripMenuItem
+            // menuToolStripMenuItem
             // 
-            this.restaurantViewToolStripMenuItem.Name = "restaurantViewToolStripMenuItem";
-            this.restaurantViewToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
-            this.restaurantViewToolStripMenuItem.Text = "Restaurant view";
-            this.restaurantViewToolStripMenuItem.Click += new System.EventHandler(this.restaurantViewToolStripMenuItem_Click);
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.returnToManagementToolStripMenuItem,
+            this.logOffToolStripMenuItem});
+            this.menuToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // returnToManagementToolStripMenuItem
+            // 
+            this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
+            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.returnToManagementToolStripMenuItem.Text = "Management";
+            this.returnToManagementToolStripMenuItem.Visible = false;
+            this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.returnToManagementToolStripMenuItem_Click);
+            // 
+            // logOffToolStripMenuItem
+            // 
+            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logOffToolStripMenuItem.Text = "Log off";
+            this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
             // TableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 953);
-            this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btlLogoff);
+            this.ClientSize = new System.Drawing.Size(782, 903);
+            this.Controls.Add(this.lblEmployee);
             this.Controls.Add(this.pnl_tables);
             this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TableView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -309,10 +314,11 @@
         private System.Windows.Forms.PictureBox pcboxtb3;
         private System.Windows.Forms.PictureBox pcboxtb2;
         private System.Windows.Forms.PictureBox pcboxtb1;
-        private System.Windows.Forms.Button btlLogoff;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblEmployee;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem restaurantViewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToManagementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
     }
 }
