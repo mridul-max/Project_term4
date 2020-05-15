@@ -43,14 +43,14 @@
             // 
             this.txtUsername.Location = new System.Drawing.Point(203, 407);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(284, 22);
+            this.txtUsername.Size = new System.Drawing.Size(284, 19);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(203, 484);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(284, 22);
+            this.txtPassword.Size = new System.Drawing.Size(284, 19);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -61,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(49, 407);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 25);
+            this.label1.Size = new System.Drawing.Size(96, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username:";
             // 
@@ -72,7 +72,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(49, 480);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.Size = new System.Drawing.Size(91, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
@@ -83,7 +83,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(148, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(315, 29);
+            this.label3.Size = new System.Drawing.Size(255, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Welcome to Chapeau App";
             // 
@@ -105,7 +105,7 @@
             this.ChPassword.BackColor = System.Drawing.Color.Transparent;
             this.ChPassword.Location = new System.Drawing.Point(346, 539);
             this.ChPassword.Name = "ChPassword";
-            this.ChPassword.Size = new System.Drawing.Size(141, 21);
+            this.ChPassword.Size = new System.Drawing.Size(114, 17);
             this.ChPassword.TabIndex = 7;
             this.ChPassword.Text = "Show password";
             this.ChPassword.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@
             // 
             // LoginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
