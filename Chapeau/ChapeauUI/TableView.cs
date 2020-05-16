@@ -132,7 +132,7 @@ namespace ChapeauUI
         }
         #endregion
 
-        private void logOffToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void logOffToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             LoginScreen login = new LoginScreen();
             this.Hide();
