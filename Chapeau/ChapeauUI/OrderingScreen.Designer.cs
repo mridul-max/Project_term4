@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.flpCurrentOrderItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabAllItems = new TransparentTabControl();
+            this.tabMenu = new TransparentTabControl();
             this.tabDrinks = new System.Windows.Forms.TabPage();
             this.flpDrinkItems = new System.Windows.Forms.FlowLayoutPanel();
             this.tabDinner = new System.Windows.Forms.TabPage();
             this.flpDinnerItems = new System.Windows.Forms.FlowLayoutPanel();
             this.tabLunch = new System.Windows.Forms.TabPage();
             this.flpLunchItems = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabAllItems.SuspendLayout();
+            this.tabMenu.SuspendLayout();
             this.tabDrinks.SuspendLayout();
             this.tabDinner.SuspendLayout();
             this.tabLunch.SuspendLayout();
@@ -68,14 +68,14 @@
             // 
             // tabAllItems
             // 
-            this.tabAllItems.Controls.Add(this.tabDrinks);
-            this.tabAllItems.Controls.Add(this.tabDinner);
-            this.tabAllItems.Controls.Add(this.tabLunch);
-            this.tabAllItems.Location = new System.Drawing.Point(12, 88);
-            this.tabAllItems.Name = "tabAllItems";
-            this.tabAllItems.SelectedIndex = 0;
-            this.tabAllItems.Size = new System.Drawing.Size(377, 816);
-            this.tabAllItems.TabIndex = 3;
+            this.tabMenu.Controls.Add(this.tabDrinks);
+            this.tabMenu.Controls.Add(this.tabDinner);
+            this.tabMenu.Controls.Add(this.tabLunch);
+            this.tabMenu.Location = new System.Drawing.Point(12, 88);
+            this.tabMenu.Name = "tabAllItems";
+            this.tabMenu.SelectedIndex = 0;
+            this.tabMenu.Size = new System.Drawing.Size(377, 816);
+            this.tabMenu.TabIndex = 3;
             // 
             // tabDrinks
             // 
@@ -151,13 +151,13 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 1241);
-            this.Controls.Add(this.tabAllItems);
+            this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.flpCurrentOrderItems);
             this.Controls.Add(this.label1);
             this.Name = "OrderingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderingScreen";
-            this.tabAllItems.ResumeLayout(false);
+            this.tabMenu.ResumeLayout(false);
             this.tabDrinks.ResumeLayout(false);
             this.tabDrinks.PerformLayout();
             this.tabDinner.ResumeLayout(false);
@@ -174,7 +174,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flpDrinkItems;
         private System.Windows.Forms.FlowLayoutPanel flpCurrentOrderItems;
-        private TransparentTabControl tabAllItems;
+        private TransparentTabControl tabMenu;
         private System.Windows.Forms.TabPage tabDrinks;
         private System.Windows.Forms.TabPage tabDinner;
         private System.Windows.Forms.TabPage tabLunch;

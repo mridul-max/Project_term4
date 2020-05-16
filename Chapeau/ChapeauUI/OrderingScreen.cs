@@ -33,7 +33,7 @@ namespace ChapeauUI
             allOrderItems = new List<OrderingRow>();
             headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
             subHeaderFont = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
-            tabAllItems.MakeTransparent();
+            tabMenu.MakeTransparent();
 
             FillAllItemsPanel();
             FillCurrentItemsPanel();
