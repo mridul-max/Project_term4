@@ -29,7 +29,7 @@ namespace ChapeauLogic
         {
             try
             {
-                return paymentDao.GetById(id);
+                return paymentDao.GetOrderById(id);
             }
             catch
             {

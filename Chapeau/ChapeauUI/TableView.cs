@@ -40,6 +40,7 @@ namespace ChapeauUI
         {
             TableDisplay tableDisplay = new TableDisplay(allTables[index]);
             tableDisplay.ShowDialog();
+            CheckOccupancy();
         }
         private void TableView_FormClosing_1(object sender, FormClosingEventArgs e)
         {
@@ -83,61 +84,51 @@ namespace ChapeauUI
         private void pcboxtb1_Click(object sender, EventArgs e)
         {
             DisplayTableForm(0);
-            CheckOccupancy();
         }
 
         private void pcboxtb2_Click(object sender, EventArgs e)
         {
             DisplayTableForm(1);
-            CheckOccupancy();
         }
 
         private void pcboxtb3_Click(object sender, EventArgs e)
         {
             DisplayTableForm(2);
-            CheckOccupancy();
         }
 
         private void pcboxtb4_Click(object sender, EventArgs e)
         {
             DisplayTableForm(3);
-            CheckOccupancy();
         }
 
         private void pcboxtb5_Click(object sender, EventArgs e)
         {
             DisplayTableForm(4);
-            CheckOccupancy();
         }
 
         private void pcboxtb6_Click(object sender, EventArgs e)
         {
             DisplayTableForm(5);
-            CheckOccupancy();
         }
 
         private void pcboxtb7_Click(object sender, EventArgs e)
         {
             DisplayTableForm(6);
-            CheckOccupancy();
         }
 
         private void pcboxtb8_Click(object sender, EventArgs e)
         {
             DisplayTableForm(7);
-            CheckOccupancy();
         }
 
         private void pcboxtb9_Click(object sender, EventArgs e)
         {
             DisplayTableForm(8);
-            CheckOccupancy();
         }
 
         private void pcboxtb10_Click(object sender, EventArgs e)
         {
             DisplayTableForm(9);
-            CheckOccupancy();
         }
         #endregion
     }
