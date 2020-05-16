@@ -131,5 +131,12 @@ namespace ChapeauUI
             DisplayTableForm(9);
         }
         #endregion
+
+        private void logOffToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            LoginScreen login = new LoginScreen();
+            this.Hide();
+            login.ShowDialog();
+        }
     }
 }
