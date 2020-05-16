@@ -52,31 +52,30 @@
             this.groupBox1.Controls.Add(this.lblOccupy);
             this.groupBox1.Controls.Add(this.lblCapacity);
             this.groupBox1.Controls.Add(this.lblTableNumber);
-            this.groupBox1.Location = new System.Drawing.Point(9, 31);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 38);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(363, 403);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(484, 496);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 332);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(5, 409);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(350, 21);
+            this.comboBox1.Size = new System.Drawing.Size(465, 24);
             this.comboBox1.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1, 288);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(1, 354);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(221, 26);
+            this.label4.Size = new System.Drawing.Size(282, 32);
             this.label4.TabIndex = 6;
             this.label4.Text = "Reservation Status:";
             // 
@@ -84,10 +83,9 @@
             // 
             this.lblOccupy.AutoSize = true;
             this.lblOccupy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOccupy.Location = new System.Drawing.Point(5, 180);
-            this.lblOccupy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOccupy.Location = new System.Drawing.Point(7, 222);
             this.lblOccupy.Name = "lblOccupy";
-            this.lblOccupy.Size = new System.Drawing.Size(137, 26);
+            this.lblOccupy.Size = new System.Drawing.Size(175, 32);
             this.lblOccupy.TabIndex = 5;
             this.lblOccupy.Text = "Occupancy:";
             // 
@@ -95,10 +93,9 @@
             // 
             this.lblCapacity.AutoSize = true;
             this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacity.Location = new System.Drawing.Point(5, 103);
-            this.lblCapacity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCapacity.Location = new System.Drawing.Point(7, 127);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(112, 26);
+            this.lblCapacity.Size = new System.Drawing.Size(143, 32);
             this.lblCapacity.TabIndex = 3;
             this.lblCapacity.Text = "Capacity:";
             // 
@@ -106,10 +103,9 @@
             // 
             this.lblTableNumber.AutoSize = true;
             this.lblTableNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableNumber.Location = new System.Drawing.Point(5, 37);
-            this.lblTableNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTableNumber.Location = new System.Drawing.Point(7, 46);
             this.lblTableNumber.Name = "lblTableNumber";
-            this.lblTableNumber.Size = new System.Drawing.Size(168, 26);
+            this.lblTableNumber.Size = new System.Drawing.Size(215, 32);
             this.lblTableNumber.TabIndex = 1;
             this.lblTableNumber.Text = "Table Number:";
             // 
@@ -118,11 +114,11 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(376, 31);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(501, 38);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(351, 604);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(468, 743);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Order Status";
@@ -130,29 +126,29 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(62, 130);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(83, 160);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(230, 13);
+            this.label5.Size = new System.Drawing.Size(310, 17);
             this.label5.TabIndex = 1;
             this.label5.Text = "There will be orders here that belongs to tables.";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 111);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(24, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 17);
             this.label2.TabIndex = 0;
             // 
             // Btnreserve
             // 
+            this.Btnreserve.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.Btnreserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnreserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btnreserve.Location = new System.Drawing.Point(9, 439);
-            this.Btnreserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnreserve.Location = new System.Drawing.Point(12, 540);
+            this.Btnreserve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btnreserve.Name = "Btnreserve";
-            this.Btnreserve.Size = new System.Drawing.Size(142, 42);
+            this.Btnreserve.Size = new System.Drawing.Size(207, 59);
             this.Btnreserve.TabIndex = 2;
             this.Btnreserve.Text = "Add reservation";
             this.Btnreserve.UseVisualStyleBackColor = true;
@@ -160,11 +156,13 @@
             // 
             // BtnOrder
             // 
+            this.BtnOrder.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.BtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOrder.Location = new System.Drawing.Point(169, 439);
-            this.BtnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnOrder.Location = new System.Drawing.Point(240, 540);
+            this.BtnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnOrder.Name = "BtnOrder";
-            this.BtnOrder.Size = new System.Drawing.Size(142, 41);
+            this.BtnOrder.Size = new System.Drawing.Size(189, 50);
             this.BtnOrder.TabIndex = 3;
             this.BtnOrder.Text = "Add Order";
             this.BtnOrder.UseVisualStyleBackColor = true;
@@ -172,12 +170,14 @@
             // 
             // BtnChout
             // 
+            this.BtnChout.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BtnChout.Enabled = false;
+            this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChout.Location = new System.Drawing.Point(9, 502);
-            this.BtnChout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnChout.Location = new System.Drawing.Point(12, 618);
+            this.BtnChout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnChout.Name = "BtnChout";
-            this.BtnChout.Size = new System.Drawing.Size(142, 41);
+            this.BtnChout.Size = new System.Drawing.Size(189, 50);
             this.BtnChout.TabIndex = 4;
             this.BtnChout.Text = "Check out";
             this.BtnChout.UseVisualStyleBackColor = true;
@@ -185,17 +185,17 @@
             // 
             // TableDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.ClientSize = new System.Drawing.Size(1045, 1055);
             this.Controls.Add(this.BtnChout);
             this.Controls.Add(this.BtnOrder);
             this.Controls.Add(this.Btnreserve);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "TableDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

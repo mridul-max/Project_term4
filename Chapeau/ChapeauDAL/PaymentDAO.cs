@@ -40,7 +40,7 @@ namespace ChapeauDAL
             }
             return payments;
         }
-        public Payment GetById(int id)
+        public Payment GetOrderById(int id)
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand("SELECT [OrderID],TableNumber,EmployeeID,TotalPriceNoVAT,TotalPriceVAT,PaymentMethod,PaymentDateTimeFROM [Order] WHERE OrderID = @Id;", conn);
@@ -59,7 +59,7 @@ namespace ChapeauDAL
         {
                                  
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [Order]VALUES(@OrderID,@TableNumber,@EmployeeID,@TotalPriceNoVAT,@TotalPriceVAT,@PaymentMethod,@PaymentDateTime);", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [Order] VALUES(@OrderID,@TableNumber,@EmployeeID,@TotalPriceNoVAT,@TotalPriceVAT,@PaymentMethod,@PaymentDateTime);", conn);
             cmd.Parameters.AddWithValue("@OrderID", payment.PaymentID);
             cmd.Parameters.AddWithValue("@TableNumber", payment.TableNumber);
             cmd.Parameters.AddWithValue("@EmployeeID", payment.EmployeeID);
@@ -71,7 +71,17 @@ namespace ChapeauDAL
             reader.Close();
             conn.Close();
         }
+        public void CreatePayment(int tableNumber,int employeeID)
+        {
 
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("insert into [order] VALUES(@TableNumber,@EmployeeID,NULL,NULL,NULL,NULL);", conn);
+            cmd.Parameters.AddWithValue("@TableNumber", tableNumber);
+            cmd.Parameters.AddWithValue("@EmployeeID", employeeID);           
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+        }
 
         private Payment ReadPayment(SqlDataReader reader)
         {

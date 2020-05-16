@@ -61,6 +61,12 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableView.Designer.cs">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlls\OrderingConfirmation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,17 +111,14 @@
     <Compile Include="TableDisplay.Designer.cs">
       <DependentUpon>TableDisplay.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TableView.Designer.cs">
-      <DependentUpon>TableView.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="KitchenBarScreen.resx">
       <DependentUpon>KitchenBarScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableView.resx">
+      <DependentUpon>TableView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlls\OrderingConfirmation.resx">
       <DependentUpon>OrderingConfirmation.cs</DependentUpon>
@@ -148,9 +151,6 @@
     <EmbeddedResource Include="TableDisplay.resx">
       <DependentUpon>TableDisplay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableView.resx">
-      <DependentUpon>TableView.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -181,34 +181,40 @@
     <None Include="Resources\chapeauLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo1.png" />
+    <None Include="Resources\table1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo2.png" />
+    <None Include="Resources\table2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo3.png" />
+    <None Include="Resources\table3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo4.png" />
+    <None Include="Resources\table4.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo5.png" />
+    <None Include="Resources\table5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo6.png" />
+    <None Include="Resources\table6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo7.png" />
+    <None Include="Resources\table7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo8.png" />
+    <None Include="Resources\table8.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo9.png" />
+    <None Include="Resources\table9.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tableLogo10.png" />
+    <None Include="Resources\table10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eating.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

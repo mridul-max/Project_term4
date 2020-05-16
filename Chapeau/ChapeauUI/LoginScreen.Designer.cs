@@ -43,7 +43,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(144, 413);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(284, 28);
+            this.txtUsername.Size = new System.Drawing.Size(284, 34);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
@@ -51,7 +51,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(144, 517);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(284, 28);
+            this.txtPassword.Size = new System.Drawing.Size(284, 34);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -62,7 +62,7 @@
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(225, 369);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.Size = new System.Drawing.Size(133, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
@@ -73,13 +73,16 @@
             this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(225, 474);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 24);
+            this.label2.Size = new System.Drawing.Size(128, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnLogin.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(144, 639);
             this.btnLogin.Name = "btnLogin";
@@ -95,7 +98,7 @@
             this.ChPassword.BackColor = System.Drawing.Color.Transparent;
             this.ChPassword.Location = new System.Drawing.Point(212, 572);
             this.ChPassword.Name = "ChPassword";
-            this.ChPassword.Size = new System.Drawing.Size(114, 17);
+            this.ChPassword.Size = new System.Drawing.Size(141, 21);
             this.ChPassword.TabIndex = 7;
             this.ChPassword.Text = "Show password";
             this.ChPassword.UseVisualStyleBackColor = false;
@@ -115,7 +118,7 @@
             // 
             // LoginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
