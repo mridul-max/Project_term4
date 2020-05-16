@@ -10,48 +10,48 @@ namespace ChapeauLogic
 {
     public class PaymentService
     {
-        PaymentDAO paymentDao = new PaymentDAO();
-        public void CompletePayment(Payment payment)
-        {
-            try
-            {
-                paymentDao.CompletePayment(payment);
-            }
-            catch
-            {
-                string errorstr = "Chapeau App couldn't finish  the payment";
-                ErrorDAO error = new ErrorDAO(errorstr);
-                throw;
-            }
+    //    PaymentDAO paymentDao = new PaymentDAO();
+    //    public void CompletePayment(Order payment)
+    //    {
+    //        try
+    //        {
+    //            paymentDao.CompletePayment(payment);
+    //        }
+    //        catch
+    //        {
+    //            string errorstr = "Chapeau App couldn't finish  the payment";
+    //            ErrorDAO error = new ErrorDAO(errorstr);
+    //            throw;
+    //        }
             
-        }
-        public Payment GetById(int id)
-        {
-            try
-            {
-                return paymentDao.GetOrderById(id);
-            }
-            catch
-            {
-                string errorstr = "Chapeau App couldn't get  the payment";
-                ErrorDAO error = new ErrorDAO(errorstr);
-                throw;
-            }
+    //    }
+    //    public Order GetById(int id)
+    //    {
+    //        try
+    //        {
+    //            return paymentDao.GetOrderById(id);
+    //        }
+    //        catch
+    //        {
+    //            string errorstr = "Chapeau App couldn't get  the payment";
+    //            ErrorDAO error = new ErrorDAO(errorstr);
+    //            throw;
+    //        }
            
-        }
-        public List<Payment> GetAllPayments()
-        {
-            try
-            {
-                return paymentDao.GetAllPayments();
-            }
-            catch
-            {
-                string errorstr = "Chapeau App couldn't get the payments";
-                ErrorDAO error = new ErrorDAO(errorstr);
-                throw;
-            }
+    //    }
+    //    public List<Order> GetAllPayments()
+    //    {
+    //        try
+    //        {
+    //            return paymentDao.GetAllPayments();
+    //        }
+    //        catch
+    //        {
+    //            string errorstr = "Chapeau App couldn't get the payments";
+    //            ErrorDAO error = new ErrorDAO(errorstr);
+    //            throw;
+    //        }
             
-        }
+    //    }
     }
 }

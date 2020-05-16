@@ -14,23 +14,23 @@ namespace ChapeauUI
 {
     public partial class PaymentScreen : Form
     {
-       private Payment CurrentPayment;
+       private Order CurrentPayment;
        private EmployeeService employeeService;
        private PaymentService paymentService;
        private Employee employee;
 
-        public PaymentScreen(Payment CurrentPayment)
+        public PaymentScreen(Order CurrentPayment)
         {
             InitializeComponent();
             this.CurrentPayment = CurrentPayment;
             employeeService = new EmployeeService();
-            employee = employeeService.GetById(CurrentPayment.EmployeeID);
+            employee = CurrentPayment.Host;
             paymentService = new PaymentService();
         }
 
         private void PaymentScreen_Load(object sender, EventArgs e)
         {
-            lblTbnumber.Text = lblTbnumber.Text + " " + CurrentPayment.TableNumber.ToString();
+            lblTbnumber.Text = lblTbnumber.Text + " " + CurrentPayment.TableNr.ToString();
             //lblEmployee.Text = lblEmployee.Text + " " + employee.Name;
             //lblNoVAT.Text = lblNoVAT.Text + " " + CurrentPayment.TotalPriceNoVAT.ToString();
             //lblPriceVAT.Text = lblPriceVAT.Text + " " + CurrentPayment.TotalPriceVAT.ToString();
@@ -56,21 +56,21 @@ namespace ChapeauUI
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if (cmbPayment.SelectedIndex > 0)
-            {
-                // pas the complete object.
-                if (cmbPayment.SelectedItem.ToString() == "Cash")
-                    CurrentPayment.PaymentMethod = 0;
-                else if (cmbPayment.SelectedItem.ToString() == "Debit")
-                    CurrentPayment.PaymentMethod = 1;
+            //if (cmbPayment.SelectedIndex > 0)
+            //{
+            //    // pas the complete object.
+            //    if (cmbPayment.SelectedItem.ToString() == "Cash")
+            //        CurrentPayment.PaymentMethod = 0;
+            //    else if (cmbPayment.SelectedItem.ToString() == "Debit")
+            //        CurrentPayment.PaymentMethod = 1;
                 
-                paymentService.CompletePayment(CurrentPayment);
+            //    paymentService.CompletePayment(CurrentPayment);
                 
-            }
-            else
-            {
-                MessageBox.Show("Please choose a payment method", "Payment method required", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please choose a payment method", "Payment method required", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
         }
     }
 }

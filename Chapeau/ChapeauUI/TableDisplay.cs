@@ -15,7 +15,7 @@ namespace ChapeauUI
     public partial class TableDisplay : Form
     {
         private Table CurrentTable;
-        private Payment CurrentTicket;
+        private Order CurrentTicket;
 
         private ReservationService reservationService = new ReservationService();
         private  List<Reservation> reservations;
@@ -23,8 +23,8 @@ namespace ChapeauUI
         {
             InitializeComponent();
             this.CurrentTable = CurrentTable;
-            CurrentTicket = new Payment();
-            CurrentTicket.TableNumber = CurrentTable.TableNumber;
+            CurrentTicket = new Order();
+            CurrentTicket.TableNr = CurrentTable.TableNumber;
 
 
         }

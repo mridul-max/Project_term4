@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,13 @@ namespace ChapeauModel
         public int TableNr;
         public List<OrderItem> OrderItems;
         public Employee Host;
+        public PaymentMethod Method { get; set; }
+        public DateTime PaymentDate { get; set; }
+
+        public string Comment { get; set; }
+        public bool IsFinished { get; set; }
+
+        public float Tip{ get; set; }
 
         public float TotalPrice
         {

@@ -21,6 +21,7 @@ namespace ChapeauUI
 
         private void TableView_Load(object sender, EventArgs e)
         {
+
             allTables = tableService.GetAllTables();
             occupiedIcons = FillPictureBoxes();
             CheckOccupancy();
