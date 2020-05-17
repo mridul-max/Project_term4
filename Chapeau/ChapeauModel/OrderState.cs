@@ -2,6 +2,6 @@
 {
     public enum OrderState
     {
-        InProgress, ReadyForPickup, OrderDelivered
+        ReadyToDeliver=1,RunningOrder
     }
 }

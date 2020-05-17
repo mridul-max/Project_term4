@@ -37,6 +37,18 @@ namespace ChapeauDAL
             }
             return tables;
         }
+
+        private Table ReadTable(SqlDataReader reader)
+        {
+            Table table = new Table()
+            {
+                TableNumber = (int)reader["TableNumber"],
+                Capacity = (int)reader["Capacity"],
+                IsOccupied = (bool)reader["IsOccupied"]
+            };
+            return table;
+        }
+
         //Gets a table with a requested Id.
         public Table GetById(int id)
         {
@@ -53,19 +65,48 @@ namespace ChapeauDAL
             conn.Close();
             return table;
         }
-      
-        private Table ReadTable(SqlDataReader reader)
+        public List<OrderItem> GetOrderItemsofTable(int TableNr)
         {
-            Table table = new Table()
+            OpenConnection();
+            string query ="SELECT MenuItem.*,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.OrderDateTime FROM OrderItem INNER JOIN [Order] ON  [OrderItem].OrderID=[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey=OrderItem.OrderStateKey WHERE [Order].TableNumber = @Id AND [Order].isFinished=0; ";
+            SqlParameter[] sqlParameters = new SqlParameter[1]
             {
-                TableNumber = (int)reader["TableNumber"],
-                Capacity = (int)reader["Capacity"],
-                IsOccupied = (bool)reader["IsOccupied"]
+                new SqlParameter("@Id",TableNr)
             };
-            return table;
+            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));          
         }
 
+        private List<OrderItem> ReadOrderItems(DataTable dataTable)
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                MenuItem menuItem = new MenuItem()
+                {
+                    Name = dr["ItemName"].ToString(),
+                    Price = float.Parse(dr["Price"].ToString()),
+                    Stock = (int)dr["Stock"],
+                    Description = dr["Description"].ToString(),
+                    CategoryType = (CategoryType)Enum.Parse(typeof(CategoryType), dr["CategoryType"].ToString()),
+                    Category = dr["CategoryName"].ToString(),
+                    VAT = ((int)dr["VAT"]) / 100f
+                };
 
-
+                OrderItem orderItem = new OrderItem()
+                {
+                    MenuItem = menuItem,
+                    Amount = (int)dr["Amount"],
+                    DateTimeAdded = (DateTime)dr["OrderDateTime"],
+                    orderState = (OrderState)Enum.Parse(typeof(OrderState), dr["OrderStateInformation"].ToString()),
+                };
+                orderItems.Add(orderItem);
+            }
+            return orderItems;
+        }
     }
 }
+
+
+
+
+

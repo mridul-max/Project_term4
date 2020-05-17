@@ -61,6 +61,12 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\CurrentOrderUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\CurrentOrderUC.Designer.cs">
+      <DependentUpon>CurrentOrderUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CurrentOrderUC.resx">
+      <DependentUpon>CurrentOrderUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableView.resx">
       <DependentUpon>TableView.cs</DependentUpon>
