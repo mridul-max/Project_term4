@@ -30,6 +30,10 @@ namespace ChapeauLogic
           
             
         }
+        public List<OrderItem> GetOrderItemsofTable(int TableNr)
+        {
+            return tabledao.GetOrderItemsofTable(TableNr);
+        }
         public Table GetById(int id)
         {          
             try

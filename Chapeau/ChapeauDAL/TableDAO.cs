@@ -68,7 +68,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetOrderItemsofTable(int TableNr)
         {
             OpenConnection();
-            string query ="SELECT MenuItem.*,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.OrderDateTime FROM OrderItem INNER JOIN [Order] ON  [OrderItem].OrderID=[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey=OrderItem.OrderStateKey WHERE [Order].TableNumber = @Id AND [Order].isFinished=0; ";
+            string query = "SELECT MenuItem.*,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.OrderDateTime,Category.CategoryName,Category.VAT,Category.CategoryType,OrderState.OrderStateInformation FROM OrderItem INNER JOIN [Order] ON  [OrderItem].OrderID=[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey=OrderItem.OrderStateKey INNER JOIN Category ON Category.CategoryID = MenuItem.CategoryID WHERE [Order].TableNumber =@Id AND [Order].isFinished=0; ";
             SqlParameter[] sqlParameters = new SqlParameter[1]
             {
                 new SqlParameter("@Id",TableNr)
