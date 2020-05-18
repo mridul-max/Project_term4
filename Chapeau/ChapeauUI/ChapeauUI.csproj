@@ -61,12 +61,6 @@
     <Compile Include="LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resources\CurrentOrderUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Resources\CurrentOrderUC.Designer.cs">
-      <DependentUpon>CurrentOrderUC.cs</DependentUpon>
-    </Compile>
     <Compile Include="TableView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,14 +111,17 @@
     <Compile Include="TableDisplay.Designer.cs">
       <DependentUpon>TableDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlls\UCCurrentOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlls\UCCurrentOrders.Designer.cs">
+      <DependentUpon>UCCurrentOrders.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="KitchenBarScreen.resx">
       <DependentUpon>KitchenBarScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\CurrentOrderUC.resx">
-      <DependentUpon>CurrentOrderUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableView.resx">
       <DependentUpon>TableView.cs</DependentUpon>
@@ -159,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TableDisplay.resx">
       <DependentUpon>TableDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlls\UCCurrentOrders.resx">
+      <DependentUpon>UCCurrentOrders.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,6 +224,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningTimer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -65,6 +65,7 @@ namespace ChapeauDAL
             conn.Close();
             return table;
         }
+        // This methods are temporarily here they will be moved to orderDAO when it's created.
         public List<OrderItem> GetOrderItemsofTable(int TableNr)
         {
             OpenConnection();

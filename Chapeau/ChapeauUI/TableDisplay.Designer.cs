@@ -1,4 +1,6 @@
-﻿namespace ChapeauUI
+﻿using ChapeauModel;
+
+namespace ChapeauUI
 {
     partial class TableDisplay
     {
@@ -38,6 +40,7 @@
             this.BtnOrder = new System.Windows.Forms.Button();
             this.BtnChout = new System.Windows.Forms.Button();
             this.pnlCurrentOrders = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -151,19 +154,33 @@
             // 
             // pnlCurrentOrders
             // 
+            this.pnlCurrentOrders.AutoScroll = true;
             this.pnlCurrentOrders.BackColor = System.Drawing.Color.Transparent;
-            this.pnlCurrentOrders.Location = new System.Drawing.Point(509, 38);
+            this.pnlCurrentOrders.Location = new System.Drawing.Point(509, 84);
             this.pnlCurrentOrders.Name = "pnlCurrentOrders";
-            this.pnlCurrentOrders.Size = new System.Drawing.Size(524, 911);
+            this.pnlCurrentOrders.Size = new System.Drawing.Size(524, 865);
             this.pnlCurrentOrders.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tw Cen MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(520, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(314, 33);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Current orders of this table";
             // 
             // TableDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1045, 1055);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCurrentOrders);
             this.Controls.Add(this.BtnChout);
             this.Controls.Add(this.BtnOrder);
@@ -178,6 +195,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -193,5 +211,6 @@
         private System.Windows.Forms.Button BtnOrder;       
         private System.Windows.Forms.Button BtnChout;
         private System.Windows.Forms.FlowLayoutPanel pnlCurrentOrders;
+        private System.Windows.Forms.Label label1;
     }
 }

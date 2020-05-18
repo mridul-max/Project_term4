@@ -398,7 +398,7 @@
             // 
             this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
-            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.returnToManagementToolStripMenuItem.Text = "Management";
             this.returnToManagementToolStripMenuItem.Visible = false;
             // 
@@ -406,7 +406,7 @@
             // 
             this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click_2);
             // 
@@ -415,6 +415,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1045, 1055);
