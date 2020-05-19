@@ -17,7 +17,7 @@ namespace ChapeauUI
     {
         private Table CurrentTable;
         private Order CurrentTicket;
-        private TableService tableService = new TableService();
+        private OrderService orderService = new OrderService();
         private ReservationService reservationService = new ReservationService();
         private List<Reservation> reservations;
         private List<OrderItem> orderItems;
@@ -65,7 +65,7 @@ namespace ChapeauUI
         }
         void FillCurrentOrders()
         {
-            orderItems = tableService.GetOrderItemsofTable(CurrentTable.TableNumber);
+            orderItems = orderService.GetOrderItemsofTable(CurrentTable.TableNumber);
             UCCurrentOrders orderUC;
             foreach (OrderItem item in orderItems)
             {

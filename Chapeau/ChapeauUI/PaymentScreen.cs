@@ -16,7 +16,7 @@ namespace ChapeauUI
     {
        private Order CurrentPayment;
        private EmployeeService employeeService;
-       private PaymentService paymentService;
+       private OrderService paymentService;
        private Employee employee;
 
         public PaymentScreen(Order CurrentPayment)
@@ -25,7 +25,7 @@ namespace ChapeauUI
             this.CurrentPayment = CurrentPayment;
             employeeService = new EmployeeService();
             employee = CurrentPayment.Host;
-            paymentService = new PaymentService();
+            paymentService = new OrderService();
         }
 
         private void PaymentScreen_Load(object sender, EventArgs e)

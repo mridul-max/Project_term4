@@ -92,5 +92,6 @@ namespace ChapeauUI.UserControlls
 
             lblTimer.Text = $"{totalMinutes.ToString("00")}:{remainingSeconds.ToString("00")}";
         }
+
     }
 }

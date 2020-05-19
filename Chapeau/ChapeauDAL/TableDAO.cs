@@ -66,44 +66,7 @@ namespace ChapeauDAL
             return table;
         }
         // This methods are temporarily here they will be moved to orderDAO when it's created.
-        public List<OrderItem> GetOrderItemsofTable(int TableNr)
-        {
-            OpenConnection();
-            string query = "SELECT MenuItem.*,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.OrderDateTime,Category.CategoryName,Category.VAT,Category.CategoryType,OrderState.OrderStateInformation FROM OrderItem INNER JOIN [Order] ON  [OrderItem].OrderID=[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey=OrderItem.OrderStateKey INNER JOIN Category ON Category.CategoryID = MenuItem.CategoryID WHERE [Order].TableNumber =@Id AND [Order].isFinished=0; ";
-            SqlParameter[] sqlParameters = new SqlParameter[1]
-            {
-                new SqlParameter("@Id",TableNr)
-            };
-            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));          
-        }
-
-        private List<OrderItem> ReadOrderItems(DataTable dataTable)
-        {
-            List<OrderItem> orderItems = new List<OrderItem>();
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                MenuItem menuItem = new MenuItem()
-                {
-                    Name = dr["ItemName"].ToString(),
-                    Price = float.Parse(dr["Price"].ToString()),
-                    Stock = (int)dr["Stock"],
-                    Description = dr["Description"].ToString(),
-                    CategoryType = (CategoryType)Enum.Parse(typeof(CategoryType), dr["CategoryType"].ToString()),
-                    Category = dr["CategoryName"].ToString(),
-                    VAT = ((int)dr["VAT"]) / 100f
-                };
-
-                OrderItem orderItem = new OrderItem()
-                {
-                    MenuItem = menuItem,
-                    Amount = (int)dr["Amount"],
-                    DateTimeAdded = (DateTime)dr["OrderDateTime"],
-                    orderState = (OrderState)Enum.Parse(typeof(OrderState), dr["OrderStateInformation"].ToString()),
-                };
-                orderItems.Add(orderItem);
-            }
-            return orderItems;
-        }
+      
     }
 }
 

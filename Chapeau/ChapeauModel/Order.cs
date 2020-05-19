@@ -11,10 +11,9 @@ namespace ChapeauModel
         public int OrderID;
         public int TableNr;
         public List<OrderItem> OrderItems;
-        public Employee Host;
+        public Employee Host { get; set; }
         public PaymentMethod Method { get; set; }
         public DateTime PaymentDate { get; set; }
-
         public string Comment { get; set; }
         public bool IsFinished { get; set; }
 
@@ -31,6 +30,7 @@ namespace ChapeauModel
                 }
                 return totalPrice;
             }
+           
         }
 
         public float TotalPriceWithVAT
@@ -44,6 +44,7 @@ namespace ChapeauModel
                 }
                 return totalPrice;
             }
+        
         }
 
         public float TotalVAT
