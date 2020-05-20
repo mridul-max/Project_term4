@@ -16,7 +16,7 @@ namespace ChapeauDAL
       
         public List<Order> GetAllPayments()
         {
-            string query = "SELECT [OrderID],TableNumber,EmployeeID,TotalPriceNoVAT,TotalPriceVAT,PaymentMethod,PaymentDateTime FROM [Order]; ";
+            string query = "SELECT OrderID,TableNumber,EmployeeID,TotalPriceVAT,TotalPriceNoVAT,PaymentMethod,PaymentDateTime,Comment,isFinished,Tip FROM [Order]; ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -31,12 +31,13 @@ namespace ChapeauDAL
                     OrderID = (int)dr["OrderID"],
                     TableNr = (int)dr["TableNumber"],
                     Host = employeeDao.GetById((int)dr["EmployeeID"]),
-                    Method = (PaymentMethod)Enum.Parse(typeof(PaymentMethod), dr["PaymentMethod"].ToString()),
-                    PaymentDate = (DateTime)dr["PaymentDateTime"],
-                    Comment = (string)dr["Comment"],
-                    IsFinished = (bool)dr["isFinished"]
+                    Method = dr["PaymentMethod"] == DBNull.Value ? PaymentMethod.Cash : (PaymentMethod)Enum.Parse(typeof(PaymentMethod), dr["PaymentMethod"].ToString()),
+                    PaymentDate = dr["PaymentDateTime"] == DBNull.Value ? DateTime.Now : (DateTime)dr["PaymentDateTime"],
+                    Comment = dr["Comment"] == DBNull.Value ? "  " : (string)dr["Comment"],
+                    IsFinished = (bool)dr["isFinished"],
+                    Tip = float.Parse(dr["Tip"].ToString())
                 };
-                payment.OrderItems = GetOrderItemsofTable(payment.TableNr);
+                payment.OrderItems = GetUnfinishedOrdersOfTable(payment.TableNr);
                 payments.Add(payment);
             }
             return payments;
@@ -44,15 +45,17 @@ namespace ChapeauDAL
         public Order GetOrderByTableId(int id)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("SELECT [OrderID],TableNumber,EmployeeID,TotalPriceNoVAT,TotalPriceVAT,PaymentMethod,PaymentDateTime,Comment,isFinished FROM [Order] WHERE TableNumber=@Id AND [Order].isFinished=0;;", conn);
+            SqlCommand cmd = new SqlCommand("SELECT OrderID,TableNumber,EmployeeID,TotalPriceVAT,TotalPriceNoVAT,PaymentMethod,PaymentDateTime,Comment,isFinished, Tip FROM [Order] WHERE TableNumber=@Id AND [Order].isFinished=0;", conn);
             cmd.Parameters.AddWithValue("@Id", id);
             SqlDataReader reader = cmd.ExecuteReader();
             Order payment = null;
 
             if (reader.Read())
+            {
                 payment = ReadPayment(reader);
-
-            payment.OrderItems = GetOrderItemsofTable(id);
+                payment.OrderItems = GetUnfinishedOrdersOfTable(id);
+            }
+                        
             reader.Close();
             conn.Close();
             return payment;
@@ -61,13 +64,14 @@ namespace ChapeauDAL
         {
 
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("UPDATE [Order] set TotalPriceNoVAT= @TotalPriceNoVat, TotalPriceVAT=@TotalPriceVat, PaymentMethod =@Method, PaymentDateTime= @Date,Comment=@Comment, isFinished= 1 where orderid=@ID;", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE [Order] set TotalPriceNoVAT= @TotalPriceNoVat, TotalPriceVAT=@TotalPriceVat, PaymentMethod =@Method, PaymentDateTime= @Date,Comment=@Comment,Tip=@Tip ,isFinished= 1 where orderid=@ID;", conn);
             cmd.Parameters.AddWithValue("@TotalPriceNoVat", payment.TotalPrice);
             cmd.Parameters.AddWithValue("@TotalPriceVat", payment.TotalPriceWithVAT);
             cmd.Parameters.AddWithValue("@Method", payment.Method.ToString());
             cmd.Parameters.AddWithValue("@Date", DateTime.Now);
             cmd.Parameters.AddWithValue("@Comment", payment.Comment);
             cmd.Parameters.AddWithValue("@ID", payment.OrderID);
+            cmd.Parameters.AddWithValue("@Tip",payment.Tip);
             
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
@@ -77,7 +81,7 @@ namespace ChapeauDAL
         {
 
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("insert into [order] VALUES(3,2,NULL,NULL,NULL,NULL,NULL,0);", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO[order] VALUES(@TableNumber,@EmployeeID, NULL, NULL, NULL, NULL, NULL, 0, NULL); ", conn);
             cmd.Parameters.AddWithValue("@TableNumber", tableNumber);
             cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -87,20 +91,21 @@ namespace ChapeauDAL
 
         private Order ReadPayment(SqlDataReader reader)
         {
+
             Order payment = new Order()
             {
                 OrderID = (int)reader["OrderID"],
                 TableNr = (int)reader["TableNumber"],
                 Host = employeeDao.GetById((int)reader["EmployeeID"]),
-                Method = (PaymentMethod)Enum.Parse(typeof(PaymentMethod),reader["PaymentMethod"].ToString()),
-                PaymentDate = (DateTime)reader["PaymentDateTime"],
-                Comment=(string)reader["Comment"],
-                IsFinished=(bool)reader["isFinished"]
+                Method = reader["PaymentMethod"]== DBNull.Value ?PaymentMethod.Cash:(PaymentMethod)Enum.Parse(typeof(PaymentMethod), reader["PaymentMethod"].ToString()),
+                PaymentDate = reader["PaymentDateTime"]==DBNull.Value?DateTime.Now: (DateTime)reader["PaymentDateTime"],
+                Comment = reader["Comment"]==DBNull.Value?"  ": (string)reader["Comment"],
+                IsFinished = (bool)reader["isFinished"],
+                Tip = float.Parse(reader["Tip"].ToString())
             };
-            payment.OrderItems = GetOrderItemsofTable(payment.TableNr);
             return payment;
         }
-        public List<OrderItem> GetOrderItemsofTable(int TableNr)
+        public List<OrderItem> GetUnfinishedOrdersOfTable(int TableNr)
         {
             OpenConnection();
             string query = "SELECT MenuItem.*,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.LastStateChanged,Category.CategoryName,Category.VAT,Category.CategoryType,OrderState.OrderStateInformation FROM OrderItem INNER JOIN [Order] ON  [OrderItem].OrderID=[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey=OrderItem.OrderStateKey INNER JOIN Category ON Category.CategoryID = MenuItem.CategoryID WHERE [Order].TableNumber =@Id AND [Order].isFinished=0; ";

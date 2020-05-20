@@ -13,9 +13,9 @@ namespace ChapeauLogic
 
         private OrderDAO orderDao = new OrderDAO();
 
-        public List<OrderItem> GetOrderItemsofTable(int TableNr)
+        public List<OrderItem> GetUnfinishedOrdersOfTable(int TableNr)
         {
-            return orderDao.GetOrderItemsofTable(TableNr);
+            return orderDao.GetUnfinishedOrdersOfTable(TableNr);
         }
 
         public void CompletePayment(Order payment)
@@ -23,9 +23,9 @@ namespace ChapeauLogic
             orderDao.CompletePayment(payment);
         }
 
-        public Order GetOrderById(int id)
+        public Order GetOrderByTableId(int id)
         {
-            return orderDao.GetOrderById(id);
+            return orderDao.GetOrderByTableId(id);
           
         }
 

@@ -37,6 +37,24 @@ namespace ChapeauDAL
             }
             return tables;
         }
+        public void SetOccupied(int TableNr)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("UPDATE [Table] set IsOccupied = 1 WHERE TableNumber= @Id;", conn);
+            cmd.Parameters.AddWithValue("@Id", TableNr);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+        }
+        public void SetNoOccupied(int TableNr)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("UPDATE [Table] set IsOccupied = 0 WHERE TableNumber= @Id;", conn);
+            cmd.Parameters.AddWithValue("@Id", TableNr);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+        }
 
         private Table ReadTable(SqlDataReader reader)
         {

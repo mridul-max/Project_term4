@@ -16,27 +16,31 @@ namespace ChapeauUI
     public partial class TableDisplay : Form
     {
         private Table CurrentTable;
-        private Order CurrentTicket;
-        private OrderService orderService = new OrderService();
-        private ReservationService reservationService = new ReservationService();
+        private OrderService orderService;
+        private ReservationService reservationService;
         private List<Reservation> reservations;
         private List<OrderItem> orderItems;
-        public TableDisplay(Table CurrentTable)
+        private TableService tableService;
+        public TableDisplay(Table currentTable)
         {
             InitializeComponent();
-            this.CurrentTable = CurrentTable;
-            CurrentTicket = new Order();
-            CurrentTicket.TableNr = CurrentTable.TableNumber;
+           
+            orderService = new OrderService();
+            reservationService = new ReservationService();
+            tableService = new TableService();
+            this.CurrentTable = tableService.GetById(currentTable.TableNumber);
         }
 
         private void TableDisplay_Load(object sender, EventArgs e)
         {
             FillTableInformation();
             UpdateTableView();
-            FillCurrentOrders();
+
         }
+        //Fills the current order and displays the current reservations for the current table.
         private void UpdateTableView()
         {
+            FillCurrentOrders();
             reservations = reservationService.GetAllReservations();
             comboBox1.Items.Clear();
             foreach (Reservation reservation in reservations)
@@ -56,16 +60,17 @@ namespace ChapeauUI
         //fills the labels according to the information.
         void FillTableInformation()
         {
-            lblTableNumber.Text = lblTableNumber.Text + " " + CurrentTable.TableNumber.ToString();
-            lblCapacity.Text = lblCapacity.Text + " " + CurrentTable.Capacity.ToString();
+            lblTableNumber.Text = "Table Number:" + " " + CurrentTable.TableNumber.ToString();
+            lblCapacity.Text = "Capacity:" + " " + CurrentTable.Capacity.ToString();
             if (CurrentTable.IsOccupied)
-                lblOccupy.Text = lblOccupy.Text + " " + "Occupied";
+                lblOccupy.Text = "Occupancy: Occupied";
             else
-                lblOccupy.Text = lblOccupy.Text + " " + "Empty";
+                lblOccupy.Text = "Ocupancy:  Empty";
         }
+        //Displays each order one by one in user control with timer.
         void FillCurrentOrders()
         {
-            orderItems = orderService.GetOrderItemsofTable(CurrentTable.TableNumber);
+            orderItems = orderService.GetUnfinishedOrdersOfTable(CurrentTable.TableNumber);
             UCCurrentOrders orderUC;
             foreach (OrderItem item in orderItems)
             {
@@ -73,27 +78,43 @@ namespace ChapeauUI
                 pnlCurrentOrders.Controls.Add(orderUC);
             }
         }
-
+        //opens reservation screen
         private void Btnreserve_Click(object sender, EventArgs e)
         {
             ReservationForm form = new ReservationForm(CurrentTable);
             form.ShowDialog();
             UpdateTableView();
         }
+        //opens ordering screen
         private void BtnOrder_Click(object sender, EventArgs e)
         {
             OrderingScreen screen = new OrderingScreen(CurrentTable);
             screen.ShowDialog();
             UpdateTableView();
         }
-
+        //opens payment screen.
         private void BtnChout_Click(object sender, EventArgs e)
         {
-            PaymentScreen screen = new PaymentScreen(CurrentTicket);
+            PaymentScreen screen = new PaymentScreen(CurrentTable);
             screen.ShowDialog();
             UpdateTableView();
         }
+        //closes this tab and returns to tableview.
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //Sets the table to occupied as requested in pdf.
+        private void btnOccupy_Click(object sender, EventArgs e)
+        {
+          if(!CurrentTable.IsOccupied)
+            {
+                tableService.SetOccupied(CurrentTable.TableNumber);
+                CurrentTable.IsOccupied = true;
+                FillTableInformation(); // Refreshing the labels.
 
-
+                //SHOULD I ALSO CREATE AN EMPTY PAYMENT SINCE THE TABLE IS OCCUPIED??
+            }
+        }
     }
 }

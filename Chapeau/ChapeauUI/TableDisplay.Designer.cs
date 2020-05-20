@@ -41,6 +41,8 @@ namespace ChapeauUI
             this.BtnChout = new System.Windows.Forms.Button();
             this.pnlCurrentOrders = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnOccupy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,10 +130,10 @@ namespace ChapeauUI
             this.BtnOrder.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOrder.Location = new System.Drawing.Point(240, 540);
+            this.BtnOrder.Location = new System.Drawing.Point(236, 538);
             this.BtnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnOrder.Name = "BtnOrder";
-            this.BtnOrder.Size = new System.Drawing.Size(189, 50);
+            this.BtnOrder.Size = new System.Drawing.Size(207, 61);
             this.BtnOrder.TabIndex = 3;
             this.BtnOrder.Text = "Add Order";
             this.BtnOrder.UseVisualStyleBackColor = true;
@@ -140,13 +142,12 @@ namespace ChapeauUI
             // BtnChout
             // 
             this.BtnChout.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
-            this.BtnChout.Enabled = false;
             this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChout.Location = new System.Drawing.Point(12, 618);
+            this.BtnChout.Location = new System.Drawing.Point(12, 622);
             this.BtnChout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnChout.Name = "BtnChout";
-            this.BtnChout.Size = new System.Drawing.Size(189, 50);
+            this.BtnChout.Size = new System.Drawing.Size(207, 61);
             this.BtnChout.TabIndex = 4;
             this.BtnChout.Text = "Check out";
             this.BtnChout.UseVisualStyleBackColor = true;
@@ -172,6 +173,34 @@ namespace ChapeauUI
             this.label1.TabIndex = 6;
             this.label1.Text = "Current orders of this table";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(2, 888);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(207, 61);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnOccupy
+            // 
+            this.btnOccupy.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnOccupy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOccupy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOccupy.Location = new System.Drawing.Point(236, 622);
+            this.btnOccupy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOccupy.Name = "btnOccupy";
+            this.btnOccupy.Size = new System.Drawing.Size(207, 61);
+            this.btnOccupy.TabIndex = 8;
+            this.btnOccupy.Text = "Mark as occupied";
+            this.btnOccupy.UseVisualStyleBackColor = true;
+            this.btnOccupy.Click += new System.EventHandler(this.btnOccupy_Click);
+            // 
             // TableDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -180,6 +209,8 @@ namespace ChapeauUI
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1045, 1055);
+            this.Controls.Add(this.btnOccupy);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCurrentOrders);
             this.Controls.Add(this.BtnChout);
@@ -212,5 +243,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Button BtnChout;
         private System.Windows.Forms.FlowLayoutPanel pnlCurrentOrders;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnOccupy;
     }
 }

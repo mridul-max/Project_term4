@@ -14,63 +14,65 @@ namespace ChapeauUI
 {
     public partial class PaymentScreen : Form
     {
-       private Order CurrentPayment;
-       private EmployeeService employeeService;
-       private OrderService paymentService;
-       private Employee employee;
+        private Order CurrentPayment;
+        private TableService tableService = new TableService();
+        private OrderService orderService = new OrderService();
 
-        public PaymentScreen(Order CurrentPayment)
+        public PaymentScreen(Table table)
         {
             InitializeComponent();
-            this.CurrentPayment = CurrentPayment;
-            employeeService = new EmployeeService();
-            employee = CurrentPayment.Host;
-            paymentService = new OrderService();
+            CurrentPayment = orderService.GetOrderByTableId(table.TableNumber);
+         
+
+
         }
 
         private void PaymentScreen_Load(object sender, EventArgs e)
         {
-            lblTbnumber.Text = lblTbnumber.Text + " " + CurrentPayment.TableNr.ToString();
-            //lblEmployee.Text = lblEmployee.Text + " " + employee.Name;
-            //lblNoVAT.Text = lblNoVAT.Text + " " + CurrentPayment.TotalPriceNoVAT.ToString();
-            //lblPriceVAT.Text = lblPriceVAT.Text + " " + CurrentPayment.TotalPriceVAT.ToString();
-
-
-            cmbPayment.Items.Add("Cash"); // radio button
-            cmbPayment.Items.Add("Debit");
+            if(CurrentPayment!=null)
+            FillListView();
 
         }
-        public void CalculateVatprice()
+        public void FillListView()
         {
-            //...
-        }
-        public void CalculateNoVatPrice()
-        {
-            //..
+           
+            listViewOrders.Clear();
+            ColumnHeader MenuItemName = new ColumnHeader();
+            MenuItemName.Text ="Menu item name";
+            ColumnHeader Amount = new ColumnHeader();
+            Amount.Text = "Amount";
+            ColumnHeader Category = new ColumnHeader();
+            Category.Text = "Category";
+            ColumnHeader CategoryType = new ColumnHeader();
+            CategoryType.Text = "Category Type";
+
+
+            listViewOrders.Columns.AddRange(new ColumnHeader[] { MenuItemName, Amount, Category, CategoryType});
+
+            foreach (OrderItem order in CurrentPayment.OrderItems)
+            {
+                ListViewItem li = new ListViewItem(order.MenuItem.Name);
+                li.SubItems.Add(order.Amount.ToString());
+                li.SubItems.Add(order.MenuItem.Category);
+                li.SubItems.Add(order.MenuItem.CategoryType.ToString());
+                listViewOrders.Items.Add(li);
+            }
+            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        //Checks out and makes the table empty again.
         private void btnApply_Click(object sender, EventArgs e)
         {
-            //if (cmbPayment.SelectedIndex > 0)
-            //{
-            //    // pas the complete object.
-            //    if (cmbPayment.SelectedItem.ToString() == "Cash")
-            //        CurrentPayment.PaymentMethod = 0;
-            //    else if (cmbPayment.SelectedItem.ToString() == "Debit")
-            //        CurrentPayment.PaymentMethod = 1;
-                
-            //    paymentService.CompletePayment(CurrentPayment);
-                
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please choose a payment method", "Payment method required", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+          
+        }
+        private void FillPrices()
+        {
+
         }
     }
 }

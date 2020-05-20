@@ -43,6 +43,8 @@ namespace ChapeauUI
             tableDisplay.ShowDialog();
             CheckOccupancy();
         }
+
+        //For closing the application.
         private void TableView_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
@@ -62,8 +64,9 @@ namespace ChapeauUI
             login.ShowDialog();
         }
         //this methods are for changing occupancy picture visibilities.
-        void CheckOccupancy()
+        void CheckOccupancy() // ask about this
         {
+            allTables = tableService.GetAllTables();
             for (int i = 0; i < allTables.Count; i++)
             {
                 if (allTables[i].IsOccupied)
@@ -75,11 +78,17 @@ namespace ChapeauUI
                     occupiedIcons[i].Visible = false;               
             }
         }
+
+
+
         //This is method exist because I want to keep form load as clean as possible
         List<PictureBox> FillPictureBoxes()
         {
             return new List<PictureBox>() { pcoccupied1, pcoccupied2, pcoccupied3, pcoccupied4, pcoccupied5, pcoccupied6, pcoccupied7, pcoccupied8, pcoccupied9, pcoccupied10};
         }
+
+
+
         //in this code between region picture box codes are implemented.
         #region Display table code for picture boxes.
         private void pcboxtb1_Click(object sender, EventArgs e)
@@ -133,6 +142,8 @@ namespace ChapeauUI
         }
         #endregion
 
+
+        //for returning the login screen.
         private void logOffToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
             LoginScreen login = new LoginScreen();

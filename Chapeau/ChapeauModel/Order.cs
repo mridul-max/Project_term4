@@ -26,7 +26,7 @@ namespace ChapeauModel
                 float totalPrice = 0;
                 foreach (OrderItem item in OrderItems)
                 {
-                    totalPrice += item.MenuItem.Price;
+                    totalPrice += item.MenuItem.Price*item.Amount;
                 }
                 return totalPrice;
             }
@@ -40,7 +40,7 @@ namespace ChapeauModel
                 float totalPrice = 0;
                 foreach (OrderItem item in OrderItems)
                 {
-                    totalPrice += item.MenuItem.PriceWithVAT;
+                    totalPrice += item.MenuItem.PriceWithVAT*item.Amount;
                 }
                 return totalPrice;
             }
@@ -54,7 +54,7 @@ namespace ChapeauModel
                 float totalPrice = 0;
                 foreach (OrderItem item in OrderItems)
                 {
-                    totalPrice += item.MenuItem.Price * item.MenuItem.VAT;
+                    totalPrice += item.MenuItem.Price * item.MenuItem.VAT*item.Amount;
                 }
                 return totalPrice;
             }

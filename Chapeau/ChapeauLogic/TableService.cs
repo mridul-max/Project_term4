@@ -29,6 +29,14 @@ namespace ChapeauLogic
             }
                     
         }
+        public void SetOccupied(int TableNr)
+        {
+            tabledao.SetOccupied(TableNr);
+        }
+        public void SetNoOccupied(int TableNr)
+        {
+            tabledao.SetNoOccupied(TableNr);
+        }
         public Table GetById(int id)
         {          
             try
