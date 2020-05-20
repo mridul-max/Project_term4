@@ -60,5 +60,13 @@ namespace ChapeauModel
             }
         }
 
+        public Order() { }
+        public Order(int TableNr, List<OrderItem> orderItems, Employee Host)
+        {
+            this.TableNr = TableNr;
+            this.OrderItems = orderItems;
+            this.Host = Host;
+        }
+
     }
 }

@@ -51,6 +51,7 @@ namespace ChapeauUI
         //Opens a different form for each type of employee.
         private void LoginAccordingtoEmployeeType(Employee employee)
         {
+            Employee.LoggedEmployee = employee;
             switch (employee.EmployeeType)
             {
                 case EmployeeType.Waiter:

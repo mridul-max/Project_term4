@@ -66,13 +66,13 @@
             this.flpCurrentOrderItems.Size = new System.Drawing.Size(380, 80);
             this.flpCurrentOrderItems.TabIndex = 2;
             // 
-            // tabAllItems
+            // tabMenu
             // 
             this.tabMenu.Controls.Add(this.tabDrinks);
             this.tabMenu.Controls.Add(this.tabDinner);
             this.tabMenu.Controls.Add(this.tabLunch);
             this.tabMenu.Location = new System.Drawing.Point(12, 88);
-            this.tabMenu.Name = "tabAllItems";
+            this.tabMenu.Name = "tabMenu";
             this.tabMenu.SelectedIndex = 0;
             this.tabMenu.Size = new System.Drawing.Size(377, 816);
             this.tabMenu.TabIndex = 3;
@@ -157,6 +157,7 @@
             this.Name = "OrderingScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderingScreen";
+            this.Load += new System.EventHandler(this.OrderingScreen_Load);
             this.tabMenu.ResumeLayout(false);
             this.tabDrinks.ResumeLayout(false);
             this.tabDrinks.PerformLayout();

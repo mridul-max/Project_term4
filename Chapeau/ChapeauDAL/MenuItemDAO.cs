@@ -12,7 +12,7 @@ namespace ChapeauDAL
     {
         public List<MenuItem> GetCompleteMenu()
         {
-            string query = "SELECT ItemName, Price, Stock, [Description], CategoryType, CategoryName, VAT FROM MenuItem JOIN Category ON MenuItem.CategoryID = Category.CategoryID; ";
+            string query = "SELECT MenuItemID, ItemName, Price, Stock, [Description], CategoryType, CategoryName, VAT FROM MenuItem JOIN Category ON MenuItem.CategoryID = Category.CategoryID; ";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadMenuItems(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -24,6 +24,7 @@ namespace ChapeauDAL
             {
                 MenuItem table = new MenuItem()
                 {
+                    ID = (int)dr["MenuItemID"],
                     Name = dr["ItemName"].ToString(),
                     Price = float.Parse(dr["Price"].ToString()),
                     Stock = (int)dr["Stock"],

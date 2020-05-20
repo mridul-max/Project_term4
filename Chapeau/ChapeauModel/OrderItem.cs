@@ -4,9 +4,18 @@ namespace ChapeauModel
 {
     public class OrderItem
     {
-        public MenuItem MenuItem;
-        public OrderState orderState;
-        public int Amount;
-        public DateTime DateTimeAdded;
+        public MenuItem MenuItem { get; set; }
+        public OrderState orderState { get; set; }
+        public int Amount { get; set; }
+        public DateTime DateTimeAdded { get; set; }
+
+        public OrderItem() { }
+        public OrderItem(MenuItem menuItem, int amount = 1)
+        {
+            this.MenuItem = menuItem;
+            this.Amount = amount;
+            this.orderState = OrderState.PrepairingOrder;
+            this.DateTimeAdded = DateTime.Now;
+        }
     }
 }
