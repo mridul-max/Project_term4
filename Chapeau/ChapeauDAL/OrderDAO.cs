@@ -35,7 +35,7 @@ namespace ChapeauDAL
                     PaymentDate = dr["PaymentDateTime"] == DBNull.Value ? DateTime.Now : (DateTime)dr["PaymentDateTime"],
                     Comment = dr["Comment"] == DBNull.Value ? "  " : (string)dr["Comment"],
                     IsFinished = (bool)dr["isFinished"],
-                    Tip = float.Parse(dr["Tip"].ToString())
+                    Tip = dr["Tip"] == DBNull.Value ? 0 : float.Parse(dr["Tip"].ToString())
                 };
                 payment.OrderItems = GetUnfinishedOrdersOfTable(payment.TableNr);
                 payments.Add(payment);
@@ -48,17 +48,17 @@ namespace ChapeauDAL
             SqlCommand cmd = new SqlCommand("SELECT OrderID,TableNumber,EmployeeID,TotalPriceVAT,TotalPriceNoVAT,PaymentMethod,PaymentDateTime,Comment,isFinished, Tip FROM [Order] WHERE TableNumber=@Id AND [Order].isFinished=0;", conn);
             cmd.Parameters.AddWithValue("@Id", id);
             SqlDataReader reader = cmd.ExecuteReader();
-            Order payment = null;
+            Order order = null;
 
             if (reader.Read())
             {
-                payment = ReadPayment(reader);
-                payment.OrderItems = GetUnfinishedOrdersOfTable(id);
+                order = ReadOrder(reader);
+                order.OrderItems = GetUnfinishedOrdersOfTable(id);
             }
                         
             reader.Close();
             conn.Close();
-            return payment;
+            return order;
         }
         public void CompletePayment(Order payment)
         {
@@ -77,19 +77,38 @@ namespace ChapeauDAL
             reader.Close();
             conn.Close();
         }
-        public void CreatePayment(int tableNumber, int employeeID)
+        public int CreateOrder(int tableNumber, int employeeID)
         {
-
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("INSERT INTO[order] VALUES(@TableNumber,@EmployeeID, NULL, NULL, NULL, NULL, NULL, 0, NULL); ", conn);
-            cmd.Parameters.AddWithValue("@TableNumber", tableNumber);
-            cmd.Parameters.AddWithValue("@EmployeeID", employeeID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
+            string query = "INSERT INTO [Order](TableNumber, EmployeeID, isFinished) VALUES(@TableNumber, @EmployeeID, 0) SELECT SCOPE_IDENTITY(); ";
+            SqlParameter[] sqlParameters = new SqlParameter[2]
+            {
+                new SqlParameter("@TableNumber", tableNumber),
+                new SqlParameter("@EmployeeID", employeeID)
+            };
+            return ExecuteEditQueryAutoIncrement(query, sqlParameters);
         }
 
-        private Order ReadPayment(SqlDataReader reader)
+        public void CreateOrderItems(int orderID, List<OrderItem> orderItems)
+        {
+            if (orderItems.Count < 1)
+                return;
+            string query = "INSERT INTO [OrderItem](OrderID, MenuItemID, OrderStateKey, Amount, LastStateChanged, OrderDateTime) VALUES";
+            SqlParameter[] sqlParameters = new SqlParameter[2 * orderItems.Count + 2];
+            sqlParameters[0] = new SqlParameter("@orderID", orderID);
+            sqlParameters[1] = new SqlParameter("@date", DateTime.Now);
+            for (int i = 0; i < orderItems.Count; i++)
+            {
+                query += $" (@orderID, @menuItemID{i}, 'PR', @amount{i}, @date, @date),";
+
+                sqlParameters[ (i * 2) + 2 ] = new SqlParameter("@menuItemID" + i, orderItems[i].MenuItem.ID);
+                sqlParameters[ (i * 2) + 3 ] = new SqlParameter("@amount" + i, orderItems[i].Amount);
+            }
+            query = query.Remove(query.Length - 1);
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        private Order ReadOrder(SqlDataReader reader)
         {
 
             Order payment = new Order()
@@ -101,7 +120,7 @@ namespace ChapeauDAL
                 PaymentDate = reader["PaymentDateTime"]==DBNull.Value?DateTime.Now: (DateTime)reader["PaymentDateTime"],
                 Comment = reader["Comment"]==DBNull.Value?"  ": (string)reader["Comment"],
                 IsFinished = (bool)reader["isFinished"],
-                Tip = float.Parse(reader["Tip"].ToString())
+                Tip =reader["Tip"]==DBNull.Value? 0: float.Parse(reader["Tip"].ToString())
             };
             return payment;
         }

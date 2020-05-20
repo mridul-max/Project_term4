@@ -22,23 +22,19 @@ namespace ChapeauUI
         {
             InitializeComponent();
             CurrentPayment = orderService.GetOrderByTableId(table.TableNumber);
-         
-
-
         }
 
         private void PaymentScreen_Load(object sender, EventArgs e)
         {
-            if(CurrentPayment!=null)
             FillListView();
-
+            FillPrices();
         }
         public void FillListView()
         {
-           
+
             listViewOrders.Clear();
             ColumnHeader MenuItemName = new ColumnHeader();
-            MenuItemName.Text ="Menu item name";
+            MenuItemName.Text = "Menu item name";
             ColumnHeader Amount = new ColumnHeader();
             Amount.Text = "Amount";
             ColumnHeader Category = new ColumnHeader();
@@ -47,7 +43,7 @@ namespace ChapeauUI
             CategoryType.Text = "Category Type";
 
 
-            listViewOrders.Columns.AddRange(new ColumnHeader[] { MenuItemName, Amount, Category, CategoryType});
+            listViewOrders.Columns.AddRange(new ColumnHeader[] { MenuItemName, Amount, Category, CategoryType });
 
             foreach (OrderItem order in CurrentPayment.OrderItems)
             {
@@ -68,10 +64,72 @@ namespace ChapeauUI
         //Checks out and makes the table empty again.
         private void btnApply_Click(object sender, EventArgs e)
         {
-          
+            bool fieldsAreFilled = true; //If fields are field user will be able o check out
+
+            if (String.IsNullOrEmpty(txtComment.Text))
+            {
+                CurrentPayment.Comment = "None";
+            }
+            else
+            {
+                CurrentPayment.Comment = txtComment.Text;
+
+            }
+
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTip.Text, @"^[0-9]*(?:\.[0-9]+)?$"))
+            {
+                fieldsAreFilled = false;
+                MessageBox.Show("This field only accepts numbers!!", "Please use only numbers", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (String.IsNullOrEmpty(txtTip.Text))
+            {
+                CurrentPayment.Tip = 0;
+                fieldsAreFilled = true;
+            }
+            else
+            {
+                fieldsAreFilled = true;
+                CurrentPayment.Tip = float.Parse(txtTip.Text);
+            }
+
+            if (RDCash.Checked)
+            {
+                CurrentPayment.Method = PaymentMethod.Cash;
+                fieldsAreFilled = true;
+            }
+            else if (RDPin.Checked)
+            {
+                CurrentPayment.Method = PaymentMethod.Pin;
+                fieldsAreFilled = true;
+            }
+            else if (RDCredit.Checked)
+            {
+                CurrentPayment.Method = PaymentMethod.Credit;
+                fieldsAreFilled = true;
+            }
+            else
+            {
+                fieldsAreFilled = false;
+                MessageBox.Show("Please pick a payment method!!", "Payment method required.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            //If the fields are filled correctly terminate the order and come back to table display.
+            if (fieldsAreFilled)
+            {
+                CurrentPayment.PaymentDate = DateTime.Now;
+                orderService.CompletePayment(CurrentPayment);
+                tableService.SetNoOccupied(CurrentPayment.TableNr);
+                MessageBox.Show("Payment has completed and saved successfully.", "Payment completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }          
+
         }
         private void FillPrices()
         {
+            lblVAT.Text = "VAT:" + CurrentPayment.TotalVAT.ToString();
+            lblPrice.Text = "Price:" + CurrentPayment.TotalPrice.ToString();
+            lblTotalPrice.Text = "Total Price:" + CurrentPayment.TotalPriceWithVAT.ToString();
 
         }
     }

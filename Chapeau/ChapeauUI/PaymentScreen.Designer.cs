@@ -36,7 +36,7 @@
             this.lblVAT = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.RDCash = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RDCredit = new System.Windows.Forms.RadioButton();
             this.RDPin = new System.Windows.Forms.RadioButton();
             this.txtTip = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -139,18 +139,18 @@
             this.RDCash.Text = "Cash";
             this.RDCash.UseVisualStyleBackColor = false;
             // 
-            // radioButton1
+            // RDCredit
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(598, 673);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 21);
-            this.radioButton1.TabIndex = 10;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Credit Card";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.RDCredit.AutoSize = true;
+            this.RDCredit.BackColor = System.Drawing.Color.Transparent;
+            this.RDCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RDCredit.Location = new System.Drawing.Point(598, 673);
+            this.RDCredit.Name = "RDCredit";
+            this.RDCredit.Size = new System.Drawing.Size(100, 21);
+            this.RDCredit.TabIndex = 10;
+            this.RDCredit.TabStop = true;
+            this.RDCredit.Text = "Credit Card";
+            this.RDCredit.UseVisualStyleBackColor = false;
             // 
             // RDPin
             // 
@@ -227,7 +227,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTip);
             this.Controls.Add(this.RDPin);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.RDCredit);
             this.Controls.Add(this.RDCash);
             this.Controls.Add(this.lblTotalPrice);
             this.Controls.Add(this.lblVAT);
@@ -256,7 +256,7 @@
         private System.Windows.Forms.Label lblVAT;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.RadioButton RDCash;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton RDCredit;
         private System.Windows.Forms.RadioButton RDPin;
         private System.Windows.Forms.TextBox txtTip;
         private System.Windows.Forms.Label label2;

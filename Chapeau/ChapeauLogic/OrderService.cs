@@ -25,14 +25,22 @@ namespace ChapeauLogic
 
         public Order GetOrderByTableId(int id)
         {
-            return orderDao.GetOrderByTableId(id);
-          
+            return orderDao.GetOrderByTableId(id);          
         }
 
-        public void CreatePayment(int tableNumber, int employeeID)
+        public void CreateNewOrder(Order order)
         {
-            orderDao.CreatePayment(tableNumber, employeeID);
-        }
+            Order oldOrder = GetOrderByTableId(order.TableNr);
+            if (oldOrder == null)
+            {
+                order.OrderID = orderDao.CreateOrder(order.TableNr, order.Host.EmployeeID);
+            }
+            else
+            {
+                order.OrderID = oldOrder.OrderID;
+            }
 
+            orderDao.CreateOrderItems(order.OrderID, order.OrderItems);
+        }
     }
 }

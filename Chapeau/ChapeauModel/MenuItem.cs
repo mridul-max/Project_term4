@@ -8,6 +8,7 @@ namespace ChapeauModel
 {
     public class MenuItem
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Category { get; set; }
         public CategoryType CategoryType { get; set; }

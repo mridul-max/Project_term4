@@ -33,6 +33,10 @@ namespace ChapeauUI
             allOrderItems = new List<OrderingRow>();
             headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
             subHeaderFont = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
+        }
+
+        private void OrderingScreen_Load(object sender, EventArgs e)
+        {
             tabMenu.MakeTransparent();
             FillAllItemsPanel();
             FillCurrentItemsPanel();
@@ -134,6 +138,19 @@ namespace ChapeauUI
             label.AutoSize = true;
 
             return label;
+        }
+
+        public Order GetCurrentOrder()
+        {
+
+            
+            List<OrderItem> orderItems = new List<OrderItem>();
+            foreach (OrderingRow row in currentOrderItems)
+            {
+                orderItems.Add(new OrderItem(row.MenuItem, row.Amount));
+            }
+            Order currentOrder = new Order(CurrentTable.TableNumber, orderItems, Employee.LoggedEmployee);
+            return currentOrder;
         }
     }
 }

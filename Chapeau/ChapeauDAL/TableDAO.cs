@@ -37,6 +37,7 @@ namespace ChapeauDAL
             }
             return tables;
         }
+        //Changes the occupancy (for adding order and table display)
         public void SetOccupied(int TableNr)
         {
             OpenConnection();
@@ -46,6 +47,7 @@ namespace ChapeauDAL
             reader.Close();
             conn.Close();
         }
+        //Changes the occupancy (For after checking out)
         public void SetNoOccupied(int TableNr)
         {
             OpenConnection();
