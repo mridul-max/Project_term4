@@ -24,7 +24,7 @@ namespace ChapeauUI
         public TableDisplay(Table currentTable)
         {
             InitializeComponent();
-           
+
             orderService = new OrderService();
             reservationService = new ReservationService();
             tableService = new TableService();
@@ -48,15 +48,18 @@ namespace ChapeauUI
                 if (reservation.TableNumber == CurrentTable.TableNumber && reservation.ReservationDate >= DateTime.Now)
                     comboBox1.Items.Add(reservation.ReserverName + "  " + reservation.ReservationDate.ToString());
             }
-            if (CurrentTable.IsOccupied)
+            //If table has no orders yet, user is unable to check out even if the table is occupied.
+            if (orderItems.Count<=0)
             {
-                BtnChout.Enabled = true;
+                BtnChout.Enabled = false;        
             }
             else
             {
-                BtnChout.Enabled = false;
+                BtnChout.Enabled = true;
             }
         }
+
+
         //fills the labels according to the information.
         void FillTableInformation()
         {
@@ -65,19 +68,27 @@ namespace ChapeauUI
             if (CurrentTable.IsOccupied)
                 lblOccupy.Text = "Occupancy: Occupied";
             else
-                lblOccupy.Text = "Ocupancy:  Empty";
+                lblOccupy.Text = "Occupancy:  Empty";
         }
+
+
         //Displays each order one by one in user control with timer.
         void FillCurrentOrders()
         {
             orderItems = orderService.GetUnfinishedOrdersOfTable(CurrentTable.TableNumber);
             UCCurrentOrders orderUC;
+            if(pnlCurrentOrders.Controls.Count>0)
+            {
+                pnlCurrentOrders.Controls.Clear(); //Clearing for having more up to date  information.
+            }
             foreach (OrderItem item in orderItems)
             {
                 orderUC = new UCCurrentOrders(item);
                 pnlCurrentOrders.Controls.Add(orderUC);
             }
         }
+
+
         //opens reservation screen
         private void Btnreserve_Click(object sender, EventArgs e)
         {
@@ -85,6 +96,8 @@ namespace ChapeauUI
             form.ShowDialog();
             UpdateTableView();
         }
+
+
         //opens ordering screen
         private void BtnOrder_Click(object sender, EventArgs e)
         {
@@ -92,6 +105,8 @@ namespace ChapeauUI
             screen.ShowDialog();
             UpdateTableView();
         }
+
+
         //opens payment screen.
         private void BtnChout_Click(object sender, EventArgs e)
         {
@@ -99,18 +114,23 @@ namespace ChapeauUI
             screen.ShowDialog();
             UpdateTableView();
         }
+
+
         //closes this tab and returns to tableview.
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
         //Sets the table to occupied as requested in pdf.
         private void btnOccupy_Click(object sender, EventArgs e)
         {
-          if(!CurrentTable.IsOccupied)
+            if (!CurrentTable.IsOccupied)
             {
                 tableService.SetOccupied(CurrentTable.TableNumber);
                 CurrentTable.IsOccupied = true;
+                UpdateTableView();
                 FillTableInformation(); // Refreshing the labels.
 
                 //SHOULD I ALSO CREATE AN EMPTY PAYMENT SINCE THE TABLE IS OCCUPIED??

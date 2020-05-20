@@ -35,7 +35,7 @@ namespace ChapeauDAL
                     PaymentDate = dr["PaymentDateTime"] == DBNull.Value ? DateTime.Now : (DateTime)dr["PaymentDateTime"],
                     Comment = dr["Comment"] == DBNull.Value ? "  " : (string)dr["Comment"],
                     IsFinished = (bool)dr["isFinished"],
-                    Tip = float.Parse(dr["Tip"].ToString())
+                    Tip = dr["Tip"] == DBNull.Value ? 0 : float.Parse(dr["Tip"].ToString())
                 };
                 payment.OrderItems = GetUnfinishedOrdersOfTable(payment.TableNr);
                 payments.Add(payment);
@@ -101,7 +101,7 @@ namespace ChapeauDAL
                 PaymentDate = reader["PaymentDateTime"]==DBNull.Value?DateTime.Now: (DateTime)reader["PaymentDateTime"],
                 Comment = reader["Comment"]==DBNull.Value?"  ": (string)reader["Comment"],
                 IsFinished = (bool)reader["isFinished"],
-                Tip = float.Parse(reader["Tip"].ToString())
+                Tip =reader["Tip"]==DBNull.Value? 0: float.Parse(reader["Tip"].ToString())
             };
             return payment;
         }

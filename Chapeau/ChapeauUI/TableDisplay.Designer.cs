@@ -142,6 +142,7 @@ namespace ChapeauUI
             // BtnChout
             // 
             this.BtnChout.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.BtnChout.Enabled = false;
             this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChout.Location = new System.Drawing.Point(12, 622);
