@@ -66,15 +66,15 @@
             this.flpCurrentOrderItems.Size = new System.Drawing.Size(380, 80);
             this.flpCurrentOrderItems.TabIndex = 2;
             // 
-            // tabAllItems
+            // tabMenu
             // 
             this.tabMenu.Controls.Add(this.tabDrinks);
             this.tabMenu.Controls.Add(this.tabDinner);
             this.tabMenu.Controls.Add(this.tabLunch);
-            this.tabMenu.Location = new System.Drawing.Point(12, 88);
-            this.tabMenu.Name = "tabAllItems";
+            this.tabMenu.Location = new System.Drawing.Point(12, 98);
+            this.tabMenu.Name = "tabMenu";
             this.tabMenu.SelectedIndex = 0;
-            this.tabMenu.Size = new System.Drawing.Size(377, 816);
+            this.tabMenu.Size = new System.Drawing.Size(377, 806);
             this.tabMenu.TabIndex = 3;
             // 
             // tabDrinks
@@ -84,7 +84,7 @@
             this.tabDrinks.Location = new System.Drawing.Point(4, 22);
             this.tabDrinks.Name = "tabDrinks";
             this.tabDrinks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDrinks.Size = new System.Drawing.Size(369, 790);
+            this.tabDrinks.Size = new System.Drawing.Size(369, 780);
             this.tabDrinks.TabIndex = 0;
             this.tabDrinks.Text = "Drinks";
             // 
@@ -128,7 +128,7 @@
             this.tabLunch.Location = new System.Drawing.Point(4, 22);
             this.tabLunch.Name = "tabLunch";
             this.tabLunch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLunch.Size = new System.Drawing.Size(369, 790);
+            this.tabLunch.Size = new System.Drawing.Size(369, 780);
             this.tabLunch.TabIndex = 2;
             this.tabLunch.Text = "Lunch";
             // 
@@ -150,7 +150,7 @@
             this.AutoScroll = true;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.ClientSize = new System.Drawing.Size(801, 749);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.flpCurrentOrderItems);
             this.Controls.Add(this.label1);

@@ -33,6 +33,15 @@ namespace ChapeauLogic
         {
             orderDao.CreatePayment(tableNumber, employeeID);
         }
+        public List<OrderItem> GetAllFood(int OrderID)
+        {
+            return orderDao.GetListOfFood(OrderID);
+        }
+        public List<OrderItem> GetAllDrinks(int OrderID)
+        {
+            return orderDao.GetListOfFood(OrderID);
+        }
+
 
 
 

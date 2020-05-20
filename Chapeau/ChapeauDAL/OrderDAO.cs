@@ -143,6 +143,77 @@ namespace ChapeauDAL
             }
             return orderItems;
         }
+        public List<OrderItem> GetListOfFood(int OrderID)
+        {
+            OpenConnection();
+            string query = "Select M.*,O.* From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID Where C.CategoryType != 'Drinks' And O.OrderID = @ID Order by O.OrderID,M.ItemName";
+            SqlParameter[] sqlParameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id",OrderID)
+            };
+            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
+
+        }
+        private List<OrderItem> ReadAllFood(DataTable dataTable)
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                MenuItem menuItem = new MenuItem()
+                {
+                    Name = dr["ItemName"].ToString(),
+                    Price = float.Parse(dr["Price"].ToString()),
+                    Stock = (int)dr["Stock"],
+                    Description = dr["Description"].ToString(),
+                    Category = dr["CategoryID"].ToString()
+                };
+                OrderItem orderItem = new OrderItem()
+                {
+                    MenuItem = menuItem,
+                    Amount = (int)dr["Amount"],
+                    DateTimeAdded = (DateTime)dr["LastStateChanged"],
+                    orderState = (OrderState)Enum.Parse(typeof(OrderState), dr["OrderStateInformation"].ToString()),
+                };
+                orderItems.Add(orderItem);
+            }
+            return orderItems;
+
+        }
+        public List<OrderItem> GetAllDrinks(int OrderID)
+        {
+            OpenConnection();
+            string query = "Select M.*,O.* From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID Where C.CategoryType = 'Drinks' And O.OrderID = @ID Order by O.OrderID,M.ItemName";
+            SqlParameter[] sqlParameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id",OrderID)
+            };
+            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private List<OrderItem> ReadAllDribks(DataTable dataTable)
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                MenuItem menuItem = new MenuItem()
+                {
+                    Name = dr["ItemName"].ToString(),
+                    Price = float.Parse(dr["Price"].ToString()),
+                    Stock = (int)dr["Stock"],
+                    Description = dr["Description"].ToString(),
+                    Category = dr["CategoryID"].ToString()
+                };
+                OrderItem orderItem = new OrderItem()
+                {
+                    MenuItem = menuItem,
+                    Amount = (int)dr["Amount"],
+                    DateTimeAdded = (DateTime)dr["LastStateChanged"],
+                    orderState = (OrderState)Enum.Parse(typeof(OrderState), dr["OrderStateInformation"].ToString()),
+                };
+                orderItems.Add(orderItem);
+            }
+            return orderItems;
+
+        }
 
 
     }

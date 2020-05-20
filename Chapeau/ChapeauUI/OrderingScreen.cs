@@ -34,7 +34,6 @@ namespace ChapeauUI
             headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
             subHeaderFont = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
             tabMenu.MakeTransparent();
-
             FillAllItemsPanel();
             FillCurrentItemsPanel();
         }
