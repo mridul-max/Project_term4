@@ -44,12 +44,12 @@ namespace ChapeauUI
                 {
                     this.Hide();
 
-                    CheckEnumForForms(loggedEmployee);
+                    LoginAccordingtoEmployeeType(loggedEmployee);
                 }
             }
         }
         //Opens a different form for each type of employee.
-        private void CheckEnumForForms(Employee employee)
+        private void LoginAccordingtoEmployeeType(Employee employee)
         {
             switch (employee.EmployeeType)
             {
@@ -61,11 +61,15 @@ namespace ChapeauUI
                     ManagerScreen managerForm = new ManagerScreen(employee);
                     managerForm.ShowDialog();
                     break;
-                default: // since it can only be kitchen or bar after manager and waiter.
+                case EmployeeType.Bar:
+                case EmployeeType.Kitchen:
                     KitchenBarScreen KitchenBarForm = new KitchenBarScreen(employee);
                     KitchenBarForm.ShowDialog();
                     break;
- 
+                default:
+                    MessageBox.Show("Employee type is not valid or not found", "Invalid employee type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    break;
+
             }
         }
 

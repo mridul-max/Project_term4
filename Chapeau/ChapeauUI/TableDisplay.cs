@@ -61,25 +61,25 @@ namespace ChapeauUI
 
 
         //fills the labels according to the information.
-        void FillTableInformation()
+       private void FillTableInformation()
         {
             lblTableNumber.Text = "Table Number:" + " " + CurrentTable.TableNumber.ToString();
             lblCapacity.Text = "Capacity:" + " " + CurrentTable.Capacity.ToString();
             if (CurrentTable.IsOccupied)
                 lblOccupy.Text = "Occupancy: Occupied";
             else
-                lblOccupy.Text = "Occupancy:  Empty";
+                lblOccupy.Text = "Occupancy:  Free";
         }
 
 
         //Displays each order one by one in user control with timer.
-        void FillCurrentOrders()
+       private void FillCurrentOrders()
         {
             orderItems = orderService.GetUnfinishedOrdersOfTable(CurrentTable.TableNumber);
             UCCurrentOrders orderUC;
-            if(pnlCurrentOrders.Controls.Count>0)
+            if (pnlCurrentOrders.Controls.Count > 0)
             {
-                pnlCurrentOrders.Controls.Clear(); //Clearing for having more up to date  information.
+                pnlCurrentOrders.Controls.Clear(); //Clearing the list first for having more up to date  information.
             }
             foreach (OrderItem item in orderItems)
             {
@@ -128,6 +128,7 @@ namespace ChapeauUI
         {
             if (!CurrentTable.IsOccupied)
             {
+                //pass in the object instead.
                 tableService.SetOccupied(CurrentTable.TableNumber);
                 CurrentTable.IsOccupied = true;
                 UpdateTableView();

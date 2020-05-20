@@ -21,10 +21,8 @@ namespace ChapeauUI
 
         private void TableView_Load(object sender, EventArgs e)
         {
-
-            allTables = tableService.GetAllTables();
             occupiedIcons = FillPictureBoxes();
-            CheckOccupancy();
+            RefreshTableInformation();
             lblEmployee.Text = lblEmployee.Text + " " + loggedEmployee.Name;
             if (loggedEmployee.EmployeeType == EmployeeType.Manager)
             {
@@ -41,7 +39,7 @@ namespace ChapeauUI
         {
             TableDisplay tableDisplay = new TableDisplay(allTables[index]);
             tableDisplay.ShowDialog();
-            CheckOccupancy();
+            RefreshTableInformation();
         }
 
         //For closing the application.
@@ -64,7 +62,7 @@ namespace ChapeauUI
             login.ShowDialog();
         }
         //this methods are for changing occupancy picture visibilities.
-        void CheckOccupancy() // ask about this
+        void RefreshTableInformation() // ask about this [refresh]
         {
             allTables = tableService.GetAllTables();
             for (int i = 0; i < allTables.Count; i++)
@@ -150,5 +148,6 @@ namespace ChapeauUI
             this.Hide();
             login.ShowDialog();
         }
+
     }
 }
