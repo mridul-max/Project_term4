@@ -132,9 +132,7 @@ namespace ChapeauUI
                 tableService.SetOccupied(CurrentTable.TableNumber);
                 CurrentTable.IsOccupied = true;
                 UpdateTableView();
-                FillTableInformation(); // Refreshing the labels.
-
-                //SHOULD I ALSO CREATE AN EMPTY PAYMENT SINCE THE TABLE IS OCCUPIED??
+                FillTableInformation(); // Refreshing the labels.               
             }
         }
     }
