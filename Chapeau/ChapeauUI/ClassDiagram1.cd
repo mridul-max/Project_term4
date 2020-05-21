@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TransparentTabControl">
+    <Position X="41" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CustomControls\TransparentTabControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.KitchenBarScreen">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQIAAAAAACAAAFAAAgCAAIACQAAAAAgAAAAAAAABAAA=</HashCode>
+      <FileName>KitchenBarScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.LoginScreen">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAgAAAAAACAAABAAAACAAAACAAAACAAAABAAAAhAAJA=</HashCode>
+      <FileName>LoginScreen.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="employeeService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.ManagerScreen">
+    <Position X="27.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iRIAAAAAACgAIEAAAADAgAACQCACAAAAACABAAAAAAA=</HashCode>
+      <FileName>ManagerScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.OrderingScreen">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <AssociationLine Name="currentOrderItems" Type="ChapeauUI.OrderingRow" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.5" Y="2.375" />
+        <Point X="17.662" Y="2.375" />
+        <Point X="17.662" Y="2.375" />
+        <Point X="17.25" Y="2.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAAAAQACIwARAgAAKAIAgCABAAAkQACCAAAgMCACA=</HashCode>
+      <FileName>OrderingScreen.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="confirmControll" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="allOrderItems" />
+      <Field Name="currentOrderItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChapeauUI.PaymentScreen">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABgAAAQCAAABAAABCAKMACAAIAABFgAAAAAAAAQFA=</HashCode>
+      <FileName>PaymentScreen.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="orderService" />
+      <Field Name="CurrentPayment" />
+      <Field Name="tableService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.ReservationForm">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAADACICABAgQACAIAACAAAAAAwAAAAAgIAAAAQ=</HashCode>
+      <FileName>ReservationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauUI.TableDisplay">
+    <Position X="34.75" Y="0.5" Width="1.5" />
+    <AssociationLine Name="orderItems" Type="ChapeauModel.OrderItem" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="35.195" Y="6.8" />
+        <Point X="35.195" Y="11.857" />
+        <Point X="34.458" Y="11.857" Type="JumpStart" />
+        <Point X="34.292" Y="11.857" Type="JumpEnd" />
+        <Point X="32.333" Y="11.857" Type="JumpStart" />
+        <Point X="32.167" Y="11.857" Type="JumpEnd" />
+        <Point X="6.266" Y="11.857" />
+        <Point X="6.266" Y="9.497" />
+        <Point X="6.25" Y="9.497" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.079" Y="-0.41" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgQAAACAAKhAwAACAQpMCiAoAQAhAACAAQAAAIAA=</HashCode>
+      <FileName>TableDisplay.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="CurrentTable" />
+      <Field Name="tableService" />
+      <Field Name="orderService" />
+      <Field Name="reservationService" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="orderItems" />
+      <Field Name="reservations" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChapeauUI.TableView">
+    <Position X="31.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BZIAgYAAACQAIEQAIgCwGIgSQEBMDAANBAAQBg0GAig=</HashCode>
+      <FileName>TableView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="tableService" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="allTables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChapeauUI.OrderingConfirmation">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAkAAACAAEACEAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>UserControlls\OrderingConfirmation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mainScreen" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.OrderingRow">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAAACwAABIAAACAAACCMAAAgAIAAAAAAgAAAAA=</HashCode>
+      <FileName>UserControlls\OrderingRow.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mainScreen" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauUI.UserControlls.UCCurrentOrders">
+    <Position X="38" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEBCgAABJRAACAAACCAAAgAAAAAAAUAQAAAAA=</HashCode>
+      <FileName>UserControlls\UCCurrentOrders.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="orderItem" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauModel.Employee">
+    <Position X="0.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="EmployeeType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauModel.MenuItem">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="CategoryType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauModel.Order">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Host" />
+      <Property Name="Method" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="OrderItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ChapeauModel.OrderItem">
+    <Position X="5.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="orderState" />
+      <Property Name="MenuItem" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ChapeauModel.Reservation">
+    <Position X="0.5" Y="14" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauModel.Table">
+    <Position X="3.25" Y="14" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.EmployeeService">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.Error_Service">
+    <Position X="13.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.MenuItemService">
+    <Position X="15.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.OrderService">
+    <Position X="17.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.ReservationService">
+    <Position X="13.75" Y="9" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauLogic.TableService">
+    <Position X="17" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="SomerenDAL.Base">
+    <Position X="12.75" Y="18.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.EmployeeDAO">
+    <Position X="15.25" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.ErrorDAO">
+    <Position X="20.5" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.MenuItemDAO">
+    <Position X="8.25" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.OrderDAO">
+    <Position X="10.25" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.ReservationDAO">
+    <Position X="12.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="ChapeauDAL.TableDAO">
+    <Position X="17.75" Y="15" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="ChapeauModel.CategoryType">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="ChapeauModel.EmployeeType">
+    <Position X="0.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="ChapeauModel.OrderState">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Enum Name="ChapeauModel.PaymentMethod">
+    <Position X="8.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
