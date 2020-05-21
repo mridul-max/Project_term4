@@ -76,8 +76,8 @@ namespace ChapeauUI
 
             }
 
-
-            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTip.Text, @"^[0-9]*(?:\.[0-9]+)?$"))
+            txtTip.Text = txtTip.Text.Replace('.', ',');
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtTip.Text, @"^[0-9]*(?:\,[0-9]+)?$"))
             {
                 fieldsAreFilled = false;
                 MessageBox.Show("This field only accepts numbers!!", "Please use only numbers", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -85,28 +85,23 @@ namespace ChapeauUI
             else if (String.IsNullOrEmpty(txtTip.Text))
             {
                 CurrentPayment.Tip = 0;
-                fieldsAreFilled = true;
             }
             else
             {
-                fieldsAreFilled = true;
                 CurrentPayment.Tip = float.Parse(txtTip.Text);
             }
 
             if (RDCash.Checked)
             {
                 CurrentPayment.Method = PaymentMethod.Cash;
-                fieldsAreFilled = true;
             }
             else if (RDPin.Checked)
             {
                 CurrentPayment.Method = PaymentMethod.Pin;
-                fieldsAreFilled = true;
             }
             else if (RDCredit.Checked)
             {
                 CurrentPayment.Method = PaymentMethod.Credit;
-                fieldsAreFilled = true;
             }
             else
             {
