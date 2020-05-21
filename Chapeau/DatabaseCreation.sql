@@ -1,4 +1,6 @@
-﻿Drop Table Category;
+﻿DROP TABLE OrderItem;
+DROP TABLE [Order];
+Drop Table Category;
 DROP TABLE Employee;
 DROP TABLE EmployeeType;
 DROP TABLE Empolyee;
@@ -72,13 +74,15 @@ CREATE TABLE OrderState
 	OrderStateInformation VARCHAR(45) NOT NULL
 );
 GO
-CREATE TABLE OrderItem
-(
-	OrderID INT NOT NULL FOREIGN KEY REFERENCES [Order](OrderID) ON DELETE CASCADE ON UPDATE CASCADE,
-	MenuItemID INT NOT NULL FOREIGN KEY REFERENCES MenuItem(MenuItemID) ON DELETE NO ACTION ON UPDATE CASCADE,
-	OrderStateKey VARCHAR(3) NOT NULL FOREIGN KEY REFERENCES OrderState(OrderStateKey) ON DELETE NO ACTION ON UPDATE CASCADE,
-	Amount INT NOT NULL DEFAULT 1,
-	LastStateChanged DATETIME NOT NULL,
-	OrderDateTime DATETIME NOT NULL,
-	PRIMARY KEY(OrderID, MENUITEMID)
+CREATE TABLE [dbo].[OrderItem] (
+	[ID]				INT			NOT NULL PRIMARY KEY IDENTITY(1,1),
+    [OrderID]          INT         NOT NULL,
+    [MenuItemID]       INT         NOT NULL,
+    [OrderStateKey]    VARCHAR (3) NOT NULL,
+    [Amount]           INT         DEFAULT ((1)) NOT NULL,
+    [LastStateChanged] DATETIME    NOT NULL,
+    [OrderDateTime]    DATETIME    NOT NULL,
+    FOREIGN KEY ([OrderID]) REFERENCES [dbo].[Order] ([OrderID]) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ([MenuItemID]) REFERENCES [dbo].[MenuItem] ([MenuItemID]) ON UPDATE CASCADE,
+    FOREIGN KEY ([OrderStateKey]) REFERENCES [dbo].[OrderState] ([OrderStateKey]) ON UPDATE CASCADE
 );

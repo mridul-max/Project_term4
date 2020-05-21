@@ -231,9 +231,6 @@ namespace ChapeauDAL
                 orderItems.Add(orderItem);
             }
             return orderItems;
-
         }
-
-
     }
 }
