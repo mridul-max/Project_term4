@@ -14,7 +14,6 @@ namespace ChapeauUI
 {
     public partial class TableView : Form
     {   //write private.
-        private Employee loggedEmployee;
         private TableService tableService;
         private List<Table> allTables;
         private List<PictureBox> occupiedIcons;
@@ -23,16 +22,15 @@ namespace ChapeauUI
         {
             occupiedIcons = FillPictureBoxes();
             RefreshTableInformation();
-            lblEmployee.Text = lblEmployee.Text + " " + loggedEmployee.Name;
-            if (loggedEmployee.EmployeeType == EmployeeType.Manager)
+            lblEmployee.Text = lblEmployee.Text + " " + Employee.LoggedEmployee.Name;
+            if (Employee.LoggedEmployee.EmployeeType == EmployeeType.Manager)
             {
                 returnToManagementToolStripMenuItem.Visible = true;
             }
         }
-        public TableView(Employee loggedEmployee)
+        public TableView()
         {
             InitializeComponent();
-            this.loggedEmployee = loggedEmployee;
             tableService = new TableService();
         }
         void DisplayTableForm(int index)
@@ -48,12 +46,7 @@ namespace ChapeauUI
             Application.Exit();
         }
 
-        private void returnToManagementToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ManagerScreen managementScreen = new ManagerScreen(loggedEmployee);
-            this.Hide();
-            managementScreen.ShowDialog();
-        }
+
 
         private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -149,5 +142,11 @@ namespace ChapeauUI
             login.ShowDialog();
         }
 
+        private void returnToManagementToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            ManagerScreen manager = new ManagerScreen();
+            this.Hide();
+            manager.ShowDialog();
+        }
     }
 }

@@ -14,15 +14,14 @@ namespace ChapeauUI
     public partial class ManagerScreen : Form
     {
         private Employee loggedEmployee;
-        public ManagerScreen(Employee loggedEmployee)
+        public ManagerScreen()
         {
-            InitializeComponent();
-            this.loggedEmployee = loggedEmployee;                   
+            InitializeComponent();                           
         }
 
         private void ManagerScreen_Load(object sender, EventArgs e)
         {
-            lblLogged.Text = lblLogged.Text + " " + loggedEmployee.Name;
+            lblLogged.Text = lblLogged.Text + " " + Employee.LoggedEmployee.Name;
         }
 
         private void ManagerScreen_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,14 +31,14 @@ namespace ChapeauUI
 
         private void kitchenbarScreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            KitchenBarScreen kitchenBarView = new KitchenBarScreen(loggedEmployee);
+            KitchenBarScreen kitchenBarView = new KitchenBarScreen();
             this.Hide();
             kitchenBarView.ShowDialog();
         }
 
         private void tableViewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TableView tableView = new TableView(loggedEmployee);
+            TableView tableView = new TableView();
             this.Hide();
             tableView.ShowDialog();
         }
