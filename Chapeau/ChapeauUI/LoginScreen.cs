@@ -52,19 +52,20 @@ namespace ChapeauUI
         private void LoginAccordingtoEmployeeType(Employee employee)
         {
             Employee.LoggedEmployee = employee;
-            switch (employee.EmployeeType)
+            //We have a static logged employee in our application and now we don't have to pass in the employee for each form which makes it cleaner.
+            switch (Employee.LoggedEmployee.EmployeeType)
             {
                 case EmployeeType.Waiter:
-                    TableView tableForm = new TableView(employee);
+                    TableView tableForm = new TableView();
                     tableForm.ShowDialog();
                     break;
                 case EmployeeType.Manager:
-                    ManagerScreen managerForm = new ManagerScreen(employee);
+                    ManagerScreen managerForm = new ManagerScreen();
                     managerForm.ShowDialog();
                     break;
                 case EmployeeType.Bar:
                 case EmployeeType.Kitchen:
-                    KitchenBarScreen KitchenBarForm = new KitchenBarScreen(employee);
+                    KitchenBarScreen KitchenBarForm = new KitchenBarScreen();
                     KitchenBarForm.ShowDialog();
                     break;
                 default:
