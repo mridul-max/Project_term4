@@ -38,21 +38,21 @@ namespace ChapeauDAL
             return tables;
         }
         //Changes the occupancy (for adding order and table display)
-        public void SetOccupied(int TableNr)
+        public void SetOccupied(Table table)
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand("UPDATE [Table] set IsOccupied = 1 WHERE TableNumber= @Id;", conn);
-            cmd.Parameters.AddWithValue("@Id", TableNr);
+            cmd.Parameters.AddWithValue("@Id", table.TableNumber);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();
         }
         //Changes the occupancy (For after checking out)
-        public void SetNoOccupied(int TableNr)
+        public void SetNoOccupied(Table table)
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand("UPDATE [Table] set IsOccupied = 0 WHERE TableNumber= @Id;", conn);
-            cmd.Parameters.AddWithValue("@Id", TableNr);
+            cmd.Parameters.AddWithValue("@Id", table.TableNumber);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();

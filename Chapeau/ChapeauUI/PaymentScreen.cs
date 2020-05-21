@@ -119,7 +119,8 @@ namespace ChapeauUI
             {
                 CurrentPayment.PaymentDate = DateTime.Now;
                 orderService.CompletePayment(CurrentPayment);
-                tableService.SetNoOccupied(CurrentPayment.TableNr);
+               Table table= tableService.GetById(CurrentPayment.TableNr);
+                tableService.SetNoOccupied(table);
                 MessageBox.Show("Payment has completed and saved successfully.", "Payment completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }          

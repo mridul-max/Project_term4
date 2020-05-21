@@ -29,13 +29,13 @@ namespace ChapeauLogic
             }
                     
         }
-        public void SetOccupied(int TableNr)
+        public void SetOccupied(Table table)
         {
-            tabledao.SetOccupied(TableNr);
+            tabledao.SetOccupied(table);
         }
-        public void SetNoOccupied(int TableNr)
+        public void SetNoOccupied(Table table)
         {
-            tabledao.SetNoOccupied(TableNr);
+            tabledao.SetNoOccupied(table);
         }
         public Table GetById(int id)
         {          

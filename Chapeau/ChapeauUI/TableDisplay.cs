@@ -48,6 +48,7 @@ namespace ChapeauUI
                 if (reservation.TableNumber == CurrentTable.TableNumber && reservation.ReservationDate >= DateTime.Now)
                     comboBox1.Items.Add(reservation.ReserverName + "  " + reservation.ReservationDate.ToString());
             }
+
             //If table has no orders yet, user is unable to check out even if the table is occupied.
             if (orderItems.Count<=0)
             {
@@ -66,9 +67,15 @@ namespace ChapeauUI
             lblTableNumber.Text = "Table Number:" + " " + CurrentTable.TableNumber.ToString();
             lblCapacity.Text = "Capacity:" + " " + CurrentTable.Capacity.ToString();
             if (CurrentTable.IsOccupied)
+            {
                 lblOccupy.Text = "Occupancy: Occupied";
+                btnOccupy.Text = "Mark as free";
+            }
             else
+            {
                 lblOccupy.Text = "Occupancy:  Free";
+                btnOccupy.Text = "Mark as occupied";
+            }
         }
 
 
@@ -126,14 +133,22 @@ namespace ChapeauUI
         //Sets the table to occupied as requested in pdf.
         private void btnOccupy_Click(object sender, EventArgs e)
         {
+            UpdateTableView();
             if (!CurrentTable.IsOccupied)
             {
-                //pass in the object instead.
-                tableService.SetOccupied(CurrentTable.TableNumber);
                 CurrentTable.IsOccupied = true;
-                UpdateTableView();
-                FillTableInformation(); // Refreshing the labels.               
+                tableService.SetOccupied(CurrentTable);                            
             }
+            else if(CurrentTable.IsOccupied && orderItems.Count<=0)
+            {
+                CurrentTable.IsOccupied = false;
+                tableService.SetNoOccupied(CurrentTable);               
+            }
+            else
+            {
+                MessageBox.Show("You can't set a table to free when a table has orders", "Can not set to free", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }         
+            FillTableInformation(); // Refreshing the occupancy sections.
         }
     }
 }
