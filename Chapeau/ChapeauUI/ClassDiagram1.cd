@@ -25,9 +25,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauUI.ManagerScreen">
-    <Position X="27.25" Y="0.5" Width="1.5" />
+    <Position X="26.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>iRIAAAAAACgAIEAAAADAgAACQCACAAAAACABAAAAAAA=</HashCode>
+      <HashCode>iRIAAAAAACgAIEAAAADAgAACACACAAAAACABAAAAAAA=</HashCode>
       <FileName>ManagerScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -49,8 +49,8 @@
       <Field Name="confirmControll" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="allOrderItems" />
       <Field Name="currentOrderItems" />
+      <Field Name="allOrderItems" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ChapeauUI.PaymentScreen">
@@ -60,9 +60,9 @@
       <FileName>PaymentScreen.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="orderService" />
       <Field Name="CurrentPayment" />
       <Field Name="tableService" />
+      <Field Name="orderService" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauUI.ReservationForm">
@@ -96,19 +96,19 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="CurrentTable" />
-      <Field Name="tableService" />
       <Field Name="orderService" />
       <Field Name="reservationService" />
+      <Field Name="tableService" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="orderItems" />
       <Field Name="reservations" />
+      <Field Name="orderItems" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="ChapeauUI.TableView">
     <Position X="31.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BZIAgYAAACQAIEQAIgCwGIgSQEBMDAANBAAQBg0GAig=</HashCode>
+      <HashCode>BZIAgYAAACQAIEQAIgCwGAgSAEBMDAANBAAQBg0GAig=</HashCode>
       <FileName>TableView.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -177,8 +177,8 @@
     <Position X="5.5" Y="7.75" Width="1.5" />
     <TypeIdentifier />
     <ShowAsAssociation>
-      <Property Name="orderState" />
       <Property Name="MenuItem" />
+      <Property Name="orderState" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauModel.Reservation">

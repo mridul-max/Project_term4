@@ -13,7 +13,6 @@ namespace ChapeauUI
 {
     public partial class ManagerScreen : Form
     {
-        private Employee loggedEmployee;
         public ManagerScreen()
         {
             InitializeComponent();                           
