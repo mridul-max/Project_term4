@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="TransparentTabControl">
-    <Position X="41" Y="0.5" Width="1.5" />
+    <Position X="40.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAQAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
       <FileName>CustomControls\TransparentTabControl.cs</FileName>
@@ -82,6 +82,8 @@
         <Point X="34.292" Y="11.857" Type="JumpEnd" />
         <Point X="32.333" Y="11.857" Type="JumpStart" />
         <Point X="32.167" Y="11.857" Type="JumpEnd" />
+        <Point X="7.458" Y="11.857" Type="JumpStart" />
+        <Point X="7.292" Y="11.857" Type="JumpEnd" />
         <Point X="6.266" Y="11.857" />
         <Point X="6.266" Y="9.497" />
         <Point X="6.25" Y="9.497" />
@@ -139,7 +141,22 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauUI.UserControlls.UCCurrentOrders">
-    <Position X="38" Y="0.5" Width="1.5" />
+    <Position X="37.75" Y="1.25" Width="1.5" />
+    <AssociationLine Name="orderItem" Type="ChapeauModel.OrderItem" ManuallyRouted="true">
+      <Path>
+        <Point X="38.5" Y="6.271" />
+        <Point X="38.5" Y="12.723" />
+        <Point X="35.837" Y="12.723" Type="JumpStart" />
+        <Point X="35.67" Y="12.723" Type="JumpEnd" />
+        <Point X="34.458" Y="12.723" Type="JumpStart" />
+        <Point X="34.292" Y="12.723" Type="JumpEnd" />
+        <Point X="32.333" Y="12.723" Type="JumpStart" />
+        <Point X="32.167" Y="12.723" Type="JumpEnd" />
+        <Point X="7.375" Y="12.723" />
+        <Point X="7.375" Y="8.842" />
+        <Point X="7" Y="8.842" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAQAAAAEBCgAABJRAACAAACCAAAgAAAAAAAUAQAAAAA=</HashCode>
       <FileName>UserControlls\UCCurrentOrders.cs</FileName>
@@ -254,7 +271,7 @@
     <TypeIdentifier />
   </Enum>
   <Enum Name="ChapeauModel.PaymentMethod">
-    <Position X="8.5" Y="5.75" Width="1.5" />
+    <Position X="8.5" Y="5.25" Width="1.5" />
     <TypeIdentifier />
   </Enum>
   <Font Name="Segoe UI" Size="9" />
