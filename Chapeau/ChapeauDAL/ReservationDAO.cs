@@ -20,6 +20,17 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+
+        public List<Reservation> GetAllById(int TableNr)
+        {
+            string query = "select ReservationID,TableNumber,ReservationDate,PhoneNumber,ReserverName from reservation WHERE TableNumber= @Id AND ReservationDate> @Date;";
+            SqlParameter[] sqlParameters = new SqlParameter[2]
+            {
+                new SqlParameter("@Id",TableNr),
+                new SqlParameter("@Date",DateTime.Now)
+            };
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
         private List<Reservation> ReadTables(DataTable dataTable)
         {
             List<Reservation> reservations = new List<Reservation>();

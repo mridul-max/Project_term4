@@ -17,41 +17,7 @@ namespace ChapeauUI.UserControlls
         private Timer timer;
 
         private OrderItem orderItem { get; set; }
-        private Label itemName
-        {
-            get
-            {
-                return lblItemName;
-            }
-            set
-            {
-                lblItemName = value;
-            }
-        }
-        private Label Amount
-        {
-            get
-            {
-                return lblAmount;
-            }
-            set
-            {
-                lblAmount = value;
-            }
-        }
-
-        private Label Status
-        {
-            get
-            {
-                return lblStatus;
-            }
-            set
-            {
-                lblStatus = value;
-            }
-        }
-
+   
 
 
         public UCCurrentOrders(OrderItem orderItem)

@@ -30,6 +30,10 @@ namespace ChapeauLogic
 
 
         }
+        public List<Reservation> GetAllById(int TableNr)
+        {
+          return  reservationDao.GetAllById(TableNr);
+        }
         public void CreateReservation(int tableNumber, string reservationDate, long phoneNumber, string reserverName)
         {
             try

@@ -111,6 +111,12 @@
     <Compile Include="TableDisplay.Designer.cs">
       <DependentUpon>TableDisplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlls\UCReservationForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlls\UCReservationForm.Designer.cs">
+      <DependentUpon>UCReservationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlls\UCCurrentOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TableDisplay.resx">
       <DependentUpon>TableDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlls\UCReservationForm.resx">
+      <DependentUpon>UCReservationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlls\UCCurrentOrders.resx">
       <DependentUpon>UCCurrentOrders.cs</DependentUpon>
