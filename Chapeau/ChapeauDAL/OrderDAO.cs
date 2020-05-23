@@ -171,11 +171,11 @@ namespace ChapeauDAL
             {
                 new SqlParameter("@Id",OrderID)
             };
-            return ReadAllFood(ExecuteSelectQuery(query, sqlParameters));
+            return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
 
         }
         //Reading all food for kitchen view
-        private List<OrderItem> ReadAllFood(DataTable dataTable)
+        private List<OrderItem> ReadAlltype(DataTable dataTable)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
             foreach (DataRow dr in dataTable.Rows)
@@ -209,59 +209,38 @@ namespace ChapeauDAL
             {
                 new SqlParameter("@Id",OrderID)
             };
-            return ReadAllDrinks(ExecuteSelectQuery(query, sqlParameters));
+            return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
         }
-        //reading all the drinks for bar view
-        private List<OrderItem> ReadAllDrinks(DataTable dataTable)
-        {
-            List<OrderItem> orderItems = new List<OrderItem>();
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                MenuItem menuItem = new MenuItem()
-                {
-                    Name = dr["ItemName"].ToString(),
-                    Price = float.Parse(dr["Price"].ToString()),
-                    Stock = (int)dr["Stock"],
-                    Description = dr["Description"].ToString(),
-                    Category = dr["CategoryID"].ToString()
-                };
-                OrderItem orderItem = new OrderItem()
-                {
-                    MenuItem = menuItem,
-                    Amount = (int)dr["Amount"],
-                    DateTimeAdded = (DateTime)dr["LastStateChanged"],
-                    orderState = (OrderState)Enum.Parse(typeof(OrderState), dr["OrderStateInformation"].ToString()),
-                };
-                orderItems.Add(orderItem);
-            }
-            return orderItems;
-        }
+       
         //Ready to serve Orderitem 
-        public void UpdateReadyItem(OrderItem items)
+        public void UpdateReadyItem(OrderItem item)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RD' Where id = @id;", conn);
-            cmd.Parameters.AddWithValue("@id", items.MenuItem);
+            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RD' Where OrderID = @OrderID and MenuItemID = @MenuItemID;", conn);
+            cmd.Parameters.AddWithValue("@OrderID",item.OrderID);
+            cmd.Parameters.AddWithValue("@MenuItemID", item.MenuItem.ID);
             SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
+            reader.Close(); 
             conn.Close();
         }
         //Running to serve orderItem
-        public void UpdateRunningItem(OrderItem items)
+        public void UpdateRunningItem(OrderItem item)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RN' Where id = @id;", conn);
-            cmd.Parameters.AddWithValue("@id",items.MenuItem);
+            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RN' Where OrderID = @OrderID and MenuItemID = @MenuItemID;", conn);
+            cmd.Parameters.AddWithValue("@OrderID", item.OrderID);
+            cmd.Parameters.AddWithValue("@MenuItemID", item.MenuItem.ID);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();
         }
         //preparing to serve orderItem
-        public void UpdatePreparingItem(OrderItem items)
+        public void UpdatePreparingItem(OrderItem item)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'PR' Where id = @id;", conn);
-            cmd.Parameters.AddWithValue("@id", items.MenuItem);
+            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'PR' Where OrderID = @OrderID and MenuItemID = @MenuItemID;", conn);
+            cmd.Parameters.AddWithValue("@OrderID", item.OrderID);
+            cmd.Parameters.AddWithValue("@MenuItemID", item.MenuItem.ID);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();

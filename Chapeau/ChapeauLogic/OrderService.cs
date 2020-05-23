@@ -50,19 +50,19 @@ namespace ChapeauLogic
         {
             return orderDao.GetAllDrinks(OrderID);
         }
-        public void UpdatePreparingItem(OrderItem items)
+        public void UpdatePreparingItem(OrderItem item)
         {
-            orderDao.UpdatePreparingItem(items);
+            orderDao.UpdatePreparingItem(item);
 
         }
-        public void UpdateRunningItem(OrderItem items)
+        public void UpdateRunningItem(OrderItem item)
         {
-            orderDao.UpdateRunningItem(items);
+            orderDao.UpdateRunningItem(item);
 
         }
-        public void UpdateReadyItem(OrderItem items)
+        public void UpdateReadyItem(OrderItem item)
         {
-            orderDao.UpdateReadyItem(items);
+            orderDao.UpdateReadyItem(item);
 
         }
     }
