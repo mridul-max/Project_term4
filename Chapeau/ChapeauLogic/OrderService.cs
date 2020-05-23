@@ -30,6 +30,7 @@ namespace ChapeauLogic
 
         public void CreateNewOrder(Order order)
         {
+            TableService tableService = new TableService();
             Order oldOrder = GetOrderByTableId(order.TableNr);
             if (oldOrder == null)
             {
@@ -39,7 +40,7 @@ namespace ChapeauLogic
             {
                 order.OrderID = oldOrder.OrderID;
             }
-
+            tableService.SetOccupied(order.TableNr);
             orderDao.CreateOrderItems(order.OrderID, order.OrderItems);
         }
         public List<OrderItem> GetListOfFood(int OrderID)

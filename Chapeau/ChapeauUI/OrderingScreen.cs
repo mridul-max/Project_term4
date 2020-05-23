@@ -38,6 +38,7 @@ namespace ChapeauUI
         private void OrderingScreen_Load(object sender, EventArgs e)
         {
             tabMenu.MakeTransparent();
+            lblTableNr.Text = "Table: " + CurrentTable.TableNumber;
             FillAllItemsPanel();
             FillCurrentItemsPanel();
         }
@@ -142,8 +143,6 @@ namespace ChapeauUI
 
         public Order GetCurrentOrder()
         {
-
-            
             List<OrderItem> orderItems = new List<OrderItem>();
             foreach (OrderingRow row in currentOrderItems)
             {
