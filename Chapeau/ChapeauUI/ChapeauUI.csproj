@@ -149,8 +149,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,42 +241,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\WarningTimer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy4.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy5.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy7.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy8.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy9.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Occupy10.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Table11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,7 +41,10 @@ namespace ChapeauUI
             FillCurrentOrders();
             UpdateReservationStatus();
             UpdateTableInformation();
+
+            //If table has no orders yet, user is unable to check out even if the table is occupied.
           
+
         }
         //Gets the reservations according to now's datetime and table number and adds it to the list.
         private void UpdateReservationStatus()

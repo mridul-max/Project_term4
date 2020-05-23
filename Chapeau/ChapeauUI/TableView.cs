@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauLogic;
 using ChapeauModel;
-using ChapeauUI.Properties;
 
 namespace ChapeauUI
 {
@@ -17,16 +16,11 @@ namespace ChapeauUI
     {   //write private.
         private TableService tableService;
         private List<Table> allTables;
-        private List<PictureBox> orderIcons;
-        private List<PictureBox> tableIcons;
-        private List<PictureBox> timerIcons;
-        private List<Bitmap> tableImages;
-        private List<Bitmap> occupiedTableImages;
-
+        private List<PictureBox> occupiedIcons;
 
         private void TableView_Load(object sender, EventArgs e)
         {
-            FillPictureBoxes();
+            occupiedIcons = FillPictureBoxes();
             RefreshTableInformation();
             lblEmployee.Text = lblEmployee.Text + " " + Employee.LoggedEmployee.Name;
             if (Employee.LoggedEmployee.EmployeeType == EmployeeType.Manager)
@@ -61,34 +55,27 @@ namespace ChapeauUI
             login.ShowDialog();
         }
         //this methods are for changing occupancy picture visibilities.
-        void RefreshTableInformation() 
+        void RefreshTableInformation() // ask about this [refresh]
         {
             allTables = tableService.GetAllTables();
             for (int i = 0; i < allTables.Count; i++)
             {
                 if (allTables[i].IsOccupied)
                 {
-                    tableIcons[i].Image = occupiedTableImages[i];
-                    tableIcons[i].Height = 128;   // I had to change the height due to resolution issues.
+                    occupiedIcons[i].Visible = true;
+                   
                 }
                 else
-                {
-                    tableIcons[i].Image = tableImages[i];
-                    tableIcons[i].Height = 103;  // I had to change the height due to resolution issues.
-                }
-                                  
+                    occupiedIcons[i].Visible = false;               
             }
         }
 
 
 
         //This is method exist because I want to keep form load as clean as possible
-        void FillPictureBoxes()
+        List<PictureBox> FillPictureBoxes()
         {
-            orderIcons = new List<PictureBox>() { pcOrder1, pcorder2, pcorder3, pcorder4, pcorder5, pcorder6, pcorder7, pcorder8, pcorder9, pcorder10 };
-            tableIcons = new List<PictureBox>() { pcTable1, pcTable2, pcTable3, pcTable4, pcTable5, pcTable6, pcTable7, pcTable8, pcTable9, pcTable10 };
-            tableImages = new List<Bitmap> { Resources.table1, Resources.table2, Resources.table3, Resources.table4, Resources.table5, Resources.table5, Resources.table6, Resources.table7, Resources.table8, Resources.table9, Resources.table10 };
-            occupiedTableImages = new List<Bitmap>() { Resources.Occupy1,Resources.Occupy2,Resources.Occupy3,Resources.Occupy4,Resources.Occupy5,Resources.Occupy6,Resources.Occupy7,Resources.Occupy8,Resources.Occupy9,Resources.Occupy10};
+            return new List<PictureBox>() { pcoccupied1, pcoccupied2, pcoccupied3, pcoccupied4, pcoccupied5, pcoccupied6, pcoccupied7, pcoccupied8, pcoccupied9, pcoccupied10};
         }
 
 
@@ -96,7 +83,7 @@ namespace ChapeauUI
         //in this code between region picture box codes are implemented.
         #region Display table code for picture boxes.
         private void pcboxtb1_Click(object sender, EventArgs e)
-        {           
+        {
             DisplayTableForm(0);
         }
 

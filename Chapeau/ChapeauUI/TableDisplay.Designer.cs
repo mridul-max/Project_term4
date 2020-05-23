@@ -58,16 +58,16 @@ namespace ChapeauUI
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(484, 693);
+            this.groupBox1.Size = new System.Drawing.Size(484, 622);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // pnlReserve
             // 
             this.pnlReserve.AutoScroll = true;
-            this.pnlReserve.Location = new System.Drawing.Point(0, 358);
+            this.pnlReserve.Location = new System.Drawing.Point(0, 322);
             this.pnlReserve.Name = "pnlReserve";
-            this.pnlReserve.Size = new System.Drawing.Size(478, 330);
+            this.pnlReserve.Size = new System.Drawing.Size(478, 329);
             this.pnlReserve.TabIndex = 7;
             // 
             // lblResStatus
@@ -115,7 +115,7 @@ namespace ChapeauUI
             this.Btnreserve.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.Btnreserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnreserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btnreserve.Location = new System.Drawing.Point(12, 783);
+            this.Btnreserve.Location = new System.Drawing.Point(3, 724);
             this.Btnreserve.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btnreserve.Name = "Btnreserve";
             this.Btnreserve.Size = new System.Drawing.Size(207, 59);
@@ -129,7 +129,7 @@ namespace ChapeauUI
             this.BtnOrder.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOrder.Location = new System.Drawing.Point(236, 781);
+            this.BtnOrder.Location = new System.Drawing.Point(227, 722);
             this.BtnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnOrder.Name = "BtnOrder";
             this.BtnOrder.Size = new System.Drawing.Size(207, 62);
@@ -144,7 +144,7 @@ namespace ChapeauUI
             this.BtnChout.Enabled = false;
             this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChout.Location = new System.Drawing.Point(12, 865);
+            this.BtnChout.Location = new System.Drawing.Point(3, 806);
             this.BtnChout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnChout.Name = "BtnChout";
             this.BtnChout.Size = new System.Drawing.Size(207, 62);
@@ -193,7 +193,7 @@ namespace ChapeauUI
             this.btnOccupy.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.btnOccupy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOccupy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOccupy.Location = new System.Drawing.Point(236, 865);
+            this.btnOccupy.Location = new System.Drawing.Point(227, 806);
             this.btnOccupy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOccupy.Name = "btnOccupy";
             this.btnOccupy.Size = new System.Drawing.Size(207, 62);

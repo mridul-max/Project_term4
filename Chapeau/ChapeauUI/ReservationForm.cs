@@ -43,7 +43,7 @@ namespace ChapeauUI
             {
                 MessageBox.Show("Please enter a reserver name", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if(string.IsNullOrEmpty(txtPhone.Text)|| System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]")||txtPhone.Text.Length<=10) 
+            else if(string.IsNullOrEmpty(txtPhone.Text)|| System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]")) 
             {
                 MessageBox.Show("Please enter a proper phone number", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }           
