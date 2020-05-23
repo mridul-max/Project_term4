@@ -251,7 +251,7 @@ namespace ChapeauDAL
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RN' Where id = @id;", conn);
-            cmd.Parameters.AddWithValue("@Id",items.MenuItem);
+            cmd.Parameters.AddWithValue("@id",items.MenuItem);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();
@@ -261,7 +261,7 @@ namespace ChapeauDAL
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'PR' Where id = @id;", conn);
-            cmd.Parameters.AddWithValue("@Id", items.MenuItem);
+            cmd.Parameters.AddWithValue("@id", items.MenuItem);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();

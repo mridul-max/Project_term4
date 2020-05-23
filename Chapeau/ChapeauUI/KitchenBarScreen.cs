@@ -21,7 +21,34 @@ namespace ChapeauUI
 
         private void KitchenBarScreen_Load(object sender, EventArgs e)
         {
-            lblloggedemp.Text = lblloggedemp.Text+ " "+ Employee.LoggedEmployee.Name;
+            lblloggedinChef.Text = lblloggedinChef.Text+ " "+ Employee.LoggedEmployee.Name;
+            if (Employee.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
+            {
+                managementToolStripMenuItem.Visible = true;
+                showPanel("pnlKitchen");
+            }
+            else if(Employee.LoggedEmployee.EmployeeType == EmployeeType.Bar)
+            {
+                managementToolStripMenuItem.Visible = true;
+                showPanel("pnlBarScreen");
+            }
+        }
+        private void showPanel(string panelName,bool refresh = true)
+        {
+            if (panelName == "pnlKitchen")
+            {
+                pnlBarScreen.Hide();
+                pnlKitchen.Show();
+                pnlKitchen.Visible = true;
+                lblKitchenScreen.Text = "Kitchen Screen";
+            }
+            else if (panelName == "pnlBarScreen")
+            {
+                pnlKitchen.Hide();
+                pnlBarScreen.Show();
+                pnlBarScreen.Visible = true;
+                lblKitchenScreen.Text = "Bar Screen";
+            }
         }
 
         private void KitchenBarScreen_FormClosing(object sender, FormClosingEventArgs e)
