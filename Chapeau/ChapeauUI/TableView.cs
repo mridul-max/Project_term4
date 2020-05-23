@@ -75,6 +75,7 @@ namespace ChapeauUI
                 else
                     tableIcons[i].Image = tableImages[i];
 
+                //also divide the tasks so that your app can work faster.
                 List<OrderItem> items = orderService.GetUnfinishedOrdersOfTable(allTables[i].TableNumber);
                 if(items.Count>0)
                 {
@@ -84,7 +85,7 @@ namespace ChapeauUI
                 {
                     orderIcons[i].Visible = false;
                 }
-
+                //Change this ui code it's slow.
                 foreach(OrderItem item in items)
                 {
                     if((int)(DateTime.Now - item.DateTimeAdded).TotalMinutes>=10 && item.orderState!=OrderState.ReadyToDeliver)
