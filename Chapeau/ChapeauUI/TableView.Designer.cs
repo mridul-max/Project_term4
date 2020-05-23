@@ -29,27 +29,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableView));
             this.pnl_tables = new System.Windows.Forms.Panel();
-            this.pcoccupied9 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied10 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied8 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied7 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied6 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied5 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied3 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied4 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied2 = new System.Windows.Forms.PictureBox();
-            this.pcoccupied1 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb10 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb9 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb8 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb7 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb6 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb5 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb4 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb3 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb2 = new System.Windows.Forms.PictureBox();
-            this.pcboxtb1 = new System.Windows.Forms.PictureBox();
+            this.pcorder9 = new System.Windows.Forms.PictureBox();
+            this.pcorder10 = new System.Windows.Forms.PictureBox();
+            this.pcorder8 = new System.Windows.Forms.PictureBox();
+            this.pcorder7 = new System.Windows.Forms.PictureBox();
+            this.pcorder6 = new System.Windows.Forms.PictureBox();
+            this.pcorder5 = new System.Windows.Forms.PictureBox();
+            this.pcorder3 = new System.Windows.Forms.PictureBox();
+            this.pcorder4 = new System.Windows.Forms.PictureBox();
+            this.pcorder2 = new System.Windows.Forms.PictureBox();
+            this.pcOrder1 = new System.Windows.Forms.PictureBox();
+            this.pcTable10 = new System.Windows.Forms.PictureBox();
+            this.pcTable9 = new System.Windows.Forms.PictureBox();
+            this.pcTable8 = new System.Windows.Forms.PictureBox();
+            this.pcTable7 = new System.Windows.Forms.PictureBox();
+            this.pcTable6 = new System.Windows.Forms.PictureBox();
+            this.pcTable5 = new System.Windows.Forms.PictureBox();
+            this.pcTable4 = new System.Windows.Forms.PictureBox();
+            this.pcTable3 = new System.Windows.Forms.PictureBox();
+            this.pcTable2 = new System.Windows.Forms.PictureBox();
+            this.pcTable1 = new System.Windows.Forms.PictureBox();
             this.lblEmployee = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -57,298 +58,303 @@
             this.returnToManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_tables.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcOrder1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_tables
             // 
             this.pnl_tables.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_tables.Controls.Add(this.pcoccupied9);
-            this.pnl_tables.Controls.Add(this.pcoccupied10);
-            this.pnl_tables.Controls.Add(this.pcoccupied8);
-            this.pnl_tables.Controls.Add(this.pcoccupied7);
-            this.pnl_tables.Controls.Add(this.pcoccupied6);
-            this.pnl_tables.Controls.Add(this.pcoccupied5);
-            this.pnl_tables.Controls.Add(this.pcoccupied3);
-            this.pnl_tables.Controls.Add(this.pcoccupied4);
-            this.pnl_tables.Controls.Add(this.pcoccupied2);
-            this.pnl_tables.Controls.Add(this.pcoccupied1);
-            this.pnl_tables.Controls.Add(this.pcboxtb10);
-            this.pnl_tables.Controls.Add(this.pcboxtb9);
-            this.pnl_tables.Controls.Add(this.pcboxtb8);
-            this.pnl_tables.Controls.Add(this.pcboxtb7);
-            this.pnl_tables.Controls.Add(this.pcboxtb6);
-            this.pnl_tables.Controls.Add(this.pcboxtb5);
-            this.pnl_tables.Controls.Add(this.pcboxtb4);
-            this.pnl_tables.Controls.Add(this.pcboxtb3);
-            this.pnl_tables.Controls.Add(this.pcboxtb2);
-            this.pnl_tables.Controls.Add(this.pcboxtb1);
+            this.pnl_tables.Controls.Add(this.pcorder9);
+            this.pnl_tables.Controls.Add(this.pcorder10);
+            this.pnl_tables.Controls.Add(this.pcorder8);
+            this.pnl_tables.Controls.Add(this.pcorder7);
+            this.pnl_tables.Controls.Add(this.pcorder6);
+            this.pnl_tables.Controls.Add(this.pcorder5);
+            this.pnl_tables.Controls.Add(this.pcorder3);
+            this.pnl_tables.Controls.Add(this.pcorder4);
+            this.pnl_tables.Controls.Add(this.pcorder2);
+            this.pnl_tables.Controls.Add(this.pcOrder1);
+            this.pnl_tables.Controls.Add(this.pcTable10);
+            this.pnl_tables.Controls.Add(this.pcTable9);
+            this.pnl_tables.Controls.Add(this.pcTable8);
+            this.pnl_tables.Controls.Add(this.pcTable7);
+            this.pnl_tables.Controls.Add(this.pcTable6);
+            this.pnl_tables.Controls.Add(this.pcTable5);
+            this.pnl_tables.Controls.Add(this.pcTable4);
+            this.pnl_tables.Controls.Add(this.pcTable3);
+            this.pnl_tables.Controls.Add(this.pcTable2);
+            this.pnl_tables.Controls.Add(this.pcTable1);
             this.pnl_tables.Location = new System.Drawing.Point(12, 68);
             this.pnl_tables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnl_tables.Name = "pnl_tables";
             this.pnl_tables.Size = new System.Drawing.Size(1021, 976);
             this.pnl_tables.TabIndex = 0;
             // 
-            // pcoccupied9
+            // pcorder9
             // 
-            this.pcoccupied9.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied9.Location = new System.Drawing.Point(299, 750);
-            this.pcoccupied9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied9.Name = "pcoccupied9";
-            this.pcoccupied9.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied9.TabIndex = 28;
-            this.pcoccupied9.TabStop = false;
+            this.pcorder9.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder9.Location = new System.Drawing.Point(345, 791);
+            this.pcorder9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder9.Name = "pcorder9";
+            this.pcorder9.Size = new System.Drawing.Size(40, 36);
+            this.pcorder9.TabIndex = 28;
+            this.pcorder9.TabStop = false;
             // 
-            // pcoccupied10
+            // pcorder10
             // 
-            this.pcoccupied10.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied10.Location = new System.Drawing.Point(717, 750);
-            this.pcoccupied10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied10.Name = "pcoccupied10";
-            this.pcoccupied10.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied10.TabIndex = 26;
-            this.pcoccupied10.TabStop = false;
+            this.pcorder10.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder10.Location = new System.Drawing.Point(765, 791);
+            this.pcorder10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder10.Name = "pcorder10";
+            this.pcorder10.Size = new System.Drawing.Size(40, 36);
+            this.pcorder10.TabIndex = 26;
+            this.pcorder10.TabStop = false;
             // 
-            // pcoccupied8
+            // pcorder8
             // 
-            this.pcoccupied8.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied8.Location = new System.Drawing.Point(717, 565);
-            this.pcoccupied8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied8.Name = "pcoccupied8";
-            this.pcoccupied8.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied8.TabIndex = 24;
-            this.pcoccupied8.TabStop = false;
+            this.pcorder8.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder8.Location = new System.Drawing.Point(765, 606);
+            this.pcorder8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder8.Name = "pcorder8";
+            this.pcorder8.Size = new System.Drawing.Size(40, 36);
+            this.pcorder8.TabIndex = 24;
+            this.pcorder8.TabStop = false;
             // 
-            // pcoccupied7
+            // pcorder7
             // 
-            this.pcoccupied7.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied7.Location = new System.Drawing.Point(299, 565);
-            this.pcoccupied7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied7.Name = "pcoccupied7";
-            this.pcoccupied7.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied7.TabIndex = 22;
-            this.pcoccupied7.TabStop = false;
+            this.pcorder7.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder7.Location = new System.Drawing.Point(345, 606);
+            this.pcorder7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder7.Name = "pcorder7";
+            this.pcorder7.Size = new System.Drawing.Size(40, 36);
+            this.pcorder7.TabIndex = 22;
+            this.pcorder7.TabStop = false;
             // 
-            // pcoccupied6
+            // pcorder6
             // 
-            this.pcoccupied6.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied6.Location = new System.Drawing.Point(717, 378);
-            this.pcoccupied6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied6.Name = "pcoccupied6";
-            this.pcoccupied6.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied6.TabIndex = 20;
-            this.pcoccupied6.TabStop = false;
+            this.pcorder6.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder6.Location = new System.Drawing.Point(765, 418);
+            this.pcorder6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder6.Name = "pcorder6";
+            this.pcorder6.Size = new System.Drawing.Size(40, 36);
+            this.pcorder6.TabIndex = 20;
+            this.pcorder6.TabStop = false;
             // 
-            // pcoccupied5
+            // pcorder5
             // 
-            this.pcoccupied5.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied5.Location = new System.Drawing.Point(297, 378);
-            this.pcoccupied5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied5.Name = "pcoccupied5";
-            this.pcoccupied5.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied5.TabIndex = 18;
-            this.pcoccupied5.TabStop = false;
+            this.pcorder5.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder5.Location = new System.Drawing.Point(345, 418);
+            this.pcorder5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder5.Name = "pcorder5";
+            this.pcorder5.Size = new System.Drawing.Size(40, 36);
+            this.pcorder5.TabIndex = 18;
+            this.pcorder5.TabStop = false;
             // 
-            // pcoccupied3
+            // pcorder3
             // 
-            this.pcoccupied3.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied3.Location = new System.Drawing.Point(297, 191);
-            this.pcoccupied3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied3.Name = "pcoccupied3";
-            this.pcoccupied3.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied3.TabIndex = 16;
-            this.pcoccupied3.TabStop = false;
+            this.pcorder3.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder3.Location = new System.Drawing.Point(345, 231);
+            this.pcorder3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder3.Name = "pcorder3";
+            this.pcorder3.Size = new System.Drawing.Size(40, 36);
+            this.pcorder3.TabIndex = 16;
+            this.pcorder3.TabStop = false;
+            this.pcorder3.Visible = false;
             // 
-            // pcoccupied4
+            // pcorder4
             // 
-            this.pcoccupied4.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied4.Location = new System.Drawing.Point(717, 191);
-            this.pcoccupied4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied4.Name = "pcoccupied4";
-            this.pcoccupied4.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied4.TabIndex = 14;
-            this.pcoccupied4.TabStop = false;
+            this.pcorder4.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder4.Location = new System.Drawing.Point(765, 231);
+            this.pcorder4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder4.Name = "pcorder4";
+            this.pcorder4.Size = new System.Drawing.Size(40, 36);
+            this.pcorder4.TabIndex = 14;
+            this.pcorder4.TabStop = false;
+            this.pcorder4.Visible = false;
             // 
-            // pcoccupied2
+            // pcorder2
             // 
-            this.pcoccupied2.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied2.Location = new System.Drawing.Point(717, 27);
-            this.pcoccupied2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied2.Name = "pcoccupied2";
-            this.pcoccupied2.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied2.TabIndex = 12;
-            this.pcoccupied2.TabStop = false;
+            this.pcorder2.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcorder2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcorder2.Location = new System.Drawing.Point(765, 68);
+            this.pcorder2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcorder2.Name = "pcorder2";
+            this.pcorder2.Size = new System.Drawing.Size(40, 36);
+            this.pcorder2.TabIndex = 12;
+            this.pcorder2.TabStop = false;
+            this.pcorder2.Visible = false;
             // 
-            // pcoccupied1
+            // pcOrder1
             // 
-            this.pcoccupied1.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
-            this.pcoccupied1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcoccupied1.Location = new System.Drawing.Point(297, 27);
-            this.pcoccupied1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcoccupied1.Name = "pcoccupied1";
-            this.pcoccupied1.Size = new System.Drawing.Size(40, 36);
-            this.pcoccupied1.TabIndex = 10;
-            this.pcoccupied1.TabStop = false;
+            this.pcOrder1.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
+            this.pcOrder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcOrder1.Location = new System.Drawing.Point(345, 68);
+            this.pcOrder1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcOrder1.Name = "pcOrder1";
+            this.pcOrder1.Size = new System.Drawing.Size(40, 36);
+            this.pcOrder1.TabIndex = 10;
+            this.pcOrder1.TabStop = false;
+            this.pcOrder1.Visible = false;
             // 
-            // pcboxtb10
+            // pcTable10
             // 
-            this.pcboxtb10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb10.Image = global::ChapeauUI.Properties.Resources.table10;
-            this.pcboxtb10.Location = new System.Drawing.Point(628, 791);
-            this.pcboxtb10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb10.Name = "pcboxtb10";
-            this.pcboxtb10.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb10.TabIndex = 9;
-            this.pcboxtb10.TabStop = false;
-            this.pcboxtb10.Click += new System.EventHandler(this.pcboxtb10_Click);
+            this.pcTable10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable10.Image = global::ChapeauUI.Properties.Resources.table10;
+            this.pcTable10.Location = new System.Drawing.Point(628, 791);
+            this.pcTable10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable10.Name = "pcTable10";
+            this.pcTable10.Size = new System.Drawing.Size(131, 103);
+            this.pcTable10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable10.TabIndex = 9;
+            this.pcTable10.TabStop = false;
+            this.pcTable10.Click += new System.EventHandler(this.pcboxtb10_Click);
             // 
-            // pcboxtb9
+            // pcTable9
             // 
-            this.pcboxtb9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb9.Image = global::ChapeauUI.Properties.Resources.table9;
-            this.pcboxtb9.Location = new System.Drawing.Point(208, 791);
-            this.pcboxtb9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb9.Name = "pcboxtb9";
-            this.pcboxtb9.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb9.TabIndex = 8;
-            this.pcboxtb9.TabStop = false;
-            this.pcboxtb9.Click += new System.EventHandler(this.pcboxtb9_Click);
+            this.pcTable9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable9.Image = global::ChapeauUI.Properties.Resources.table9;
+            this.pcTable9.Location = new System.Drawing.Point(208, 791);
+            this.pcTable9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable9.Name = "pcTable9";
+            this.pcTable9.Size = new System.Drawing.Size(131, 103);
+            this.pcTable9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable9.TabIndex = 8;
+            this.pcTable9.TabStop = false;
+            this.pcTable9.Click += new System.EventHandler(this.pcboxtb9_Click);
             // 
-            // pcboxtb8
+            // pcTable8
             // 
-            this.pcboxtb8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb8.Image = global::ChapeauUI.Properties.Resources.table8;
-            this.pcboxtb8.Location = new System.Drawing.Point(628, 606);
-            this.pcboxtb8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb8.Name = "pcboxtb8";
-            this.pcboxtb8.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb8.TabIndex = 7;
-            this.pcboxtb8.TabStop = false;
-            this.pcboxtb8.Click += new System.EventHandler(this.pcboxtb8_Click);
+            this.pcTable8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcTable8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable8.Image = global::ChapeauUI.Properties.Resources.table8;
+            this.pcTable8.Location = new System.Drawing.Point(628, 606);
+            this.pcTable8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable8.Name = "pcTable8";
+            this.pcTable8.Size = new System.Drawing.Size(131, 103);
+            this.pcTable8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable8.TabIndex = 7;
+            this.pcTable8.TabStop = false;
+            this.pcTable8.Click += new System.EventHandler(this.pcboxtb8_Click);
             // 
-            // pcboxtb7
+            // pcTable7
             // 
-            this.pcboxtb7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb7.Image = global::ChapeauUI.Properties.Resources.table7;
-            this.pcboxtb7.Location = new System.Drawing.Point(208, 606);
-            this.pcboxtb7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb7.Name = "pcboxtb7";
-            this.pcboxtb7.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb7.TabIndex = 6;
-            this.pcboxtb7.TabStop = false;
-            this.pcboxtb7.Click += new System.EventHandler(this.pcboxtb7_Click);
+            this.pcTable7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable7.Image = global::ChapeauUI.Properties.Resources.table7;
+            this.pcTable7.Location = new System.Drawing.Point(208, 606);
+            this.pcTable7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable7.Name = "pcTable7";
+            this.pcTable7.Size = new System.Drawing.Size(131, 103);
+            this.pcTable7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable7.TabIndex = 6;
+            this.pcTable7.TabStop = false;
+            this.pcTable7.Click += new System.EventHandler(this.pcboxtb7_Click);
             // 
-            // pcboxtb6
+            // pcTable6
             // 
-            this.pcboxtb6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb6.Image = global::ChapeauUI.Properties.Resources.table6;
-            this.pcboxtb6.Location = new System.Drawing.Point(628, 418);
-            this.pcboxtb6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb6.Name = "pcboxtb6";
-            this.pcboxtb6.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb6.TabIndex = 5;
-            this.pcboxtb6.TabStop = false;
-            this.pcboxtb6.Click += new System.EventHandler(this.pcboxtb6_Click);
+            this.pcTable6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable6.Image = global::ChapeauUI.Properties.Resources.table6;
+            this.pcTable6.Location = new System.Drawing.Point(628, 418);
+            this.pcTable6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable6.Name = "pcTable6";
+            this.pcTable6.Size = new System.Drawing.Size(131, 103);
+            this.pcTable6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable6.TabIndex = 5;
+            this.pcTable6.TabStop = false;
+            this.pcTable6.Click += new System.EventHandler(this.pcboxtb6_Click);
             // 
-            // pcboxtb5
+            // pcTable5
             // 
-            this.pcboxtb5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb5.Image = global::ChapeauUI.Properties.Resources.table5;
-            this.pcboxtb5.Location = new System.Drawing.Point(208, 418);
-            this.pcboxtb5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb5.Name = "pcboxtb5";
-            this.pcboxtb5.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb5.TabIndex = 4;
-            this.pcboxtb5.TabStop = false;
-            this.pcboxtb5.Click += new System.EventHandler(this.pcboxtb5_Click);
+            this.pcTable5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable5.Image = global::ChapeauUI.Properties.Resources.table5;
+            this.pcTable5.Location = new System.Drawing.Point(208, 418);
+            this.pcTable5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable5.Name = "pcTable5";
+            this.pcTable5.Size = new System.Drawing.Size(131, 103);
+            this.pcTable5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable5.TabIndex = 4;
+            this.pcTable5.TabStop = false;
+            this.pcTable5.Click += new System.EventHandler(this.pcboxtb5_Click);
             // 
-            // pcboxtb4
+            // pcTable4
             // 
-            this.pcboxtb4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb4.Image = global::ChapeauUI.Properties.Resources.table4;
-            this.pcboxtb4.Location = new System.Drawing.Point(628, 231);
-            this.pcboxtb4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb4.Name = "pcboxtb4";
-            this.pcboxtb4.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb4.TabIndex = 3;
-            this.pcboxtb4.TabStop = false;
-            this.pcboxtb4.Click += new System.EventHandler(this.pcboxtb4_Click);
+            this.pcTable4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable4.Image = global::ChapeauUI.Properties.Resources.table4;
+            this.pcTable4.Location = new System.Drawing.Point(628, 231);
+            this.pcTable4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable4.Name = "pcTable4";
+            this.pcTable4.Size = new System.Drawing.Size(131, 103);
+            this.pcTable4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable4.TabIndex = 3;
+            this.pcTable4.TabStop = false;
+            this.pcTable4.Click += new System.EventHandler(this.pcboxtb4_Click);
             // 
-            // pcboxtb3
+            // pcTable3
             // 
-            this.pcboxtb3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb3.Image = global::ChapeauUI.Properties.Resources.table3;
-            this.pcboxtb3.Location = new System.Drawing.Point(208, 231);
-            this.pcboxtb3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb3.Name = "pcboxtb3";
-            this.pcboxtb3.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb3.TabIndex = 2;
-            this.pcboxtb3.TabStop = false;
-            this.pcboxtb3.Click += new System.EventHandler(this.pcboxtb3_Click);
+            this.pcTable3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable3.Image = global::ChapeauUI.Properties.Resources.table3;
+            this.pcTable3.Location = new System.Drawing.Point(208, 231);
+            this.pcTable3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable3.Name = "pcTable3";
+            this.pcTable3.Size = new System.Drawing.Size(131, 103);
+            this.pcTable3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable3.TabIndex = 2;
+            this.pcTable3.TabStop = false;
+            this.pcTable3.Click += new System.EventHandler(this.pcboxtb3_Click);
             // 
-            // pcboxtb2
+            // pcTable2
             // 
-            this.pcboxtb2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb2.Image = global::ChapeauUI.Properties.Resources.table2;
-            this.pcboxtb2.Location = new System.Drawing.Point(628, 68);
-            this.pcboxtb2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb2.Name = "pcboxtb2";
-            this.pcboxtb2.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb2.TabIndex = 1;
-            this.pcboxtb2.TabStop = false;
-            this.pcboxtb2.Click += new System.EventHandler(this.pcboxtb2_Click);
+            this.pcTable2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable2.Image = global::ChapeauUI.Properties.Resources.table2;
+            this.pcTable2.Location = new System.Drawing.Point(628, 68);
+            this.pcTable2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable2.Name = "pcTable2";
+            this.pcTable2.Size = new System.Drawing.Size(131, 103);
+            this.pcTable2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable2.TabIndex = 1;
+            this.pcTable2.TabStop = false;
+            this.pcTable2.Click += new System.EventHandler(this.pcboxtb2_Click);
             // 
-            // pcboxtb1
+            // pcTable1
             // 
-            this.pcboxtb1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pcboxtb1.ErrorImage = null;
-            this.pcboxtb1.Image = global::ChapeauUI.Properties.Resources.table1;
-            this.pcboxtb1.Location = new System.Drawing.Point(208, 68);
-            this.pcboxtb1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcboxtb1.Name = "pcboxtb1";
-            this.pcboxtb1.Size = new System.Drawing.Size(131, 103);
-            this.pcboxtb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pcboxtb1.TabIndex = 0;
-            this.pcboxtb1.TabStop = false;
-            this.pcboxtb1.Click += new System.EventHandler(this.pcboxtb1_Click);
+            this.pcTable1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcTable1.ErrorImage = null;
+            this.pcTable1.Image = ((System.Drawing.Image)(resources.GetObject("pcTable1.Image")));
+            this.pcTable1.Location = new System.Drawing.Point(208, 68);
+            this.pcTable1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcTable1.Name = "pcTable1";
+            this.pcTable1.Size = new System.Drawing.Size(131, 128);
+            this.pcTable1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcTable1.TabIndex = 0;
+            this.pcTable1.TabStop = false;
+            this.pcTable1.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // lblEmployee
             // 
@@ -398,7 +404,7 @@
             // 
             this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
-            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.returnToManagementToolStripMenuItem.Text = "Management";
             this.returnToManagementToolStripMenuItem.Visible = false;
             this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.returnToManagementToolStripMenuItem_Click_1);
@@ -407,7 +413,7 @@
             // 
             this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click_2);
             // 
@@ -431,26 +437,26 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableView_FormClosing_1);
             this.Load += new System.EventHandler(this.TableView_Load);
             this.pnl_tables.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcoccupied1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcboxtb1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcorder2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcOrder1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcTable1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -461,31 +467,31 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_tables;
-        private System.Windows.Forms.PictureBox pcboxtb10;
-        private System.Windows.Forms.PictureBox pcboxtb9;
-        private System.Windows.Forms.PictureBox pcboxtb8;
-        private System.Windows.Forms.PictureBox pcboxtb7;
-        private System.Windows.Forms.PictureBox pcboxtb6;
-        private System.Windows.Forms.PictureBox pcboxtb5;
-        private System.Windows.Forms.PictureBox pcboxtb4;
-        private System.Windows.Forms.PictureBox pcboxtb3;
-        private System.Windows.Forms.PictureBox pcboxtb2;
-        private System.Windows.Forms.PictureBox pcboxtb1;
+        private System.Windows.Forms.PictureBox pcTable10;
+        private System.Windows.Forms.PictureBox pcTable9;
+        private System.Windows.Forms.PictureBox pcTable8;
+        private System.Windows.Forms.PictureBox pcTable7;
+        private System.Windows.Forms.PictureBox pcTable6;
+        private System.Windows.Forms.PictureBox pcTable5;
+        private System.Windows.Forms.PictureBox pcTable4;
+        private System.Windows.Forms.PictureBox pcTable3;
+        private System.Windows.Forms.PictureBox pcTable2;
+        private System.Windows.Forms.PictureBox pcTable1;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblEmployee;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem returnToManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pcoccupied8;
-        private System.Windows.Forms.PictureBox pcoccupied7;
-        private System.Windows.Forms.PictureBox pcoccupied6;
-        private System.Windows.Forms.PictureBox pcoccupied5;
-        private System.Windows.Forms.PictureBox pcoccupied3;
-        private System.Windows.Forms.PictureBox pcoccupied4;
-        private System.Windows.Forms.PictureBox pcoccupied2;
-        private System.Windows.Forms.PictureBox pcoccupied1;
-        private System.Windows.Forms.PictureBox pcoccupied9;
-        private System.Windows.Forms.PictureBox pcoccupied10;
+        private System.Windows.Forms.PictureBox pcorder8;
+        private System.Windows.Forms.PictureBox pcorder7;
+        private System.Windows.Forms.PictureBox pcorder6;
+        private System.Windows.Forms.PictureBox pcorder5;
+        private System.Windows.Forms.PictureBox pcorder3;
+        private System.Windows.Forms.PictureBox pcorder4;
+        private System.Windows.Forms.PictureBox pcorder2;
+        private System.Windows.Forms.PictureBox pcOrder1;
+        private System.Windows.Forms.PictureBox pcorder9;
+        private System.Windows.Forms.PictureBox pcorder10;
     }
 }

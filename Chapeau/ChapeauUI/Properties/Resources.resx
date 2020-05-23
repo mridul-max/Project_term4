@@ -121,8 +121,11 @@
   <data name="reserve" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reserve.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chapeauLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chapeauLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Occupy3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Occupy1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,20 +133,35 @@
   <data name="tableLogo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Occupy6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tableLogo71" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Occupy2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Occupy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tableLogo9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Occupy7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tableLogo51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chapeauLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chapeauLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tableLogo61" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,6 +190,12 @@
   <data name="tableLogo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eating" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eating.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Occupy8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tableLogo11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,8 +208,14 @@
   <data name="tableLogo41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Occupy10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tableLogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Occupy9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="table4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,20 +223,26 @@
   <data name="tableLogo81" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tableLogo102" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tableLogo10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="tableLogo10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tableLogo4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Occupy5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tableLogo102" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tableLogo10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="table5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\table5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tableLogo8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WarningTimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WarningTimer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tableLogo5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,13 +253,13 @@
   <data name="tableLogo101" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo101.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eating" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eating.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Occupy4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Occupy4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tableLogo7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tableLogo7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WarningTimer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WarningTimer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Table1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
