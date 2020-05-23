@@ -42,5 +42,28 @@ namespace ChapeauLogic
 
             orderDao.CreateOrderItems(order.OrderID, order.OrderItems);
         }
+        public List<OrderItem> GetListOfFood(int OrderID)
+        {
+            return orderDao.GetListOfFood(OrderID);
+        }
+        public List<OrderItem> GetAllDrinks(int OrderID)
+        {
+            return orderDao.GetAllDrinks(OrderID);
+        }
+        public void UpdatePreparingItem(OrderItem items)
+        {
+            orderDao.UpdatePreparingItem(items);
+
+        }
+        public void UpdateRunningItem(OrderItem items)
+        {
+            orderDao.UpdateRunningItem(items);
+
+        }
+        public void UpdateReadyItem(OrderItem items)
+        {
+            orderDao.UpdateReadyItem(items);
+
+        }
     }
 }
