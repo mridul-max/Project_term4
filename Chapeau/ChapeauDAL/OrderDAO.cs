@@ -208,7 +208,7 @@ namespace ChapeauDAL
             };
             return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
-        private List<OrderItem> ReadAllDribks(DataTable dataTable)
+        private List<OrderItem> ReadAllDrinks(DataTable dataTable)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
             foreach (DataRow dr in dataTable.Rows)
