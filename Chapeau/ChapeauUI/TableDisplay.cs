@@ -67,6 +67,7 @@ namespace ChapeauUI
         //fills the labels according to the information.
         private void UpdateTableInformation()
         {
+            CurrentTable = tableService.GetById(CurrentTable.TableNumber); //For getting more up to date information for occupancy. Mostly for check out button.
             lblTableNumber.Text = "Table Number:" + " " + CurrentTable.TableNumber.ToString();
             lblCapacity.Text = "Capacity:" + " " + CurrentTable.Capacity.ToString();
             if (CurrentTable.IsOccupied)

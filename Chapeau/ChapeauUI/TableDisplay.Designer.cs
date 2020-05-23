@@ -67,7 +67,7 @@ namespace ChapeauUI
             this.pnlReserve.AutoScroll = true;
             this.pnlReserve.Location = new System.Drawing.Point(0, 322);
             this.pnlReserve.Name = "pnlReserve";
-            this.pnlReserve.Size = new System.Drawing.Size(478, 329);
+            this.pnlReserve.Size = new System.Drawing.Size(478, 284);
             this.pnlReserve.TabIndex = 7;
             // 
             // lblResStatus

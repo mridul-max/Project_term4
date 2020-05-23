@@ -13,7 +13,7 @@ namespace ChapeauUI
 {
     public partial class KitchenBarScreen : Form
     {
-        private Employee loggedEmployee;
+        
         public KitchenBarScreen()
         {
             InitializeComponent();       

@@ -242,5 +242,68 @@
   <ItemGroup>
     <None Include="Resources\WarningTimer.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Occupy10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tableReserved.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
