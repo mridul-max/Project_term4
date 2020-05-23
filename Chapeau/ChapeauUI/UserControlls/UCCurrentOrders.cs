@@ -53,7 +53,7 @@ namespace ChapeauUI.UserControlls
             int totalMinutes = totalseconds / 60;
             int remainingSeconds = totalseconds % 60;
 
-            if (totalMinutes > 8)
+            if (totalMinutes > 10)
                 pcTimer.Visible = true;
 
             lblTimer.Text = $"{totalMinutes.ToString("00")}:{remainingSeconds.ToString("00")}";

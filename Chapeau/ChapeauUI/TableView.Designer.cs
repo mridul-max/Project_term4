@@ -30,16 +30,16 @@
         private void InitializeComponent()
         {
             this.pnl_tables = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcwarning10 = new System.Windows.Forms.PictureBox();
+            this.pcwarning9 = new System.Windows.Forms.PictureBox();
+            this.pcwarning8 = new System.Windows.Forms.PictureBox();
+            this.pcwarning7 = new System.Windows.Forms.PictureBox();
+            this.pcwarning6 = new System.Windows.Forms.PictureBox();
+            this.pcwarning5 = new System.Windows.Forms.PictureBox();
+            this.pcwarning4 = new System.Windows.Forms.PictureBox();
+            this.pcwarning2 = new System.Windows.Forms.PictureBox();
+            this.pcwarning3 = new System.Windows.Forms.PictureBox();
+            this.pcwarning1 = new System.Windows.Forms.PictureBox();
             this.pcOrder9 = new System.Windows.Forms.PictureBox();
             this.pcOrder10 = new System.Windows.Forms.PictureBox();
             this.pcOrder8 = new System.Windows.Forms.PictureBox();
@@ -67,16 +67,16 @@
             this.returnToManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnl_tables.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcOrder9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcOrder10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcOrder8)).BeginInit();
@@ -103,16 +103,16 @@
             // pnl_tables
             // 
             this.pnl_tables.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_tables.Controls.Add(this.pictureBox10);
-            this.pnl_tables.Controls.Add(this.pictureBox9);
-            this.pnl_tables.Controls.Add(this.pictureBox8);
-            this.pnl_tables.Controls.Add(this.pictureBox7);
-            this.pnl_tables.Controls.Add(this.pictureBox6);
-            this.pnl_tables.Controls.Add(this.pictureBox5);
-            this.pnl_tables.Controls.Add(this.pictureBox4);
-            this.pnl_tables.Controls.Add(this.pictureBox3);
-            this.pnl_tables.Controls.Add(this.pictureBox2);
-            this.pnl_tables.Controls.Add(this.pictureBox1);
+            this.pnl_tables.Controls.Add(this.pcwarning10);
+            this.pnl_tables.Controls.Add(this.pcwarning9);
+            this.pnl_tables.Controls.Add(this.pcwarning8);
+            this.pnl_tables.Controls.Add(this.pcwarning7);
+            this.pnl_tables.Controls.Add(this.pcwarning6);
+            this.pnl_tables.Controls.Add(this.pcwarning5);
+            this.pnl_tables.Controls.Add(this.pcwarning4);
+            this.pnl_tables.Controls.Add(this.pcwarning2);
+            this.pnl_tables.Controls.Add(this.pcwarning3);
+            this.pnl_tables.Controls.Add(this.pcwarning1);
             this.pnl_tables.Controls.Add(this.pcOrder9);
             this.pnl_tables.Controls.Add(this.pcOrder10);
             this.pnl_tables.Controls.Add(this.pcOrder8);
@@ -139,112 +139,115 @@
             this.pnl_tables.Size = new System.Drawing.Size(1021, 976);
             this.pnl_tables.TabIndex = 0;
             // 
-            // pictureBox10
+            // pcwarning10
             // 
-            this.pictureBox10.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(765, 832);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox10.TabIndex = 38;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
+            this.pcwarning10.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning10.Location = new System.Drawing.Point(765, 832);
+            this.pcwarning10.Name = "pcwarning10";
+            this.pcwarning10.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning10.TabIndex = 38;
+            this.pcwarning10.TabStop = false;
+            this.pcwarning10.Visible = false;
             // 
-            // pictureBox9
+            // pcwarning9
             // 
-            this.pictureBox9.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(345, 832);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox9.TabIndex = 37;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Visible = false;
+            this.pcwarning9.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning9.Location = new System.Drawing.Point(345, 832);
+            this.pcwarning9.Name = "pcwarning9";
+            this.pcwarning9.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning9.TabIndex = 37;
+            this.pcwarning9.TabStop = false;
+            this.pcwarning9.Visible = false;
             // 
-            // pictureBox8
+            // pcwarning8
             // 
-            this.pictureBox8.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(765, 647);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox8.TabIndex = 36;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Visible = false;
+            this.pcwarning8.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning8.Location = new System.Drawing.Point(765, 647);
+            this.pcwarning8.Name = "pcwarning8";
+            this.pcwarning8.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning8.TabIndex = 36;
+            this.pcwarning8.TabStop = false;
+            this.pcwarning8.Visible = false;
             // 
-            // pictureBox7
+            // pcwarning7
             // 
-            this.pictureBox7.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(345, 647);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox7.TabIndex = 35;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
+            this.pcwarning7.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning7.Location = new System.Drawing.Point(345, 647);
+            this.pcwarning7.Name = "pcwarning7";
+            this.pcwarning7.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning7.TabIndex = 35;
+            this.pcwarning7.TabStop = false;
+            this.pcwarning7.Visible = false;
             // 
-            // pictureBox6
+            // pcwarning6
             // 
-            this.pictureBox6.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(765, 459);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox6.TabIndex = 34;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
+            this.pcwarning6.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning6.Location = new System.Drawing.Point(765, 459);
+            this.pcwarning6.Name = "pcwarning6";
+            this.pcwarning6.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning6.TabIndex = 34;
+            this.pcwarning6.TabStop = false;
+            this.pcwarning6.Visible = false;
             // 
-            // pictureBox5
+            // pcwarning5
             // 
-            this.pictureBox5.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(345, 459);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox5.TabIndex = 33;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
+            this.pcwarning5.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning5.Location = new System.Drawing.Point(345, 459);
+            this.pcwarning5.Name = "pcwarning5";
+            this.pcwarning5.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning5.TabIndex = 33;
+            this.pcwarning5.TabStop = false;
+            this.pcwarning5.Visible = false;
             // 
-            // pictureBox4
+            // pcwarning4
             // 
-            this.pictureBox4.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(765, 272);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox4.TabIndex = 32;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
+            this.pcwarning4.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning4.Location = new System.Drawing.Point(765, 272);
+            this.pcwarning4.Name = "pcwarning4";
+            this.pcwarning4.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning4.TabIndex = 32;
+            this.pcwarning4.TabStop = false;
+            this.pcwarning4.Visible = false;
             // 
-            // pictureBox3
+            // pcwarning2
             // 
-            this.pictureBox3.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(765, 109);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
+            this.pcwarning2.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning2.Location = new System.Drawing.Point(765, 109);
+            this.pcwarning2.Name = "pcwarning2";
+            this.pcwarning2.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning2.TabIndex = 31;
+            this.pcwarning2.TabStop = false;
+            this.pcwarning2.Visible = false;
             // 
-            // pictureBox2
+            // pcwarning3
             // 
-            this.pictureBox2.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(345, 272);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
+            this.pcwarning3.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning3.Location = new System.Drawing.Point(345, 272);
+            this.pcwarning3.Name = "pcwarning3";
+            this.pcwarning3.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning3.TabIndex = 30;
+            this.pcwarning3.TabStop = false;
+            this.pcwarning3.Visible = false;
             // 
-            // pictureBox1
+            // pcwarning1
             // 
-            this.pictureBox1.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(345, 109);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 36);
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.pcwarning1.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
+            this.pcwarning1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcwarning1.Location = new System.Drawing.Point(345, 109);
+            this.pcwarning1.Name = "pcwarning1";
+            this.pcwarning1.Size = new System.Drawing.Size(40, 36);
+            this.pcwarning1.TabIndex = 29;
+            this.pcwarning1.TabStop = false;
+            this.pcwarning1.Visible = false;
             // 
             // pcOrder9
             // 
@@ -568,16 +571,16 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TableView_FormClosing_1);
             this.Load += new System.EventHandler(this.TableView_Load);
             this.pnl_tables.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcwarning1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcOrder9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcOrder10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcOrder8)).EndInit();
@@ -634,15 +637,15 @@
         private System.Windows.Forms.PictureBox pcOrder1;
         private System.Windows.Forms.PictureBox pcOrder9;
         private System.Windows.Forms.PictureBox pcOrder10;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcwarning10;
+        private System.Windows.Forms.PictureBox pcwarning9;
+        private System.Windows.Forms.PictureBox pcwarning8;
+        private System.Windows.Forms.PictureBox pcwarning7;
+        private System.Windows.Forms.PictureBox pcwarning6;
+        private System.Windows.Forms.PictureBox pcwarning5;
+        private System.Windows.Forms.PictureBox pcwarning4;
+        private System.Windows.Forms.PictureBox pcwarning2;
+        private System.Windows.Forms.PictureBox pcwarning3;
+        private System.Windows.Forms.PictureBox pcwarning1;
     }
 }
