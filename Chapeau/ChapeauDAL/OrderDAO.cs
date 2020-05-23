@@ -170,7 +170,7 @@ namespace ChapeauDAL
             {
                 new SqlParameter("@Id",OrderID)
             };
-            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
+            return ReadAllFood(ExecuteSelectQuery(query, sqlParameters));
 
         }
         private List<OrderItem> ReadAllFood(DataTable dataTable)
@@ -206,7 +206,7 @@ namespace ChapeauDAL
             {
                 new SqlParameter("@Id",OrderID)
             };
-            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
+            return ReadAllDrinks(ExecuteSelectQuery(query, sqlParameters));
         }
         private List<OrderItem> ReadAllDrinks(DataTable dataTable)
         {
