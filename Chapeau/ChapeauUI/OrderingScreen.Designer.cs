@@ -37,6 +37,7 @@
             this.flpDinnerItems = new System.Windows.Forms.FlowLayoutPanel();
             this.tabLunch = new System.Windows.Forms.TabPage();
             this.flpLunchItems = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblTableNr = new System.Windows.Forms.Label();
             this.tabMenu.SuspendLayout();
             this.tabDrinks.SuspendLayout();
             this.tabDinner.SuspendLayout();
@@ -143,6 +144,18 @@
             this.flpLunchItems.Size = new System.Drawing.Size(357, 80);
             this.flpLunchItems.TabIndex = 2;
             // 
+            // lblTableNr
+            // 
+            this.lblTableNr.AutoSize = true;
+            this.lblTableNr.BackColor = System.Drawing.Color.Transparent;
+            this.lblTableNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableNr.Location = new System.Drawing.Point(13, 43);
+            this.lblTableNr.Name = "lblTableNr";
+            this.lblTableNr.Size = new System.Drawing.Size(112, 31);
+            this.lblTableNr.TabIndex = 4;
+            this.lblTableNr.Text = "Table: 5";
+            this.lblTableNr.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // OrderingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +164,7 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.Controls.Add(this.lblTableNr);
             this.Controls.Add(this.tabMenu);
             this.Controls.Add(this.flpCurrentOrderItems);
             this.Controls.Add(this.label1);
@@ -181,5 +195,6 @@
         private System.Windows.Forms.TabPage tabLunch;
         private System.Windows.Forms.FlowLayoutPanel flpDinnerItems;
         private System.Windows.Forms.FlowLayoutPanel flpLunchItems;
+        private System.Windows.Forms.Label lblTableNr;
     }
 }
