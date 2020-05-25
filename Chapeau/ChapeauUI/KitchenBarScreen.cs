@@ -27,7 +27,7 @@ namespace ChapeauUI
             {
                 showPanel("pnlKitchen");
             }
-            else if(Employee.LoggedEmployee.EmployeeType == EmployeeType.Bar)
+            else if(Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Bar)
             { 
                 showPanel("pnlBarScreen");
             }
