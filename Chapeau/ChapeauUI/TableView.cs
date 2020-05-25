@@ -81,7 +81,7 @@ namespace ChapeauUI
                         orderIcons[i].Visible = false;
                     }
                     //Change this ui code it's slow.
-
+                    // make this a method.
                     foreach (OrderItem item in items)
                     {
 

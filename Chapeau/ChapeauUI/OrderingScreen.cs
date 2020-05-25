@@ -118,7 +118,7 @@ namespace ChapeauUI
                 }
             }
         }
-
+        //Capital c
         bool containsMenuItem(List<OrderingRow> rows, ChapeauModel.MenuItem menuItem)
         {
             foreach (var row in rows)
