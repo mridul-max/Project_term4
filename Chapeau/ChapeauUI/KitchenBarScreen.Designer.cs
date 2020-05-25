@@ -34,21 +34,21 @@
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlKitchen = new System.Windows.Forms.Panel();
-            this.lblKitchenScreen = new System.Windows.Forms.Label();
-            this.pnlBarScreen = new System.Windows.Forms.Panel();
-            this.lblBarScreen = new System.Windows.Forms.Label();
-            this.listViewBar = new System.Windows.Forms.ListView();
-            this.DrinkName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DrinkAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DrinkOrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.DrinkStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ListViewKitchen = new System.Windows.Forms.ListView();
             this.FName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FOrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FOrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FTableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblKitchenScreen = new System.Windows.Forms.Label();
+            this.pnlBarScreen = new System.Windows.Forms.Panel();
+            this.listViewBar = new System.Windows.Forms.ListView();
+            this.DrinkName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrinkAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrinkOrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrinkStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.DTableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblBarScreen = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlKitchen.SuspendLayout();
             this.pnlBarScreen.SuspendLayout();
@@ -59,10 +59,9 @@
             this.lblloggedinChef.AutoSize = true;
             this.lblloggedinChef.BackColor = System.Drawing.Color.Transparent;
             this.lblloggedinChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblloggedinChef.Location = new System.Drawing.Point(18, 41);
-            this.lblloggedinChef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblloggedinChef.Location = new System.Drawing.Point(24, 50);
             this.lblloggedinChef.Name = "lblloggedinChef";
-            this.lblloggedinChef.Size = new System.Drawing.Size(117, 20);
+            this.lblloggedinChef.Size = new System.Drawing.Size(143, 25);
             this.lblloggedinChef.TabIndex = 0;
             this.lblloggedinChef.Text = "Logged in as:";
             // 
@@ -74,8 +73,8 @@
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(784, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1045, 33);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -87,20 +86,21 @@
             this.logOffToolStripMenuItem});
             this.menuToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // managementToolStripMenuItem
             // 
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.managementToolStripMenuItem.Text = "Management";
+            this.managementToolStripMenuItem.Visible = false;
             this.managementToolStripMenuItem.Click += new System.EventHandler(this.managementToolStripMenuItem_Click);
             // 
             // logOffToolStripMenuItem
             // 
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click_1);
             // 
@@ -109,71 +109,11 @@
             this.pnlKitchen.BackColor = System.Drawing.Color.Transparent;
             this.pnlKitchen.Controls.Add(this.ListViewKitchen);
             this.pnlKitchen.Controls.Add(this.lblKitchenScreen);
-            this.pnlKitchen.Location = new System.Drawing.Point(47, 81);
+            this.pnlKitchen.Location = new System.Drawing.Point(63, 100);
+            this.pnlKitchen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlKitchen.Name = "pnlKitchen";
-            this.pnlKitchen.Size = new System.Drawing.Size(643, 346);
+            this.pnlKitchen.Size = new System.Drawing.Size(857, 426);
             this.pnlKitchen.TabIndex = 8;
-            // 
-            // lblKitchenScreen
-            // 
-            this.lblKitchenScreen.AutoSize = true;
-            this.lblKitchenScreen.Location = new System.Drawing.Point(231, 11);
-            this.lblKitchenScreen.Name = "lblKitchenScreen";
-            this.lblKitchenScreen.Size = new System.Drawing.Size(80, 13);
-            this.lblKitchenScreen.TabIndex = 0;
-            this.lblKitchenScreen.Text = "Kitchen Screen";
-            // 
-            // pnlBarScreen
-            // 
-            this.pnlBarScreen.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBarScreen.Controls.Add(this.listViewBar);
-            this.pnlBarScreen.Controls.Add(this.lblBarScreen);
-            this.pnlBarScreen.Location = new System.Drawing.Point(53, 97);
-            this.pnlBarScreen.Name = "pnlBarScreen";
-            this.pnlBarScreen.Size = new System.Drawing.Size(637, 343);
-            this.pnlBarScreen.TabIndex = 1;
-            // 
-            // lblBarScreen
-            // 
-            this.lblBarScreen.AutoSize = true;
-            this.lblBarScreen.Location = new System.Drawing.Point(231, 11);
-            this.lblBarScreen.Name = "lblBarScreen";
-            this.lblBarScreen.Size = new System.Drawing.Size(60, 13);
-            this.lblBarScreen.TabIndex = 0;
-            this.lblBarScreen.Text = "Bar Screen";
-            // 
-            // listViewBar
-            // 
-            this.listViewBar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.listViewBar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.DrinkName,
-            this.DrinkAmount,
-            this.DrinkOrderTime,
-            this.DrinkStatus,
-            this.DTableNumber});
-            this.listViewBar.HideSelection = false;
-            this.listViewBar.Location = new System.Drawing.Point(0, 38);
-            this.listViewBar.Name = "listViewBar";
-            this.listViewBar.Size = new System.Drawing.Size(640, 305);
-            this.listViewBar.TabIndex = 1;
-            this.listViewBar.UseCompatibleStateImageBehavior = false;
-            this.listViewBar.View = System.Windows.Forms.View.Details;
-            // 
-            // DrinkName
-            // 
-            this.DrinkName.Text = "Item Name";
-            // 
-            // DrinkAmount
-            // 
-            this.DrinkAmount.Text = "Amount";
-            // 
-            // DrinkOrderTime
-            // 
-            this.DrinkOrderTime.Text = "Order Time";
-            // 
-            // DrinkStatus
-            // 
-            this.DrinkStatus.Text = "Status";
             // 
             // ListViewKitchen
             // 
@@ -185,9 +125,10 @@
             this.FOrderStatus,
             this.FTableNumber});
             this.ListViewKitchen.HideSelection = false;
-            this.ListViewKitchen.Location = new System.Drawing.Point(3, 30);
+            this.ListViewKitchen.Location = new System.Drawing.Point(4, 37);
+            this.ListViewKitchen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ListViewKitchen.Name = "ListViewKitchen";
-            this.ListViewKitchen.Size = new System.Drawing.Size(640, 313);
+            this.ListViewKitchen.Size = new System.Drawing.Size(852, 384);
             this.ListViewKitchen.TabIndex = 2;
             this.ListViewKitchen.UseCompatibleStateImageBehavior = false;
             this.ListViewKitchen.View = System.Windows.Forms.View.Details;
@@ -217,23 +158,88 @@
             this.FTableNumber.Text = "Table Number";
             this.FTableNumber.Width = 112;
             // 
+            // lblKitchenScreen
+            // 
+            this.lblKitchenScreen.AutoSize = true;
+            this.lblKitchenScreen.Location = new System.Drawing.Point(308, 14);
+            this.lblKitchenScreen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKitchenScreen.Name = "lblKitchenScreen";
+            this.lblKitchenScreen.Size = new System.Drawing.Size(104, 17);
+            this.lblKitchenScreen.TabIndex = 0;
+            this.lblKitchenScreen.Text = "Kitchen Screen";
+            // 
+            // pnlBarScreen
+            // 
+            this.pnlBarScreen.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBarScreen.Controls.Add(this.listViewBar);
+            this.pnlBarScreen.Controls.Add(this.lblBarScreen);
+            this.pnlBarScreen.Location = new System.Drawing.Point(71, 119);
+            this.pnlBarScreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBarScreen.Name = "pnlBarScreen";
+            this.pnlBarScreen.Size = new System.Drawing.Size(849, 422);
+            this.pnlBarScreen.TabIndex = 1;
+            // 
+            // listViewBar
+            // 
+            this.listViewBar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewBar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DrinkName,
+            this.DrinkAmount,
+            this.DrinkOrderTime,
+            this.DrinkStatus,
+            this.DTableNumber});
+            this.listViewBar.HideSelection = false;
+            this.listViewBar.Location = new System.Drawing.Point(0, 47);
+            this.listViewBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listViewBar.Name = "listViewBar";
+            this.listViewBar.Size = new System.Drawing.Size(852, 374);
+            this.listViewBar.TabIndex = 1;
+            this.listViewBar.UseCompatibleStateImageBehavior = false;
+            this.listViewBar.View = System.Windows.Forms.View.Details;
+            // 
+            // DrinkName
+            // 
+            this.DrinkName.Text = "Item Name";
+            // 
+            // DrinkAmount
+            // 
+            this.DrinkAmount.Text = "Amount";
+            // 
+            // DrinkOrderTime
+            // 
+            this.DrinkOrderTime.Text = "Order Time";
+            // 
+            // DrinkStatus
+            // 
+            this.DrinkStatus.Text = "Status";
+            // 
             // DTableNumber
             // 
             this.DTableNumber.Text = "Table Number";
             // 
+            // lblBarScreen
+            // 
+            this.lblBarScreen.AutoSize = true;
+            this.lblBarScreen.Location = new System.Drawing.Point(308, 14);
+            this.lblBarScreen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBarScreen.Name = "lblBarScreen";
+            this.lblBarScreen.Size = new System.Drawing.Size(79, 17);
+            this.lblBarScreen.TabIndex = 0;
+            this.lblBarScreen.Text = "Bar Screen";
+            // 
             // KitchenBarScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 749);
+            this.ClientSize = new System.Drawing.Size(1045, 922);
             this.Controls.Add(this.pnlKitchen);
             this.Controls.Add(this.pnlBarScreen);
             this.Controls.Add(this.lblloggedinChef);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "KitchenBarScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenBarScreen";
