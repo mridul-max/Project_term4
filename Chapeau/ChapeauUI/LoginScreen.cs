@@ -51,9 +51,9 @@ namespace ChapeauUI
         //Opens a different form for each type of employee.
         private void LoginAccordingtoEmployeeType(Employee employee)
         {
-            Employee.LoggedEmployee = employee;
+            Session.Instance.SetLoggedEmployee(employee);
             //We have a static logged employee in our application and now we don't have to pass in the employee for each form which makes it cleaner.
-            switch (Employee.LoggedEmployee.EmployeeType)
+            switch (Session.Instance.LoggedEmployee.EmployeeType)
             {
                 case EmployeeType.Waiter:
                     TableView tableForm = new TableView();

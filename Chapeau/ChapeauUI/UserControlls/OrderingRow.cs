@@ -13,7 +13,7 @@ namespace ChapeauUI
 {
     public partial class OrderingRow : UserControl
     {
-        public ChapeauModel.MenuItem MenuItem { get; }
+        public OrderItem OrderItem { get; }
         public Label AmountLabel { get { return lblAmount; } }
         public Label currentOrderLabel;
         private int amount;
@@ -36,15 +36,14 @@ namespace ChapeauUI
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
-            MenuItem = menuItem;
-            Amount = amount;
+            OrderItem = new OrderItem(menuItem, amount);
             lblAmount.Text = Amount.ToString();
             lblName.Text = menuItem.Name;
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if(Amount != 0)
+            if(Amount > 0)
             {
                 Amount--;
                 mainScreen.UpdateCurrentOrderItem(this);

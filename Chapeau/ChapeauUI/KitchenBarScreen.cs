@@ -21,13 +21,13 @@ namespace ChapeauUI
 
         private void KitchenBarScreen_Load(object sender, EventArgs e)
         {
-            lblloggedinChef.Text = lblloggedinChef.Text+ " "+ Employee.LoggedEmployee.Name;
-            if (Employee.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
+            lblloggedinChef.Text = lblloggedinChef.Text+ " "+ Session.Instance.LoggedEmployee.Name;
+            if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
             {
                 managementToolStripMenuItem.Visible = true;
                 showPanel("pnlKitchen");
             }
-            else if(Employee.LoggedEmployee.EmployeeType == EmployeeType.Bar)
+            else if(Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Bar)
             {
                 managementToolStripMenuItem.Visible = true;
                 showPanel("pnlBarScreen");

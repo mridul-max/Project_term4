@@ -84,9 +84,9 @@ namespace ChapeauUI
 
         public void UpdateCurrentOrderItem(OrderingRow orderingRow)
         {
-            if (!containsMenuItem(currentOrderItems, orderingRow.MenuItem))
+            if (!ContainsMenuItem(currentOrderItems, orderingRow.OrderItem.MenuItem))
             {                
-                orderingRow = new OrderingRow(this, orderingRow.MenuItem, orderingRow.Amount);
+                orderingRow = new OrderingRow(this, orderingRow.OrderItem.MenuItem, orderingRow.Amount);
                 currentOrderItems.Add(orderingRow);
                 flpCurrentOrderItems.Controls.Remove(confirmControll);
                 flpCurrentOrderItems.Controls.Add(orderingRow);
@@ -97,17 +97,19 @@ namespace ChapeauUI
 
                 foreach (var row in allOrderItems)
                 {
-                    if (orderingRow.MenuItem == row.MenuItem)
+                    if (orderingRow.OrderItem.MenuItem == row.OrderItem.MenuItem)
                     {
                         row.Amount = orderingRow.Amount;
+                        break;
                     }
                 }
 
                 foreach (var row in currentOrderItems)
                 {
-                    if (orderingRow.MenuItem == row.MenuItem)
+                    if (orderingRow.OrderItem.MenuItem == row.OrderItem.MenuItem)
                     {
                         row.Amount = orderingRow.Amount;
+                        break;
                     }
                 }
 
@@ -119,11 +121,11 @@ namespace ChapeauUI
             }
         }
 
-        bool containsMenuItem(List<OrderingRow> rows, ChapeauModel.MenuItem menuItem)
+        bool ContainsMenuItem(List<OrderingRow> rows, ChapeauModel.MenuItem menuItem)
         {
             foreach (var row in rows)
             {
-                if (menuItem == row.MenuItem)
+                if (menuItem == row.OrderItem.MenuItem)
                 {
                     return true;
                 }
@@ -146,9 +148,9 @@ namespace ChapeauUI
             List<OrderItem> orderItems = new List<OrderItem>();
             foreach (OrderingRow row in currentOrderItems)
             {
-                orderItems.Add(new OrderItem(row.MenuItem, row.Amount));
+                orderItems.Add(row.OrderItem);
             }
-            Order currentOrder = new Order(CurrentTable.TableNumber, orderItems, Employee.LoggedEmployee);
+            Order currentOrder = new Order(CurrentTable.TableNumber, orderItems, Session.Instance.LoggedEmployee);
             return currentOrder;
         }
     }

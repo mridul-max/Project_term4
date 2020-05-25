@@ -28,8 +28,8 @@ namespace ChapeauUI
         {
             FillPictureBoxes();
             RefreshTableInformation();
-            lblEmployee.Text = lblEmployee.Text + " " + Employee.LoggedEmployee.Name;
-            if (Employee.LoggedEmployee.EmployeeType == EmployeeType.Manager)
+            lblEmployee.Text = lblEmployee.Text + " " + Session.Instance.LoggedEmployee.Name;
+            if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Manager)
             {
                 returnToManagementToolStripMenuItem.Visible = true;
             }

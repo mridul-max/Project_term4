@@ -20,7 +20,7 @@ namespace ChapeauUI
 
         private void ManagerScreen_Load(object sender, EventArgs e)
         {
-            lblLogged.Text = lblLogged.Text + " " + Employee.LoggedEmployee.Name;
+            lblLogged.Text = lblLogged.Text + " " + Session.Instance.LoggedEmployee.Name;
         }
 
         private void ManagerScreen_FormClosing(object sender, FormClosingEventArgs e)
