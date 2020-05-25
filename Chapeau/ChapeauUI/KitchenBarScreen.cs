@@ -1,4 +1,5 @@
-﻿using ChapeauModel;
+﻿using ChapeauLogic;
+using ChapeauModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,12 +25,10 @@ namespace ChapeauUI
             lblloggedinChef.Text = lblloggedinChef.Text+ " "+ Employee.LoggedEmployee.Name;
             if (Employee.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
             {
-                managementToolStripMenuItem.Visible = true;
                 showPanel("pnlKitchen");
             }
             else if(Employee.LoggedEmployee.EmployeeType == EmployeeType.Bar)
-            {
-                managementToolStripMenuItem.Visible = true;
+            { 
                 showPanel("pnlBarScreen");
             }
         }
@@ -37,17 +36,50 @@ namespace ChapeauUI
         {
             if (panelName == "pnlKitchen")
             {
-                pnlBarScreen.Hide();
-                pnlKitchen.Show();
-                pnlKitchen.Visible = true;
-                lblKitchenScreen.Text = "Kitchen Screen";
+                if (refresh)
+                {
+                    pnlBarScreen.Hide();
+                    pnlKitchen.Show();
+                    pnlKitchen.Visible = true;
+                    lblKitchenScreen.Text = "Kitchen Screen";
+                    OrderService orderService = new OrderService();
+                    List<OrderItem> Food = orderService.GetListOfFood();
+                    ListViewKitchen.Clear();
+                    ListViewKitchen.Columns.Add("FName");
+                    ListViewKitchen.Columns.Add("FAmount");
+                    ListViewKitchen.Columns.Add("FOrderDTime");
+                    ListViewKitchen.Columns.Add("FOrderStatus");
+                    foreach (OrderItem F in Food)
+                    {
+                        ListViewKitchen.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString() }));
+                    }
+                    listViewBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+
+                }
+           
             }
             else if (panelName == "pnlBarScreen")
             {
-                pnlKitchen.Hide();
-                pnlBarScreen.Show();
-                pnlBarScreen.Visible = true;
-                lblKitchenScreen.Text = "Bar Screen";
+
+                if (refresh)
+                {
+                    pnlKitchen.Hide();
+                    pnlBarScreen.Show();
+                    pnlBarScreen.Visible = true;
+                    lblKitchenScreen.Text = "Bar Screen";
+                    OrderService orderService = new OrderService();
+                    List<OrderItem> Drinks = orderService.GetAllDrinks();
+                    listViewBar.Clear();
+                    listViewBar.Columns.Add("DrinkName");
+                    listViewBar.Columns.Add("DrinkAmount");
+                    listViewBar.Columns.Add("DrinkOrderTime");
+                    listViewBar.Columns.Add("DrinkStatus");
+                    listViewBar.Columns.Add("DTableNumber");
+                    foreach (OrderItem O in Drinks)
+                    {
+                        listViewBar.Items.Add(new ListViewItem(new string[] { O.MenuItem.Name.ToString(), O.Amount.ToString(), O.DateTimeAdded.ToString(), O.orderState.ToString()}));
+                    }
+                }
             }
         }
 
@@ -67,6 +99,11 @@ namespace ChapeauUI
             LoginScreen login = new LoginScreen();
             this.Hide();
             login.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

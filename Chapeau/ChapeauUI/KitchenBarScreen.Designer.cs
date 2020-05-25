@@ -37,6 +37,18 @@
             this.lblKitchenScreen = new System.Windows.Forms.Label();
             this.pnlBarScreen = new System.Windows.Forms.Panel();
             this.lblBarScreen = new System.Windows.Forms.Label();
+            this.listViewBar = new System.Windows.Forms.ListView();
+            this.DrinkName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrinkAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrinkOrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DrinkStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ListViewKitchen = new System.Windows.Forms.ListView();
+            this.FName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FOrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FOrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FTableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.DTableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.pnlKitchen.SuspendLayout();
             this.pnlBarScreen.SuspendLayout();
@@ -66,6 +78,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(784, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // menuToolStripMenuItem
             // 
@@ -94,8 +107,9 @@
             // pnlKitchen
             // 
             this.pnlKitchen.BackColor = System.Drawing.Color.Transparent;
+            this.pnlKitchen.Controls.Add(this.ListViewKitchen);
             this.pnlKitchen.Controls.Add(this.lblKitchenScreen);
-            this.pnlKitchen.Location = new System.Drawing.Point(64, 74);
+            this.pnlKitchen.Location = new System.Drawing.Point(47, 81);
             this.pnlKitchen.Name = "pnlKitchen";
             this.pnlKitchen.Size = new System.Drawing.Size(643, 346);
             this.pnlKitchen.TabIndex = 8;
@@ -112,10 +126,11 @@
             // pnlBarScreen
             // 
             this.pnlBarScreen.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBarScreen.Controls.Add(this.listViewBar);
             this.pnlBarScreen.Controls.Add(this.lblBarScreen);
-            this.pnlBarScreen.Location = new System.Drawing.Point(61, 74);
+            this.pnlBarScreen.Location = new System.Drawing.Point(53, 97);
             this.pnlBarScreen.Name = "pnlBarScreen";
-            this.pnlBarScreen.Size = new System.Drawing.Size(643, 346);
+            this.pnlBarScreen.Size = new System.Drawing.Size(637, 343);
             this.pnlBarScreen.TabIndex = 1;
             // 
             // lblBarScreen
@@ -127,15 +142,94 @@
             this.lblBarScreen.TabIndex = 0;
             this.lblBarScreen.Text = "Bar Screen";
             // 
+            // listViewBar
+            // 
+            this.listViewBar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listViewBar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.DrinkName,
+            this.DrinkAmount,
+            this.DrinkOrderTime,
+            this.DrinkStatus,
+            this.DTableNumber});
+            this.listViewBar.HideSelection = false;
+            this.listViewBar.Location = new System.Drawing.Point(0, 38);
+            this.listViewBar.Name = "listViewBar";
+            this.listViewBar.Size = new System.Drawing.Size(640, 305);
+            this.listViewBar.TabIndex = 1;
+            this.listViewBar.UseCompatibleStateImageBehavior = false;
+            this.listViewBar.View = System.Windows.Forms.View.Details;
+            // 
+            // DrinkName
+            // 
+            this.DrinkName.Text = "Item Name";
+            // 
+            // DrinkAmount
+            // 
+            this.DrinkAmount.Text = "Amount";
+            // 
+            // DrinkOrderTime
+            // 
+            this.DrinkOrderTime.Text = "Order Time";
+            // 
+            // DrinkStatus
+            // 
+            this.DrinkStatus.Text = "Status";
+            // 
+            // ListViewKitchen
+            // 
+            this.ListViewKitchen.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ListViewKitchen.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FName,
+            this.FAmount,
+            this.FOrderTime,
+            this.FOrderStatus,
+            this.FTableNumber});
+            this.ListViewKitchen.HideSelection = false;
+            this.ListViewKitchen.Location = new System.Drawing.Point(3, 30);
+            this.ListViewKitchen.Name = "ListViewKitchen";
+            this.ListViewKitchen.Size = new System.Drawing.Size(640, 313);
+            this.ListViewKitchen.TabIndex = 2;
+            this.ListViewKitchen.UseCompatibleStateImageBehavior = false;
+            this.ListViewKitchen.View = System.Windows.Forms.View.Details;
+            // 
+            // FName
+            // 
+            this.FName.Text = "Item Name";
+            this.FName.Width = 116;
+            // 
+            // FAmount
+            // 
+            this.FAmount.Text = "Amount";
+            this.FAmount.Width = 162;
+            // 
+            // FOrderTime
+            // 
+            this.FOrderTime.Text = "Order Time";
+            this.FOrderTime.Width = 133;
+            // 
+            // FOrderStatus
+            // 
+            this.FOrderStatus.Text = "Status";
+            this.FOrderStatus.Width = 78;
+            // 
+            // FTableNumber
+            // 
+            this.FTableNumber.Text = "Table Number";
+            this.FTableNumber.Width = 112;
+            // 
+            // DTableNumber
+            // 
+            this.DTableNumber.Text = "Table Number";
+            // 
             // KitchenBarScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
-            this.Controls.Add(this.pnlBarScreen);
+            this.ClientSize = new System.Drawing.Size(784, 749);
             this.Controls.Add(this.pnlKitchen);
+            this.Controls.Add(this.pnlBarScreen);
             this.Controls.Add(this.lblloggedinChef);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -167,5 +261,17 @@
         private System.Windows.Forms.Panel pnlBarScreen;
         private System.Windows.Forms.Label lblBarScreen;
         private System.Windows.Forms.Label lblKitchenScreen;
+        private System.Windows.Forms.ListView listViewBar;
+        private System.Windows.Forms.ColumnHeader DrinkName;
+        private System.Windows.Forms.ColumnHeader DrinkAmount;
+        private System.Windows.Forms.ColumnHeader DrinkOrderTime;
+        private System.Windows.Forms.ColumnHeader DrinkStatus;
+        private System.Windows.Forms.ListView ListViewKitchen;
+        private System.Windows.Forms.ColumnHeader FName;
+        private System.Windows.Forms.ColumnHeader FAmount;
+        private System.Windows.Forms.ColumnHeader FOrderTime;
+        private System.Windows.Forms.ColumnHeader FOrderStatus;
+        private System.Windows.Forms.ColumnHeader FTableNumber;
+        private System.Windows.Forms.ColumnHeader DTableNumber;
     }
 }

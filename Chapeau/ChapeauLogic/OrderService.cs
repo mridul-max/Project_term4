@@ -43,13 +43,13 @@ namespace ChapeauLogic
             tableService.SetOccupied(order.TableNr);
             orderDao.CreateOrderItems(order.OrderID, order.OrderItems);
         }
-        public List<OrderItem> GetListOfFood(int OrderID)
+        public List<OrderItem> GetListOfFood()
         {
-            return orderDao.GetListOfFood(OrderID);
+            return orderDao.GetListOfFood();
         }
-        public List<OrderItem> GetAllDrinks(int OrderID)
+        public List<OrderItem> GetAllDrinks()
         {
-            return orderDao.GetAllDrinks(OrderID);
+            return orderDao.GetAllDrinks();
         }
         public void UpdatePreparingItem(OrderItem item)
         {

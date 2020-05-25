@@ -150,7 +150,6 @@ namespace ChapeauDAL
                     Category = dr["CategoryName"].ToString(),
                     VAT = ((int)dr["VAT"]) / 100f
                 };
-
                 OrderItem orderItem = new OrderItem()
                 {
                     MenuItem = menuItem,
@@ -163,14 +162,11 @@ namespace ChapeauDAL
             return orderItems;
         }
         //Get all food for kitchen view
-        public List<OrderItem> GetListOfFood(int OrderID)
+        public List<OrderItem> GetListOfFood()
         {
             OpenConnection();
-            string query = "Select M.*,O.* From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID Where C.CategoryType != 'Drinks' And O.OrderID = @ID Order by O.OrderID,M.ItemName";
-            SqlParameter[] sqlParameters = new SqlParameter[1]
-            {
-                new SqlParameter("@Id",OrderID)
-            };
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType != 'Drinks' And O.OrderStateKey !='RD' Order by M.ItemName";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
 
         }
@@ -186,10 +182,10 @@ namespace ChapeauDAL
                     Price = float.Parse(dr["Price"].ToString()),
                     Stock = (int)dr["Stock"],
                     Description = dr["Description"].ToString(),
-                    Category = dr["CategoryID"].ToString()
+                    Category = dr["CategoryID"].ToString(),
                 };
                 OrderItem orderItem = new OrderItem()
-                {
+                {   
                     MenuItem = menuItem,
                     Amount = (int)dr["Amount"],
                     DateTimeAdded = (DateTime)dr["LastStateChanged"],
@@ -201,14 +197,11 @@ namespace ChapeauDAL
 
         }
         //get all drinks order for bar view
-        public List<OrderItem> GetAllDrinks(int OrderID)
+        public List<OrderItem> GetAllDrinks()
         {
             OpenConnection();
-            string query = "Select M.*,O.* From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID Where C.CategoryType = 'Drinks' And O.OrderID = @ID Order by O.OrderID,M.ItemName";
-            SqlParameter[] sqlParameters = new SqlParameter[1]
-            {
-                new SqlParameter("@Id",OrderID)
-            };
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey !='RD' Order by M.ItemName";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
         }
        

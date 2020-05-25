@@ -12,7 +12,7 @@ namespace ChapeauModel
 
         public OrderItem() { }
         public OrderItem(MenuItem menuItem, int amount = 1)
-        {
+        {       
             this.MenuItem = menuItem;
             this.Amount = amount;
             this.orderState = OrderState.PrepairingOrder;
