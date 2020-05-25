@@ -29,6 +29,8 @@ namespace ChapeauUI
             FillListView();
             FillPrices();
         }
+
+        //private.
         public void FillListView()
         {
 
