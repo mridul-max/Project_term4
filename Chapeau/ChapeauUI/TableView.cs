@@ -68,21 +68,26 @@ namespace ChapeauUI
         {
             allTables = tableService.GetAllTables();
             //Instead of keep opening the database in for loop now I only receive all the unpaid orders at ones for the order items.
-            List<Order> allUnpaidOrders = orderService.GetAllUnfinishedOrders(); 
+            List<Order> allUnpaidOrders = orderService.GetAllUnfinishedOrders();
             for (int i = 0; i < allTables.Count; i++)
             {
-               
+
                 if (allTables[i].IsOccupied)
                 {
                     tableIcons[i].Image = occupiedTableImages[i];
-                    int indexofOrder = OrderIndexOfTable(allTables[i], allUnpaidOrders);
-                    //If table has orders check status of orders to inform waiter with icons.
-                    if (allUnpaidOrders[indexofOrder].OrderItems.Count>0)
+                    //if restaurant has no present orders skip displaying icons
+                    if (allUnpaidOrders.Count != 0)
                     {
-                        RefreshDishIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
-                        RefreshWarningIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
-                        RefreshDrinkIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
-                    }                  
+                        int indexofOrder = OrderIndexOfTable(allTables[i], allUnpaidOrders);
+                        //If table has orders check status of orders to inform waiter with icons.                        
+                        if (indexofOrder >= 0 && allUnpaidOrders[indexofOrder].OrderItems.Count != 0)
+                        {
+                            RefreshDishIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
+                            RefreshWarningIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
+                            RefreshDrinkIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
+                        }
+                    }
+
                 }
                 else
                 {
@@ -102,22 +107,22 @@ namespace ChapeauUI
 
         }
         //This method is for finding the right order for the table.
-        int OrderIndexOfTable(Table table,List<Order>orders)
+        int OrderIndexOfTable(Table table, List<Order> orders)
         {
             for (int i = 0; i < orders.Count; i++)
             {
-                if(orders[i].TableNr==table.TableNumber)
+                if (orders[i].TableNr == table.TableNumber)
                 {
                     return i;
                 }
             }
-            //Since this will only be checked when the table is occupied it will always return the right value therefore it will never reach line 111.
-            return 0;
+            //validation of -1 value is handled in line 84 [if(indexofORder>=0)]
+            return -1;
         }
         //If a table has unserved dishes, an icon will appear to inform  the waiter.
         void RefreshDishIcons(List<OrderItem> orders, int index)
         {
-            
+
             foreach (OrderItem order in orders)
             {
                 if (order.MenuItem.CategoryType != CategoryType.Drinks)
@@ -158,12 +163,12 @@ namespace ChapeauUI
         }
 
         //If a table has a reservation in the next hour an icon will appear to inform waiter.
-        void RefreshReservationIcons(List<Reservation>reservations, int index)
-        {         
+        void RefreshReservationIcons(List<Reservation> reservations, int index)
+        {
             foreach (Reservation reservation in reservations)
             {
                 //Only check if table has a reservation today.
-                if(DateTime.Now.Date==reservation.ReservationDate.Date)
+                if (DateTime.Now.Date == reservation.ReservationDate.Date)
                 {
                     int totalMinutes = (int)(DateTime.Now - reservation.ReservationDate).TotalMinutes;
                     if (totalMinutes <= 60)
@@ -172,7 +177,7 @@ namespace ChapeauUI
                         break;
                     }
                 }
-               
+
             }
         }
 
@@ -189,13 +194,13 @@ namespace ChapeauUI
         }
 
         //This code opens a table display form according to the sender index.
-      
+
         private void pcboxtb1_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox = (PictureBox)sender; //store the clicked table
             int tableId = int.Parse(pictureBox.Name.Remove(0, 7));
-            DisplayTableForm(tableId-1);            
-        }    
+            DisplayTableForm(tableId - 1);
+        }
         //for returning the login screen.
         private void logOffToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
