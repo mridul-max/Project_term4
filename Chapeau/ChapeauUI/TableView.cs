@@ -75,7 +75,7 @@ namespace ChapeauUI
                 if (allTables[i].IsOccupied)
                 {
                     tableIcons[i].Image = occupiedTableImages[i];
-                    //if restaurant has no present orders skip displaying icons
+                    //if restaurant has no present orders skip displaying icons and only change table icon.
                     if (allUnpaidOrders.Count != 0)
                     {
                         int indexofOrder = OrderIndexOfTable(allTables[i], allUnpaidOrders);
