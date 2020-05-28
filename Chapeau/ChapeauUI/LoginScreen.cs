@@ -74,7 +74,7 @@ namespace ChapeauUI
 
             }
         }
-      
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -88,9 +88,6 @@ namespace ChapeauUI
             {
                 pcPasswordIcon.BackgroundImage = Properties.Resources.Closedeye;
             }
-
-
-
         }
     }
 }
