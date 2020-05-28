@@ -91,6 +91,7 @@ namespace ChapeauUI
                     dishIcons[i].Visible = false;
                     drinkIcons[i].Visible = false;
                 }
+                //Refreshing the reservation icons for  each table.
                 List<Reservation> reservations = reservationService.GetAllById(allTables[i].TableNumber);
                 if (reservations.Count > 0)
                 {
@@ -190,7 +191,9 @@ namespace ChapeauUI
         #region Display table code for picture boxes.
         private void pcboxtb1_Click(object sender, EventArgs e)
         {
-            DisplayTableForm(0);
+            PictureBox pictureBox = (PictureBox)sender; //store the clicked table
+            int tableId = int.Parse(pictureBox.Name.Remove(0, 7));
+            DisplayTableForm(tableId-1);            
         }
 
         private void pcboxtb2_Click(object sender, EventArgs e)

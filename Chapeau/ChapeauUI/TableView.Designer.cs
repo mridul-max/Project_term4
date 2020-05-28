@@ -680,7 +680,7 @@
             this.pcTable10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable10.TabIndex = 9;
             this.pcTable10.TabStop = false;
-            this.pcTable10.Click += new System.EventHandler(this.pcboxtb10_Click);
+            this.pcTable10.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable9
             // 
@@ -693,7 +693,7 @@
             this.pcTable9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable9.TabIndex = 8;
             this.pcTable9.TabStop = false;
-            this.pcTable9.Click += new System.EventHandler(this.pcboxtb9_Click);
+            this.pcTable9.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable8
             // 
@@ -706,7 +706,7 @@
             this.pcTable8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable8.TabIndex = 7;
             this.pcTable8.TabStop = false;
-            this.pcTable8.Click += new System.EventHandler(this.pcboxtb8_Click);
+            this.pcTable8.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable7
             // 
@@ -719,7 +719,7 @@
             this.pcTable7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable7.TabIndex = 6;
             this.pcTable7.TabStop = false;
-            this.pcTable7.Click += new System.EventHandler(this.pcboxtb7_Click);
+            this.pcTable7.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable6
             // 
@@ -732,7 +732,7 @@
             this.pcTable6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable6.TabIndex = 5;
             this.pcTable6.TabStop = false;
-            this.pcTable6.Click += new System.EventHandler(this.pcboxtb6_Click);
+            this.pcTable6.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable5
             // 
@@ -745,7 +745,7 @@
             this.pcTable5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable5.TabIndex = 4;
             this.pcTable5.TabStop = false;
-            this.pcTable5.Click += new System.EventHandler(this.pcboxtb5_Click);
+            this.pcTable5.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable4
             // 
@@ -758,7 +758,7 @@
             this.pcTable4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable4.TabIndex = 3;
             this.pcTable4.TabStop = false;
-            this.pcTable4.Click += new System.EventHandler(this.pcboxtb4_Click);
+            this.pcTable4.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable3
             // 
@@ -771,7 +771,7 @@
             this.pcTable3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable3.TabIndex = 2;
             this.pcTable3.TabStop = false;
-            this.pcTable3.Click += new System.EventHandler(this.pcboxtb3_Click);
+            this.pcTable3.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable2
             // 
@@ -784,7 +784,7 @@
             this.pcTable2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcTable2.TabIndex = 1;
             this.pcTable2.TabStop = false;
-            this.pcTable2.Click += new System.EventHandler(this.pcboxtb2_Click);
+            this.pcTable2.Click += new System.EventHandler(this.pcboxtb1_Click);
             // 
             // pcTable1
             // 
