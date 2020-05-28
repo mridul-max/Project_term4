@@ -434,7 +434,7 @@
             // 
             // pcwarning9
             // 
-            this.pcwarning9.BackColor = System.Drawing.Color.LightCoral;
+            this.pcwarning9.BackColor = System.Drawing.Color.Transparent;
             this.pcwarning9.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcwarning9.Location = new System.Drawing.Point(345, 869);

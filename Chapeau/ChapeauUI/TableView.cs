@@ -13,9 +13,10 @@ using ChapeauModel;
 namespace ChapeauUI
 {
     public partial class TableView : Form
-    {   //write private.
+    {   // Components needed for tables.
         private TableService tableService;
         private List<Table> allTables;
+        //Picture boxes and Icons I have.
         private List<PictureBox> dishIcons;
         private List<PictureBox> tableIcons;
         private List<PictureBox> warningIcons;
@@ -23,6 +24,7 @@ namespace ChapeauUI
         private List<PictureBox> drinkIcons;
         private List<Bitmap> tableImages;
         private List<Bitmap> occupiedTableImages;
+        //Components needed for orders and reservations.
         private ReservationService reservationService;
         private OrderService orderService;
 
@@ -65,19 +67,20 @@ namespace ChapeauUI
         void RefreshTableInformation()
         {
             allTables = tableService.GetAllTables();
+            List<Order> allUnpaidOrders = orderService.GetAllUnfinishedOrders(); //Instead of keep opening the database in for loop now I only receive all the unpaid orders at ones for the order items.
             for (int i = 0; i < allTables.Count; i++)
             {
                
                 if (allTables[i].IsOccupied)
                 {
                     tableIcons[i].Image = occupiedTableImages[i];
-                    List<OrderItem> items = orderService.GetUnfinishedOrdersOfTable(allTables[i].TableNumber);
+                    int indexofOrder = OrderIndexOfTable(allTables[i], allUnpaidOrders);
                     //If table has orders check status of orders to inform waiter with icons.
-                    if (items.Count > 0)
+                    if (allUnpaidOrders[indexofOrder].OrderItems.Count>0)
                     {
-                        RefreshDishIcons(items, i);
-                        RefreshWarningIcons(items, i);
-                        RefreshDrinkIcons(items, i);
+                        RefreshDishIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
+                        RefreshWarningIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
+                        RefreshDrinkIcons(allUnpaidOrders[indexofOrder].OrderItems, i);
                     }                  
                 }
                 else
@@ -95,6 +98,19 @@ namespace ChapeauUI
                 }
             }
 
+        }
+        //This method is for finding the right order for the table.
+        int OrderIndexOfTable(Table table,List<Order>orders)
+        {
+            for (int i = 0; i < orders.Count; i++)
+            {
+                if(orders[i].TableNr==table.TableNumber)
+                {
+                    return i;
+                }
+            }
+            //Since this will only be checked when the table is occupied it will always return the right value therefore it will never reach line 111.
+            return 0;
         }
         //If a table has unserved dishes, an icon will appear to inform  the waiter.
         void RefreshDishIcons(List<OrderItem> orders, int index)
