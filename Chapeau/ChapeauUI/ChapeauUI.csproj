@@ -305,5 +305,26 @@
   <ItemGroup>
     <None Include="Resources\tableReserved.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordClosed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Closedeye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenEye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drinkOccupy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Booked.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

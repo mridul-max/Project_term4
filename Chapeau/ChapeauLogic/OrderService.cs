@@ -22,6 +22,10 @@ namespace ChapeauLogic
         {
             orderDao.CompletePayment(payment);
         }
+        public List<Order> GetAllUnfinishedOrders()
+        {
+            return orderDao.GetAllUnfinishedOrders();
+        }
 
         public Order GetOrderByTableId(int id)
         {

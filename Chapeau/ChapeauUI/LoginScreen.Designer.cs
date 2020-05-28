@@ -33,9 +33,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.ChPassword = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcPasswordIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcPasswordIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -91,18 +92,6 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // ChPassword
-            // 
-            this.ChPassword.AutoSize = true;
-            this.ChPassword.BackColor = System.Drawing.Color.Transparent;
-            this.ChPassword.Location = new System.Drawing.Point(212, 572);
-            this.ChPassword.Name = "ChPassword";
-            this.ChPassword.Size = new System.Drawing.Size(141, 21);
-            this.ChPassword.TabIndex = 7;
-            this.ChPassword.Text = "Show password";
-            this.ChPassword.UseVisualStyleBackColor = false;
-            this.ChPassword.CheckedChanged += new System.EventHandler(this.ChPassword_CheckedChanged);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -115,6 +104,18 @@
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
+            // pcPasswordIcon
+            // 
+            this.pcPasswordIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pcPasswordIcon.BackgroundImage = global::ChapeauUI.Properties.Resources.OpenEye;
+            this.pcPasswordIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pcPasswordIcon.Location = new System.Drawing.Point(435, 517);
+            this.pcPasswordIcon.Name = "pcPasswordIcon";
+            this.pcPasswordIcon.Size = new System.Drawing.Size(34, 34);
+            this.pcPasswordIcon.TabIndex = 9;
+            this.pcPasswordIcon.TabStop = false;
+            this.pcPasswordIcon.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // LoginScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -122,8 +123,8 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(582, 903);
+            this.Controls.Add(this.pcPasswordIcon);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ChPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -137,6 +138,7 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcPasswordIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,8 +151,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.CheckBox ChPassword;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcPasswordIcon;
     }
 }
 

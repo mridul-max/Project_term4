@@ -73,9 +73,49 @@ namespace ChapeauUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Booked {
+            get {
+                object obj = ResourceManager.GetObject("Booked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chapeauLogo {
             get {
                 object obj = ResourceManager.GetObject("chapeauLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Closedeye {
+            get {
+                object obj = ResourceManager.GetObject("Closedeye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Drink {
+            get {
+                object obj = ResourceManager.GetObject("Drink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drinkOccupy {
+            get {
+                object obj = ResourceManager.GetObject("drinkOccupy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +326,36 @@ namespace ChapeauUI.Properties {
         internal static System.Drawing.Bitmap Occupy9 {
             get {
                 object obj = ResourceManager.GetObject("Occupy9", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OpenEye {
+            get {
+                object obj = ResourceManager.GetObject("OpenEye", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap passwordClosed {
+            get {
+                object obj = ResourceManager.GetObject("passwordClosed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap passwordOpen {
+            get {
+                object obj = ResourceManager.GetObject("passwordOpen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

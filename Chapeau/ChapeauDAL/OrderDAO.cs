@@ -41,6 +41,12 @@ namespace ChapeauDAL
                 payments.Add(payment);
             }
             return payments;
+        }      
+        public List<Order>GetAllUnfinishedOrders()
+        {
+            string query = "SELECT OrderID,TableNumber,EmployeeID,TotalPriceVAT,TotalPriceNoVAT,PaymentMethod,PaymentDateTime,Comment,isFinished,Tip FROM [Order]WHERE [Order].isFinished=0 order by TableNumber; ";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
         public Order GetOrderByTableId(int id)
         {

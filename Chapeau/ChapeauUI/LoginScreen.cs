@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauLogic;
 using ChapeauModel;
-
+using ChapeauUI.Properties;
 
 namespace ChapeauUI
 {
@@ -74,12 +74,23 @@ namespace ChapeauUI
 
             }
         }
+      
 
-
-        private void ChPassword_CheckedChanged(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
-        }
 
+            if (txtPassword.UseSystemPasswordChar == true)
+            {
+                pcPasswordIcon.BackgroundImage = Properties.Resources.OpenEye;
+            }
+            else
+            {
+                pcPasswordIcon.BackgroundImage = Properties.Resources.Closedeye;
+            }
+
+
+
+        }
     }
 }
