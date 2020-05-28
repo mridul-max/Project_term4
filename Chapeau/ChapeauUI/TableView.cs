@@ -67,7 +67,8 @@ namespace ChapeauUI
         void RefreshTableInformation()
         {
             allTables = tableService.GetAllTables();
-            List<Order> allUnpaidOrders = orderService.GetAllUnfinishedOrders(); //Instead of keep opening the database in for loop now I only receive all the unpaid orders at ones for the order items.
+            //Instead of keep opening the database in for loop now I only receive all the unpaid orders at ones for the order items.
+            List<Order> allUnpaidOrders = orderService.GetAllUnfinishedOrders(); 
             for (int i = 0; i < allTables.Count; i++)
             {
                
@@ -187,62 +188,14 @@ namespace ChapeauUI
             occupiedTableImages = new List<Bitmap>() { Properties.Resources.Occupy1, Properties.Resources.Occupy2, Properties.Resources.Occupy3, Properties.Resources.Occupy4, Properties.Resources.Occupy5, Properties.Resources.Occupy6, Properties.Resources.Occupy7, Properties.Resources.Occupy8, Properties.Resources.Occupy9, Properties.Resources.Occupy10 };
         }
 
-        //in this code between region picture box codes are implemented.
-        #region Display table code for picture boxes.
+        //This code opens a table display form according to the sender index.
+      
         private void pcboxtb1_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox = (PictureBox)sender; //store the clicked table
             int tableId = int.Parse(pictureBox.Name.Remove(0, 7));
             DisplayTableForm(tableId-1);            
-        }
-
-        private void pcboxtb2_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(1);
-        }
-
-        private void pcboxtb3_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(2);
-        }
-
-        private void pcboxtb4_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(3);
-        }
-
-        private void pcboxtb5_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(4);
-        }
-
-        private void pcboxtb6_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(5);
-        }
-
-        private void pcboxtb7_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(6);
-        }
-
-        private void pcboxtb8_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(7);
-        }
-
-        private void pcboxtb9_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(8);
-        }
-
-        private void pcboxtb10_Click(object sender, EventArgs e)
-        {
-            DisplayTableForm(9);
-        }
-        #endregion
-
-
+        }    
         //for returning the login screen.
         private void logOffToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
@@ -250,7 +203,7 @@ namespace ChapeauUI
             this.Hide();
             login.ShowDialog();
         }
-
+        //If user is a manager this is for returning to management.
         private void returnToManagementToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             ManagerScreen manager = new ManagerScreen();
