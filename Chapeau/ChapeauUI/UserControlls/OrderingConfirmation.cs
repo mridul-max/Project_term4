@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauLogic;
+using ChapeauModel;
 
 namespace ChapeauUI
 {
@@ -24,13 +25,17 @@ namespace ChapeauUI
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            Order order = mainScreen.GetCurrentOrder();
+            if (order.OrderItems.Count < 1)
+                return;
+
             try
             {
-                services.CreateNewOrder(mainScreen.GetCurrentOrder());
+                services.CreateNewOrder(order);
             }
             catch
             {
-                throw;
+                //throw;
             }
             finally
             {
