@@ -18,35 +18,43 @@ namespace ChapeauUI
             InitializeComponent();                           
         }
 
-        private void ManagerScreen_Load(object sender, EventArgs e)
-        {
-            lblLogged.Text = lblLogged.Text + " " + Session.Instance.LoggedEmployee.Name;
-        }
-
-        private void ManagerScreen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void kitchenbarScreenToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            KitchenBarScreen kitchenBarView = new KitchenBarScreen();
-            this.Hide();
-            kitchenBarView.ShowDialog();
-        }
-
-        private void tableViewToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TableView tableView = new TableView();
-            this.Hide();
-            tableView.ShowDialog();
-        }
-
         private void logOffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoginScreen login = new LoginScreen();
             this.Hide();
             login.ShowDialog();
+        }
+
+        private void ManagerScreen_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditEmp_Click(object sender, EventArgs e)
+        {
+            EditEmployee edit = new EditEmployee();
+            this.Hide();
+            edit.ShowDialog();
+        }
+
+        private void btnEditStock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditItems_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKitchen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,112 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblLogged = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kitchenbarScreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tableViewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editAccountsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editMenuItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEditEmp = new System.Windows.Forms.Button();
+            this.btnEditStock = new System.Windows.Forms.Button();
+            this.btnEditItems = new System.Windows.Forms.Button();
+            this.btnKitchen = new System.Windows.Forms.Button();
+            this.btnTable = new System.Windows.Forms.Button();
+            this.lblLog = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblLogged
-            // 
-            this.lblLogged.AutoSize = true;
-            this.lblLogged.BackColor = System.Drawing.Color.Transparent;
-            this.lblLogged.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogged.Location = new System.Drawing.Point(9, 34);
-            this.lblLogged.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLogged.Name = "lblLogged";
-            this.lblLogged.Size = new System.Drawing.Size(117, 20);
-            this.lblLogged.TabIndex = 2;
-            this.lblLogged.Text = "Logged in as:";
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.managementToolStripMenuItem,
             this.logOffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(784, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(682, 33);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // managementToolStripMenuItem
-            // 
-            this.managementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kitchenbarScreenToolStripMenuItem,
-            this.tableViewToolStripMenuItem,
-            this.editAccountsToolStripMenuItem,
-            this.editStockToolStripMenuItem,
-            this.editMenuItemsToolStripMenuItem});
-            this.managementToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
-            this.managementToolStripMenuItem.Text = "Management";
-            // 
-            // kitchenbarScreenToolStripMenuItem
-            // 
-            this.kitchenbarScreenToolStripMenuItem.Name = "kitchenbarScreenToolStripMenuItem";
-            this.kitchenbarScreenToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
-            this.kitchenbarScreenToolStripMenuItem.Text = "Kitchen/bar screen";
-            this.kitchenbarScreenToolStripMenuItem.Click += new System.EventHandler(this.kitchenbarScreenToolStripMenuItem_Click);
-            // 
-            // tableViewToolStripMenuItem
-            // 
-            this.tableViewToolStripMenuItem.Name = "tableViewToolStripMenuItem";
-            this.tableViewToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
-            this.tableViewToolStripMenuItem.Text = "Table view";
-            this.tableViewToolStripMenuItem.Click += new System.EventHandler(this.tableViewToolStripMenuItem_Click);
-            // 
-            // editAccountsToolStripMenuItem
-            // 
-            this.editAccountsToolStripMenuItem.Name = "editAccountsToolStripMenuItem";
-            this.editAccountsToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
-            this.editAccountsToolStripMenuItem.Text = "Edit accounts";
-            // 
-            // editStockToolStripMenuItem
-            // 
-            this.editStockToolStripMenuItem.Name = "editStockToolStripMenuItem";
-            this.editStockToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
-            this.editStockToolStripMenuItem.Text = "Edit stock";
-            // 
-            // editMenuItemsToolStripMenuItem
-            // 
-            this.editMenuItemsToolStripMenuItem.Name = "editMenuItemsToolStripMenuItem";
-            this.editMenuItemsToolStripMenuItem.Size = new System.Drawing.Size(228, 24);
-            this.editMenuItemsToolStripMenuItem.Text = "Edit Menu items";
             // 
             // logOffToolStripMenuItem
             // 
             this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
+            // btnEditEmp
+            // 
+            this.btnEditEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditEmp.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnEditEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEmp.Location = new System.Drawing.Point(216, 91);
+            this.btnEditEmp.Name = "btnEditEmp";
+            this.btnEditEmp.Size = new System.Drawing.Size(220, 76);
+            this.btnEditEmp.TabIndex = 8;
+            this.btnEditEmp.Text = "Edit Employee";
+            this.btnEditEmp.UseVisualStyleBackColor = false;
+            this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click);
+            // 
+            // btnEditStock
+            // 
+            this.btnEditStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditStock.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnEditStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditStock.Location = new System.Drawing.Point(216, 206);
+            this.btnEditStock.Name = "btnEditStock";
+            this.btnEditStock.Size = new System.Drawing.Size(220, 76);
+            this.btnEditStock.TabIndex = 9;
+            this.btnEditStock.Text = "Edit Stock";
+            this.btnEditStock.UseVisualStyleBackColor = false;
+            this.btnEditStock.Click += new System.EventHandler(this.btnEditStock_Click);
+            // 
+            // btnEditItems
+            // 
+            this.btnEditItems.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditItems.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnEditItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEditItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditItems.Location = new System.Drawing.Point(216, 325);
+            this.btnEditItems.Name = "btnEditItems";
+            this.btnEditItems.Size = new System.Drawing.Size(220, 76);
+            this.btnEditItems.TabIndex = 10;
+            this.btnEditItems.Text = "Edit Menu Items";
+            this.btnEditItems.UseVisualStyleBackColor = false;
+            this.btnEditItems.Click += new System.EventHandler(this.btnEditItems_Click);
+            // 
+            // btnKitchen
+            // 
+            this.btnKitchen.BackColor = System.Drawing.Color.Transparent;
+            this.btnKitchen.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnKitchen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnKitchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKitchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKitchen.Location = new System.Drawing.Point(216, 428);
+            this.btnKitchen.Name = "btnKitchen";
+            this.btnKitchen.Size = new System.Drawing.Size(220, 76);
+            this.btnKitchen.TabIndex = 11;
+            this.btnKitchen.Text = "Kitchen bar screen";
+            this.btnKitchen.UseVisualStyleBackColor = false;
+            this.btnKitchen.Click += new System.EventHandler(this.btnKitchen_Click);
+            // 
+            // btnTable
+            // 
+            this.btnTable.BackColor = System.Drawing.Color.Transparent;
+            this.btnTable.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTable.Location = new System.Drawing.Point(216, 529);
+            this.btnTable.Name = "btnTable";
+            this.btnTable.Size = new System.Drawing.Size(220, 76);
+            this.btnTable.TabIndex = 12;
+            this.btnTable.Text = "Table view";
+            this.btnTable.UseVisualStyleBackColor = false;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
+            // 
+            // lblLog
+            // 
+            this.lblLog.AutoSize = true;
+            this.lblLog.BackColor = System.Drawing.Color.Transparent;
+            this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLog.Location = new System.Drawing.Point(13, 49);
+            this.lblLog.Name = "lblLog";
+            this.lblLog.Size = new System.Drawing.Size(143, 25);
+            this.lblLog.TabIndex = 13;
+            this.lblLog.Text = "Logged in as:";
+            // 
             // ManagerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
-            this.Controls.Add(this.lblLogged);
+            this.ClientSize = new System.Drawing.Size(682, 653);
+            this.Controls.Add(this.lblLog);
+            this.Controls.Add(this.btnTable);
+            this.Controls.Add(this.btnKitchen);
+            this.Controls.Add(this.btnEditItems);
+            this.Controls.Add(this.btnEditStock);
+            this.Controls.Add(this.btnEditEmp);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManagerScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Management";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerScreen_FormClosing);
             this.Load += new System.EventHandler(this.ManagerScreen_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -143,14 +173,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblLogged;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kitchenbarScreenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tableViewToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editAccountsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editStockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editMenuItemsToolStripMenuItem;
+        private System.Windows.Forms.Button btnEditEmp;
+        private System.Windows.Forms.Button btnEditStock;
+        private System.Windows.Forms.Button btnEditItems;
+        private System.Windows.Forms.Button btnKitchen;
+        private System.Windows.Forms.Button btnTable;
+        private System.Windows.Forms.Label lblLog;
     }
 }

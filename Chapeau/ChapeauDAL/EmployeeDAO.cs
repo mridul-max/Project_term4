@@ -38,6 +38,22 @@ namespace ChapeauDAL
             }
             return employees;
         }
+        // For manager part : For checking if there is someone with this username in the database.
+        public Employee VerifyUsername(string username)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("SELECT [Name],EmployeeID,EmployeeTypeKey,Username,[Password] FROM Employee WHERE Username=@Username;", conn);
+            cmd.Parameters.AddWithValue("@Username", username);
+            SqlDataReader reader = cmd.ExecuteReader();
+            Employee employee = null;
+
+            if (reader.Read())
+                employee = ReadEmployee(reader);
+
+            reader.Close();
+            conn.Close();
+            return employee;
+        }
         //Gets an employee with a requested Id.
         public Employee GetById(int id)
         {
@@ -84,34 +100,46 @@ namespace ChapeauDAL
             return employee;
         }
 
-        public void RemoveEmployee(Employee employee, bool Ismanager)
+        public void RemoveEmployee(Employee employee)
         {
-            if (Ismanager)//We have this because in order to enter a new employee to the db you have to be a manager.
-            {
+            
                 SqlCommand cmd = new SqlCommand("DELETE FROM Employee WHERE EmployeeID =@Id;", conn);
                 cmd.Parameters.AddWithValue("@Id", employee.EmployeeID);
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Close();
                 conn.Close();
-            }
+            
         }
-        public void CreateEmployee(bool isManager,Employee employee) // think about a better solution than isManager.
+        public void CreateEmployee(Employee employee) 
         {
             //We validate this because only a manager can create accounts for employees.
-            if (isManager)
-            {
+            string EmployeeTypeKey = ConvertToString(employee.EmployeeType);
+            
                 OpenConnection();
-                SqlCommand cmd = new SqlCommand(" INSERT INTO Employee VALUES('@employeeTypeKey', '@name', '@username', '@password');", conn);
-                cmd.Parameters.AddWithValue("@employeeTypeKey", employee.EmployeeType);
+                SqlCommand cmd = new SqlCommand(" INSERT INTO Employee VALUES(@employeeTypeKey, @name, @username, @password);", conn);
+                cmd.Parameters.AddWithValue("@employeeTypeKey", EmployeeTypeKey);
                 cmd.Parameters.AddWithValue("@name", employee.Name);
                 cmd.Parameters.AddWithValue("@username", employee.Username);
                 cmd.Parameters.AddWithValue("@password", employee.Password);
                 SqlDataReader reader = cmd.ExecuteReader();
                 reader.Close();
                 conn.Close();
-            }
+            
 
         }
+
+        public void UpdateEmployee(Employee employee)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("Update Employee SET Username=@Username,[Password]=@Password WHERE EmployeeID=@Id;", conn);
+            cmd.Parameters.AddWithValue("@Username", employee.Username);
+            cmd.Parameters.AddWithValue("@Password", employee.Password);
+            cmd.Parameters.AddWithValue("@Id", employee.EmployeeID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+        }
+        //Needed function for read employee methods.
         private EmployeeType ConvertToEnum(string employeetype)
         {
             switch (employeetype)
@@ -127,6 +155,22 @@ namespace ChapeauDAL
                     return EmployeeType.Waiter;
                 default:
                     return EmployeeType.Waiter;
+            }
+        }
+        // Needed function for create employee method.
+        private string ConvertToString(EmployeeType type)
+        {
+            switch (type)
+            {
+                case EmployeeType.Manager:
+                    return "MN";
+                case EmployeeType.Kitchen:
+                    return "KC";
+                        case EmployeeType.Bar:
+                    return "BR";
+                default:
+                    return "WA"; //if none of them were correct. It could be only waiter.
+                    
             }
         }
 
