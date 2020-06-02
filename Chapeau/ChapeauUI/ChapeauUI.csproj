@@ -49,6 +49,12 @@
     <Compile Include="CustomControls\TransparentTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitchenBarScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     <Compile Include="UserControlls\UCCurrentOrders.Designer.cs">
       <DependentUpon>UCCurrentOrders.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KitchenBarScreen.resx">
       <DependentUpon>KitchenBarScreen.cs</DependentUpon>
     </EmbeddedResource>

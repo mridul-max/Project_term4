@@ -12,11 +12,11 @@ namespace ChapeauLogic
     {
         EmployeeDAO employeeDao = new EmployeeDAO();
 
-        public void CreateEmployee(bool isManager,Employee employee)
+        public void CreateEmployee(Employee employee)
         {
             try
             {
-                employeeDao.CreateEmployee(isManager,employee);
+                employeeDao.CreateEmployee(employee);
             }
             catch
             {
@@ -26,11 +26,28 @@ namespace ChapeauLogic
             }
            
         }
-        public void RemoveEmployee(Employee employee, bool Ismanager)
+        public void UpdateEmployee(Employee employee)
         {
             try
             {
-                employeeDao.RemoveEmployee(employee, Ismanager);
+                employeeDao.UpdateEmployee(employee);
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't update the employee account";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
+        }
+        public Employee VerifyUsername(string username)
+        {
+            return employeeDao.VerifyUsername(username);
+        }
+        public void RemoveEmployee(Employee employee)
+        {
+            try
+            {
+                employeeDao.RemoveEmployee(employee);
             }
             catch
             {
