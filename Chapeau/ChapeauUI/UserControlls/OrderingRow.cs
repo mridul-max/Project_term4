@@ -16,7 +16,6 @@ namespace ChapeauUI
         public OrderItem OrderItem { get; }
         public Label AmountLabel { get { return lblAmount; } }
         public Label currentOrderLabel;
-        private int amount;
         public int Amount 
         { 
             get { return OrderItem.Amount; }
@@ -52,8 +51,15 @@ namespace ChapeauUI
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            Amount++;
-            mainScreen.UpdateCurrentOrderItem(this);
+            if (Amount < OrderItem.MenuItem.Stock)
+            {
+                Amount++;
+                mainScreen.UpdateCurrentOrderItem(this);
+            }
+            else
+            {
+                MessageBox.Show($"{OrderItem} has only {OrderItem.MenuItem.Stock} items left in stock");
+            }
         }
     }
 }
