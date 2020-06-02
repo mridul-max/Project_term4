@@ -19,12 +19,12 @@ namespace ChapeauUI
         private int amount;
         public int Amount 
         { 
-            get { return amount; }
+            get { return OrderItem.Amount; }
             set
             {
                 if (value >= 0)
                 {
-                    amount = value;
+                    OrderItem.Amount = value;
                     lblAmount.Text = Amount.ToString();
                     if(currentOrderLabel != null)
                         currentOrderLabel.Text = Amount.ToString();
