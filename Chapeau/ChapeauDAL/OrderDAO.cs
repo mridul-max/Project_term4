@@ -93,7 +93,7 @@ namespace ChapeauDAL
             };
             return ExecuteEditQueryAutoIncrement(query, sqlParameters);
         }
-
+        //Creates the individual order items in the OrderItems Database Table
         public void CreateOrderItems(int orderID, List<OrderItem> orderItems)
         {
             if (orderItems.Count < 1)
@@ -102,14 +102,31 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[2 * orderItems.Count + 2];
             sqlParameters[0] = new SqlParameter("@orderID", orderID);
             sqlParameters[1] = new SqlParameter("@date", DateTime.Now);
+            
+            //loops over every order item and creates an insert value pair for it
+            //then it subtracts the correct amount from the stock
             for (int i = 0; i < orderItems.Count; i++)
             {
                 query += $" (@orderID, @menuItemID{i}, 'PR', @amount{i}, @date, @date),";
 
                 sqlParameters[ (i * 2) + 2 ] = new SqlParameter("@menuItemID" + i, orderItems[i].MenuItem.ID);
                 sqlParameters[ (i * 2) + 3 ] = new SqlParameter("@amount" + i, orderItems[i].Amount);
+
+                AddStockForItem(orderItems[i].MenuItem.ID, -orderItems[i].Amount );
             }
+            //remove the trailing comma
             query = query.Remove(query.Length - 1);
+
+            ExecuteEditQuery(query, sqlParameters);
+        }
+
+        //changes the stock for the given item by the given amount
+        private void AddStockForItem(int MenuItemID, int Amount)
+        {
+            string query = "UPDATE MenuItem SET Stock = Stock + @amount WHERE MenuItemID = @menuItemID";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@amount", Amount);
+            sqlParameters[1] = new SqlParameter("@menuItemID", MenuItemID);
 
             ExecuteEditQuery(query, sqlParameters);
         }
