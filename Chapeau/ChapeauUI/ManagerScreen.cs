@@ -44,7 +44,9 @@ namespace ChapeauUI
 
         private void btnEditItems_Click(object sender, EventArgs e)
         {
-
+            ItemForm itemForm = new ItemForm();
+            this.Hide();
+            itemForm.ShowDialog();
         }
 
         private void btnKitchen_Click(object sender, EventArgs e)
@@ -55,6 +57,11 @@ namespace ChapeauUI
         private void btnTable_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ManagerScreen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
