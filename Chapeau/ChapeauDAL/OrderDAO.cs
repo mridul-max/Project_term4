@@ -30,7 +30,7 @@ namespace ChapeauDAL
                 {
                     OrderID = (int)dr["OrderID"],
                     TableNr = (int)dr["TableNumber"],
-                    Host = employeeDao.GetById((int)dr["EmployeeID"]),
+                    Host =dr["EmployeeID"] ==DBNull.Value ? new Employee(): employeeDao.GetById((int)dr["EmployeeID"]),
                     Method = dr["PaymentMethod"] == DBNull.Value ? PaymentMethod.Cash : (PaymentMethod)Enum.Parse(typeof(PaymentMethod), dr["PaymentMethod"].ToString()),
                     PaymentDate = dr["PaymentDateTime"] == DBNull.Value ? DateTime.Now : (DateTime)dr["PaymentDateTime"],
                     Comment = dr["Comment"] == DBNull.Value ? "  " : (string)dr["Comment"],
@@ -121,7 +121,7 @@ namespace ChapeauDAL
             {
                 OrderID = (int)reader["OrderID"],
                 TableNr = (int)reader["TableNumber"],
-                Host = employeeDao.GetById((int)reader["EmployeeID"]),
+                Host = reader["EmployeeID"] == DBNull.Value ? new Employee() : employeeDao.GetById((int)reader["EmployeeID"]),
                 Method = reader["PaymentMethod"]== DBNull.Value ?PaymentMethod.Cash:(PaymentMethod)Enum.Parse(typeof(PaymentMethod), reader["PaymentMethod"].ToString()),
                 PaymentDate = reader["PaymentDateTime"]==DBNull.Value?DateTime.Now: (DateTime)reader["PaymentDateTime"],
                 Comment = reader["Comment"]==DBNull.Value?"  ": (string)reader["Comment"],

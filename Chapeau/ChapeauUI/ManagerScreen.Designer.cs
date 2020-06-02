@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEditEmp = new System.Windows.Forms.Button();
-            this.btnEditStock = new System.Windows.Forms.Button();
             this.btnEditItems = new System.Windows.Forms.Button();
             this.btnKitchen = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
@@ -75,21 +74,6 @@
             this.btnEditEmp.UseVisualStyleBackColor = false;
             this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click);
             // 
-            // btnEditStock
-            // 
-            this.btnEditStock.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditStock.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
-            this.btnEditStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditStock.Location = new System.Drawing.Point(216, 206);
-            this.btnEditStock.Name = "btnEditStock";
-            this.btnEditStock.Size = new System.Drawing.Size(220, 76);
-            this.btnEditStock.TabIndex = 9;
-            this.btnEditStock.Text = "Edit Stock";
-            this.btnEditStock.UseVisualStyleBackColor = false;
-            this.btnEditStock.Click += new System.EventHandler(this.btnEditStock_Click);
-            // 
             // btnEditItems
             // 
             this.btnEditItems.BackColor = System.Drawing.Color.Transparent;
@@ -97,7 +81,7 @@
             this.btnEditItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditItems.Location = new System.Drawing.Point(216, 325);
+            this.btnEditItems.Location = new System.Drawing.Point(216, 209);
             this.btnEditItems.Name = "btnEditItems";
             this.btnEditItems.Size = new System.Drawing.Size(220, 76);
             this.btnEditItems.TabIndex = 10;
@@ -112,7 +96,7 @@
             this.btnKitchen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKitchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKitchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKitchen.Location = new System.Drawing.Point(216, 428);
+            this.btnKitchen.Location = new System.Drawing.Point(216, 312);
             this.btnKitchen.Name = "btnKitchen";
             this.btnKitchen.Size = new System.Drawing.Size(220, 76);
             this.btnKitchen.TabIndex = 11;
@@ -127,7 +111,7 @@
             this.btnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(216, 529);
+            this.btnTable.Location = new System.Drawing.Point(216, 413);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(220, 76);
             this.btnTable.TabIndex = 12;
@@ -157,13 +141,13 @@
             this.Controls.Add(this.btnTable);
             this.Controls.Add(this.btnKitchen);
             this.Controls.Add(this.btnEditItems);
-            this.Controls.Add(this.btnEditStock);
             this.Controls.Add(this.btnEditEmp);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManagerScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerScreen_FormClosing);
             this.Load += new System.EventHandler(this.ManagerScreen_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -176,7 +160,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem logOffToolStripMenuItem;
         private System.Windows.Forms.Button btnEditEmp;
-        private System.Windows.Forms.Button btnEditStock;
         private System.Windows.Forms.Button btnEditItems;
         private System.Windows.Forms.Button btnKitchen;
         private System.Windows.Forms.Button btnTable;

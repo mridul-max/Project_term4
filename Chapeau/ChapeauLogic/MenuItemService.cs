@@ -24,6 +24,22 @@ namespace ChapeauLogic
             }
             
         }
+        public void CreateMenuItem(MenuItem item)
+        {
+            DAO.CreateMenuItem(item);
+        }
+        public void DeleteMenuItem(MenuItem item)
+        {
+            DAO.DeleteMenuItem(item);
+        }
+        public void UpdateStockOfItem(MenuItem item)
+        {
+            DAO.UpdateStockOfItem(item);
+        }
+        public MenuItem GetById(int id)
+        {
+            return DAO.GetById(id);
+        }
 
 
         //example of returned format: Dinner > Mains > Pizza
