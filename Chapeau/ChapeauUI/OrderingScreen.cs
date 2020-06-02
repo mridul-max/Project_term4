@@ -94,7 +94,6 @@ namespace ChapeauUI
             }
             else 
             {
-
                 foreach (var row in allOrderItems)
                 {
                     if (orderingRow.OrderItem.MenuItem == row.OrderItem.MenuItem)

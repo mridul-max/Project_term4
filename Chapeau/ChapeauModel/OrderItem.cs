@@ -18,5 +18,10 @@ namespace ChapeauModel
             this.orderState = OrderState.PrepairingOrder;
             this.DateTimeAdded = DateTime.Now;
         }
+
+        public override string ToString()
+        {
+            return MenuItem.Name;
+        }
     }
 }
