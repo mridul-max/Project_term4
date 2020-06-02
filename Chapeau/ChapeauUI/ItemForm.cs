@@ -118,7 +118,52 @@ namespace ChapeauUI
 
         private void editMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlEditMenu.Show();
+            pnlAdd.Hide();
 
+            List<ChapeauModel.MenuItem> AllItems = serviceItem.GetMenuItems();
+            cmbEdit.Items.Clear();
+            foreach (ChapeauModel.MenuItem item in AllItems)
+            {
+                cmbEdit.Items.Add(item.ID+":"+item.Name+"  "+item.Stock.ToString());
+            }
+        }
+
+        private void btnApplyStock_Click(object sender, EventArgs e)
+        {
+            bool IsError = false;
+
+            if(cmbEdit.SelectedIndex<0)
+            {
+                IsError = true;
+            }
+
+            if(String.IsNullOrWhiteSpace(txtNewStock.Text)|| !System.Text.RegularExpressions.Regex.IsMatch(txtStock.Text, "^[0-9]*$"))
+            {
+                IsError = true;
+            }
+
+
+
+            if(IsError)
+            {
+                MessageBox.Show("Please fill the values properly","Fields required",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+            else
+            {
+                string selectedItem = cmbEdit.SelectedItem.ToString();
+                string[] empId = selectedItem.Split(':');
+                ChapeauModel.MenuItem menuItem = serviceItem.GetById(int.Parse(empId[0]));
+                menuItem.Stock = int.Parse(txtNewStock.Text);
+
+
+                serviceItem.UpdateStockOfItem(menuItem);
+
+
+                MessageBox.Show("Stock has been updated", "Stock updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+            }
         }
     }
 }

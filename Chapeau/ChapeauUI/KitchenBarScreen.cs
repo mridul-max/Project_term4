@@ -31,6 +31,12 @@ namespace ChapeauUI
             { 
                 showPanel("pnlBarScreen");
             }
+
+
+            if(Session.Instance.LoggedEmployee.EmployeeType==EmployeeType.Manager)
+            {
+                managementToolStripMenuItem.Visible = true;
+            }
         }
         private void showPanel(string panelName,bool refresh = true)
         {

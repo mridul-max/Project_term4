@@ -51,12 +51,16 @@ namespace ChapeauUI
 
         private void btnKitchen_Click(object sender, EventArgs e)
         {
-
+            KitchenBarScreen kitchenBar = new KitchenBarScreen();
+            this.Hide();
+            kitchenBar.ShowDialog();
         }
 
         private void btnTable_Click(object sender, EventArgs e)
         {
-
+            TableView tableView = new TableView();
+            this.Hide();
+            tableView.ShowDialog();
         }
 
         private void ManagerScreen_FormClosing(object sender, FormClosingEventArgs e)
