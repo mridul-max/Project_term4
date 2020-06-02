@@ -102,29 +102,29 @@ namespace ChapeauDAL
 
         public void RemoveEmployee(Employee employee)
         {
-            
-                SqlCommand cmd = new SqlCommand("DELETE FROM Employee WHERE EmployeeID =@Id;", conn);
-                cmd.Parameters.AddWithValue("@Id", employee.EmployeeID);
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Close();
-                conn.Close();
-            
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("DELETE FROM Employee WHERE EmployeeID =@Id;", conn);
+            cmd.Parameters.AddWithValue("@Id", employee.EmployeeID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+
         }
-        public void CreateEmployee(Employee employee) 
+        public void CreateEmployee(Employee employee)
         {
             //We validate this because only a manager can create accounts for employees.
             string EmployeeTypeKey = ConvertToString(employee.EmployeeType);
-            
-                OpenConnection();
-                SqlCommand cmd = new SqlCommand(" INSERT INTO Employee VALUES(@employeeTypeKey, @name, @username, @password);", conn);
-                cmd.Parameters.AddWithValue("@employeeTypeKey", EmployeeTypeKey);
-                cmd.Parameters.AddWithValue("@name", employee.Name);
-                cmd.Parameters.AddWithValue("@username", employee.Username);
-                cmd.Parameters.AddWithValue("@password", employee.Password);
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Close();
-                conn.Close();
-            
+
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand(" INSERT INTO Employee VALUES(@employeeTypeKey, @name, @username, @password);", conn);
+            cmd.Parameters.AddWithValue("@employeeTypeKey", EmployeeTypeKey);
+            cmd.Parameters.AddWithValue("@name", employee.Name);
+            cmd.Parameters.AddWithValue("@username", employee.Username);
+            cmd.Parameters.AddWithValue("@password", employee.Password);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+
 
         }
 
@@ -166,11 +166,11 @@ namespace ChapeauDAL
                     return "MN";
                 case EmployeeType.Kitchen:
                     return "KC";
-                        case EmployeeType.Bar:
+                case EmployeeType.Bar:
                     return "BR";
                 default:
                     return "WA"; //if none of them were correct. It could be only waiter.
-                    
+
             }
         }
 

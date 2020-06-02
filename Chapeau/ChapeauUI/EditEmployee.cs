@@ -24,6 +24,8 @@ namespace ChapeauUI
         {
             pnlAdd.Show();
             pnlEditEmp.Hide();
+            pnlRemove.Hide();
+            cmbEmpType.Items.Clear();
             string[] employeeTypes = new string[] { "Manager", "Waiter", "Kitchen", "Bar" };
             cmbEmpType.Items.AddRange(employeeTypes);
 
@@ -93,6 +95,8 @@ namespace ChapeauUI
                 employee.Name = txtName.Text;
 
                 service.CreateEmployee(employee);
+                MessageBox.Show("Employee has been created", "Process successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             }
             else
@@ -114,6 +118,7 @@ namespace ChapeauUI
         {
             pnlEditEmp.Show();
             pnlAdd.Hide();
+            pnlRemove.Hide();
             cmbAllEmp.Items.Clear();
             List<Employee> employees = service.GetAllEmployees();
             foreach (Employee employee in employees)
@@ -183,6 +188,39 @@ namespace ChapeauUI
 
 
 
+        }
+
+        private void removeEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlAdd.Hide();
+            pnlEditEmp.Hide();
+
+            pnlRemove.Show();
+            cmbRemove.Items.Clear();
+            List<Employee> employees = service.GetAllEmployees();
+            foreach (Employee employee in employees)
+            {
+                cmbRemove.Items.Add(employee.EmployeeID + ":" + employee.Name);
+            }
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if(cmbRemove.SelectedIndex<0)
+            {
+                Console.WriteLine("Please pick an employee to remove from system.","Missing information",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string selectedItem = cmbRemove.SelectedItem.ToString();
+                string[] empId = selectedItem.Split(':');
+                Employee ChosenEmployee = service.GetById(int.Parse(empId[0]));
+
+                if(MessageBox.Show($"Are you sure you want to delete {ChosenEmployee.Name} ","Verification",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    service.RemoveEmployee(ChosenEmployee);
+                }
+            }
         }
     }
 }
