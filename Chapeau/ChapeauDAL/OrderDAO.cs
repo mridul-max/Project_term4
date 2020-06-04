@@ -185,7 +185,7 @@ namespace ChapeauDAL
             return orderItems;
         }
         //Get all food for kitchen view
-        public List<OrderItem> GetListOfFood()
+        public List<OrderItem> GetAllRunningFood()
         {
             OpenConnection();
             string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType != 'Drinks' And O.OrderStateKey !='RD' Order by M.ItemName";
@@ -220,7 +220,7 @@ namespace ChapeauDAL
 
         }
         //get all drinks order for bar view
-        public List<OrderItem> GetAllDrinks()
+        public List<OrderItem> GetAllRunningDrinks()
         {
             OpenConnection();
             string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey !='RD' Order by M.ItemName";

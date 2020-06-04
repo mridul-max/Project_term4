@@ -25,67 +25,62 @@ namespace ChapeauUI
             lblloggedinChef.Text = lblloggedinChef.Text+ " "+ Session.Instance.LoggedEmployee.Name;
             if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
             {
-                showPanel("pnlKitchen");
+                lblKitchenBar.Text = "Kitchen Screen";
+                showPanel("Kitchen");
             }
             else if(Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Bar)
-            { 
-                showPanel("pnlBarScreen");
+            {
+                lblKitchenBar.Text = "Bar Screen";
+                showPanel("Bar");
             }
-
-
-            if(Session.Instance.LoggedEmployee.EmployeeType==EmployeeType.Manager)
+            else if(Session.Instance.LoggedEmployee.EmployeeType==EmployeeType.Manager)
             {
                 managementToolStripMenuItem.Visible = true;
             }
         }
-        private void showPanel(string panelName,bool refresh = true)
+        private void showPanel(string panelName, bool refresh = true)
         {
-            if (panelName == "pnlKitchen")
+            if (panelName == "Kitchen")
             {
                 if (refresh)
                 {
-                    pnlBarScreen.Hide();
-                    pnlKitchen.Show();
-                    pnlKitchen.Visible = true;
-                    lblKitchenScreen.Text = "Kitchen Screen";
+                    pnlKitchenBar.Show();
+                    pnlKitchenBar.Visible = true;
                     OrderService orderService = new OrderService();
-                    List<OrderItem> Food = orderService.GetListOfFood();
-                    ListViewKitchen.Clear();
-                    ListViewKitchen.Columns.Add("FName");
-                    ListViewKitchen.Columns.Add("FAmount");
-                    ListViewKitchen.Columns.Add("FOrderDTime");
-                    ListViewKitchen.Columns.Add("FOrderStatus");
+                    List<OrderItem> Food = orderService.GetAllRunningFood();
+                    listViewKitchenBar.Clear();
+                    listViewKitchenBar.Columns.Add("ItemName");
+                    listViewKitchenBar.Columns.Add("ItemAmount");
+                    listViewKitchenBar.Columns.Add("OrderTime");
+                    listViewKitchenBar.Columns.Add("OrderStatus");
                     foreach (OrderItem F in Food)
                     {
-                        ListViewKitchen.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString() }));
+                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString() }));
                     }
-                    listViewBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-
+                    listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
-           
-            }
-            else if (panelName == "pnlBarScreen")
-            {
 
+            }
+            if (panelName == "Bar")
+            {
                 if (refresh)
                 {
-                    pnlKitchen.Hide();
-                    pnlBarScreen.Show();
-                    pnlBarScreen.Visible = true;
-                    lblKitchenScreen.Text = "Bar Screen";
+                    pnlKitchenBar.Show();
+                    pnlKitchenBar.Visible = true;
                     OrderService orderService = new OrderService();
-                    List<OrderItem> Drinks = orderService.GetAllDrinks();
-                    listViewBar.Clear();
-                    listViewBar.Columns.Add("DrinkName");
-                    listViewBar.Columns.Add("DrinkAmount");
-                    listViewBar.Columns.Add("DrinkOrderTime");
-                    listViewBar.Columns.Add("DrinkStatus");
-                    listViewBar.Columns.Add("DTableNumber");
-                    foreach (OrderItem O in Drinks)
+                    List<OrderItem> Drinks = orderService.GetAllRunningDrinks();
+                    listViewKitchenBar.Clear();
+                    listViewKitchenBar.Columns.Add("ItemName");
+                    listViewKitchenBar.Columns.Add("ItemAmount");
+                    listViewKitchenBar.Columns.Add("OrderTime");
+                    listViewKitchenBar.Columns.Add("OrderStatus");
+                    foreach (OrderItem D in Drinks)
                     {
-                        listViewBar.Items.Add(new ListViewItem(new string[] { O.MenuItem.Name.ToString(), O.Amount.ToString(), O.DateTimeAdded.ToString(), O.orderState.ToString()}));
+                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { D.MenuItem.Name.ToString(), D.Amount.ToString(), D.DateTimeAdded.ToString(), D.orderState.ToString() }));
                     }
+                    listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
+
             }
         }
 
@@ -108,6 +103,11 @@ namespace ChapeauUI
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pnlKitchenBar_Paint(object sender, PaintEventArgs e)
         {
 
         }
