@@ -55,15 +55,9 @@ namespace ChapeauLogic
         {
             return orderDao.GetAllRunningDrinks();
         }
-        public void UpdatePreparingItem(OrderItem item)
+        public int GetOrderTable(int OrderID)
         {
-            orderDao.UpdatePreparingItem(item);
-
-        }
-        public void UpdateRunningItem(OrderItem item)
-        {
-            orderDao.UpdateRunningItem(item);
-
+            return orderDao.GetOrderTable(OrderID);
         }
         public void UpdateReadyItem(OrderItem item)
         {

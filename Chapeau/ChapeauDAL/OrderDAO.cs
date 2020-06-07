@@ -188,7 +188,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetAllRunningFood()
         {
             OpenConnection();
-            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType != 'Drinks' And O.OrderStateKey !='RD' Order by M.ItemName";
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType != 'Drinks' And O.OrderStateKey !='RD' And Convert(date,O.OrderDateTime) = Convert(date,GETDATE()) Order by M.ItemName";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
 
@@ -209,6 +209,7 @@ namespace ChapeauDAL
                 };
                 OrderItem orderItem = new OrderItem()
                 {   
+                    OrderID =(int)dr["OrderID"],
                     MenuItem = menuItem,
                     Amount = (int)dr["Amount"],
                     DateTimeAdded = (DateTime)dr["LastStateChanged"],
@@ -223,9 +224,29 @@ namespace ChapeauDAL
         public List<OrderItem> GetAllRunningDrinks()
         {
             OpenConnection();
-            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey !='RD' Order by M.ItemName";
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey !='RD' And Convert(date,O.OrderDateTime) = Convert(date,GETDATE()) Order by M.ItemName";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
+        }
+        public int GetOrderTable(int OrderID)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("SELECT TableNumber From [Order] where OrderID =@OrderID" , conn);
+            cmd.Parameters.AddWithValue("@OrderId", OrderID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            int table=0;
+            if (reader.Read())
+            {
+                table = ReadTableNumber(reader);
+            }
+
+            reader.Close();
+            conn.Close();
+            return table;
+        }
+        public int ReadTableNumber(SqlDataReader reader)
+        {     
+            return (int)reader["TableNumber"];
         }
        
         //Ready to serve Orderitem 
@@ -239,27 +260,6 @@ namespace ChapeauDAL
             reader.Close(); 
             conn.Close();
         }
-        //Running to serve orderItem
-        public void UpdateRunningItem(OrderItem item)
-        {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RN' Where OrderID = @OrderID and MenuItemID = @MenuItemID;", conn);
-            cmd.Parameters.AddWithValue("@OrderID", item.OrderID);
-            cmd.Parameters.AddWithValue("@MenuItemID", item.MenuItem.ID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
-        }
-        //preparing to serve orderItem
-        public void UpdatePreparingItem(OrderItem item)
-        {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'PR' Where OrderID = @OrderID and MenuItemID = @MenuItemID;", conn);
-            cmd.Parameters.AddWithValue("@OrderID", item.OrderID);
-            cmd.Parameters.AddWithValue("@MenuItemID", item.MenuItem.ID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
-        }
+        
     }
 }

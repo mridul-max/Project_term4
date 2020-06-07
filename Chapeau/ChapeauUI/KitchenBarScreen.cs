@@ -53,10 +53,14 @@ namespace ChapeauUI
                     listViewKitchenBar.Columns.Add("ItemAmount");
                     listViewKitchenBar.Columns.Add("OrderTime");
                     listViewKitchenBar.Columns.Add("OrderStatus");
+                    listViewKitchenBar.Columns.Add("TableNumber");
                     foreach (OrderItem F in Food)
                     {
-                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString() }));
-                    }
+                        int table = orderService.GetOrderTable(F.OrderID);
+                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString(),table.ToString()}));
+                      
+                    }        
+                    
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
 
@@ -74,9 +78,11 @@ namespace ChapeauUI
                     listViewKitchenBar.Columns.Add("ItemAmount");
                     listViewKitchenBar.Columns.Add("OrderTime");
                     listViewKitchenBar.Columns.Add("OrderStatus");
+                    listViewKitchenBar.Columns.Add("TableNumber");
                     foreach (OrderItem D in Drinks)
                     {
-                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { D.MenuItem.Name.ToString(), D.Amount.ToString(), D.DateTimeAdded.ToString(), D.orderState.ToString() }));
+                        int table = orderService.GetOrderTable(D.OrderID);
+                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { D.MenuItem.Name.ToString(), D.Amount.ToString(), D.DateTimeAdded.ToString(), D.orderState.ToString(),table.ToString()}));
                     }
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
@@ -110,6 +116,18 @@ namespace ChapeauUI
         private void pnlKitchenBar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnReady_Click(object sender, EventArgs e)
+        {
+            if (listViewKitchenBar.CheckedItems.Count < 1)
+            {
+                MessageBox.Show("Please select an Item first");
+            }
+            else
+            {
+
+            }
         }
     }
 }

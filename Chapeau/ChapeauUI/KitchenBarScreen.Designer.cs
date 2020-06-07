@@ -34,13 +34,15 @@
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlKitchenBar = new System.Windows.Forms.Panel();
-            this.lblKitchenBar = new System.Windows.Forms.Label();
             this.listViewKitchenBar = new System.Windows.Forms.ListView();
             this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ItemAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MarkAsReady = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lblKitchenBar = new System.Windows.Forms.Label();
+            this.btnReady = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlKitchenBar.SuspendLayout();
             this.SuspendLayout();
@@ -102,9 +104,56 @@
             this.pnlKitchenBar.Controls.Add(this.listViewKitchenBar);
             this.pnlKitchenBar.Location = new System.Drawing.Point(22, 115);
             this.pnlKitchenBar.Name = "pnlKitchenBar";
-            this.pnlKitchenBar.Size = new System.Drawing.Size(731, 365);
+            this.pnlKitchenBar.Size = new System.Drawing.Size(731, 319);
             this.pnlKitchenBar.TabIndex = 8;
             this.pnlKitchenBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlKitchenBar_Paint);
+            // 
+            // listViewKitchenBar
+            // 
+            this.listViewKitchenBar.CheckBoxes = true;
+            this.listViewKitchenBar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ItemName,
+            this.ItemAmount,
+            this.OrderStatus,
+            this.OrderTime,
+            this.TableNumber,
+            this.MarkAsReady});
+            this.listViewKitchenBar.HideSelection = false;
+            this.listViewKitchenBar.Location = new System.Drawing.Point(0, 3);
+            this.listViewKitchenBar.Name = "listViewKitchenBar";
+            this.listViewKitchenBar.Size = new System.Drawing.Size(731, 313);
+            this.listViewKitchenBar.TabIndex = 0;
+            this.listViewKitchenBar.UseCompatibleStateImageBehavior = false;
+            this.listViewKitchenBar.View = System.Windows.Forms.View.Details;
+            // 
+            // ItemName
+            // 
+            this.ItemName.Text = "Item Name";
+            this.ItemName.Width = 128;
+            // 
+            // ItemAmount
+            // 
+            this.ItemAmount.Text = "Amount";
+            this.ItemAmount.Width = 119;
+            // 
+            // OrderStatus
+            // 
+            this.OrderStatus.Text = "Status";
+            this.OrderStatus.Width = 106;
+            // 
+            // OrderTime
+            // 
+            this.OrderTime.Text = "Order Time";
+            this.OrderTime.Width = 89;
+            // 
+            // TableNumber
+            // 
+            this.TableNumber.Text = "Table Number";
+            this.TableNumber.Width = 159;
+            // 
+            // MarkAsReady
+            // 
+            this.MarkAsReady.Text = "";
             // 
             // lblKitchenBar
             // 
@@ -116,46 +165,16 @@
             this.lblKitchenBar.Size = new System.Drawing.Size(152, 31);
             this.lblKitchenBar.TabIndex = 9;
             // 
-            // listViewKitchenBar
+            // btnReady
             // 
-            this.listViewKitchenBar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ItemName,
-            this.ItemAmount,
-            this.OrderStatus,
-            this.OrderTime,
-            this.TableNumber});
-            this.listViewKitchenBar.HideSelection = false;
-            this.listViewKitchenBar.Location = new System.Drawing.Point(0, 3);
-            this.listViewKitchenBar.Name = "listViewKitchenBar";
-            this.listViewKitchenBar.Size = new System.Drawing.Size(731, 359);
-            this.listViewKitchenBar.TabIndex = 0;
-            this.listViewKitchenBar.UseCompatibleStateImageBehavior = false;
-            this.listViewKitchenBar.View = System.Windows.Forms.View.Details;
-            // 
-            // ItemName
-            // 
-            this.ItemName.Text = "Item Name";
-            this.ItemName.Width = 82;
-            // 
-            // ItemAmount
-            // 
-            this.ItemAmount.Text = "Amount";
-            this.ItemAmount.Width = 83;
-            // 
-            // OrderStatus
-            // 
-            this.OrderStatus.Text = "Status";
-            this.OrderStatus.Width = 70;
-            // 
-            // OrderTime
-            // 
-            this.OrderTime.Text = "Order Time";
-            this.OrderTime.Width = 80;
-            // 
-            // TableNumber
-            // 
-            this.TableNumber.Text = "Table Number";
-            this.TableNumber.Width = 116;
+            this.btnReady.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnReady.Location = new System.Drawing.Point(31, 467);
+            this.btnReady.Name = "btnReady";
+            this.btnReady.Size = new System.Drawing.Size(116, 33);
+            this.btnReady.TabIndex = 10;
+            this.btnReady.Text = "Mark As Ready";
+            this.btnReady.UseVisualStyleBackColor = false;
+            this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
             // 
             // KitchenBarScreen
             // 
@@ -164,6 +183,7 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 609);
+            this.Controls.Add(this.btnReady);
             this.Controls.Add(this.lblKitchenBar);
             this.Controls.Add(this.pnlKitchenBar);
             this.Controls.Add(this.lblloggedinChef);
@@ -198,5 +218,7 @@
         private System.Windows.Forms.ColumnHeader OrderStatus;
         private System.Windows.Forms.ColumnHeader OrderTime;
         private System.Windows.Forms.ColumnHeader TableNumber;
+        private System.Windows.Forms.ColumnHeader MarkAsReady;
+        private System.Windows.Forms.Button btnReady;
     }
 }

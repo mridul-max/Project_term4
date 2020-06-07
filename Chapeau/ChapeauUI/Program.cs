@@ -1,4 +1,5 @@
 ﻿using ChapeauDAL;
+using ChapeauLogic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,15 @@ namespace ChapeauUI
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[]args)
         {
+            //OrderService s = new OrderService();
+            //int d = s.GetOrderTable(107);
+            //MessageBox.Show(d.ToString());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginScreen());
+
         }
     }
 }
