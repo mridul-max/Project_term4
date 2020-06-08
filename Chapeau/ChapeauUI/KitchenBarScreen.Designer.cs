@@ -40,7 +40,6 @@
             this.OrderStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OrderTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.TableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MarkAsReady = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblKitchenBar = new System.Windows.Forms.Label();
             this.btnReady = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -116,8 +115,7 @@
             this.ItemAmount,
             this.OrderStatus,
             this.OrderTime,
-            this.TableNumber,
-            this.MarkAsReady});
+            this.TableNumber});
             this.listViewKitchenBar.HideSelection = false;
             this.listViewKitchenBar.Location = new System.Drawing.Point(0, 3);
             this.listViewKitchenBar.Name = "listViewKitchenBar";
@@ -150,10 +148,6 @@
             // 
             this.TableNumber.Text = "Table Number";
             this.TableNumber.Width = 159;
-            // 
-            // MarkAsReady
-            // 
-            this.MarkAsReady.Text = "";
             // 
             // lblKitchenBar
             // 
@@ -218,7 +212,6 @@
         private System.Windows.Forms.ColumnHeader OrderStatus;
         private System.Windows.Forms.ColumnHeader OrderTime;
         private System.Windows.Forms.ColumnHeader TableNumber;
-        private System.Windows.Forms.ColumnHeader MarkAsReady;
         private System.Windows.Forms.Button btnReady;
     }
 }

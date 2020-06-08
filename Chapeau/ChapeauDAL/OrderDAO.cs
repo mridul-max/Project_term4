@@ -201,6 +201,7 @@ namespace ChapeauDAL
             {
                 MenuItem menuItem = new MenuItem()
                 {
+                    ID = (int)dr["ID"],
                     Name = dr["ItemName"].ToString(),
                     Price = float.Parse(dr["Price"].ToString()),
                     Stock = (int)dr["Stock"],
@@ -250,12 +251,11 @@ namespace ChapeauDAL
         }
        
         //Ready to serve Orderitem 
-        public void UpdateReadyItem(OrderItem item)
+        public void UpdateReadyItem(int ID)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RD' Where OrderID = @OrderID and MenuItemID = @MenuItemID;", conn);
-            cmd.Parameters.AddWithValue("@OrderID",item.OrderID);
-            cmd.Parameters.AddWithValue("@MenuItemID", item.MenuItem.ID);
+            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RD' Where ID = @ID", conn);
+            cmd.Parameters.AddWithValue("@ID", ID);
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close(); 
             conn.Close();
