@@ -41,18 +41,18 @@ namespace ChapeauUI
             Amount.Text = "Amount";
             ColumnHeader Category = new ColumnHeader();
             Category.Text = "Category";
-            ColumnHeader CategoryType = new ColumnHeader();
-            CategoryType.Text = "Category Type";
+            ColumnHeader Price = new ColumnHeader();
+            Price.Text = "Price";
 
 
-            listViewOrders.Columns.AddRange(new ColumnHeader[] { MenuItemName, Amount, Category, CategoryType });
+            listViewOrders.Columns.AddRange(new ColumnHeader[] { MenuItemName, Amount, Category, Price });
 
             foreach (OrderItem order in CurrentPayment.OrderItems)
             {
                 ListViewItem li = new ListViewItem(order.MenuItem.Name);
                 li.SubItems.Add(order.Amount.ToString());
                 li.SubItems.Add(order.MenuItem.Category);
-                li.SubItems.Add(order.MenuItem.CategoryType.ToString());
+                li.SubItems.Add(order.MenuItem.PriceWithVAT.ToString("0.00"));
                 listViewOrders.Items.Add(li);
             }
             listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -114,20 +114,26 @@ namespace ChapeauUI
             //If the fields are filled correctly terminate the order and come back to table display.
             if (fieldsAreFilled)
             {
-                CurrentPayment.PaymentDate = DateTime.Now;
-                orderService.CompletePayment(CurrentPayment);
-               Table table= tableService.GetById(CurrentPayment.TableNr);
-                tableService.SetNoOccupied(table);
-                MessageBox.Show("Payment has completed and saved successfully.", "Payment completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-            }          
+                
+                DialogResult result = MessageBox.Show("Total Price: " + CurrentPayment.TotalPriceWithVAT.ToString("0.00") + "   Tip:" + CurrentPayment.Tip.ToString("0.00"), "Confirmation required", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    CurrentPayment.PaymentDate = DateTime.Now;
+                    orderService.CompletePayment(CurrentPayment);
+                    Table table = tableService.GetById(CurrentPayment.TableNr);
+                    tableService.SetNoOccupied(table);
+                    MessageBox.Show("Payment has completed and saved successfully.", "Payment completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+
+            }
 
         }
         private void FillPrices()
         {
-            lblVAT.Text = "VAT:" + CurrentPayment.TotalVAT.ToString();
-            lblPrice.Text = "Price:" + CurrentPayment.TotalPrice.ToString();
-            lblTotalPrice.Text = "Total Price:" + CurrentPayment.TotalPriceWithVAT.ToString();
+            lblVAT.Text = "VAT:" + CurrentPayment.TotalVAT.ToString("0.00");
+            lblPrice.Text = "Price:" + CurrentPayment.TotalPrice.ToString("0.00");
+            lblTotalPrice.Text = "Total Price:" + CurrentPayment.TotalPriceWithVAT.ToString("0.00");
 
         }
     }

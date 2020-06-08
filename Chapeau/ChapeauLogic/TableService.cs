@@ -31,22 +31,59 @@ namespace ChapeauLogic
         }
         public void SetOccupied(Table table)
         {
-            tabledao.SetOccupied(table);
+            try
+            {
+                tabledao.SetOccupied(table);
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't set the tables";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
         }
 
         public void SetOccupied(int tableNr)
         {
-            tabledao.SetOccupied(new Table(tableNr));
+            try
+            {
+                tabledao.SetOccupied(new Table(tableNr));
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't set the tables";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
         }
 
         public void SetNoOccupied(Table table)
         {
-            tabledao.SetNoOccupied(table);
+            try
+            {
+                tabledao.SetNoOccupied(table);
+
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't set the tables";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
         }
 
-        public void SetNoOccupied(int tableNr)
+        public void SetNoOccupied(int tableNr) // Required method overload for order part of the application.
         {
-            tabledao.SetNoOccupied(new Table(tableNr));
+            try
+            {
+                tabledao.SetNoOccupied(new Table(tableNr));
+            }
+            catch
+            {
+                string errorstr = "Chapeau App couldn't set the tables";
+                ErrorDAO error = new ErrorDAO(errorstr);
+                throw;
+            }
         }
 
         public Table GetById(int id)
