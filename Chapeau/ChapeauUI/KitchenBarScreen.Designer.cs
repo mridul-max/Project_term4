@@ -42,6 +42,7 @@
             this.TableNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblKitchenBar = new System.Windows.Forms.Label();
             this.btnReady = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlKitchenBar.SuspendLayout();
             this.SuspendLayout();
@@ -164,11 +165,23 @@
             this.btnReady.BackColor = System.Drawing.Color.LimeGreen;
             this.btnReady.Location = new System.Drawing.Point(31, 467);
             this.btnReady.Name = "btnReady";
-            this.btnReady.Size = new System.Drawing.Size(116, 33);
+            this.btnReady.Size = new System.Drawing.Size(116, 39);
             this.btnReady.TabIndex = 10;
             this.btnReady.Text = "Mark As Ready";
             this.btnReady.UseVisualStyleBackColor = false;
             this.btnReady.Click += new System.EventHandler(this.btnReady_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRefresh.Location = new System.Drawing.Point(227, 469);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(124, 37);
+            this.btnRefresh.TabIndex = 11;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // KitchenBarScreen
             // 
@@ -177,6 +190,7 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 609);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReady);
             this.Controls.Add(this.lblKitchenBar);
             this.Controls.Add(this.pnlKitchenBar);
@@ -213,5 +227,6 @@
         private System.Windows.Forms.ColumnHeader OrderTime;
         private System.Windows.Forms.ColumnHeader TableNumber;
         private System.Windows.Forms.Button btnReady;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

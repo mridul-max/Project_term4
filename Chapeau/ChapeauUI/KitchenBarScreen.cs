@@ -134,5 +134,10 @@ namespace ChapeauUI
             }
 
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            KitchenBarScreen_Load(sender, e);
+        }
     }
 }
