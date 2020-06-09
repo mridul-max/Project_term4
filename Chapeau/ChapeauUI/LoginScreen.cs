@@ -75,7 +75,7 @@ namespace ChapeauUI
             }
         }
 
-
+        //For displaying the password.
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;

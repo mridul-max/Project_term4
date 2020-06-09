@@ -45,6 +45,7 @@ namespace ChapeauUI
             reservationService = new ReservationService();
             orderService = new OrderService();
         }
+        //For opening table display.
         void DisplayTableForm(int index)
         {
             TableDisplay tableDisplay = new TableDisplay(allTables[index]);

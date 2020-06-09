@@ -24,6 +24,7 @@ namespace ChapeauUI
         }
         private void ReservationForm_Load(object sender, EventArgs e)
         {
+            //Filling the hours and minutes.
             monthCalendar1.MinDate = DateTime.Today;
             for (int i = 9; i <22; i++)
             {
@@ -39,6 +40,7 @@ namespace ChapeauUI
         //verifies the information and applies if it works.
         private void btnAddReservation_Click(object sender, EventArgs e)
         {
+            // Double checking fields before creating the reservations.
             if(string.IsNullOrEmpty(txtName.Text))
             {
                 MessageBox.Show("Please enter a reserver name", "Missing information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
