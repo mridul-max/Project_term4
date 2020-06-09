@@ -96,6 +96,7 @@ namespace ChapeauUI
         private void addMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnlAdd.Show();
+            pnlEditMenu.Hide();
 
 
             string[] Categories = new string[] { "Beers", "Desserts", "Mains", "Starters", "Hot drinks", "Bites", "Mains", "Special", "Soft drinks", "Wines" };

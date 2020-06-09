@@ -219,6 +219,7 @@ namespace ChapeauUI
                 if(MessageBox.Show($"Are you sure you want to delete {ChosenEmployee.Name} ","Verification",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     service.RemoveEmployee(ChosenEmployee);
+                    MessageBox.Show("Employee has been removed.","Employee removed",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 }
             }
         }

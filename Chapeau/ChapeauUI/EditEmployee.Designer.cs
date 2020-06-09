@@ -348,7 +348,7 @@
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Location = new System.Drawing.Point(447, 210);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(210, 60);
+            this.btnRemove.Size = new System.Drawing.Size(258, 65);
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "Remove Employee";
             this.btnRemove.UseVisualStyleBackColor = true;
