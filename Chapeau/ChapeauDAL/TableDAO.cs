@@ -40,22 +40,22 @@ namespace ChapeauDAL
         //Changes the occupancy (for adding order and table display)
         public void SetOccupied(Table table)
         {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("UPDATE [Table] set IsOccupied = 1 WHERE TableNumber= @Id;", conn);
-            cmd.Parameters.AddWithValue("@Id", table.TableNumber);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
+            string query = "UPDATE [Table] set IsOccupied = 1 WHERE TableNumber= @Id;";
+            SqlParameter[] parameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id", table.TableNumber),
+            };
+            ExecuteEditQuery(query,parameters);
         }
         //Changes the occupancy (For after checking out)
         public void SetNoOccupied(Table table)
         {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("UPDATE [Table] set IsOccupied = 0 WHERE TableNumber= @Id;", conn);
-            cmd.Parameters.AddWithValue("@Id", table.TableNumber);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
+            string query = "UPDATE [Table] set IsOccupied = 0 WHERE TableNumber= @Id;";
+            SqlParameter[] parameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id", table.TableNumber),
+            };
+            ExecuteEditQuery(query,parameters);           
         }
 
         private Table ReadTable(SqlDataReader reader)

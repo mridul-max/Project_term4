@@ -20,7 +20,7 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-
+        // For getting a specific reservation.
         public List<Reservation> GetAllById(int TableNr)
         {
             string query = "select ReservationID,TableNumber,ReservationDate,PhoneNumber,ReserverName from reservation WHERE TableNumber= @Id AND ReservationDate> @Date;";
@@ -31,6 +31,8 @@ namespace ChapeauDAL
             };
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
+
+        //For reading the tables.
         private List<Reservation> ReadTables(DataTable dataTable)
         {
             List<Reservation> reservations = new List<Reservation>();
@@ -49,21 +51,21 @@ namespace ChapeauDAL
             }
             return reservations;
         }
+        //For creating reservations.
         public void CreateReservation(int tableNumber,string reservationDate,long phoneNumber,string reserverName)
         {
-            //We validate this because only a manager can create accounts for employees.                       
-                OpenConnection();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Reservation VALUES(@TableNumber, @ReservationDate, @PhoneNumber, @ReserverName); ", conn);
-                cmd.Parameters.AddWithValue("@TableNumber", tableNumber);
-                cmd.Parameters.AddWithValue("@ReservationDate", reservationDate);
-                cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber.ToString());
-                cmd.Parameters.AddWithValue("@ReserverName", reserverName);
-                SqlDataReader reader = cmd.ExecuteReader();
-                reader.Close();
-                conn.Close();            
+            string query = "INSERT INTO Reservation VALUES(@TableNumber, @ReservationDate, @PhoneNumber, @ReserverName);";
+            SqlParameter[] parameters = new SqlParameter[4]
+            {
+                new SqlParameter("@TableNumber", tableNumber),
+                new SqlParameter("@ReservationDate", reservationDate),
+                new SqlParameter("@PhoneNumber", phoneNumber.ToString()),
+                new SqlParameter("@ReserverName", reserverName)
+            };
+            ExecuteEditQuery(query,parameters);                                   
         }
 
-
+        //For reading a singular reservation.
         private Reservation ReadReservation(SqlDataReader reader)
         {
             Reservation reservation = new Reservation()

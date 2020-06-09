@@ -70,10 +70,12 @@ namespace ChapeauDAL
             conn.Close();
             return employee;
         }
+        // Verifying the credentials from the database for login.
         public Employee GetEmployeeByCredentials(string username, string password)
         {
             OpenConnection();
             SqlCommand cmd = new SqlCommand("SELECT EmployeeID,EmployeeTypeKey,[Name],Username,[Password] FROM Employee WHERE Username= @Username  AND [password]=@Password COLLATE Latin1_General_CS_AS; ", conn);
+
             cmd.Parameters.AddWithValue("@Username", username);
             cmd.Parameters.AddWithValue("@Password", password);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -100,46 +102,45 @@ namespace ChapeauDAL
             return employee;
         }
 
+        //For deleting the employee.
         public void RemoveEmployee(Employee employee)
         {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("DELETE FROM Employee WHERE EmployeeID =@Id;", conn);
-            cmd.Parameters.AddWithValue("@Id", employee.EmployeeID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
-
+            string query = "DELETE FROM Employee WHERE EmployeeID =@Id;";
+            SqlParameter[] parameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id", employee.EmployeeID),
+            };
+            ExecuteEditQuery(query, parameters);
         }
+        //For creating the employee.
         public void CreateEmployee(Employee employee)
         {
             //We validate this because only a manager can create accounts for employees.
             string EmployeeTypeKey = ConvertToString(employee.EmployeeType);
-
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand(" INSERT INTO Employee VALUES(@employeeTypeKey, @name, @username, @password);", conn);
-            cmd.Parameters.AddWithValue("@employeeTypeKey", EmployeeTypeKey);
-            cmd.Parameters.AddWithValue("@name", employee.Name);
-            cmd.Parameters.AddWithValue("@username", employee.Username);
-            cmd.Parameters.AddWithValue("@password", employee.Password);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
-
-
+            string query = "INSERT INTO Employee VALUES(@employeeTypeKey, @name, @username, @password);";
+            SqlParameter[] parameters = new SqlParameter[4]
+            {
+                new SqlParameter("@employeeTypeKey", EmployeeTypeKey),
+                new SqlParameter("@name", employee.Name),
+                new SqlParameter("@username", employee.Username),
+                new SqlParameter("@password", employee.Password)
+            };
+            ExecuteEditQuery(query, parameters);
         }
 
+        //For changing the credentials of the chosen employee.
         public void UpdateEmployee(Employee employee)
         {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update Employee SET Username=@Username,[Password]=@Password WHERE EmployeeID=@Id;", conn);
-            cmd.Parameters.AddWithValue("@Username", employee.Username);
-            cmd.Parameters.AddWithValue("@Password", employee.Password);
-            cmd.Parameters.AddWithValue("@Id", employee.EmployeeID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close();
-            conn.Close();
+            string query = "Update Employee SET Username=@Username,[Password]=@Password WHERE EmployeeID=@Id;";
+            SqlParameter[] parameters = new SqlParameter[3]
+            {
+                new SqlParameter("@Username", employee.Username),
+                new SqlParameter("@Password", employee.Password),
+                new SqlParameter("@Id", employee.EmployeeID)
+            };
+            ExecuteEditQuery(query, parameters);
         }
-        //Needed function for read employee methods.
+        //Needed function for read employee methods. (Database has strange employee keys)
         private EmployeeType ConvertToEnum(string employeetype)
         {
             switch (employeetype)
@@ -170,7 +171,6 @@ namespace ChapeauDAL
                     return "BR";
                 default:
                     return "WA"; //if none of them were correct. It could be only waiter.
-
             }
         }
 
