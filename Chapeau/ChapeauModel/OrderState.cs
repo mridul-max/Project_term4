@@ -2,6 +2,6 @@
 {
     public enum OrderState
     {
-        ReadyToDeliver, RunningOrder, PrepairingOrder
+        ReadyToDeliver, RunningOrder, PrepairingOrder,OrderServed
     }
 }

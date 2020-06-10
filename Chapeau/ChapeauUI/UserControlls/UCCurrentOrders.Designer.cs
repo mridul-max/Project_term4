@@ -36,6 +36,7 @@
             this.pcTimer = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnServed = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcTimer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             // 
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.Location = new System.Drawing.Point(296, 191);
+            this.lblTimer.Location = new System.Drawing.Point(380, 178);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(17, 28);
             this.lblTimer.TabIndex = 0;
@@ -90,11 +91,12 @@
             // 
             // pcTimer
             // 
+            this.pcTimer.BackColor = System.Drawing.Color.LightCoral;
             this.pcTimer.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcTimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcTimer.Location = new System.Drawing.Point(246, 178);
+            this.pcTimer.Location = new System.Drawing.Point(385, 17);
             this.pcTimer.Name = "pcTimer";
-            this.pcTimer.Size = new System.Drawing.Size(44, 41);
+            this.pcTimer.Size = new System.Drawing.Size(65, 65);
             this.pcTimer.TabIndex = 4;
             this.pcTimer.TabStop = false;
             this.pcTimer.Visible = false;
@@ -119,10 +121,28 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Status:";
             // 
+            // btnServed
+            // 
+            this.btnServed.BackColor = System.Drawing.Color.Transparent;
+            this.btnServed.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnServed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnServed.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServed.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnServed.Location = new System.Drawing.Point(21, 178);
+            this.btnServed.Name = "btnServed";
+            this.btnServed.Size = new System.Drawing.Size(219, 41);
+            this.btnServed.TabIndex = 7;
+            this.btnServed.Text = "Mark as served";
+            this.btnServed.UseVisualStyleBackColor = false;
+            this.btnServed.Visible = false;
+            this.btnServed.Click += new System.EventHandler(this.btnServed_Click);
+            // 
             // UCCurrentOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnServed);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pcTimer);
@@ -150,5 +170,6 @@
         private System.Windows.Forms.PictureBox pcTimer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnServed;
     }
 }

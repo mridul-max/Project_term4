@@ -150,7 +150,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetUnfinishedOrdersOfTable(int TableNr)
         {
             OpenConnection();
-            string query = "SELECT MenuItem.*,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.LastStateChanged,Category.CategoryName,Category.VAT,Category.CategoryType,OrderState.OrderStateInformation FROM OrderItem INNER JOIN [Order] ON  [OrderItem].OrderID=[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey=OrderItem.OrderStateKey INNER JOIN Category ON Category.CategoryID = MenuItem.CategoryID WHERE [Order].TableNumber =@Id AND [Order].isFinished=0; ";
+            string query = "SELECT MenuItem.*,OrderItem.ID,Orderitem.Amount,OrderItem.OrderStateKey,OrderItem.LastStateChanged,Category.CategoryName,Category.VAT,Category.CategoryType,OrderState.OrderStateInformation FROM OrderItem INNER JOIN[Order] ON[OrderItem].OrderID =[Order].OrderID INNER JOIN MenuItem ON OrderItem.MenuItemID = MenuItem.MenuItemID  INNER JOIN OrderState ON OrderState.OrderStateKey = OrderItem.OrderStateKey INNER JOIN Category ON Category.CategoryID = MenuItem.CategoryID WHERE[Order].TableNumber = @Id AND[Order].isFinished = 0; ";
             SqlParameter[] sqlParameters = new SqlParameter[1]
             {
                 new SqlParameter("@Id",TableNr)
@@ -175,6 +175,7 @@ namespace ChapeauDAL
                 };
                 OrderItem orderItem = new OrderItem()
                 {
+                    OrderItemID = (int)dr["ID"],
                     MenuItem = menuItem,
                     Amount = (int)dr["Amount"],
                     DateTimeAdded = (DateTime)dr["LastStateChanged"],
@@ -244,6 +245,15 @@ namespace ChapeauDAL
             reader.Close();
             conn.Close();
             return table;
+        }
+        public void SetOrderItemAsServed(OrderItem Item)
+        {
+            string query = "Update OrderItem SET OrderStateKey='OS' WHERE ID=@Id;";
+            SqlParameter[] parameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id", Item.OrderItemID),
+            };
+            ExecuteEditQuery(query, parameters);
         }
         public int ReadTableNumber(SqlDataReader reader)
         {     

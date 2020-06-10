@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauModel;
+using ChapeauLogic;
 
 namespace ChapeauUI.UserControlls
 {
@@ -17,6 +18,7 @@ namespace ChapeauUI.UserControlls
         private Timer timer;
 
         private OrderItem orderItem { get; set; }
+       
    
 
 
@@ -32,18 +34,28 @@ namespace ChapeauUI.UserControlls
         {
             lblItemName.Text = orderItem.MenuItem.Name;
             lblAmount.Text = orderItem.Amount.ToString();
+            
+            //There is no served order because it does not appear in waiter's screen if the order is served.
+            
             if (orderItem.orderState == OrderState.ReadyToDeliver)
             {
                 lblStatus.Text = "Ready to deliver";
                 lblTimer.Text = string.Empty;
-            }                
+                btnServed.Visible = true;
+                //if this order item is ready to deliver and not something else, make the button visible.
+            }
+            else if(orderItem.orderState==OrderState.PrepairingOrder)
+            {
+                lblStatus.Text = "Preparing order";
+            }
             else
             {
-                lblStatus.Text = "Running order";
+                lblStatus.Text = "Running order";               
+            }                 
+           
                 timer.Tick += Timer_Tick;
                 timer.Interval = 1000;
-                timer.Start();
-            }
+                timer.Start();                     
 
         }
 
@@ -59,5 +71,13 @@ namespace ChapeauUI.UserControlls
             lblTimer.Text = $"{totalMinutes.ToString("00")}:{remainingSeconds.ToString("00")}";
         }
 
+        private void btnServed_Click(object sender, EventArgs e)
+        {
+            OrderService service = new OrderService(); //Since i will only use it in this button method, I create the object here.
+
+            service.SetOrderItemAsServed(orderItem);
+            this.Hide();
+            
+        }
     }
 }

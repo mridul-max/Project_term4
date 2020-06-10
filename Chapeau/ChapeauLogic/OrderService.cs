@@ -26,6 +26,10 @@ namespace ChapeauLogic
         {
             return orderDao.GetAllUnfinishedOrders();
         }
+        public void SetOrderItemAsServed(OrderItem item)
+        {
+            orderDao.SetOrderItemAsServed(item);
+        }
 
         public Order GetOrderByTableId(int id)
         {

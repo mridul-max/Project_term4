@@ -107,7 +107,7 @@ namespace ChapeauUI
             }
 
         }
-        //This method is for finding the right order for the table.
+        //This method is for finding the right order for the table. Since it's quite impossible to order it on table numbers and filter the ones that doesnt have orders.
         int OrderIndexOfTable(Table table, List<Order> orders)
         {
             for (int i = 0; i < orders.Count; i++)
@@ -123,29 +123,56 @@ namespace ChapeauUI
         //If a table has unserved dishes, an icon will appear to inform  the waiter.
         void RefreshDishIcons(List<OrderItem> orders, int index)
         {
-
+            bool isOrderServed = true;//If there is even one unserved order bool should be false and icon should be available.
+            //If all orders are served there is no need to warn the waiter.
             foreach (OrderItem order in orders)
             {
-                if (order.MenuItem.CategoryType != CategoryType.Drinks)
+                if (order.orderState != OrderState.OrderServed)
                 {
-                    dishIcons[index].Visible = true;
-                    break;
+                    if (order.MenuItem.CategoryType != CategoryType.Drinks)
+                    {                        
+                        isOrderServed = false;
+                        break;
+                    }
                 }
+
+            }
+            if (!isOrderServed)
+            {
+                dishIcons[index].Visible = true;
+            }
+            else
+            {
+                dishIcons[index].Visible = false;   // this field is required in case user changes orderstate.
             }
 
         }
         //If a waiter has been waiting more than ten minutes an icon will appear to inform waiter.
         void RefreshWarningIcons(List<OrderItem> orders, int index)
         {
-
+            //If there is even one unserved order bool should be false and icon should be available if the order's been waiting for more than 10 minutes.
+            bool isOrderServed = true;
+            //if all orders are served, there is no need for warning icons.
             foreach (OrderItem item in orders)
             {
-                int totalseconds = (int)(DateTime.Now - item.DateTimeAdded).TotalSeconds;
-                if ((totalseconds / 60) >= 10 && item.orderState != OrderState.ReadyToDeliver)
+                if (item.orderState != OrderState.OrderServed)
                 {
-                    warningIcons[index].Visible = true;
-                    break;
+                    int totalseconds = (int)(DateTime.Now - item.DateTimeAdded).TotalSeconds;
+                    if ((totalseconds / 60) >= 10 && item.orderState != OrderState.OrderServed)
+                    {                       
+                        isOrderServed = false;
+                        break;
+                    }
                 }
+
+            }
+            if(!isOrderServed)
+            {
+                warningIcons[index].Visible = true;
+            }
+            else
+            {
+                warningIcons[index].Visible = false;  // this field is required in case user changes orderstate.
 
             }
         }
@@ -153,13 +180,28 @@ namespace ChapeauUI
 
         void RefreshDrinkIcons(List<OrderItem> orders, int index)
         {
+            //If there is even one unserved order bool should be false and icon should be available.
+            bool isOrderServed = true;
             foreach (OrderItem order in orders)
             {
-                if (order.MenuItem.CategoryType == CategoryType.Drinks)
+                //if all orders are served there is no need to  display drink icons for that table.
+                if (order.orderState != OrderState.OrderServed)
                 {
-                    drinkIcons[index].Visible = true;
-                    break;
+                    if (order.MenuItem.CategoryType == CategoryType.Drinks)
+                    {                        
+                        isOrderServed = false;
+                        break;
+                    }
                 }
+
+            }
+            if(!isOrderServed)
+            {
+                drinkIcons[index].Visible = true;
+            }
+            else
+            {
+                drinkIcons[index].Visible = false; // this field is required in case user changes orderstate.
             }
         }
 
