@@ -30,8 +30,8 @@ namespace ChapeauUI
             FillPrices();
         }
 
-        //private.
-        public void FillListView()
+       //Filling the listview current order.
+        private void FillListView()
         {
 
             listViewOrders.Clear();

@@ -185,6 +185,7 @@
             // 
             // txtComment
             // 
+            this.txtComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComment.Location = new System.Drawing.Point(11, 302);
             this.txtComment.Name = "txtComment";
             this.txtComment.Size = new System.Drawing.Size(1022, 182);
