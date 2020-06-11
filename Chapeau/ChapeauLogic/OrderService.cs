@@ -36,6 +36,9 @@ namespace ChapeauLogic
             return orderDao.GetOrderByTableId(id);          
         }
 
+        /// <summary>
+        /// Create a new order in the database
+        /// </summary>
         public void CreateNewOrder(Order order)
         {
             TableService tableService = new TableService();

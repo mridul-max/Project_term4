@@ -121,11 +121,14 @@ namespace ChapeauUI
             login.ShowDialog();
         }
 
+        // Mark the checked items as ready
         private void btnReady_Click(object sender, EventArgs e)
         {
             bool processedAction = false;
+            //loop over all the items in the list
             for (int i = 0; i < listViewKitchenBar.Items.Count; i++)
             {
+                //if the item is checked, mark it as ready
                 if (listViewKitchenBar.Items[i].Checked)
                 {
                     int ID = int.Parse(listViewKitchenBar.Items[i].SubItems[5].Text);
