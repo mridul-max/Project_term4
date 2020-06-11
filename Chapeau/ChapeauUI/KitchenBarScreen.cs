@@ -24,23 +24,33 @@ namespace ChapeauUI
         {
             lblSelectInstruction.Text = "Select an Item first to mark it ready";
             lblloggedinChef.Text = lblloggedinChef.Text + " " + Session.Instance.LoggedEmployee.Name;
-            if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
+            SelectRole(Session.Instance.LoggedEmployee.EmployeeType);
+        }
+
+        private void SelectRole(EmployeeType role)
+        {
+            if (role == EmployeeType.Kitchen)
             {
                 lblKitchenBar.Text = "Kitchen Screen";
                 showPanel("Kitchen");
             }
-            else if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Bar)
+            else if (role == EmployeeType.Bar)
             {
                 lblKitchenBar.Text = "Bar Screen";
                 showPanel("Bar");
             }
-            else if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Manager)
+            else if (role == EmployeeType.Manager)
             {
                 managementToolStripMenuItem.Visible = true;
                 kitchenToolStripMenuItem.Visible = true;
                 barToolStripMenuItem.Visible = true;
+
+                // default to the kitchen screen
+                lblKitchenBar.Text = "Kitchen Screen";
+                showPanel("Kitchen");
             }
         }
+
         private void showPanel(string panelName, bool refresh = true)
         {
             if (panelName == "Kitchen")
@@ -69,7 +79,6 @@ namespace ChapeauUI
 
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
-
             }
             if (panelName == "Bar")
             {
@@ -91,7 +100,6 @@ namespace ChapeauUI
                     }
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
-
             }
         }
 
@@ -125,31 +133,41 @@ namespace ChapeauUI
 
         private void btnReady_Click(object sender, EventArgs e)
         {
+            //listViewKitchenBar.SelectedItems[0].SubItems[0].
             //user need to select an item first
             if (listViewKitchenBar.SelectedItems.Count < 1)
             {
                 MessageBox.Show("Please select an Item first");
             }
-            else if(listViewKitchenBar.SelectedItems.Count>0)
+            else if(listViewKitchenBar.SelectedItems.Count == 1)
             {
                 int ID = int.Parse(listViewKitchenBar.SelectedItems[0].SubItems[5].Text);
                 orderService.UpdateReadyItem(ID);            
             }
-
+            else
+            {
+                for (int i = 0; i < listViewKitchenBar.SelectedItems.Count; i++)
+                {
+                    int ID = int.Parse(listViewKitchenBar.SelectedItems[i].SubItems[5].Text);
+                    orderService.UpdateReadyItem(ID);
+                }
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            KitchenBarScreen_Load(sender, e);
+            SelectRole(Session.Instance.LoggedEmployee.EmployeeType);
         }
 
         private void barToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblKitchenBar.Text = "Bar Screen";
             showPanel("Bar");
         }
 
         private void kitchenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblKitchenBar.Text = "Kitchen Screen";
             showPanel("Kitchen");
         }
     }

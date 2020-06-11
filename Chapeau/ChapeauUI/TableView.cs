@@ -46,9 +46,9 @@ namespace ChapeauUI
             orderService = new OrderService();
         }
         //For opening table display.
-        void DisplayTableForm(int index)
+        void DisplayTableForm(int tableNr)
         {
-            TableDisplay tableDisplay = new TableDisplay(allTables[index]);
+            TableDisplay tableDisplay = new TableDisplay(allTables[tableNr]);
             tableDisplay.ShowDialog();
             RefreshTableInformation();
         }
