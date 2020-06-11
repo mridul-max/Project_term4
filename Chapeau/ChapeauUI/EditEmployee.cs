@@ -116,6 +116,7 @@ namespace ChapeauUI
 
         private void editEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //For edit employee button in navbar.
             pnlEditEmp.Show();
             pnlAdd.Hide();
             pnlRemove.Hide();
@@ -135,6 +136,8 @@ namespace ChapeauUI
             {
                 IsError = true;
             }
+
+            //get's the id from combo box by splitting it.
             string selectedItem = cmbAllEmp.SelectedItem.ToString();
             string[] empId = selectedItem.Split(':');
             Employee ChosenEmployee = service.GetById(int.Parse(empId[0]));
@@ -143,7 +146,6 @@ namespace ChapeauUI
             {
                 //If it's empty fill the old username.
                 EditedEmployee.Username = ChosenEmployee.Username;
-                MessageBox.Show(EditedEmployee.Username + " Line 141");
             }
             else
             {
@@ -191,7 +193,7 @@ namespace ChapeauUI
         }
 
         private void removeEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {//hide other panels and show remove panel.
             pnlAdd.Hide();
             pnlEditEmp.Hide();
 
@@ -206,12 +208,14 @@ namespace ChapeauUI
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            //If user picked an employee delete it.
             if(cmbRemove.SelectedIndex<0)
             {
                 Console.WriteLine("Please pick an employee to remove from system.","Missing information",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else
             {
+                //get's the id from combo box by splitting it.
                 string selectedItem = cmbRemove.SelectedItem.ToString();
                 string[] empId = selectedItem.Split(':');
                 Employee ChosenEmployee = service.GetById(int.Parse(empId[0]));

@@ -29,6 +29,7 @@ namespace ChapeauUI
                 IsError = true;
             }
 
+            //get's the id from combo box by splitting it.
             txtPrice.Text = txtPrice.Text.Replace('.', ',');
             if (String.IsNullOrWhiteSpace(txtPrice.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, @"^[0-9]*(?:\,[0-9]+)?$"))
             {
@@ -48,6 +49,7 @@ namespace ChapeauUI
 
             if (!IsError)
             {
+                //Creating the menu item for dao class.
                 ChapeauModel.MenuItem item = new ChapeauModel.MenuItem()
                 {
                     Name = txtName.Text,
@@ -152,6 +154,8 @@ namespace ChapeauUI
             }
             else
             {
+
+                //get's the id from combo box by splitting it.
                 string selectedItem = cmbEdit.SelectedItem.ToString();
                 string[] empId = selectedItem.Split(':');
                 ChapeauModel.MenuItem menuItem = serviceItem.GetById(int.Parse(empId[0]));
