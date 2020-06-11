@@ -74,7 +74,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1045, 36);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // menuToolStripMenuItem
             // 
@@ -110,7 +109,6 @@
             this.pnlKitchenBar.Name = "pnlKitchenBar";
             this.pnlKitchenBar.Size = new System.Drawing.Size(975, 393);
             this.pnlKitchenBar.TabIndex = 8;
-            this.pnlKitchenBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlKitchenBar_Paint);
             // 
             // listViewKitchenBar
             // 

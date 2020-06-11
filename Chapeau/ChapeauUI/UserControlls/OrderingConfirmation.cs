@@ -16,6 +16,7 @@ namespace ChapeauUI
     {
         OrderingScreen mainScreen;
         OrderService services;
+
         public OrderingConfirmation(OrderingScreen screen)
         {
             InitializeComponent();
@@ -23,6 +24,9 @@ namespace ChapeauUI
             services = new OrderService();
         }
 
+        /// <summary>
+        /// Grabs to order from the main screen and sends it to the database
+        /// </summary>
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             Order order = mainScreen.GetCurrentOrder();
@@ -42,7 +46,10 @@ namespace ChapeauUI
                 mainScreen.Close();
             }
         }
-
+        
+        /// <summary>
+        /// Cancels the current order by closing the ordering screen
+        /// </summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             mainScreen.Close();
