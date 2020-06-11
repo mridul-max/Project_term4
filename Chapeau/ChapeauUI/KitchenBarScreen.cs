@@ -22,6 +22,7 @@ namespace ChapeauUI
 
         private void KitchenBarScreen_Load(object sender, EventArgs e)
         {
+            lblSelectInstruction.Text = "Select an Item first to mark it ready";
             lblloggedinChef.Text = lblloggedinChef.Text + " " + Session.Instance.LoggedEmployee.Name;
             if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Kitchen)
             {

@@ -43,19 +43,19 @@
             this.lblKitchenBar = new System.Windows.Forms.Label();
             this.btnReady = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.lblSelectInstruction = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.pnlKitchenBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblloggedinChef
             // 
-            this.lblloggedinChef.AutoSize = true;
             this.lblloggedinChef.BackColor = System.Drawing.Color.Transparent;
             this.lblloggedinChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblloggedinChef.Location = new System.Drawing.Point(18, 41);
             this.lblloggedinChef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblloggedinChef.Name = "lblloggedinChef";
-            this.lblloggedinChef.Size = new System.Drawing.Size(117, 20);
+            this.lblloggedinChef.Size = new System.Drawing.Size(195, 20);
             this.lblloggedinChef.TabIndex = 0;
             this.lblloggedinChef.Text = "Logged in as:";
             // 
@@ -183,6 +183,14 @@
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // lblSelectInstruction
+            // 
+            this.lblSelectInstruction.BackColor = System.Drawing.Color.Transparent;
+            this.lblSelectInstruction.Location = new System.Drawing.Point(28, 70);
+            this.lblSelectInstruction.Name = "lblSelectInstruction";
+            this.lblSelectInstruction.Size = new System.Drawing.Size(220, 23);
+            this.lblSelectInstruction.TabIndex = 12;
+            // 
             // KitchenBarScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +198,7 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 609);
+            this.Controls.Add(this.lblSelectInstruction);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReady);
             this.Controls.Add(this.lblKitchenBar);
@@ -228,5 +237,6 @@
         private System.Windows.Forms.ColumnHeader TableNumber;
         private System.Windows.Forms.Button btnReady;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lblSelectInstruction;
     }
 }
