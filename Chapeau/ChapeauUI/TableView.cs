@@ -33,15 +33,16 @@ namespace ChapeauUI
             FillPictureBoxes();
             RefreshTableInformation();
             lblEmployee.Text = lblEmployee.Text + " " + Session.Instance.LoggedEmployee.Name;
-            if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Manager)
+            if (Session.Instance.LoggedEmployee.EmployeeType == EmployeeType.Manager) 
             {
+                //If the user is manager a special button in navbar will appear.
                 returnToManagementToolStripMenuItem.Visible = true;
             }
         }
         public TableView()
         {
             InitializeComponent();
-            tableService = new TableService();
+            tableService = new TableService();  
             reservationService = new ReservationService();
             orderService = new OrderService();
         }
@@ -68,7 +69,7 @@ namespace ChapeauUI
         void RefreshTableInformation()
         {
             allTables = tableService.GetAllTables();
-            //Instead of keep opening the database in for loop now I only receive all the unpaid orders at ones for the order items.
+            //Instead of keep opening the database in for loop,I only receive all the unpaid orders at ones for the order items for being faster.
             List<Order> allUnpaidOrders = orderService.GetAllUnfinishedOrders();
             for (int i = 0; i < allTables.Count; i++)
             {
@@ -79,7 +80,8 @@ namespace ChapeauUI
                     //if restaurant has no present orders skip displaying icons and only change table icon.
                     if (allUnpaidOrders.Count != 0)
                     {
-                        int indexofOrder = OrderIndexOfTable(allTables[i], allUnpaidOrders);
+                        //Find the order of table[i] from the list acquired from database.
+                        int indexofOrder = FindOrderIndexOfTable(allTables[i], allUnpaidOrders);
                         //If table has orders check status of orders to inform waiter with icons.                        
                         if (indexofOrder >= 0 && allUnpaidOrders[indexofOrder].OrderItems.Count != 0)
                         {
@@ -92,7 +94,7 @@ namespace ChapeauUI
                 }
                 else
                 {
-                    // If table is not occupied there is no need to show any icons.
+                    // If table is not occupied, then there is no need to show any icons.
                     tableIcons[i].Image = tableImages[i];
                     warningIcons[i].Visible = false;
                     dishIcons[i].Visible = false;
@@ -100,6 +102,7 @@ namespace ChapeauUI
                 }
                 //Refreshing the reservation icons for  each table.
                 List<Reservation> reservations = reservationService.GetAllById(allTables[i].TableNumber);
+                //Refresh reservations icon only if there are any
                 if (reservations.Count > 0)
                 {
                     RefreshReservationIcons(reservations, i);
@@ -107,8 +110,9 @@ namespace ChapeauUI
             }
 
         }
-        //This method is for finding the right order for the table. Since it's quite impossible to order it on table numbers and filter the ones that doesnt have orders.
-        int OrderIndexOfTable(Table table, List<Order> orders)
+        //This method is for finding the right order for the table. Since it's quite hard to order it on
+        //table numbers and filter the ones that doesnt have orders.
+        int FindOrderIndexOfTable(Table table, List<Order> orders)
         {
             for (int i = 0; i < orders.Count; i++)
             {
@@ -117,7 +121,7 @@ namespace ChapeauUI
                     return i;
                 }
             }
-            //validation of -1 value is handled in line 84 [if(indexofORder>=0)]
+            //validation of -1 value is handled in line 86 [if(indexofORder>=0)]
             return -1;
         }
         //If a table has unserved dishes, an icon will appear to inform  the waiter.
