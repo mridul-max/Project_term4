@@ -121,36 +121,27 @@ namespace ChapeauUI
             login.ShowDialog();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void pnlKitchenBar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnReady_Click(object sender, EventArgs e)
         {
-            //listViewKitchenBar.SelectedItems[0].SubItems[0].
+            bool processedAction = false;
+            for (int i = 0; i < listViewKitchenBar.Items.Count; i++)
+            {
+                if (listViewKitchenBar.Items[i].Checked)
+                {
+                    int ID = int.Parse(listViewKitchenBar.Items[i].SubItems[5].Text);
+                    orderService.UpdateReadyItem(ID);
+                    processedAction = true;
+                }
+            }
+
             //user need to select an item first
-            if (listViewKitchenBar.SelectedItems.Count < 1)
+            if (!processedAction)
             {
                 MessageBox.Show("Please select an Item first");
             }
-            else if(listViewKitchenBar.SelectedItems.Count == 1)
-            {
-                int ID = int.Parse(listViewKitchenBar.SelectedItems[0].SubItems[5].Text);
-                orderService.UpdateReadyItem(ID);            
-            }
             else
             {
-                for (int i = 0; i < listViewKitchenBar.SelectedItems.Count; i++)
-                {
-                    int ID = int.Parse(listViewKitchenBar.SelectedItems[i].SubItems[5].Text);
-                    orderService.UpdateReadyItem(ID);
-                }
+                btnRefresh_Click(sender, e);
             }
         }
 
