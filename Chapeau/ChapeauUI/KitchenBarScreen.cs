@@ -69,8 +69,12 @@ namespace ChapeauUI
                     foreach (OrderItem F in Food)
                     {
                         //tablenumber can find by passing the orderID
-                        int table = orderService.GetOrderTable(F.OrderID);
-                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString(), table.ToString(),F.MenuItem.ID.ToString()}));
+                        if(F.orderState==OrderState.PrepairingOrder)
+                        {
+                            int table = orderService.GetOrderTable(F.OrderID);
+                            listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString(), table.ToString(), F.MenuItem.ID.ToString() }));
+                        }
+                        
                     }
 
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
@@ -93,8 +97,12 @@ namespace ChapeauUI
                     foreach (OrderItem D in Drinks)
                     {
                         //tablenumber can find by passing the orderID
-                        int table = orderService.GetOrderTable(D.OrderID);
-                        listViewKitchenBar.Items.Add(new ListViewItem(new string[] { D.MenuItem.Name.ToString(), D.Amount.ToString(), D.DateTimeAdded.ToString(), D.orderState.ToString(), table.ToString(),D.MenuItem.ID.ToString()}));
+                        if (D.orderState == OrderState.PrepairingOrder)
+                        {
+                            int table = orderService.GetOrderTable(D.OrderID);
+                            listViewKitchenBar.Items.Add(new ListViewItem(new string[] { D.MenuItem.Name.ToString(), D.Amount.ToString(), D.DateTimeAdded.ToString(), D.orderState.ToString(), table.ToString(), D.MenuItem.ID.ToString() }));
+                        }
+
                     }
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }

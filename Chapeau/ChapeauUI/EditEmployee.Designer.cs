@@ -234,11 +234,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(474, 155);
+            this.label10.Location = new System.Drawing.Point(364, 157);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(165, 25);
+            this.label10.Size = new System.Drawing.Size(405, 25);
             this.label10.TabIndex = 11;
-            this.label10.Text = "Make Changes:";
+            this.label10.Text = "Only enter the fields you want to change:";
             // 
             // label9
             // 
@@ -315,7 +315,7 @@
             this.pnlRemove.Controls.Add(this.label8);
             this.pnlRemove.Controls.Add(this.cmbRemove);
             this.pnlRemove.Controls.Add(this.btnRemove);
-            this.pnlRemove.Location = new System.Drawing.Point(3, 117);
+            this.pnlRemove.Location = new System.Drawing.Point(0, 117);
             this.pnlRemove.Name = "pnlRemove";
             this.pnlRemove.Size = new System.Drawing.Size(1087, 573);
             this.pnlRemove.TabIndex = 12;
