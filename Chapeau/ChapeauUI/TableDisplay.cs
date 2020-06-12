@@ -175,6 +175,5 @@ namespace ChapeauUI
             }
             UpdateTableView();
         }
-
     }
 }

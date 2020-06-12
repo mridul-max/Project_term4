@@ -33,6 +33,8 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kitchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.barToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlKitchenBar = new System.Windows.Forms.Panel();
             this.listViewKitchenBar = new System.Windows.Forms.ListView();
             this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,8 +46,6 @@
             this.btnReady = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.lblSelectInstruction = new System.Windows.Forms.Label();
-            this.kitchenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.pnlKitchenBar.SuspendLayout();
             this.SuspendLayout();
@@ -54,9 +54,10 @@
             // 
             this.lblloggedinChef.BackColor = System.Drawing.Color.Transparent;
             this.lblloggedinChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblloggedinChef.Location = new System.Drawing.Point(24, 50);
+            this.lblloggedinChef.Location = new System.Drawing.Point(18, 41);
+            this.lblloggedinChef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblloggedinChef.Name = "lblloggedinChef";
-            this.lblloggedinChef.Size = new System.Drawing.Size(260, 25);
+            this.lblloggedinChef.Size = new System.Drawing.Size(195, 20);
             this.lblloggedinChef.TabIndex = 0;
             this.lblloggedinChef.Text = "Logged in as:";
             // 
@@ -70,8 +71,8 @@
             this.barToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1045, 36);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,13 +83,13 @@
             this.logOffToolStripMenuItem});
             this.menuToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(80, 32);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // managementToolStripMenuItem
             // 
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
             this.managementToolStripMenuItem.Text = "Management";
             this.managementToolStripMenuItem.Visible = false;
             this.managementToolStripMenuItem.Click += new System.EventHandler(this.managementToolStripMenuItem_Click);
@@ -96,18 +97,35 @@
             // logOffToolStripMenuItem
             // 
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(224, 30);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click_1);
+            // 
+            // kitchenToolStripMenuItem
+            // 
+            this.kitchenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kitchenToolStripMenuItem.Name = "kitchenToolStripMenuItem";
+            this.kitchenToolStripMenuItem.Size = new System.Drawing.Size(80, 25);
+            this.kitchenToolStripMenuItem.Text = "Kitchen";
+            this.kitchenToolStripMenuItem.Visible = false;
+            this.kitchenToolStripMenuItem.Click += new System.EventHandler(this.kitchenToolStripMenuItem_Click);
+            // 
+            // barToolStripMenuItem
+            // 
+            this.barToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barToolStripMenuItem.Name = "barToolStripMenuItem";
+            this.barToolStripMenuItem.Size = new System.Drawing.Size(47, 25);
+            this.barToolStripMenuItem.Text = "Bar";
+            this.barToolStripMenuItem.Visible = false;
+            this.barToolStripMenuItem.Click += new System.EventHandler(this.barToolStripMenuItem_Click);
             // 
             // pnlKitchenBar
             // 
             this.pnlKitchenBar.BackColor = System.Drawing.Color.Transparent;
             this.pnlKitchenBar.Controls.Add(this.listViewKitchenBar);
-            this.pnlKitchenBar.Location = new System.Drawing.Point(29, 142);
-            this.pnlKitchenBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlKitchenBar.Location = new System.Drawing.Point(31, 187);
             this.pnlKitchenBar.Name = "pnlKitchenBar";
-            this.pnlKitchenBar.Size = new System.Drawing.Size(975, 393);
+            this.pnlKitchenBar.Size = new System.Drawing.Size(731, 1009);
             this.pnlKitchenBar.TabIndex = 8;
             // 
             // listViewKitchenBar
@@ -120,10 +138,9 @@
             this.OrderTime,
             this.TableNumber});
             this.listViewKitchenBar.HideSelection = false;
-            this.listViewKitchenBar.Location = new System.Drawing.Point(0, 4);
-            this.listViewKitchenBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listViewKitchenBar.Location = new System.Drawing.Point(0, 0);
             this.listViewKitchenBar.Name = "listViewKitchenBar";
-            this.listViewKitchenBar.Size = new System.Drawing.Size(973, 384);
+            this.listViewKitchenBar.Size = new System.Drawing.Size(731, 1006);
             this.listViewKitchenBar.TabIndex = 0;
             this.listViewKitchenBar.UseCompatibleStateImageBehavior = false;
             this.listViewKitchenBar.View = System.Windows.Forms.View.Details;
@@ -158,19 +175,17 @@
             this.lblKitchenBar.BackColor = System.Drawing.Color.Transparent;
             this.lblKitchenBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKitchenBar.ForeColor = System.Drawing.Color.Black;
-            this.lblKitchenBar.Location = new System.Drawing.Point(399, 86);
-            this.lblKitchenBar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKitchenBar.Location = new System.Drawing.Point(299, 70);
             this.lblKitchenBar.Name = "lblKitchenBar";
-            this.lblKitchenBar.Size = new System.Drawing.Size(203, 38);
+            this.lblKitchenBar.Size = new System.Drawing.Size(152, 31);
             this.lblKitchenBar.TabIndex = 9;
             // 
             // btnReady
             // 
             this.btnReady.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnReady.Location = new System.Drawing.Point(41, 575);
-            this.btnReady.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReady.Location = new System.Drawing.Point(31, 114);
             this.btnReady.Name = "btnReady";
-            this.btnReady.Size = new System.Drawing.Size(155, 48);
+            this.btnReady.Size = new System.Drawing.Size(116, 39);
             this.btnReady.TabIndex = 10;
             this.btnReady.Text = "Mark As Ready";
             this.btnReady.UseVisualStyleBackColor = false;
@@ -180,10 +195,9 @@
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.Location = new System.Drawing.Point(303, 577);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRefresh.Location = new System.Drawing.Point(638, 114);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(165, 46);
+            this.btnRefresh.Size = new System.Drawing.Size(124, 37);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -192,37 +206,18 @@
             // lblSelectInstruction
             // 
             this.lblSelectInstruction.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectInstruction.Location = new System.Drawing.Point(37, 86);
-            this.lblSelectInstruction.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSelectInstruction.Location = new System.Drawing.Point(28, 70);
             this.lblSelectInstruction.Name = "lblSelectInstruction";
-            this.lblSelectInstruction.Size = new System.Drawing.Size(293, 28);
+            this.lblSelectInstruction.Size = new System.Drawing.Size(220, 23);
             this.lblSelectInstruction.TabIndex = 12;
-            // 
-            // kitchenToolStripMenuItem
-            // 
-            this.kitchenToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kitchenToolStripMenuItem.Name = "kitchenToolStripMenuItem";
-            this.kitchenToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
-            this.kitchenToolStripMenuItem.Text = "Kitchen";
-            this.kitchenToolStripMenuItem.Visible = false;
-            this.kitchenToolStripMenuItem.Click += new System.EventHandler(this.kitchenToolStripMenuItem_Click);
-            // 
-            // barToolStripMenuItem
-            // 
-            this.barToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barToolStripMenuItem.Name = "barToolStripMenuItem";
-            this.barToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
-            this.barToolStripMenuItem.Text = "Bar";
-            this.barToolStripMenuItem.Visible = false;
-            this.barToolStripMenuItem.Click += new System.EventHandler(this.barToolStripMenuItem_Click);
             // 
             // KitchenBarScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1045, 750);
+            this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.lblSelectInstruction);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReady);
@@ -231,7 +226,7 @@
             this.Controls.Add(this.lblloggedinChef);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "KitchenBarScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenBarScreen";
