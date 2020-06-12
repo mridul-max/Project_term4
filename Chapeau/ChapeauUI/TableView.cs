@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -212,19 +213,28 @@ namespace ChapeauUI
         //If a table has a reservation in the next hour an icon will appear to inform waiter.
         void RefreshReservationIcons(List<Reservation> reservations, int index)
         {
+            //If there is even one reservation in table, bool should be false and icon should be available.
+            bool isNotReserved = true;
             foreach (Reservation reservation in reservations)
             {
                 //Only check if table has a reservation today.
                 if (DateTime.Now.Date == reservation.ReservationDate.Date)
                 {
-                    int totalMinutes = (int)(DateTime.Now - reservation.ReservationDate).TotalMinutes;
-                    if (totalMinutes <= 60)
+                    int totalMinutes = (int)(reservation.ReservationDate- DateTime.Now).TotalMinutes;
+                    if (totalMinutes <= 60 && totalMinutes>0)
                     {
-                        reservationIcons[index].Visible = true;
+                        isNotReserved = false;
                         break;
-                    }
-                }
-
+                    }                   
+                }              
+            }
+            if (!isNotReserved)
+            {
+                reservationIcons[index].Visible = true;
+            }
+            else
+            {
+                reservationIcons[index].Visible = false;
             }
         }
 
@@ -261,6 +271,11 @@ namespace ChapeauUI
             ManagerScreen manager = new ManagerScreen();
             this.Hide();
             manager.ShowDialog();
+        }
+        //Button for refreshing the page.
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            RefreshTableInformation(); 
         }
     }
 }
