@@ -905,7 +905,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 857);
+            this.ClientSize = new System.Drawing.Size(784, 1161);
             this.Controls.Add(this.lblEmployee);
             this.Controls.Add(this.pnl_tables);
             this.Controls.Add(this.menuStrip1);
