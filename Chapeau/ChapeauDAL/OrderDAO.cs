@@ -82,6 +82,18 @@ namespace ChapeauDAL
             SqlDataReader reader = cmd.ExecuteReader();
             reader.Close();
             conn.Close();
+            UpdateOrderStates(payment.OrderID);
+        }
+
+        public void UpdateOrderStates(int orderID)
+        {
+            string query = "Update [OrderItem] SET [OrderStateKey]='OS' WHERE OrderID=@Id;";
+            SqlParameter[] sqlParameters = new SqlParameter[1]
+            {
+                new SqlParameter("@Id",orderID),
+            };
+            ExecuteEditQuery(query,sqlParameters);
+          
         }
         public int CreateOrder(int tableNumber, int employeeID)
         {
