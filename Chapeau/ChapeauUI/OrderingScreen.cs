@@ -141,8 +141,10 @@ namespace ChapeauUI
                 // if the new amount is 0, remove the row from the current order panel
                 if (orderingRow.Amount == 0)
                 {
-                    currentOrderItems.Remove(orderingRow);
-                    flpCurrentOrderItems.Controls.Remove(orderingRow);
+                    //get the correct row in the current panel
+                    OrderingRow row = FindMenuItem(currentOrderItems, orderingRow.OrderItem.MenuItem);
+                    currentOrderItems.Remove(row);
+                    flpCurrentOrderItems.Controls.Remove(row);
                 }
             }
         }
@@ -160,6 +162,21 @@ namespace ChapeauUI
                 }
             }
             return false;
+        }
+
+        /// <summary>
+        /// Finds the ordering row with the given menuitem in the given list
+        /// </summary>
+        OrderingRow FindMenuItem(List<OrderingRow> rows, ChapeauModel.MenuItem menuItem)
+        {
+            foreach (var row in rows)
+            {
+                if (menuItem == row.OrderItem.MenuItem)
+                {
+                    return row;
+                }
+            }
+            return null;
         }
 
         /// <summary>
