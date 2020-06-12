@@ -26,7 +26,7 @@ namespace ChapeauUI
             lblloggedinChef.Text = lblloggedinChef.Text + " " + Session.Instance.LoggedEmployee.Name;
             SelectRole(Session.Instance.LoggedEmployee.EmployeeType);
         }
-
+        // Three emplyees can log in for kitchen and bar
         private void SelectRole(EmployeeType role)
         {
             if (role == EmployeeType.Kitchen)
@@ -50,7 +50,7 @@ namespace ChapeauUI
                 showPanel("Kitchen");
             }
         }
-
+        //This panel will show information of orderItem
         private void showPanel(string panelName, bool refresh = true)
         {
             if (panelName == "Kitchen")
@@ -68,11 +68,7 @@ namespace ChapeauUI
                     listViewKitchenBar.Columns.Add("TableNumber");
                     foreach (OrderItem F in Food)
                     {
-                        //string state = "X";
-                        //if (F.orderState.ToString()== "PR")
-                        //{
-                        //    state = "\u2713";
-                        //}
+                        //tablenumber can find by passing the orderID
                         int table = orderService.GetOrderTable(F.OrderID);
                         listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString(), table.ToString(),F.MenuItem.ID.ToString()}));
                     }
@@ -80,6 +76,7 @@ namespace ChapeauUI
                     listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 }
             }
+            //Bar panel to view the orderItem
             if (panelName == "Bar")
             {
                 if (refresh)
@@ -95,6 +92,7 @@ namespace ChapeauUI
                     listViewKitchenBar.Columns.Add("TableNumber");
                     foreach (OrderItem D in Drinks)
                     {
+                        //tablenumber can find by passing the orderID
                         int table = orderService.GetOrderTable(D.OrderID);
                         listViewKitchenBar.Items.Add(new ListViewItem(new string[] { D.MenuItem.Name.ToString(), D.Amount.ToString(), D.DateTimeAdded.ToString(), D.orderState.ToString(), table.ToString(),D.MenuItem.ID.ToString()}));
                     }
@@ -147,18 +145,18 @@ namespace ChapeauUI
                 btnRefresh_Click(sender, e);
             }
         }
-
+        //Refresh can help to disapear the order item 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             SelectRole(Session.Instance.LoggedEmployee.EmployeeType);
         }
-
+        //Manager can navigate the bar
         private void barToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblKitchenBar.Text = "Bar Screen";
             showPanel("Bar");
         }
-
+        //Manager can navigate the kitchen
         private void kitchenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lblKitchenBar.Text = "Kitchen Screen";

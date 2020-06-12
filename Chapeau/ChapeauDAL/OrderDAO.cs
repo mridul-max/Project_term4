@@ -157,7 +157,6 @@ namespace ChapeauDAL
             };
             return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
-
         private List<OrderItem> ReadOrderItems(DataTable dataTable)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
@@ -185,6 +184,7 @@ namespace ChapeauDAL
             }
             return orderItems;
         }
+
         //Get all food for kitchen view
         public List<OrderItem> GetAllRunningFood()
         {
@@ -195,6 +195,7 @@ namespace ChapeauDAL
 
         }
         //Reading all food for kitchen view
+        //loop over orderitem and menuitem to get Iteminfo
         private List<OrderItem> ReadAlltype(DataTable dataTable)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
@@ -230,6 +231,7 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
         }
+        //Get the table number for per OrderID
         public int GetOrderTable(int OrderID)
         {
             OpenConnection();
@@ -260,7 +262,7 @@ namespace ChapeauDAL
             return (int)reader["TableNumber"];
         }
        
-        //Ready to serve Orderitem 
+        //This function will make Ready to serve Orderitem 
         public void UpdateReadyItem(int ID)
         {
             OpenConnection();
