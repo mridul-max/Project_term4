@@ -198,7 +198,6 @@ namespace ChapeauUI
                         break;
                     }
                 }
-
             }
             if(!isOrderServed)
             {

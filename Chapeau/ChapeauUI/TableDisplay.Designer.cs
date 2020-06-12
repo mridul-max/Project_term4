@@ -55,9 +55,9 @@ namespace ChapeauUI
             this.groupBox1.Controls.Add(this.lblCapacity);
             this.groupBox1.Controls.Add(this.lblTableNumber);
             this.groupBox1.Location = new System.Drawing.Point(9, 68);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(363, 505);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -66,7 +66,7 @@ namespace ChapeauUI
             // 
             this.pnlReserve.AutoScroll = true;
             this.pnlReserve.Location = new System.Drawing.Point(0, 262);
-            this.pnlReserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlReserve.Margin = new System.Windows.Forms.Padding(2);
             this.pnlReserve.Name = "pnlReserve";
             this.pnlReserve.Size = new System.Drawing.Size(358, 231);
             this.pnlReserve.TabIndex = 7;
@@ -121,7 +121,7 @@ namespace ChapeauUI
             this.Btnreserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnreserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnreserve.Location = new System.Drawing.Point(2, 588);
-            this.Btnreserve.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btnreserve.Margin = new System.Windows.Forms.Padding(2);
             this.Btnreserve.Name = "Btnreserve";
             this.Btnreserve.Size = new System.Drawing.Size(155, 48);
             this.Btnreserve.TabIndex = 2;
@@ -135,7 +135,7 @@ namespace ChapeauUI
             this.BtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnOrder.Location = new System.Drawing.Point(170, 587);
-            this.BtnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.BtnOrder.Name = "BtnOrder";
             this.BtnOrder.Size = new System.Drawing.Size(155, 50);
             this.BtnOrder.TabIndex = 3;
@@ -150,7 +150,7 @@ namespace ChapeauUI
             this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnChout.Location = new System.Drawing.Point(2, 655);
-            this.BtnChout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnChout.Margin = new System.Windows.Forms.Padding(2);
             this.BtnChout.Name = "BtnChout";
             this.BtnChout.Size = new System.Drawing.Size(155, 50);
             this.BtnChout.TabIndex = 4;
@@ -163,7 +163,7 @@ namespace ChapeauUI
             this.pnlCurrentOrders.AutoScroll = true;
             this.pnlCurrentOrders.BackColor = System.Drawing.Color.Transparent;
             this.pnlCurrentOrders.Location = new System.Drawing.Point(382, 68);
-            this.pnlCurrentOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlCurrentOrders.Margin = new System.Windows.Forms.Padding(2);
             this.pnlCurrentOrders.Name = "pnlCurrentOrders";
             this.pnlCurrentOrders.Size = new System.Drawing.Size(393, 1162);
             this.pnlCurrentOrders.TabIndex = 5;
@@ -186,7 +186,7 @@ namespace ChapeauUI
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(2, 6);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(155, 50);
             this.btnBack.TabIndex = 7;
@@ -200,7 +200,7 @@ namespace ChapeauUI
             this.btnOccupy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOccupy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOccupy.Location = new System.Drawing.Point(170, 655);
-            this.btnOccupy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOccupy.Margin = new System.Windows.Forms.Padding(2);
             this.btnOccupy.Name = "btnOccupy";
             this.btnOccupy.Size = new System.Drawing.Size(155, 50);
             this.btnOccupy.TabIndex = 8;
@@ -224,7 +224,8 @@ namespace ChapeauUI
             this.Controls.Add(this.BtnOrder);
             this.Controls.Add(this.Btnreserve);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "TableDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

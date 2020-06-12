@@ -225,6 +225,7 @@
             this.Controls.Add(this.pnlKitchenBar);
             this.Controls.Add(this.lblloggedinChef);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "KitchenBarScreen";

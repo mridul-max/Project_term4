@@ -46,8 +46,8 @@
             this.logOffToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(682, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(512, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -55,7 +55,7 @@
             // 
             this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(92, 29);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
@@ -66,9 +66,10 @@
             this.btnEditEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEmp.Location = new System.Drawing.Point(216, 91);
+            this.btnEditEmp.Location = new System.Drawing.Point(162, 74);
+            this.btnEditEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditEmp.Name = "btnEditEmp";
-            this.btnEditEmp.Size = new System.Drawing.Size(220, 76);
+            this.btnEditEmp.Size = new System.Drawing.Size(165, 62);
             this.btnEditEmp.TabIndex = 8;
             this.btnEditEmp.Text = "Edit Employee";
             this.btnEditEmp.UseVisualStyleBackColor = false;
@@ -81,9 +82,10 @@
             this.btnEditItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditItems.Location = new System.Drawing.Point(216, 209);
+            this.btnEditItems.Location = new System.Drawing.Point(162, 170);
+            this.btnEditItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditItems.Name = "btnEditItems";
-            this.btnEditItems.Size = new System.Drawing.Size(220, 76);
+            this.btnEditItems.Size = new System.Drawing.Size(165, 62);
             this.btnEditItems.TabIndex = 10;
             this.btnEditItems.Text = "Edit Menu Items";
             this.btnEditItems.UseVisualStyleBackColor = false;
@@ -96,9 +98,10 @@
             this.btnKitchen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKitchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKitchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKitchen.Location = new System.Drawing.Point(216, 312);
+            this.btnKitchen.Location = new System.Drawing.Point(162, 254);
+            this.btnKitchen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnKitchen.Name = "btnKitchen";
-            this.btnKitchen.Size = new System.Drawing.Size(220, 76);
+            this.btnKitchen.Size = new System.Drawing.Size(165, 62);
             this.btnKitchen.TabIndex = 11;
             this.btnKitchen.Text = "Kitchen bar screen";
             this.btnKitchen.UseVisualStyleBackColor = false;
@@ -111,9 +114,10 @@
             this.btnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(216, 413);
+            this.btnTable.Location = new System.Drawing.Point(162, 336);
+            this.btnTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTable.Name = "btnTable";
-            this.btnTable.Size = new System.Drawing.Size(220, 76);
+            this.btnTable.Size = new System.Drawing.Size(165, 62);
             this.btnTable.TabIndex = 12;
             this.btnTable.Text = "Table view";
             this.btnTable.UseVisualStyleBackColor = false;
@@ -124,27 +128,29 @@
             this.lblLog.AutoSize = true;
             this.lblLog.BackColor = System.Drawing.Color.Transparent;
             this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLog.Location = new System.Drawing.Point(13, 49);
+            this.lblLog.Location = new System.Drawing.Point(10, 40);
+            this.lblLog.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLog.Name = "lblLog";
-            this.lblLog.Size = new System.Drawing.Size(143, 25);
+            this.lblLog.Size = new System.Drawing.Size(117, 20);
             this.lblLog.TabIndex = 13;
             this.lblLog.Text = "Logged in as:";
             // 
             // ManagerScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(682, 653);
+            this.ClientSize = new System.Drawing.Size(512, 531);
             this.Controls.Add(this.lblLog);
             this.Controls.Add(this.btnTable);
             this.Controls.Add(this.btnKitchen);
             this.Controls.Add(this.btnEditItems);
             this.Controls.Add(this.btnEditEmp);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManagerScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ManagerScreen_FormClosing);

@@ -251,6 +251,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnApply);
             this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PaymentScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
