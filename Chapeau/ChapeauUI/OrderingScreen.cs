@@ -106,7 +106,7 @@ namespace ChapeauUI
             //if the item is not yet in the current order panel, add it
             if (!ContainsMenuItem(currentOrderItems, orderingRow.OrderItem.MenuItem))
             {                
-                orderingRow = new OrderingRow(this, orderingRow.OrderItem.MenuItem, orderingRow.Amount);
+                orderingRow = new OrderingRow(this, orderingRow.OrderItem.MenuItem, true, orderingRow.Amount);
                 currentOrderItems.Add(orderingRow);
 
                 //add the order item row but keep the confirmation usercontroll at the bottom

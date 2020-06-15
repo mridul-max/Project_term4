@@ -133,6 +133,16 @@ namespace ChapeauUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EditIcon {
+            get {
+                object obj = ResourceManager.GetObject("EditIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Empty1 {
             get {
                 object obj = ResourceManager.GetObject("Empty1", resourceCulture);

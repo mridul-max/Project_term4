@@ -34,13 +34,14 @@ namespace ChapeauUI
             }
         }
         private OrderingScreen mainScreen;
-        public OrderingRow(OrderingScreen mainScreen, ChapeauModel.MenuItem menuItem, int amount = 0)
+        public OrderingRow(OrderingScreen mainScreen, ChapeauModel.MenuItem menuItem, bool showEdit = false, int amount = 0)
         {
             InitializeComponent();
             this.mainScreen = mainScreen;
             OrderItem = new OrderItem(menuItem, amount);
             lblAmount.Text = Amount.ToString();
             lblName.Text = menuItem.Name;
+            btnEdit.Visible = showEdit;
         }
 
         /// <summary>
@@ -69,6 +70,11 @@ namespace ChapeauUI
             {
                 MessageBox.Show($"{OrderItem} has only {OrderItem.MenuItem.Stock} items left in stock");
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
