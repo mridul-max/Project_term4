@@ -57,7 +57,7 @@ namespace ChapeauUI
             {
                 pnlKitchenBar.Show();
                 pnlKitchenBar.Visible = true;
-                List<OrderItem> Dishes = new List<OrderItem>();
+                List<OrderItem> Dishes;
                 if (panelName == "Kitchen")
                 {
                     Dishes = orderService.GetAllRunningFood();
@@ -76,6 +76,7 @@ namespace ChapeauUI
                 {
                     //tablenumber can find by passing the orderID
                     int table = orderService.GetOrderTable(dish.OrderID);
+
                     listViewKitchenBar.Items.Add(new ListViewItem(new string[] {
                         dish.MenuItem.Name.ToString(),
                         dish.Amount.ToString(),

@@ -184,6 +184,7 @@
             // btnReady
             // 
             this.btnReady.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnReady.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReady.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReady.Location = new System.Drawing.Point(31, 114);
             this.btnReady.Name = "btnReady";
@@ -196,6 +197,7 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRefresh.Location = new System.Drawing.Point(596, 114);
