@@ -43,14 +43,20 @@
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlEditMenu = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNewStock = new System.Windows.Forms.TextBox();
-            this.btnApplyStock = new System.Windows.Forms.Button();
+            this.ItemsGV = new System.Windows.Forms.DataGridView();
+            this.ItemID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
-            this.cmbEdit = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtItemName = new System.Windows.Forms.TextBox();
+            this.txtCount = new System.Windows.Forms.TextBox();
+            this.btnApplyStock = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlEditMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -74,7 +80,7 @@
             this.addMenuItemToolStripMenuItem.Name = "addMenuItemToolStripMenuItem";
             this.addMenuItemToolStripMenuItem.Size = new System.Drawing.Size(140, 25);
             this.addMenuItemToolStripMenuItem.Text = "Add Menu item";
-            this.addMenuItemToolStripMenuItem.Click += new System.EventHandler(this.addMenuItemToolStripMenuItem_Click);
+            this.addMenuItemToolStripMenuItem.Click += new System.EventHandler(this.AddMenuItemToolStripMenuItem_Click);
             // 
             // editMenuItemToolStripMenuItem
             // 
@@ -82,7 +88,7 @@
             this.editMenuItemToolStripMenuItem.Name = "editMenuItemToolStripMenuItem";
             this.editMenuItemToolStripMenuItem.Size = new System.Drawing.Size(139, 25);
             this.editMenuItemToolStripMenuItem.Text = "Edit Menu item";
-            this.editMenuItemToolStripMenuItem.Click += new System.EventHandler(this.editMenuItemToolStripMenuItem_Click);
+            this.editMenuItemToolStripMenuItem.Click += new System.EventHandler(this.EditMenuItemToolStripMenuItem_Click);
             // 
             // returnToManagementToolStripMenuItem
             // 
@@ -90,7 +96,7 @@
             this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
             this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(199, 25);
             this.returnToManagementToolStripMenuItem.Text = "Return to management";
-            this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.returnToManagementToolStripMenuItem_Click);
+            this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.ReturnToManagementToolStripMenuItem_Click);
             // 
             // pnlAdd
             // 
@@ -104,10 +110,10 @@
             this.pnlAdd.Controls.Add(this.txtPrice);
             this.pnlAdd.Controls.Add(this.cmbCategory);
             this.pnlAdd.Controls.Add(this.txtName);
-            this.pnlAdd.Location = new System.Drawing.Point(0, 127);
-            this.pnlAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAdd.Location = new System.Drawing.Point(0, 121);
+            this.pnlAdd.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAdd.Name = "pnlAdd";
-            this.pnlAdd.Size = new System.Drawing.Size(784, 687);
+            this.pnlAdd.Size = new System.Drawing.Size(784, 1109);
             this.pnlAdd.TabIndex = 1;
             this.pnlAdd.Visible = false;
             // 
@@ -118,13 +124,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(335, 324);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 52);
             this.button1.TabIndex = 8;
             this.button1.Text = "Add Item";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label4
             // 
@@ -174,7 +180,7 @@
             // 
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStock.Location = new System.Drawing.Point(293, 161);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(248, 26);
             this.txtStock.TabIndex = 3;
@@ -183,7 +189,7 @@
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(293, 111);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(248, 26);
             this.txtPrice.TabIndex = 2;
@@ -193,7 +199,7 @@
             this.cmbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Location = new System.Drawing.Point(293, 210);
-            this.cmbCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(248, 28);
             this.cmbCategory.TabIndex = 1;
@@ -202,7 +208,7 @@
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(293, 50);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(248, 26);
             this.txtName.TabIndex = 0;
@@ -210,37 +216,112 @@
             // pnlEditMenu
             // 
             this.pnlEditMenu.BackColor = System.Drawing.Color.Transparent;
-            this.pnlEditMenu.Controls.Add(this.label6);
-            this.pnlEditMenu.Controls.Add(this.txtNewStock);
-            this.pnlEditMenu.Controls.Add(this.btnApplyStock);
+            this.pnlEditMenu.Controls.Add(this.ItemsGV);
             this.pnlEditMenu.Controls.Add(this.label5);
-            this.pnlEditMenu.Controls.Add(this.cmbEdit);
+            this.pnlEditMenu.Controls.Add(this.label7);
+            this.pnlEditMenu.Controls.Add(this.txtItemName);
+            this.pnlEditMenu.Controls.Add(this.txtCount);
+            this.pnlEditMenu.Controls.Add(this.btnApplyStock);
             this.pnlEditMenu.Location = new System.Drawing.Point(2, 119);
-            this.pnlEditMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEditMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditMenu.Name = "pnlEditMenu";
-            this.pnlEditMenu.Size = new System.Drawing.Size(782, 650);
+            this.pnlEditMenu.Size = new System.Drawing.Size(780, 1111);
             this.pnlEditMenu.TabIndex = 2;
             this.pnlEditMenu.Visible = false;
             // 
-            // label6
+            // ItemsGV
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(200, 153);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(99, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "New Stock:";
+            this.ItemsGV.AllowUserToAddRows = false;
+            this.ItemsGV.AllowUserToDeleteRows = false;
+            this.ItemsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ItemID,
+            this.Item,
+            this.Category,
+            this.Count});
+            this.ItemsGV.Location = new System.Drawing.Point(24, 123);
+            this.ItemsGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ItemsGV.MultiSelect = false;
+            this.ItemsGV.Name = "ItemsGV";
+            this.ItemsGV.ReadOnly = true;
+            this.ItemsGV.RowHeadersWidth = 51;
+            this.ItemsGV.RowTemplate.Height = 26;
+            this.ItemsGV.Size = new System.Drawing.Size(740, 975);
+            this.ItemsGV.TabIndex = 8;
+            this.ItemsGV.SelectionChanged += new System.EventHandler(this.ItemsGV_SelectionChanged);
             // 
-            // txtNewStock
+            // ItemID
             // 
-            this.txtNewStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewStock.Location = new System.Drawing.Point(322, 149);
-            this.txtNewStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNewStock.Name = "txtNewStock";
-            this.txtNewStock.Size = new System.Drawing.Size(162, 26);
-            this.txtNewStock.TabIndex = 6;
+            this.ItemID.HeaderText = "ItemID";
+            this.ItemID.MinimumWidth = 6;
+            this.ItemID.Name = "ItemID";
+            this.ItemID.ReadOnly = true;
+            this.ItemID.Visible = false;
+            this.ItemID.Width = 125;
+            // 
+            // Item
+            // 
+            this.Item.HeaderText = "Item";
+            this.Item.MinimumWidth = 6;
+            this.Item.Name = "Item";
+            this.Item.ReadOnly = true;
+            this.Item.Width = 200;
+            // 
+            // Category
+            // 
+            this.Category.HeaderText = "Category";
+            this.Category.MinimumWidth = 6;
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            this.Category.Width = 160;
+            // 
+            // Count
+            // 
+            this.Count.HeaderText = "Count";
+            this.Count.MinimumWidth = 6;
+            this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
+            this.Count.Width = 160;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 25);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 20);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(27, 55);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Stock:";
+            // 
+            // txtItemName
+            // 
+            this.txtItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemName.Location = new System.Drawing.Point(178, 24);
+            this.txtItemName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(394, 29);
+            this.txtItemName.TabIndex = 6;
+            // 
+            // txtCount
+            // 
+            this.txtCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCount.Location = new System.Drawing.Point(178, 55);
+            this.txtCount.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCount.Name = "txtCount";
+            this.txtCount.Size = new System.Drawing.Size(61, 29);
+            this.txtCount.TabIndex = 6;
             // 
             // btnApplyStock
             // 
@@ -248,35 +329,14 @@
             this.btnApplyStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnApplyStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApplyStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyStock.Location = new System.Drawing.Point(307, 219);
-            this.btnApplyStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApplyStock.Location = new System.Drawing.Point(616, 65);
+            this.btnApplyStock.Margin = new System.Windows.Forms.Padding(2);
             this.btnApplyStock.Name = "btnApplyStock";
-            this.btnApplyStock.Size = new System.Drawing.Size(172, 50);
+            this.btnApplyStock.Size = new System.Drawing.Size(148, 36);
             this.btnApplyStock.TabIndex = 5;
             this.btnApplyStock.Text = "Apply changes";
             this.btnApplyStock.UseVisualStyleBackColor = true;
-            this.btnApplyStock.Click += new System.EventHandler(this.btnApplyStock_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(28, 82);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(293, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Choose an item to adjust the stock:";
-            // 
-            // cmbEdit
-            // 
-            this.cmbEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbEdit.FormattingEnabled = true;
-            this.cmbEdit.Location = new System.Drawing.Point(322, 80);
-            this.cmbEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbEdit.Name = "cmbEdit";
-            this.cmbEdit.Size = new System.Drawing.Size(393, 28);
-            this.cmbEdit.TabIndex = 3;
+            this.btnApplyStock.Click += new System.EventHandler(this.BtnApplyStock_Click);
             // 
             // ItemForm
             // 
@@ -290,7 +350,7 @@
             this.Controls.Add(this.pnlAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ItemForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ItemForm";
@@ -301,6 +361,7 @@
             this.pnlAdd.PerformLayout();
             this.pnlEditMenu.ResumeLayout(false);
             this.pnlEditMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,10 +384,15 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem returnToManagementToolStripMenuItem;
         private System.Windows.Forms.Panel pnlEditMenu;
-        private System.Windows.Forms.ComboBox cmbEdit;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNewStock;
         private System.Windows.Forms.Button btnApplyStock;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCount;
+        private System.Windows.Forms.DataGridView ItemsGV;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Count;
     }
 }

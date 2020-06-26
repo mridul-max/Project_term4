@@ -34,7 +34,7 @@
             this.removeEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.returnToManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlAdd = new System.Windows.Forms.Panel();
-            this.btnEmpApply = new System.Windows.Forms.Button();
+            this.btnAddEmpApply = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,8 +45,6 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlEditEmp = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmbAllEmp = new System.Windows.Forms.ComboBox();
             this.btnApplyEdit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -54,8 +52,15 @@
             this.txtEditUser = new System.Windows.Forms.TextBox();
             this.pnlRemove = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbRemove = new System.Windows.Forms.ComboBox();
             this.btnRemove = new System.Windows.Forms.Button();
+            this.listRemoveEmployee = new System.Windows.Forms.ListView();
+            this.employeeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.employeeName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.employeeType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listEditEmployee = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlEditEmp.SuspendLayout();
@@ -84,7 +89,7 @@
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
             this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(133, 25);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
-            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.AddEmployeeToolStripMenuItem_Click);
             // 
             // editEmployeeToolStripMenuItem
             // 
@@ -92,7 +97,7 @@
             this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
             this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(132, 25);
             this.editEmployeeToolStripMenuItem.Text = "Edit Employee";
-            this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.editEmployeeToolStripMenuItem_Click);
+            this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.EditEmployeeToolStripMenuItem_Click);
             // 
             // removeEmployeeToolStripMenuItem
             // 
@@ -100,7 +105,7 @@
             this.removeEmployeeToolStripMenuItem.Name = "removeEmployeeToolStripMenuItem";
             this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 25);
             this.removeEmployeeToolStripMenuItem.Text = "Remove Employee";
-            this.removeEmployeeToolStripMenuItem.Click += new System.EventHandler(this.removeEmployeeToolStripMenuItem_Click);
+            this.removeEmployeeToolStripMenuItem.Click += new System.EventHandler(this.RemoveEmployeeToolStripMenuItem_Click);
             // 
             // returnToManagementToolStripMenuItem
             // 
@@ -108,12 +113,12 @@
             this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
             this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(199, 25);
             this.returnToManagementToolStripMenuItem.Text = "Return to management";
-            this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.returnToManagementToolStripMenuItem_Click);
+            this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.ReturnToManagementToolStripMenuItem_Click);
             // 
             // pnlAdd
             // 
             this.pnlAdd.BackColor = System.Drawing.Color.Transparent;
-            this.pnlAdd.Controls.Add(this.btnEmpApply);
+            this.pnlAdd.Controls.Add(this.btnAddEmpApply);
             this.pnlAdd.Controls.Add(this.label4);
             this.pnlAdd.Controls.Add(this.label3);
             this.pnlAdd.Controls.Add(this.label2);
@@ -122,27 +127,27 @@
             this.pnlAdd.Controls.Add(this.txtPassword);
             this.pnlAdd.Controls.Add(this.txtUsername);
             this.pnlAdd.Controls.Add(this.txtName);
-            this.pnlAdd.Location = new System.Drawing.Point(0, 98);
-            this.pnlAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAdd.Location = new System.Drawing.Point(0, 46);
+            this.pnlAdd.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAdd.Name = "pnlAdd";
-            this.pnlAdd.Size = new System.Drawing.Size(784, 468);
+            this.pnlAdd.Size = new System.Drawing.Size(784, 1180);
             this.pnlAdd.TabIndex = 1;
             this.pnlAdd.Visible = false;
             // 
-            // btnEmpApply
+            // btnAddEmpApply
             // 
-            this.btnEmpApply.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
-            this.btnEmpApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEmpApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpApply.Location = new System.Drawing.Point(362, 344);
-            this.btnEmpApply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnEmpApply.Name = "btnEmpApply";
-            this.btnEmpApply.Size = new System.Drawing.Size(158, 49);
-            this.btnEmpApply.TabIndex = 8;
-            this.btnEmpApply.Text = "Apply";
-            this.btnEmpApply.UseVisualStyleBackColor = true;
-            this.btnEmpApply.Click += new System.EventHandler(this.btnEmpApply_Click);
+            this.btnAddEmpApply.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnAddEmpApply.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddEmpApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmpApply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmpApply.Location = new System.Drawing.Point(362, 344);
+            this.btnAddEmpApply.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddEmpApply.Name = "btnAddEmpApply";
+            this.btnAddEmpApply.Size = new System.Drawing.Size(158, 49);
+            this.btnAddEmpApply.TabIndex = 8;
+            this.btnAddEmpApply.Text = "Apply";
+            this.btnAddEmpApply.UseVisualStyleBackColor = true;
+            this.btnAddEmpApply.Click += new System.EventHandler(this.BtnEmpApply_Click);
             // 
             // label4
             // 
@@ -190,55 +195,55 @@
             // 
             // cmbEmpType
             // 
+            this.cmbEmpType.Font = new System.Drawing.Font("Tahoma", 14F);
             this.cmbEmpType.FormattingEnabled = true;
             this.cmbEmpType.Location = new System.Drawing.Point(338, 281);
-            this.cmbEmpType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbEmpType.Margin = new System.Windows.Forms.Padding(2);
             this.cmbEmpType.Name = "cmbEmpType";
-            this.cmbEmpType.Size = new System.Drawing.Size(224, 21);
+            this.cmbEmpType.Size = new System.Drawing.Size(224, 31);
             this.cmbEmpType.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(338, 226);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(224, 26);
+            this.txtPassword.Size = new System.Drawing.Size(224, 29);
             this.txtPassword.TabIndex = 2;
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(338, 175);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(224, 26);
+            this.txtUsername.Size = new System.Drawing.Size(224, 29);
             this.txtUsername.TabIndex = 1;
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(338, 124);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(224, 26);
+            this.txtName.Size = new System.Drawing.Size(224, 29);
             this.txtName.TabIndex = 0;
             // 
             // pnlEditEmp
             // 
             this.pnlEditEmp.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEditEmp.Controls.Add(this.listEditEmployee);
             this.pnlEditEmp.Controls.Add(this.label10);
-            this.pnlEditEmp.Controls.Add(this.label9);
-            this.pnlEditEmp.Controls.Add(this.cmbAllEmp);
             this.pnlEditEmp.Controls.Add(this.btnApplyEdit);
             this.pnlEditEmp.Controls.Add(this.label6);
             this.pnlEditEmp.Controls.Add(this.label7);
             this.pnlEditEmp.Controls.Add(this.txtEditPassword);
             this.pnlEditEmp.Controls.Add(this.txtEditUser);
-            this.pnlEditEmp.Location = new System.Drawing.Point(0, 98);
-            this.pnlEditEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEditEmp.Location = new System.Drawing.Point(0, 48);
+            this.pnlEditEmp.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEditEmp.Name = "pnlEditEmp";
-            this.pnlEditEmp.Size = new System.Drawing.Size(784, 466);
+            this.pnlEditEmp.Size = new System.Drawing.Size(784, 1180);
             this.pnlEditEmp.TabIndex = 9;
             this.pnlEditEmp.Visible = false;
             // 
@@ -246,33 +251,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(273, 128);
+            this.label10.Location = new System.Drawing.Point(102, 12);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(336, 20);
             this.label10.TabIndex = 11;
             this.label10.Text = "Only enter the fields you want to change:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(165, 32);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(153, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Pick an employee:";
-            // 
-            // cmbAllEmp
-            // 
-            this.cmbAllEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAllEmp.FormattingEnabled = true;
-            this.cmbAllEmp.Location = new System.Drawing.Point(335, 27);
-            this.cmbAllEmp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbAllEmp.Name = "cmbAllEmp";
-            this.cmbAllEmp.Size = new System.Drawing.Size(242, 30);
-            this.cmbAllEmp.TabIndex = 9;
             // 
             // btnApplyEdit
             // 
@@ -280,20 +264,20 @@
             this.btnApplyEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnApplyEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApplyEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplyEdit.Location = new System.Drawing.Point(335, 344);
-            this.btnApplyEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnApplyEdit.Location = new System.Drawing.Point(578, 19);
+            this.btnApplyEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnApplyEdit.Name = "btnApplyEdit";
             this.btnApplyEdit.Size = new System.Drawing.Size(158, 49);
             this.btnApplyEdit.TabIndex = 8;
             this.btnApplyEdit.Text = "Apply Changes";
             this.btnApplyEdit.UseVisualStyleBackColor = true;
-            this.btnApplyEdit.Click += new System.EventHandler(this.btnApplyEdit_Click);
+            this.btnApplyEdit.Click += new System.EventHandler(this.BtnApplyEdit_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(180, 250);
+            this.label6.Location = new System.Drawing.Point(9, 134);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 20);
@@ -304,7 +288,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(180, 197);
+            this.label7.Location = new System.Drawing.Point(9, 81);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 20);
@@ -313,55 +297,45 @@
             // 
             // txtEditPassword
             // 
-            this.txtEditPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditPassword.Location = new System.Drawing.Point(335, 246);
-            this.txtEditPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEditPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditPassword.Location = new System.Drawing.Point(164, 130);
+            this.txtEditPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtEditPassword.Name = "txtEditPassword";
-            this.txtEditPassword.Size = new System.Drawing.Size(224, 26);
+            this.txtEditPassword.Size = new System.Drawing.Size(242, 29);
             this.txtEditPassword.TabIndex = 2;
             // 
             // txtEditUser
             // 
-            this.txtEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditUser.Location = new System.Drawing.Point(335, 195);
-            this.txtEditUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditUser.Location = new System.Drawing.Point(164, 79);
+            this.txtEditUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtEditUser.Name = "txtEditUser";
-            this.txtEditUser.Size = new System.Drawing.Size(224, 26);
+            this.txtEditUser.Size = new System.Drawing.Size(242, 29);
             this.txtEditUser.TabIndex = 1;
             // 
             // pnlRemove
             // 
             this.pnlRemove.BackColor = System.Drawing.Color.Transparent;
+            this.pnlRemove.Controls.Add(this.listRemoveEmployee);
             this.pnlRemove.Controls.Add(this.label8);
-            this.pnlRemove.Controls.Add(this.cmbRemove);
             this.pnlRemove.Controls.Add(this.btnRemove);
-            this.pnlRemove.Location = new System.Drawing.Point(0, 95);
-            this.pnlRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlRemove.Location = new System.Drawing.Point(0, 48);
+            this.pnlRemove.Margin = new System.Windows.Forms.Padding(2);
             this.pnlRemove.Name = "pnlRemove";
-            this.pnlRemove.Size = new System.Drawing.Size(784, 466);
+            this.pnlRemove.Size = new System.Drawing.Size(784, 1182);
             this.pnlRemove.TabIndex = 12;
             this.pnlRemove.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(165, 32);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(15, 32);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(153, 20);
+            this.label8.Size = new System.Drawing.Size(227, 29);
             this.label8.TabIndex = 10;
             this.label8.Text = "Pick an employee:";
-            // 
-            // cmbRemove
-            // 
-            this.cmbRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbRemove.FormattingEnabled = true;
-            this.cmbRemove.Location = new System.Drawing.Point(335, 27);
-            this.cmbRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cmbRemove.Name = "cmbRemove";
-            this.cmbRemove.Size = new System.Drawing.Size(242, 30);
-            this.cmbRemove.TabIndex = 9;
             // 
             // btnRemove
             // 
@@ -369,14 +343,79 @@
             this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(335, 171);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemove.Location = new System.Drawing.Point(564, 19);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(194, 53);
             this.btnRemove.TabIndex = 8;
             this.btnRemove.Text = "Remove Employee";
             this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
+            // 
+            // listRemoveEmployee
+            // 
+            this.listRemoveEmployee.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.employeeID,
+            this.employeeName,
+            this.employeeType});
+            this.listRemoveEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listRemoveEmployee.FullRowSelect = true;
+            this.listRemoveEmployee.HideSelection = false;
+            this.listRemoveEmployee.Location = new System.Drawing.Point(27, 88);
+            this.listRemoveEmployee.MultiSelect = false;
+            this.listRemoveEmployee.Name = "listRemoveEmployee";
+            this.listRemoveEmployee.Size = new System.Drawing.Size(731, 1006);
+            this.listRemoveEmployee.TabIndex = 11;
+            this.listRemoveEmployee.UseCompatibleStateImageBehavior = false;
+            this.listRemoveEmployee.View = System.Windows.Forms.View.Details;
+            // 
+            // employeeID
+            // 
+            this.employeeID.Text = "ID";
+            this.employeeID.Width = 128;
+            // 
+            // employeeName
+            // 
+            this.employeeName.Text = "Name";
+            this.employeeName.Width = 119;
+            // 
+            // employeeType
+            // 
+            this.employeeType.Text = "Type";
+            this.employeeType.Width = 106;
+            // 
+            // listEditEmployee
+            // 
+            this.listEditEmployee.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listEditEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listEditEmployee.FullRowSelect = true;
+            this.listEditEmployee.HideSelection = false;
+            this.listEditEmployee.Location = new System.Drawing.Point(27, 186);
+            this.listEditEmployee.MultiSelect = false;
+            this.listEditEmployee.Name = "listEditEmployee";
+            this.listEditEmployee.Size = new System.Drawing.Size(731, 907);
+            this.listEditEmployee.TabIndex = 12;
+            this.listEditEmployee.UseCompatibleStateImageBehavior = false;
+            this.listEditEmployee.View = System.Windows.Forms.View.Details;
+            this.listEditEmployee.SelectedIndexChanged += new System.EventHandler(this.listEditEmployee_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 128;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 119;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Type";
+            this.columnHeader3.Width = 106;
             // 
             // EditEmployee
             // 
@@ -386,16 +425,15 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pnlRemove);
             this.Controls.Add(this.pnlEditEmp);
             this.Controls.Add(this.pnlAdd);
+            this.Controls.Add(this.pnlRemove);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditEmployee";
-            this.Load += new System.EventHandler(this.EditEmployee_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlAdd.ResumeLayout(false);
@@ -425,11 +463,9 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ToolStripMenuItem returnToManagementToolStripMenuItem;
-        private System.Windows.Forms.Button btnEmpApply;
+        private System.Windows.Forms.Button btnAddEmpApply;
         private System.Windows.Forms.Panel pnlEditEmp;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbAllEmp;
         private System.Windows.Forms.Button btnApplyEdit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEditPassword;
@@ -437,7 +473,14 @@
         private System.Windows.Forms.TextBox txtEditUser;
         private System.Windows.Forms.Panel pnlRemove;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cmbRemove;
         private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.ListView listRemoveEmployee;
+        private System.Windows.Forms.ColumnHeader employeeID;
+        private System.Windows.Forms.ColumnHeader employeeName;
+        private System.Windows.Forms.ColumnHeader employeeType;
+        private System.Windows.Forms.ListView listEditEmployee;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

@@ -21,7 +21,7 @@ namespace ChapeauUI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             bool IsError = false;  // if false apply changes.
             if (String.IsNullOrWhiteSpace(txtName.Text))
@@ -95,7 +95,7 @@ namespace ChapeauUI
             }
         }
 
-        private void addMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnlAdd.Show();
             pnlEditMenu.Hide();
@@ -107,67 +107,86 @@ namespace ChapeauUI
 
         }
 
-        private void returnToManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ReturnToManagementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             ManagerScreen screen = new ManagerScreen();
             screen.ShowDialog();
 
-        }          
+        }
+
+        /// <summary>
+        /// Window load event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ItemForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void editMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EditMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pnlEditMenu.Show();
             pnlAdd.Hide();
 
             List<ChapeauModel.MenuItem> AllItems = serviceItem.GetMenuItems();
-            cmbEdit.Items.Clear();
+
             foreach (ChapeauModel.MenuItem item in AllItems)
             {
-                cmbEdit.Items.Add(item.ID+":"+item.Name+"  "+item.Stock.ToString());
+                ItemsGV.Rows.Add(item.ID, item.Name, item.CategoryType, item.Stock);
             }
         }
 
-        private void btnApplyStock_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Update MenuItem event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnApplyStock_Click(object sender, EventArgs e)
         {
             bool IsError = false;
 
-            if(cmbEdit.SelectedIndex<0)
+            if (ItemsGV.SelectedRows.Count <= 0)
             {
-                IsError = true;
+                return;
             }
 
-            if(String.IsNullOrWhiteSpace(txtNewStock.Text)|| !System.Text.RegularExpressions.Regex.IsMatch(txtStock.Text, "^[0-9]*$"))
+            if (IsError)
             {
-                IsError = true;
-            }
-
-
-
-            if(IsError)
-            {
-                MessageBox.Show("Please fill the values properly","Fields required",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Please fill the values properly", "Fields required", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-
-                //get's the id from combo box by splitting it.
-                string selectedItem = cmbEdit.SelectedItem.ToString();
-                string[] empId = selectedItem.Split(':');
-                ChapeauModel.MenuItem menuItem = serviceItem.GetById(int.Parse(empId[0]));
-                menuItem.Stock = int.Parse(txtNewStock.Text);
-
-
+                int selectedItemId = (int)ItemsGV.SelectedRows[0].Cells[0].Value;
+                ChapeauModel.MenuItem menuItem = serviceItem.GetById(selectedItemId);
+                menuItem.Stock = int.Parse(txtCount.Text);
+                menuItem.Name = txtItemName.Text;
                 serviceItem.UpdateStockOfItem(menuItem);
-
+                txtCount.Text="";
+                txtItemName.Text="";
 
                 MessageBox.Show("Stock has been updated", "Stock updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                //Refresh GridView Data
+                List<ChapeauModel.MenuItem> AllItems = serviceItem.GetMenuItems();
+                ItemsGV.Rows.Clear();
+                foreach (ChapeauModel.MenuItem item in AllItems)
+                {
+                    ItemsGV.Rows.Add(item.ID, item.Name, item.CategoryType, item.Stock);
+                }
 
+            }
+        }
+
+
+        private void ItemsGV_SelectionChanged(object sender, EventArgs e)
+        {
+            if (ItemsGV.SelectedRows.Count > 0)
+            {
+                var id = ItemsGV.SelectedRows[0].Cells[0].Value;
+                txtCount.Text = ItemsGV.SelectedRows[0].Cells[3].Value.ToString();
+                txtItemName.Text = ItemsGV.SelectedRows[0].Cells[1].Value.ToString();
             }
         }
     }
