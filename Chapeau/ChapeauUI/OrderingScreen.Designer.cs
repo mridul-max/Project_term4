@@ -62,9 +62,9 @@
             this.flpCurrentOrderItems.BackColor = System.Drawing.Color.Transparent;
             this.flpCurrentOrderItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpCurrentOrderItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpCurrentOrderItems.Location = new System.Drawing.Point(395, 113);
+            this.flpCurrentOrderItems.Location = new System.Drawing.Point(395, 76);
             this.flpCurrentOrderItems.Name = "flpCurrentOrderItems";
-            this.flpCurrentOrderItems.Size = new System.Drawing.Size(380, 80);
+            this.flpCurrentOrderItems.Size = new System.Drawing.Size(380, 117);
             this.flpCurrentOrderItems.TabIndex = 2;
             // 
             // lblTableNr
@@ -72,7 +72,7 @@
             this.lblTableNr.AutoSize = true;
             this.lblTableNr.BackColor = System.Drawing.Color.Transparent;
             this.lblTableNr.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableNr.Location = new System.Drawing.Point(13, 43);
+            this.lblTableNr.Location = new System.Drawing.Point(13, 9);
             this.lblTableNr.Name = "lblTableNr";
             this.lblTableNr.Size = new System.Drawing.Size(112, 31);
             this.lblTableNr.TabIndex = 4;
@@ -84,22 +84,27 @@
             this.tabMenu.Controls.Add(this.tabDrinks);
             this.tabMenu.Controls.Add(this.tabDinner);
             this.tabMenu.Controls.Add(this.tabLunch);
-            this.tabMenu.Location = new System.Drawing.Point(12, 88);
+            this.tabMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabMenu.ItemSize = new System.Drawing.Size(125, 29);
+            this.tabMenu.Location = new System.Drawing.Point(12, 43);
             this.tabMenu.Name = "tabMenu";
             this.tabMenu.SelectedIndex = 0;
-            this.tabMenu.Size = new System.Drawing.Size(377, 806);
+            this.tabMenu.Size = new System.Drawing.Size(379, 1186);
+            this.tabMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabMenu.TabIndex = 3;
             // 
             // tabDrinks
             // 
             this.tabDrinks.BackColor = System.Drawing.Color.Transparent;
             this.tabDrinks.Controls.Add(this.flpDrinkItems);
-            this.tabDrinks.Location = new System.Drawing.Point(4, 22);
+            this.tabDrinks.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabDrinks.Location = new System.Drawing.Point(4, 33);
             this.tabDrinks.Name = "tabDrinks";
             this.tabDrinks.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDrinks.Size = new System.Drawing.Size(369, 780);
+            this.tabDrinks.Size = new System.Drawing.Size(371, 1149);
             this.tabDrinks.TabIndex = 0;
             this.tabDrinks.Text = "Drinks";
+            this.tabDrinks.UseVisualStyleBackColor = true;
             // 
             // flpDrinkItems
             // 
@@ -109,19 +114,20 @@
             this.flpDrinkItems.Location = new System.Drawing.Point(3, 3);
             this.flpDrinkItems.Margin = new System.Windows.Forms.Padding(3, 3, 3, 20);
             this.flpDrinkItems.Name = "flpDrinkItems";
-            this.flpDrinkItems.Size = new System.Drawing.Size(357, 80);
+            this.flpDrinkItems.Size = new System.Drawing.Size(362, 80);
             this.flpDrinkItems.TabIndex = 1;
             // 
             // tabDinner
             // 
             this.tabDinner.BackColor = System.Drawing.Color.Transparent;
             this.tabDinner.Controls.Add(this.flpDinnerItems);
-            this.tabDinner.Location = new System.Drawing.Point(4, 22);
+            this.tabDinner.Location = new System.Drawing.Point(4, 33);
             this.tabDinner.Name = "tabDinner";
             this.tabDinner.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDinner.Size = new System.Drawing.Size(369, 780);
+            this.tabDinner.Size = new System.Drawing.Size(371, 1149);
             this.tabDinner.TabIndex = 1;
             this.tabDinner.Text = "Dinner";
+            this.tabDinner.UseVisualStyleBackColor = true;
             // 
             // flpDinnerItems
             // 
@@ -138,12 +144,13 @@
             // 
             this.tabLunch.BackColor = System.Drawing.Color.Transparent;
             this.tabLunch.Controls.Add(this.flpLunchItems);
-            this.tabLunch.Location = new System.Drawing.Point(4, 22);
+            this.tabLunch.Location = new System.Drawing.Point(4, 33);
             this.tabLunch.Name = "tabLunch";
             this.tabLunch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLunch.Size = new System.Drawing.Size(369, 780);
+            this.tabLunch.Size = new System.Drawing.Size(371, 1149);
             this.tabLunch.TabIndex = 2;
             this.tabLunch.Text = "Lunch";
+            this.tabLunch.UseVisualStyleBackColor = true;
             // 
             // flpLunchItems
             // 

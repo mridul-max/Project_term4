@@ -48,7 +48,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.LimeGreen;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(237, 32);
+            this.btnConfirm.Location = new System.Drawing.Point(222, 32);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(128, 42);
             this.btnConfirm.TabIndex = 7;
