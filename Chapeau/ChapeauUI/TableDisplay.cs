@@ -17,8 +17,6 @@ namespace ChapeauUI
     {
         private Table CurrentTable;
         private OrderService orderService;
-        private ReservationService reservationService;
-        private List<Reservation> reservations;
         private List<OrderItem> orderItems;
         private TableService tableService;
         public TableDisplay(Table currentTable)
@@ -26,7 +24,6 @@ namespace ChapeauUI
             InitializeComponent();
 
             orderService = new OrderService();
-            reservationService = new ReservationService();
             tableService = new TableService();
             this.CurrentTable = tableService.GetById(currentTable.TableNumber);
         }
@@ -39,7 +36,6 @@ namespace ChapeauUI
         private void UpdateTableView()
         {
             FillCurrentOrders();
-            UpdateReservationStatus();
             UpdateTableInformation();
 
             //If table has no orders yet, user is unable to check out even if the table is occupied.
@@ -47,21 +43,8 @@ namespace ChapeauUI
 
         }
         //Gets the reservations according to now's datetime and table number and adds it to the list.
-        private void UpdateReservationStatus()
-        {
-            reservations = reservationService.GetAllById(CurrentTable.TableNumber);     
-            
-            if (pnlReserve.Controls.Count > 0)
-                pnlReserve.Controls.Clear();
-
-            foreach (Reservation reservation in reservations)
-            {
-                UCReservationForm form = new UCReservationForm(reservation);
-                pnlReserve.Controls.Add(form);
-            }
-
-                
-        }
+        
+        
 
 
         //fills the labels according to the information.
@@ -81,15 +64,7 @@ namespace ChapeauUI
                 btnOccupy.Text = "Mark as occupied";
             }
 
-            if (reservations.Count <= 0)
-            {
-                lblResStatus.Text = "Reservations:None available";
-            }
-            else
-            {
-                lblResStatus.Text = "Reservations:";
-            }
-
+         
 
             if (orderItems.Count <= 0)
                 BtnChout.Enabled = false;
@@ -122,13 +97,6 @@ namespace ChapeauUI
 
 
         //opens reservation screen
-        private void Btnreserve_Click(object sender, EventArgs e)
-        {
-            ReservationForm form = new ReservationForm(CurrentTable);
-            form.ShowDialog();
-            UpdateTableView();
-        }
-
 
         //opens ordering screen
         private void BtnOrder_Click(object sender, EventArgs e)
