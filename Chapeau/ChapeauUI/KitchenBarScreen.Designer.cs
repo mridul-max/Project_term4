@@ -221,7 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 749);
+            this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.lblSelectInstruction);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReady);
