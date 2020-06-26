@@ -75,11 +75,8 @@ namespace ChapeauUI
                     foreach (OrderItem F in Dish)
                     {
                         //tablenumber can find by passing the orderID
-                        if(F.orderState==OrderState.PrepairingOrder)
-                        {
                             int table = orderService.GetOrderTable(F.OrderID);
                             listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString(), table.ToString(), F.MenuItem.ID.ToString() }));
-                        }
                         
                     }
 
