@@ -84,7 +84,22 @@ namespace ChapeauDAL
             conn.Close();
             UpdateOrderStates(payment.OrderID);
         }
-
+        //YOU ARE HERE
+        public OrderItem GetOrderItemById(OrderItem item)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("Select *, MenuItem.*,OrderState.OrderStateInformation from OrderItem Inner join MenuItem ON MenuItem.MenuItemID=OrderItem.MenuItemID inner join OrderState on OrderState.OrderStateKey= Orderitem.OrderStateKey Where ID=@ID;", conn);
+            cmd.Parameters.AddWithValue("@ID",item.OrderItemID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            OrderItem orderItem = null;
+            if(reader.Read())
+            {
+                orderItem = ReadOrderItem(reader);
+            }
+            reader.Close();
+            conn.Close();
+            return orderItem;
+        }
         public void UpdateOrderStates(int orderID)
         {
             string query = "Update [OrderItem] SET [OrderStateKey]='OS' WHERE OrderID=@Id;";
@@ -199,6 +214,25 @@ namespace ChapeauDAL
             }
             return orderItems;
         }
+        private OrderItem ReadOrderItem(SqlDataReader dr)
+        {
+                MenuItem menuItem = new MenuItem()
+                {
+                    Name = dr["ItemName"].ToString(),
+                    Price = float.Parse(dr["Price"].ToString()),
+                    Stock = (int)dr["Stock"],
+                    Description = dr["Description"].ToString(),
+                };
+                OrderItem orderItem = new OrderItem()
+                {
+                    OrderItemID = (int)dr["ID"],
+                    MenuItem = menuItem,
+                    Amount = (int)dr["Amount"],
+                    DateTimeAdded = (DateTime)dr["LastStateChanged"],
+                    orderState = (OrderState)Enum.Parse(typeof(OrderState), dr["OrderStateInformation"].ToString()),
+                };                        
+            return orderItem;
+        }
 
         //Get all food for kitchen view
         public List<OrderItem> GetAllRunningFood()
@@ -287,6 +321,24 @@ namespace ChapeauDAL
             reader.Close(); 
             conn.Close();
         }
-        
+        public void UpdateReadyItem(OrderItem item)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RD' Where ID = @ID", conn);
+            cmd.Parameters.AddWithValue("@ID", item.OrderItemID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+        }
+        public void UpdatePreparingItem(OrderItem item)
+        {
+            OpenConnection();
+            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'PR' Where ID = @ID", conn);
+            cmd.Parameters.AddWithValue("@ID", item.OrderItemID);
+            SqlDataReader reader = cmd.ExecuteReader();
+            reader.Close();
+            conn.Close();
+        }
+
     }
 }

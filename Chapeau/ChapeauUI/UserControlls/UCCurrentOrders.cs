@@ -16,16 +16,15 @@ namespace ChapeauUI.UserControlls
     {
 
         private Timer timer;
+        OrderService service;
+
 
         private OrderItem orderItem { get; set; }
-       
-   
-
-
         public UCCurrentOrders(OrderItem orderItem)
         {
             InitializeComponent();
             timer = new Timer();
+            service = new OrderService();
             this.orderItem = orderItem;
         }
 
@@ -34,28 +33,44 @@ namespace ChapeauUI.UserControlls
         {
             lblItemName.Text = orderItem.MenuItem.Name;
             lblAmount.Text = orderItem.Amount.ToString();
-            
+
+            UpdateLabels();
+            timer.Tick += Timer_Tick;
+            timer.Interval = 1000;
+            timer.Start();
+
+        }
+        private void UpdateLabels()
+        {
             //There is no served order because it does not appear in waiter's screen if the order is served.
-            
+
             if (orderItem.orderState == OrderState.ReadyToDeliver)
             {
                 lblStatus.Text = "Ready to deliver";
                 lblTimer.Text = string.Empty;
+                btnRemake.Visible = false;
                 btnServed.Visible = true;
                 //if this order item is ready to deliver and not something else, make the button visible.
             }
-            else if(orderItem.orderState==OrderState.PrepairingOrder)
+            else if (orderItem.orderState == OrderState.PrepairingOrder)
             {
                 lblStatus.Text = "Preparing order";
+                btnRemake.Visible = false;
+                btnServed.Visible = false;
             }
             else
             {
-                lblStatus.Text = "Running order";               
-            }                 
-           
-                timer.Tick += Timer_Tick;
-                timer.Interval = 1000;
-                timer.Start();                     
+                lblStatus.Text = "Order is served";               
+                btnRemake.Visible = true;
+                btnServed.Visible = false;
+            }
+
+        }
+        //We are getting it again to have the most current version.
+        private void RefreshOrderItem()
+        {
+            orderItem = service.GetOrderItemsById(orderItem);
+            UpdateLabels();
 
         }
 
@@ -73,11 +88,20 @@ namespace ChapeauUI.UserControlls
 
         private void btnServed_Click(object sender, EventArgs e)
         {
-            OrderService service = new OrderService(); //Since i will only use it in this button method, I create the object here.
-
             service.SetOrderItemAsServed(orderItem);
-            this.Hide();
-            
+            btnRemake.Visible = true;
+            RefreshOrderItem();
+
         }
+
+        //For remaking the order.
+        private void button1_Click(object sender, EventArgs e)
+        {
+            service.UpdatePreparingItem(orderItem);
+            RefreshOrderItem();
+
+        }
+
+     
     }
 }
