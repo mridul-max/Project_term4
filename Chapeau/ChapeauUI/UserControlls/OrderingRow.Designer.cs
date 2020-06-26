@@ -38,52 +38,61 @@
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(30, 5);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(3, 5);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(85, 13);
+            this.lblName.Size = new System.Drawing.Size(347, 32);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Menu item name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMinus
             // 
-            this.btnMinus.Location = new System.Drawing.Point(222, 1);
+            this.btnMinus.BackColor = System.Drawing.Color.White;
+            this.btnMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinus.Location = new System.Drawing.Point(112, 36);
             this.btnMinus.Margin = new System.Windows.Forms.Padding(0);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(22, 21);
+            this.btnMinus.Size = new System.Drawing.Size(40, 35);
             this.btnMinus.TabIndex = 1;
             this.btnMinus.Text = "-";
-            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.UseVisualStyleBackColor = false;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // btnPlus
             // 
-            this.btnPlus.Location = new System.Drawing.Point(274, 1);
+            this.btnPlus.BackColor = System.Drawing.Color.White;
+            this.btnPlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlus.Location = new System.Drawing.Point(206, 36);
             this.btnPlus.Margin = new System.Windows.Forms.Padding(0);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(22, 21);
+            this.btnPlus.Size = new System.Drawing.Size(40, 35);
             this.btnPlus.TabIndex = 2;
             this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.UseVisualStyleBackColor = false;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(253, 5);
+            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount.Location = new System.Drawing.Point(168, 42);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(13, 13);
+            this.lblAmount.Size = new System.Drawing.Size(23, 25);
             this.lblAmount.TabIndex = 3;
             this.lblAmount.Text = "0";
             this.lblAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAmount.Click += new System.EventHandler(this.lblAmount_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnEdit.Image = global::ChapeauUI.Properties.Resources.EditIcon;
-            this.btnEdit.Location = new System.Drawing.Point(0, -1);
+            this.btnEdit.Location = new System.Drawing.Point(315, 36);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(25, 25);
+            this.btnEdit.Size = new System.Drawing.Size(35, 35);
             this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnEdit.TabIndex = 4;
             this.btnEdit.TabStop = false;
@@ -99,7 +108,8 @@
             this.Controls.Add(this.btnMinus);
             this.Controls.Add(this.lblName);
             this.Name = "OrderingRow";
-            this.Size = new System.Drawing.Size(339, 22);
+            this.Size = new System.Drawing.Size(354, 72);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.OrderingRow_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -33,6 +33,7 @@ namespace ChapeauUI
                 }
             }
         }
+        public bool first;
         private OrderingScreen mainScreen;
         public OrderingRow(OrderingScreen mainScreen, ChapeauModel.MenuItem menuItem, bool showEdit = false, int amount = 0)
         {
@@ -41,7 +42,7 @@ namespace ChapeauUI
             OrderItem = new OrderItem(menuItem, amount);
             lblAmount.Text = Amount.ToString();
             lblName.Text = menuItem.Name;
-            btnEdit.Visible = showEdit;
+            btnEdit.Visible = false;
         }
 
         /// <summary>
@@ -73,6 +74,20 @@ namespace ChapeauUI
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderingRow_Paint(object sender, PaintEventArgs e)
+        {
+            if (!first)
+            {
+                Pen pen = new Pen(Color.FromArgb(200, 0, 0, 0));
+                e.Graphics.DrawLine(pen, lblName.Bounds.Left + 30, lblName.Bounds.Top, lblName.Bounds.Right - 30, lblName.Bounds.Top);
+            }
+        }
+
+        private void lblAmount_Click(object sender, EventArgs e)
         {
 
         }

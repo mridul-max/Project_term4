@@ -17,6 +17,7 @@ namespace ChapeauUI
 
         List<OrderingRow> currentOrderItems;
         List<OrderingRow> allOrderItems;
+        List<FlowLayoutPanel> subPanels;
         OrderingConfirmation confirmControll;
         Table CurrentTable;
         Dictionary<string, Dictionary<string, List<ChapeauModel.MenuItem>>> menu;
@@ -33,7 +34,7 @@ namespace ChapeauUI
             currentOrderItems = new List<OrderingRow>();
             allOrderItems = new List<OrderingRow>();
             headerFont = new Font("Microsoft Sans Serif", 20F, FontStyle.Bold);
-            subHeaderFont = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold);
+            subHeaderFont = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold);
         }
 
         private void OrderingScreen_Load(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace ChapeauUI
         void FillAllItemsPanel()
         {
             FlowLayoutPanel panel = null;
+            subPanels = new List<FlowLayoutPanel>();
             foreach (var categoryType in menu)
             {
                 // select the correct panel
@@ -73,14 +75,23 @@ namespace ChapeauUI
                 foreach (var category in categoryType.Value)
                 {
                     // add header for the sub category
-                    panel.Controls.Add(NewLabel(category.Key, subHeaderFont));
-
+                    Label subHeader = NewLabel(category.Key, subHeaderFont, true);
+                    panel.Controls.Add(subHeader);
+                    FlowLayoutPanel subPanel = NewFlowPanel("flp" + category.Key);
+                    panel.Controls.Add(subPanel);
+                    subPanels.Add(subPanel);
+                    subHeader.Tag = subPanel;
+                    subPanel.Visible = false;
+                    subHeader.Click += (sender, e) => lblCategory_Click(this, e, subPanel);
+                    bool first = true;
                     //loop over all the items in the sub category 
                     foreach (var menuItem in category.Value)
                     {
                         //add the usecontroll with the menu item info
                         OrderingRow row = new OrderingRow(this, menuItem);
-                        panel.Controls.Add(row);
+                        row.first = first;
+                        first = false;
+                        subPanel.Controls.Add(row);
                         allOrderItems.Add(row);
                     }
                 }
@@ -182,14 +193,36 @@ namespace ChapeauUI
         /// <summary>
         /// Returns a new label with the given font and text
         /// </summary>
-        Label NewLabel(string text, Font font)
+        Label NewLabel(string text, Font font, bool border = false)
         {
             Label label = new Label();
             label.Font = font;
             label.Text = text;
             label.AutoSize = true;
+            label.Margin = new Padding(1);
+            if (border)
+            {
+                label.BorderStyle = BorderStyle.FixedSingle;
+                label.Padding = new Padding(5);
+                label.Margin = new Padding(5, 0, 5, 0);
+                label.Size = new Size(350, 50);
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                label.AutoSize = false;
+            }
 
             return label;
+        }
+        FlowLayoutPanel NewFlowPanel(string name)
+        {
+            FlowLayoutPanel flp = new FlowLayoutPanel();
+            flp.AutoSize = true;
+            flp.BorderStyle = BorderStyle.None;
+            flp.FlowDirection = FlowDirection.TopDown;
+            flp.Margin = new Padding(3);
+            flp.Name = name;
+            flp.Size = new Size(375, 80);
+
+            return flp;
         }
 
         /// <summary>
@@ -204,6 +237,21 @@ namespace ChapeauUI
             }
             Order currentOrder = new Order(CurrentTable.TableNumber, orderItems, Session.Instance.LoggedEmployee);
             return currentOrder;
+        }
+
+        private void lblCategory_Click(object sender, EventArgs e, FlowLayoutPanel panel)
+        {
+            foreach (var subPanel in subPanels)
+            {
+                if(subPanel == panel)
+                {
+                    panel.Visible = !panel.Visible;
+                }
+                else
+                {
+                    subPanel.Visible = false;
+                }
+            }            
         }
     }
 }

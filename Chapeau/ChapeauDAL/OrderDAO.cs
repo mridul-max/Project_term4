@@ -105,7 +105,10 @@ namespace ChapeauDAL
             };
             return ExecuteEditQueryAutoIncrement(query, sqlParameters);
         }
-        //Creates the individual order items in the OrderItems Database Table
+
+        /// <summary>
+        /// Creates the individual order items in the OrderItems Database Table
+        /// </summary>
         public void CreateOrderItems(int orderID, List<OrderItem> orderItems)
         {
             if (orderItems.Count < 1)
