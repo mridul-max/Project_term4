@@ -53,38 +53,45 @@ namespace ChapeauUI
         //This panel will show information of orderItem
         private void showPanel(string panelName, bool refresh = true)
         {
-                if (refresh)
+            if (refresh)
+            {
+                pnlKitchenBar.Show();
+                pnlKitchenBar.Visible = true;
+                List<OrderItem> Dishes = new List<OrderItem>();
+                if (panelName == "Kitchen")
                 {
-                    pnlKitchenBar.Show();
-                    pnlKitchenBar.Visible = true;
-                List<OrderItem> Dish = new List<OrderItem>();
-                if (panelName =="Kitchen")
-                {
-                    Dish = orderService.GetAllRunningFood();
+                    Dishes = orderService.GetAllRunningFood();
                 }
                 else
                 {
-                    Dish = orderService.GetAllRunningDrinks();
+                    Dishes = orderService.GetAllRunningDrinks();
                 }
-                    listViewKitchenBar.Clear();
-                    listViewKitchenBar.Columns.Add("ItemName");
-                    listViewKitchenBar.Columns.Add("ItemAmount");
-                    listViewKitchenBar.Columns.Add("OrderTime");
-                    listViewKitchenBar.Columns.Add("OrderStatus");
-                    listViewKitchenBar.Columns.Add("TableNumber");
-                    foreach (OrderItem F in Dish)
-                    {
-                        //tablenumber can find by passing the orderID
-                            int table = orderService.GetOrderTable(F.OrderID);
-                            listViewKitchenBar.Items.Add(new ListViewItem(new string[] { F.MenuItem.Name.ToString(), F.Amount.ToString(), F.DateTimeAdded.ToString(), F.orderState.ToString(), table.ToString(), F.MenuItem.ID.ToString() }));
-                        
-                    }
+                listViewKitchenBar.Clear();
+                listViewKitchenBar.Columns.Add("Name");
+                listViewKitchenBar.Columns.Add("Amount");
+                listViewKitchenBar.Columns.Add("OrderTime");
+                listViewKitchenBar.Columns.Add("Status");
+                listViewKitchenBar.Columns.Add("Table");
+                foreach (OrderItem dish in Dishes)
+                {
+                    //tablenumber can find by passing the orderID
+                    int table = orderService.GetOrderTable(dish.OrderID);
+                    listViewKitchenBar.Items.Add(new ListViewItem(new string[] {
+                        dish.MenuItem.Name.ToString(),
+                        dish.Amount.ToString(),
+                        dish.DateTimeAdded.ToString("H:mm"),
+                        dish.orderState.ToString(),
+                        table.ToString(),
+                        dish.MenuItem.ID.ToString()
+                    }));
 
-                    listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-                
+                }
+
+                listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+
             }
             //Bar panel to view the orderItem
-            
+
         }
 
         private void KitchenBarScreen_FormClosing(object sender, FormClosingEventArgs e)

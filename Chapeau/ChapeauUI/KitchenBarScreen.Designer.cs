@@ -148,7 +148,7 @@
             // 
             // ItemName
             // 
-            this.ItemName.Text = "Item Name";
+            this.ItemName.Text = "Name";
             this.ItemName.Width = 128;
             // 
             // ItemAmount
@@ -168,7 +168,7 @@
             // 
             // TableNumber
             // 
-            this.TableNumber.Text = "Table Number";
+            this.TableNumber.Text = "Table";
             this.TableNumber.Width = 159;
             // 
             // lblKitchenBar

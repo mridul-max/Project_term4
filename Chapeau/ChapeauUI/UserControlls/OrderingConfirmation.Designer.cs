@@ -34,7 +34,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCancel.BackColor = System.Drawing.Color.Tomato;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(23, 32);
             this.btnCancel.Name = "btnCancel";
