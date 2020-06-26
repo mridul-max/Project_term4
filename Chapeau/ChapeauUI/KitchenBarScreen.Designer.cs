@@ -53,11 +53,11 @@
             // lblloggedinChef
             // 
             this.lblloggedinChef.BackColor = System.Drawing.Color.Transparent;
-            this.lblloggedinChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblloggedinChef.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblloggedinChef.Location = new System.Drawing.Point(18, 41);
             this.lblloggedinChef.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblloggedinChef.Name = "lblloggedinChef";
-            this.lblloggedinChef.Size = new System.Drawing.Size(195, 20);
+            this.lblloggedinChef.Size = new System.Drawing.Size(264, 29);
             this.lblloggedinChef.TabIndex = 0;
             this.lblloggedinChef.Text = "Logged in as:";
             // 
@@ -137,6 +137,7 @@
             this.OrderStatus,
             this.OrderTime,
             this.TableNumber});
+            this.listViewKitchenBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewKitchenBar.HideSelection = false;
             this.listViewKitchenBar.Location = new System.Drawing.Point(0, 0);
             this.listViewKitchenBar.Name = "listViewKitchenBar";
@@ -173,19 +174,20 @@
             // lblKitchenBar
             // 
             this.lblKitchenBar.BackColor = System.Drawing.Color.Transparent;
-            this.lblKitchenBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKitchenBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKitchenBar.ForeColor = System.Drawing.Color.Black;
             this.lblKitchenBar.Location = new System.Drawing.Point(299, 70);
             this.lblKitchenBar.Name = "lblKitchenBar";
-            this.lblKitchenBar.Size = new System.Drawing.Size(152, 31);
+            this.lblKitchenBar.Size = new System.Drawing.Size(205, 45);
             this.lblKitchenBar.TabIndex = 9;
             // 
             // btnReady
             // 
             this.btnReady.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnReady.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReady.Location = new System.Drawing.Point(31, 114);
             this.btnReady.Name = "btnReady";
-            this.btnReady.Size = new System.Drawing.Size(116, 39);
+            this.btnReady.Size = new System.Drawing.Size(182, 57);
             this.btnReady.TabIndex = 10;
             this.btnReady.Text = "Mark As Ready";
             this.btnReady.UseVisualStyleBackColor = false;
@@ -194,10 +196,11 @@
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.DimGray;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRefresh.Location = new System.Drawing.Point(638, 114);
+            this.btnRefresh.Location = new System.Drawing.Point(596, 114);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(124, 37);
+            this.btnRefresh.Size = new System.Drawing.Size(166, 57);
             this.btnRefresh.TabIndex = 11;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -206,9 +209,10 @@
             // lblSelectInstruction
             // 
             this.lblSelectInstruction.BackColor = System.Drawing.Color.Transparent;
-            this.lblSelectInstruction.Location = new System.Drawing.Point(28, 70);
+            this.lblSelectInstruction.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelectInstruction.Location = new System.Drawing.Point(28, 78);
             this.lblSelectInstruction.Name = "lblSelectInstruction";
-            this.lblSelectInstruction.Size = new System.Drawing.Size(220, 23);
+            this.lblSelectInstruction.Size = new System.Drawing.Size(254, 23);
             this.lblSelectInstruction.TabIndex = 12;
             // 
             // KitchenBarScreen
@@ -217,7 +221,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.ClientSize = new System.Drawing.Size(784, 749);
             this.Controls.Add(this.lblSelectInstruction);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnReady);
@@ -227,7 +231,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KitchenBarScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenBarScreen";
