@@ -189,7 +189,7 @@
             // 
             this.pcDrinks9.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks9.Location = new System.Drawing.Point(116, 1070);
+            this.pcDrinks9.Location = new System.Drawing.Point(116, 1086);
             this.pcDrinks9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks9.Name = "pcDrinks9";
             this.pcDrinks9.Size = new System.Drawing.Size(60, 60);
@@ -201,7 +201,7 @@
             // 
             this.pcDrinks10.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks10.Location = new System.Drawing.Point(562, 1070);
+            this.pcDrinks10.Location = new System.Drawing.Point(562, 1086);
             this.pcDrinks10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks10.Name = "pcDrinks10";
             this.pcDrinks10.Size = new System.Drawing.Size(60, 60);
@@ -213,7 +213,7 @@
             // 
             this.pcDrinks7.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks7.Location = new System.Drawing.Point(116, 811);
+            this.pcDrinks7.Location = new System.Drawing.Point(116, 827);
             this.pcDrinks7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks7.Name = "pcDrinks7";
             this.pcDrinks7.Size = new System.Drawing.Size(60, 60);
@@ -225,7 +225,7 @@
             // 
             this.pcDrinks8.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks8.Location = new System.Drawing.Point(562, 811);
+            this.pcDrinks8.Location = new System.Drawing.Point(562, 827);
             this.pcDrinks8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks8.Name = "pcDrinks8";
             this.pcDrinks8.Size = new System.Drawing.Size(60, 60);
@@ -237,7 +237,7 @@
             // 
             this.pcDrinks2.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks2.Location = new System.Drawing.Point(562, 68);
+            this.pcDrinks2.Location = new System.Drawing.Point(562, 84);
             this.pcDrinks2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks2.Name = "pcDrinks2";
             this.pcDrinks2.Size = new System.Drawing.Size(60, 60);
@@ -249,7 +249,7 @@
             // 
             this.pcDrinks3.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks3.Location = new System.Drawing.Point(116, 313);
+            this.pcDrinks3.Location = new System.Drawing.Point(116, 329);
             this.pcDrinks3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks3.Name = "pcDrinks3";
             this.pcDrinks3.Size = new System.Drawing.Size(60, 60);
@@ -261,7 +261,7 @@
             // 
             this.pcDrinks5.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks5.Location = new System.Drawing.Point(116, 561);
+            this.pcDrinks5.Location = new System.Drawing.Point(116, 577);
             this.pcDrinks5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks5.Name = "pcDrinks5";
             this.pcDrinks5.Size = new System.Drawing.Size(60, 60);
@@ -273,7 +273,7 @@
             // 
             this.pcDrinks6.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks6.Location = new System.Drawing.Point(562, 561);
+            this.pcDrinks6.Location = new System.Drawing.Point(562, 577);
             this.pcDrinks6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks6.Name = "pcDrinks6";
             this.pcDrinks6.Size = new System.Drawing.Size(60, 60);
@@ -285,7 +285,7 @@
             // 
             this.pcDrinks4.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks4.Location = new System.Drawing.Point(562, 313);
+            this.pcDrinks4.Location = new System.Drawing.Point(562, 329);
             this.pcDrinks4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks4.Name = "pcDrinks4";
             this.pcDrinks4.Size = new System.Drawing.Size(60, 60);
@@ -297,7 +297,7 @@
             // 
             this.pcDrinks1.BackgroundImage = global::ChapeauUI.Properties.Resources.drinkOccupy;
             this.pcDrinks1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcDrinks1.Location = new System.Drawing.Point(116, 68);
+            this.pcDrinks1.Location = new System.Drawing.Point(116, 84);
             this.pcDrinks1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcDrinks1.Name = "pcDrinks1";
             this.pcDrinks1.Size = new System.Drawing.Size(60, 60);
@@ -310,7 +310,7 @@
             this.pcwarning10.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning10.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning10.Location = new System.Drawing.Point(791, 1164);
+            this.pcwarning10.Location = new System.Drawing.Point(791, 1180);
             this.pcwarning10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning10.Name = "pcwarning10";
             this.pcwarning10.Size = new System.Drawing.Size(60, 60);
@@ -323,7 +323,7 @@
             this.pcwarning9.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning9.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning9.Location = new System.Drawing.Point(345, 1163);
+            this.pcwarning9.Location = new System.Drawing.Point(345, 1179);
             this.pcwarning9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning9.Name = "pcwarning9";
             this.pcwarning9.Size = new System.Drawing.Size(60, 60);
@@ -336,7 +336,7 @@
             this.pcwarning8.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning8.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning8.Location = new System.Drawing.Point(791, 904);
+            this.pcwarning8.Location = new System.Drawing.Point(791, 920);
             this.pcwarning8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning8.Name = "pcwarning8";
             this.pcwarning8.Size = new System.Drawing.Size(60, 60);
@@ -349,7 +349,7 @@
             this.pcwarning7.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning7.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning7.Location = new System.Drawing.Point(345, 904);
+            this.pcwarning7.Location = new System.Drawing.Point(345, 920);
             this.pcwarning7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning7.Name = "pcwarning7";
             this.pcwarning7.Size = new System.Drawing.Size(60, 60);
@@ -362,7 +362,7 @@
             this.pcwarning6.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning6.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning6.Location = new System.Drawing.Point(791, 654);
+            this.pcwarning6.Location = new System.Drawing.Point(791, 670);
             this.pcwarning6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning6.Name = "pcwarning6";
             this.pcwarning6.Size = new System.Drawing.Size(60, 60);
@@ -375,7 +375,7 @@
             this.pcwarning5.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning5.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning5.Location = new System.Drawing.Point(345, 654);
+            this.pcwarning5.Location = new System.Drawing.Point(345, 670);
             this.pcwarning5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning5.Name = "pcwarning5";
             this.pcwarning5.Size = new System.Drawing.Size(60, 60);
@@ -388,7 +388,7 @@
             this.pcwarning4.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning4.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning4.Location = new System.Drawing.Point(791, 406);
+            this.pcwarning4.Location = new System.Drawing.Point(791, 422);
             this.pcwarning4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning4.Name = "pcwarning4";
             this.pcwarning4.Size = new System.Drawing.Size(60, 60);
@@ -401,7 +401,7 @@
             this.pcwarning2.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning2.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning2.Location = new System.Drawing.Point(791, 161);
+            this.pcwarning2.Location = new System.Drawing.Point(791, 177);
             this.pcwarning2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning2.Name = "pcwarning2";
             this.pcwarning2.Size = new System.Drawing.Size(60, 60);
@@ -414,7 +414,7 @@
             this.pcwarning3.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning3.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning3.Location = new System.Drawing.Point(345, 406);
+            this.pcwarning3.Location = new System.Drawing.Point(345, 422);
             this.pcwarning3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning3.Name = "pcwarning3";
             this.pcwarning3.Size = new System.Drawing.Size(60, 60);
@@ -427,7 +427,7 @@
             this.pcwarning1.BackColor = System.Drawing.Color.LightCoral;
             this.pcwarning1.BackgroundImage = global::ChapeauUI.Properties.Resources.WarningTimer;
             this.pcwarning1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcwarning1.Location = new System.Drawing.Point(345, 161);
+            this.pcwarning1.Location = new System.Drawing.Point(345, 177);
             this.pcwarning1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcwarning1.Name = "pcwarning1";
             this.pcwarning1.Size = new System.Drawing.Size(60, 60);
@@ -439,7 +439,7 @@
             // 
             this.pcOrder9.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder9.Location = new System.Drawing.Point(345, 1069);
+            this.pcOrder9.Location = new System.Drawing.Point(345, 1085);
             this.pcOrder9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder9.Name = "pcOrder9";
             this.pcOrder9.Size = new System.Drawing.Size(60, 60);
@@ -451,7 +451,7 @@
             // 
             this.pcOrder10.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder10.Location = new System.Drawing.Point(791, 1071);
+            this.pcOrder10.Location = new System.Drawing.Point(791, 1087);
             this.pcOrder10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder10.Name = "pcOrder10";
             this.pcOrder10.Size = new System.Drawing.Size(60, 60);
@@ -463,7 +463,7 @@
             // 
             this.pcOrder8.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder8.Location = new System.Drawing.Point(791, 811);
+            this.pcOrder8.Location = new System.Drawing.Point(791, 827);
             this.pcOrder8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder8.Name = "pcOrder8";
             this.pcOrder8.Size = new System.Drawing.Size(60, 60);
@@ -475,7 +475,7 @@
             // 
             this.pcOrder7.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder7.Location = new System.Drawing.Point(345, 811);
+            this.pcOrder7.Location = new System.Drawing.Point(345, 827);
             this.pcOrder7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder7.Name = "pcOrder7";
             this.pcOrder7.Size = new System.Drawing.Size(60, 60);
@@ -487,7 +487,7 @@
             // 
             this.pcOrder6.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder6.Location = new System.Drawing.Point(791, 561);
+            this.pcOrder6.Location = new System.Drawing.Point(791, 577);
             this.pcOrder6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder6.Name = "pcOrder6";
             this.pcOrder6.Size = new System.Drawing.Size(60, 60);
@@ -499,7 +499,7 @@
             // 
             this.pcOrder5.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder5.Location = new System.Drawing.Point(345, 561);
+            this.pcOrder5.Location = new System.Drawing.Point(345, 577);
             this.pcOrder5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder5.Name = "pcOrder5";
             this.pcOrder5.Size = new System.Drawing.Size(60, 60);
@@ -511,7 +511,7 @@
             // 
             this.pcOrder3.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder3.Location = new System.Drawing.Point(345, 313);
+            this.pcOrder3.Location = new System.Drawing.Point(345, 329);
             this.pcOrder3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder3.Name = "pcOrder3";
             this.pcOrder3.Size = new System.Drawing.Size(60, 60);
@@ -523,7 +523,7 @@
             // 
             this.pcOrder4.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder4.Location = new System.Drawing.Point(791, 313);
+            this.pcOrder4.Location = new System.Drawing.Point(791, 329);
             this.pcOrder4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder4.Name = "pcOrder4";
             this.pcOrder4.Size = new System.Drawing.Size(60, 60);
@@ -535,7 +535,7 @@
             // 
             this.pcOrder2.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder2.Location = new System.Drawing.Point(791, 68);
+            this.pcOrder2.Location = new System.Drawing.Point(791, 84);
             this.pcOrder2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder2.Name = "pcOrder2";
             this.pcOrder2.Size = new System.Drawing.Size(60, 60);
@@ -547,7 +547,7 @@
             // 
             this.pcOrder1.BackgroundImage = global::ChapeauUI.Properties.Resources.eating;
             this.pcOrder1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcOrder1.Location = new System.Drawing.Point(345, 68);
+            this.pcOrder1.Location = new System.Drawing.Point(345, 84);
             this.pcOrder1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcOrder1.Name = "pcOrder1";
             this.pcOrder1.Size = new System.Drawing.Size(60, 60);
@@ -559,7 +559,7 @@
             // 
             this.pcTable10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable10.Image = global::ChapeauUI.Properties.Resources.Occupy10;
-            this.pcTable10.Location = new System.Drawing.Point(628, 1070);
+            this.pcTable10.Location = new System.Drawing.Point(628, 1086);
             this.pcTable10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable10.Name = "pcTable10";
             this.pcTable10.Size = new System.Drawing.Size(157, 153);
@@ -572,7 +572,7 @@
             // 
             this.pcTable9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable9.Image = global::ChapeauUI.Properties.Resources.Occupy9;
-            this.pcTable9.Location = new System.Drawing.Point(182, 1070);
+            this.pcTable9.Location = new System.Drawing.Point(182, 1086);
             this.pcTable9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable9.Name = "pcTable9";
             this.pcTable9.Size = new System.Drawing.Size(157, 153);
@@ -585,7 +585,7 @@
             // 
             this.pcTable8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable8.Image = global::ChapeauUI.Properties.Resources.Occupy8;
-            this.pcTable8.Location = new System.Drawing.Point(628, 811);
+            this.pcTable8.Location = new System.Drawing.Point(628, 827);
             this.pcTable8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable8.Name = "pcTable8";
             this.pcTable8.Size = new System.Drawing.Size(157, 153);
@@ -598,7 +598,7 @@
             // 
             this.pcTable7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable7.Image = global::ChapeauUI.Properties.Resources.Occupy7;
-            this.pcTable7.Location = new System.Drawing.Point(182, 811);
+            this.pcTable7.Location = new System.Drawing.Point(182, 827);
             this.pcTable7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable7.Name = "pcTable7";
             this.pcTable7.Size = new System.Drawing.Size(157, 153);
@@ -611,7 +611,7 @@
             // 
             this.pcTable6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable6.Image = global::ChapeauUI.Properties.Resources.Occupy6;
-            this.pcTable6.Location = new System.Drawing.Point(628, 561);
+            this.pcTable6.Location = new System.Drawing.Point(628, 577);
             this.pcTable6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable6.Name = "pcTable6";
             this.pcTable6.Size = new System.Drawing.Size(157, 153);
@@ -624,7 +624,7 @@
             // 
             this.pcTable5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable5.Image = global::ChapeauUI.Properties.Resources.Occupy5;
-            this.pcTable5.Location = new System.Drawing.Point(182, 561);
+            this.pcTable5.Location = new System.Drawing.Point(182, 577);
             this.pcTable5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable5.Name = "pcTable5";
             this.pcTable5.Size = new System.Drawing.Size(157, 153);
@@ -637,7 +637,7 @@
             // 
             this.pcTable4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable4.Image = global::ChapeauUI.Properties.Resources.Occupy4;
-            this.pcTable4.Location = new System.Drawing.Point(628, 313);
+            this.pcTable4.Location = new System.Drawing.Point(628, 329);
             this.pcTable4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable4.Name = "pcTable4";
             this.pcTable4.Size = new System.Drawing.Size(157, 153);
@@ -650,7 +650,7 @@
             // 
             this.pcTable3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable3.Image = global::ChapeauUI.Properties.Resources.Occupy3;
-            this.pcTable3.Location = new System.Drawing.Point(182, 313);
+            this.pcTable3.Location = new System.Drawing.Point(182, 329);
             this.pcTable3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable3.Name = "pcTable3";
             this.pcTable3.Size = new System.Drawing.Size(157, 153);
@@ -663,7 +663,7 @@
             // 
             this.pcTable2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable2.Image = global::ChapeauUI.Properties.Resources.Occupy2;
-            this.pcTable2.Location = new System.Drawing.Point(628, 68);
+            this.pcTable2.Location = new System.Drawing.Point(628, 84);
             this.pcTable2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable2.Name = "pcTable2";
             this.pcTable2.Size = new System.Drawing.Size(157, 153);
@@ -677,7 +677,7 @@
             this.pcTable1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcTable1.ErrorImage = null;
             this.pcTable1.Image = global::ChapeauUI.Properties.Resources.Occupy1;
-            this.pcTable1.Location = new System.Drawing.Point(182, 68);
+            this.pcTable1.Location = new System.Drawing.Point(182, 84);
             this.pcTable1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcTable1.Name = "pcTable1";
             this.pcTable1.Size = new System.Drawing.Size(157, 153);

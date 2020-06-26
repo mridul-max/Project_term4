@@ -86,11 +86,10 @@ namespace ChapeauUI
             foreach (OrderItem item in orderItems)
             {
                 //Only show the orders that isn't served yet.
-                if(item.orderState!=OrderState.OrderServed)
-                {
+                
                     orderUC = new UCCurrentOrders(item);
                     pnlCurrentOrders.Controls.Add(orderUC);
-                }
+                
                 
             }
         }
@@ -143,5 +142,7 @@ namespace ChapeauUI
             }
             UpdateTableView();
         }
+
+      
     }
 }

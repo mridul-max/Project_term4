@@ -30,10 +30,21 @@ namespace ChapeauLogic
         {
             orderDao.SetOrderItemAsServed(item);
         }
-
+        public void UpdateReadyItem(OrderItem item)
+        {
+            orderDao.UpdateReadyItem(item);
+        }
+        public void UpdatePreparingItem(OrderItem item)
+        {
+            orderDao.UpdatePreparingItem(item);
+        }
         public Order GetOrderByTableId(int id)
         {
             return orderDao.GetOrderByTableId(id);          
+        }
+        public OrderItem GetOrderItemsById(OrderItem item)
+        {
+            return orderDao.GetOrderItemById(item);
         }
 
         /// <summary>
