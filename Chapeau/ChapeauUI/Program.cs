@@ -20,7 +20,7 @@ namespace ChapeauUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrderingScreen(new ChapeauModel.Table(5)));
+            Application.Run(new LoginScreen());
 
         }
     }
