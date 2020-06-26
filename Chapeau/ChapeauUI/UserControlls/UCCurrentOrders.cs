@@ -101,7 +101,5 @@ namespace ChapeauUI.UserControlls
             RefreshOrderItem();
 
         }
-
-     
     }
 }

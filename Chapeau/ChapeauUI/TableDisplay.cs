@@ -38,14 +38,10 @@ namespace ChapeauUI
             FillCurrentOrders();
             UpdateTableInformation();
 
-            //If table has no orders yet, user is unable to check out even if the table is occupied.
-          
+            //If table has no orders yet, user is unable to check out even if the table is occupied.          
 
         }
         //Gets the reservations according to now's datetime and table number and adds it to the list.
-        
-        
-
 
         //fills the labels according to the information.
         private void UpdateTableInformation()
@@ -57,22 +53,21 @@ namespace ChapeauUI
             {
                 lblOccupy.Text = "Occupancy: Occupied";
                 btnOccupy.Text = "Mark as free";
+                btnOccupy.BackColor = Color.Tomato;
             }
             else
             {
                 lblOccupy.Text = "Occupancy:  Free";
                 btnOccupy.Text = "Mark as occupied";
+                btnOccupy.BackColor = Color.LimeGreen;
             }
-
-         
-
+            
             if (orderItems.Count <= 0)
                 BtnChout.Enabled = false;
 
             else
                 BtnChout.Enabled = true;
         }
-
 
         //Displays each order one by one in user control with timer.
         private void FillCurrentOrders()
@@ -89,11 +84,8 @@ namespace ChapeauUI
                 
                     orderUC = new UCCurrentOrders(item);
                     pnlCurrentOrders.Controls.Add(orderUC);
-                
-                
             }
         }
-
 
         //opens reservation screen
 
@@ -104,8 +96,7 @@ namespace ChapeauUI
             screen.ShowDialog();
             UpdateTableView();
         }
-
-
+        
         //opens payment screen.
         private void BtnChout_Click(object sender, EventArgs e)
         {
@@ -113,7 +104,6 @@ namespace ChapeauUI
             screen.ShowDialog();
             UpdateTableView();
         }
-
 
         //closes this tab and returns to tableview.
         private void btnBack_Click(object sender, EventArgs e)
@@ -125,11 +115,11 @@ namespace ChapeauUI
         //Sets the table to occupied as requested in pdf.
         private void btnOccupy_Click(object sender, EventArgs e)
         {
-
             if (!CurrentTable.IsOccupied)
             {
                 CurrentTable.IsOccupied = true;
                 tableService.SetOccupied(CurrentTable);
+
             }
             else if (CurrentTable.IsOccupied && orderItems.Count <= 0)
             {
@@ -141,8 +131,6 @@ namespace ChapeauUI
                 MessageBox.Show("You can't set a table to free when a table has orders", "Can not set to free", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             UpdateTableView();
-        }
-
-      
+        }      
     }
 }
