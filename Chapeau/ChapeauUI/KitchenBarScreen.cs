@@ -14,7 +14,7 @@ namespace ChapeauUI
 {
     public partial class KitchenBarScreen : Form
     {
-        OrderService orderService = new OrderService();
+        OrderService OrderService = new OrderService();
         public KitchenBarScreen()
         {
             InitializeComponent();
@@ -44,7 +44,6 @@ namespace ChapeauUI
                 managementToolStripMenuItem.Visible = true;
                 kitchenToolStripMenuItem.Visible = true;
                 barToolStripMenuItem.Visible = true;
-
                 // default to the kitchen screen
                 lblKitchenBar.Text = "Kitchen Screen";
                 showPanel("Kitchen");
@@ -60,11 +59,11 @@ namespace ChapeauUI
                 List<OrderItem> Dishes;
                 if (panelName == "Kitchen")
                 {
-                    Dishes = orderService.GetAllRunningFood();
+                    Dishes = OrderService.GetAllRunningFood();
                 }
                 else
                 {
-                    Dishes = orderService.GetAllRunningDrinks();
+                    Dishes = OrderService.GetAllRunningDrinks();
                 }
                 listViewKitchenBar.Clear();
                 listViewKitchenBar.Columns.Add("Name");
@@ -75,25 +74,24 @@ namespace ChapeauUI
                 foreach (OrderItem dish in Dishes)
                 {
                     //tablenumber can find by passing the orderID
-                    int table = orderService.GetOrderTable(dish.OrderID);
-
-                    listViewKitchenBar.Items.Add(new ListViewItem(new string[] {
+                    int table = OrderService.GetOrderTable(dish.OrderID);
+                    ListViewItem item = new ListViewItem(
+                        new string[] {
                         dish.MenuItem.Name.ToString(),
                         dish.Amount.ToString(),
                         dish.DateTimeAdded.ToString("H:mm"),
                         dish.orderState.ToString(),
                         table.ToString(),
                         dish.MenuItem.ID.ToString()
-                    }));
-
-                }
-
-                listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-
-            }
-            //Bar panel to view the orderItem
-
+                    });
+                    item.Tag = dish;
+                    listViewKitchenBar.Items.Add(item);
+                }           
+            listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
+        //Bar panel to view the orderItem
+
+    }
 
         private void KitchenBarScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -123,12 +121,16 @@ namespace ChapeauUI
                 //if the item is checked, mark it as ready
                 if (listViewKitchenBar.Items[i].Checked)
                 {
-                    int ID = int.Parse(listViewKitchenBar.Items[i].SubItems[5].Text);
-                    orderService.UpdateReadyItem(ID);
+
+                    OrderItem Item = (OrderItem)listViewKitchenBar.Items[i].Tag;
+                    //Message for reducing the mistakes for stuffs
+                    if (MessageBox.Show($"Are you sure you want to Mark : {Item.MenuItem.Name} ", "Confrimation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        OrderService.UpdateReadyItem(Item);
+                    }
                     processedAction = true;
                 }
             }
-
             //user need to select an item first
             if (!processedAction)
             {

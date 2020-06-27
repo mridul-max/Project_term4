@@ -134,7 +134,7 @@ namespace ChapeauUI
                             isOrderReady = false;
                         }
                         isOrderServed = false;
-                        break;
+                        
                     }
                 }
 
@@ -207,7 +207,7 @@ namespace ChapeauUI
                         }
 
                         isOrderServed = false;
-                        break;
+                      
                     }
                 }
             }
