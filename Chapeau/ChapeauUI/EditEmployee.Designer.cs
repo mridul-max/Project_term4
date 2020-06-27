@@ -44,6 +44,10 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.pnlEditEmp = new System.Windows.Forms.Panel();
+            this.listEditEmployee = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label10 = new System.Windows.Forms.Label();
             this.btnApplyEdit = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,16 +55,12 @@
             this.txtEditPassword = new System.Windows.Forms.TextBox();
             this.txtEditUser = new System.Windows.Forms.TextBox();
             this.pnlRemove = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnRemove = new System.Windows.Forms.Button();
             this.listRemoveEmployee = new System.Windows.Forms.ListView();
             this.employeeID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.employeeName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.employeeType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listEditEmployee = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlAdd.SuspendLayout();
             this.pnlEditEmp.SuspendLayout();
@@ -247,14 +247,47 @@
             this.pnlEditEmp.TabIndex = 9;
             this.pnlEditEmp.Visible = false;
             // 
+            // listEditEmployee
+            // 
+            this.listEditEmployee.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listEditEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listEditEmployee.FullRowSelect = true;
+            this.listEditEmployee.HideSelection = false;
+            this.listEditEmployee.Location = new System.Drawing.Point(27, 186);
+            this.listEditEmployee.MultiSelect = false;
+            this.listEditEmployee.Name = "listEditEmployee";
+            this.listEditEmployee.Size = new System.Drawing.Size(731, 907);
+            this.listEditEmployee.TabIndex = 12;
+            this.listEditEmployee.UseCompatibleStateImageBehavior = false;
+            this.listEditEmployee.View = System.Windows.Forms.View.Details;
+            this.listEditEmployee.SelectedIndexChanged += new System.EventHandler(this.listEditEmployee_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 128;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Name";
+            this.columnHeader2.Width = 119;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Type";
+            this.columnHeader3.Width = 106;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(102, 12);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(8, 19);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(336, 20);
+            this.label10.Size = new System.Drawing.Size(484, 29);
             this.label10.TabIndex = 11;
             this.label10.Text = "Only enter the fields you want to change:";
             // 
@@ -276,22 +309,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 134);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(23, 133);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 20);
+            this.label6.Size = new System.Drawing.Size(106, 24);
             this.label6.TabIndex = 6;
             this.label6.Text = "Password:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 81);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(23, 80);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 20);
+            this.label7.Size = new System.Drawing.Size(117, 24);
             this.label7.TabIndex = 5;
             this.label7.Text = "User name:";
             // 
@@ -326,32 +359,6 @@
             this.pnlRemove.TabIndex = 12;
             this.pnlRemove.Visible = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 32);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(227, 29);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Pick an employee:";
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
-            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(564, 19);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(194, 53);
-            this.btnRemove.TabIndex = 8;
-            this.btnRemove.Text = "Remove Employee";
-            this.btnRemove.UseVisualStyleBackColor = true;
-            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
-            // 
             // listRemoveEmployee
             // 
             this.listRemoveEmployee.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -384,38 +391,31 @@
             this.employeeType.Text = "Type";
             this.employeeType.Width = 106;
             // 
-            // listEditEmployee
+            // label8
             // 
-            this.listEditEmployee.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listEditEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listEditEmployee.FullRowSelect = true;
-            this.listEditEmployee.HideSelection = false;
-            this.listEditEmployee.Location = new System.Drawing.Point(27, 186);
-            this.listEditEmployee.MultiSelect = false;
-            this.listEditEmployee.Name = "listEditEmployee";
-            this.listEditEmployee.Size = new System.Drawing.Size(731, 907);
-            this.listEditEmployee.TabIndex = 12;
-            this.listEditEmployee.UseCompatibleStateImageBehavior = false;
-            this.listEditEmployee.View = System.Windows.Forms.View.Details;
-            this.listEditEmployee.SelectedIndexChanged += new System.EventHandler(this.listEditEmployee_SelectedIndexChanged);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(15, 32);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(227, 29);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Pick an employee:";
             // 
-            // columnHeader1
+            // btnRemove
             // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 128;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 119;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Type";
-            this.columnHeader3.Width = 106;
+            this.btnRemove.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
+            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.Location = new System.Drawing.Point(564, 19);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(194, 53);
+            this.btnRemove.TabIndex = 8;
+            this.btnRemove.Text = "Remove Employee";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // EditEmployee
             // 
