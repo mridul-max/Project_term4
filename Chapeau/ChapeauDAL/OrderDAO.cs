@@ -261,6 +261,7 @@ namespace ChapeauDAL
                 };
                 OrderItem orderItem = new OrderItem()
                 {   
+                    OrderItemID=(int)dr["ID"],
                     OrderID =(int)dr["OrderID"],
                     MenuItem = menuItem,
                     Amount = (int)dr["Amount"],
@@ -276,7 +277,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetAllRunningDrinks()
         {
             OpenConnection();
-            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey ='PR'Order by M.ItemName";
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey ='PR' Order by M.ItemName";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -312,15 +313,6 @@ namespace ChapeauDAL
         }
        
         //This function will make Ready to serve Orderitem 
-        public void UpdateReadyItem(int ID)
-        {
-            OpenConnection();
-            SqlCommand cmd = new SqlCommand("Update OrderItem Set OrderStateKey = 'RD' Where ID = @ID", conn);
-            cmd.Parameters.AddWithValue("@ID", ID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            reader.Close(); 
-            conn.Close();
-        }
         public void UpdateReadyItem(OrderItem item)
         {
             OpenConnection();

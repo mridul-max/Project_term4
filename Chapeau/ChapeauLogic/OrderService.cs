@@ -77,10 +77,6 @@ namespace ChapeauLogic
         {
             return orderDao.GetOrderTable(OrderID);
         }
-        public void UpdateReadyItem(int ID)
-        {
-            orderDao.UpdateReadyItem(ID);
 
-        }
     }
 }
