@@ -141,7 +141,7 @@ namespace ChapeauUI
             this.pnlCurrentOrders.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.pnlCurrentOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCurrentOrders.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlCurrentOrders.Location = new System.Drawing.Point(-7, 420);
+            this.pnlCurrentOrders.Location = new System.Drawing.Point(-17, 420);
             this.pnlCurrentOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlCurrentOrders.Name = "pnlCurrentOrders";
             this.pnlCurrentOrders.Size = new System.Drawing.Size(1040, 1094);

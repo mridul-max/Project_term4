@@ -53,15 +53,15 @@ namespace ChapeauUI
             {
                 lblOccupy.Text = "Occupancy: Occupied";
                 btnOccupy.Text = "Mark as free";
-                btnOccupy.BackColor = Color.Tomato;
+                btnOccupy.BackColor = Color.LimeGreen;
             }
             else
             {
                 lblOccupy.Text = "Occupancy:  Free";
                 btnOccupy.Text = "Mark as occupied";
-                btnOccupy.BackColor = Color.LimeGreen;
+                btnOccupy.BackColor = Color.Tomato;
             }
-            
+
             if (orderItems.Count <= 0)
                 BtnChout.Enabled = false;
 

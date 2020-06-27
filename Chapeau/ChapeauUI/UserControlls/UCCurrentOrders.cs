@@ -35,6 +35,10 @@ namespace ChapeauUI.UserControlls
             lblAmount.Text = orderItem.Amount.ToString();
 
             UpdateLabels();
+            StartTimer();
+        }
+        private void StartTimer()
+        {
             timer.Tick += Timer_Tick;
             timer.Interval = 1000;
             timer.Start();
@@ -90,6 +94,7 @@ namespace ChapeauUI.UserControlls
         {
             service.SetOrderItemAsServed(orderItem);
             btnRemake.Visible = true;
+            timer.Stop();
             RefreshOrderItem();
 
         }
@@ -98,6 +103,7 @@ namespace ChapeauUI.UserControlls
         private void button1_Click(object sender, EventArgs e)
         {
             service.UpdatePreparingItem(orderItem);
+            timer.Start();
             RefreshOrderItem();
 
         }
