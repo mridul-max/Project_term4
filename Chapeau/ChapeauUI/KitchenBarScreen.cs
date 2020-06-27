@@ -114,8 +114,13 @@ namespace ChapeauUI
         // Mark the checked items as ready
         private void btnReady_Click(object sender, EventArgs e)
         {
-            bool processedAction = false;
-        
+            //user need to select an item first
+            if (listViewKitchenBar.CheckedItems.Count < 1)
+            {
+                MessageBox.Show("Please select an Item first");
+                return;
+            }
+
             //loop over all the items in the list
             if (MessageBox.Show($"Are you sure you want to Mark All the selected items as ready?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -126,19 +131,11 @@ namespace ChapeauUI
                     {                 
                         //Message for reducing the mistakes for stuffs
                         OrderService.UpdateReadyItem((OrderItem)listViewKitchenBar.Items[i].Tag);
-                        processedAction = true;                  
                     }
 
                 }
                 RefreshTheListView();
             }
-
-            //user need to select an item first
-            if (listViewKitchenBar.SelectedItems.Count<1)
-            {
-                MessageBox.Show("Please select an Item first");
-            }
-            
         }
         //Refresh can help to disapear the order item 
         private void btnRefresh_Click(object sender, EventArgs e)
