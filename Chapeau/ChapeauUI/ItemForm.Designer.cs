@@ -421,9 +421,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pnlEditMenu);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.pnlRemoveItem);
-            this.Controls.Add(this.pnlEditMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);

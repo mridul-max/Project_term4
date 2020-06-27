@@ -25,7 +25,7 @@ namespace ChapeauUI
         {
             txtPrice.Text = txtPrice.Text.Replace('.', ',');
 
-            if (cmbCategory.SelectedIndex < 0 || String.IsNullOrWhiteSpace(txtName.Text) || String.IsNullOrWhiteSpace(txtStock.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtStock.Text, "^[0-9]+$") || String.IsNullOrWhiteSpace(txtPrice.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, @"^[0-9]*(?:\,[0-9]+)?$"))
+            if (cmbCategory.SelectedIndex < 0 || String.IsNullOrWhiteSpace(txtName.Text) || String.IsNullOrWhiteSpace(txtStock.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtStock.Text, "^[0-9]*$") || String.IsNullOrWhiteSpace(txtPrice.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtPrice.Text, @"^[0-9]*(?:\,[0-9]+)?$"))
             {
                 MessageBox.Show("Please fill the fields properly", "Process incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -130,7 +130,7 @@ namespace ChapeauUI
                 return;
             }
 
-            if (String.IsNullOrWhiteSpace(txtItemName.Text) || String.IsNullOrWhiteSpace(txtCount.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtStock.Text, "^[0-9]+$"))
+            if (String.IsNullOrWhiteSpace(txtItemName.Text) || String.IsNullOrWhiteSpace(txtCount.Text) || !System.Text.RegularExpressions.Regex.IsMatch(txtCount.Text, "^[0-9]*$"))
             {
                 MessageBox.Show("Please fill the values properly", "Fields required", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
