@@ -57,7 +57,7 @@ namespace ChapeauUI
             {
                 pnlKitchenBar.Show();
                 pnlKitchenBar.Visible = true;
-                List<OrderItem> Dishes;
+                List<OrderItem> Dishes = new List<OrderItem>();
                 if (panelName == "Kitchen")
                 {
                     Dishes = orderService.GetAllRunningFood();

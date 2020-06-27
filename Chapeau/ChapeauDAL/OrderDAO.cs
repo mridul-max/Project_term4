@@ -238,7 +238,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetAllRunningFood()
         {
             OpenConnection();
-            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType != 'Drinks' And O.OrderStateKey !='RD' And O.OrderStatekey !='OS' And Convert(date,O.OrderDateTime) = Convert(date,GETDATE()) Order by M.ItemName";
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType != 'Drinks' And O.OrderStateKey ='PR' Order by M.ItemName";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
 
@@ -276,7 +276,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetAllRunningDrinks()
         {
             OpenConnection();
-            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey !='RD' And O.OrderStateKey !='OS' And Convert(date,O.OrderDateTime) = Convert(date,GETDATE()) Order by M.ItemName";
+            string query = "Select M.*,O.*,OrderStateInformation From[OrderItem] as O Inner join MenuItem as M On M.MenuItemID = O.MenuItemID Inner join Category as C On M.CategoryID = C.CategoryID inner join OrderState on O.OrderStateKey=OrderState.OrderStateKey Where C.CategoryType = 'Drinks' And O.OrderStateKey ='PR'Order by M.ItemName";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadAlltype(ExecuteSelectQuery(query, sqlParameters));
         }
