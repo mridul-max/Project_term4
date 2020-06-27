@@ -174,7 +174,5 @@ namespace ChapeauUI
                 txtEditPassword.Text = "";
             }
         }
-
-   
     }
 }
