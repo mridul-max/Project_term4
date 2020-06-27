@@ -124,7 +124,7 @@ namespace ChapeauUI
 
                     OrderItem Item = (OrderItem)listViewKitchenBar.Items[i].Tag;
                     //Message for reducing the mistakes for stuffs
-                    if (MessageBox.Show($"Are you sure you want to Mark : {Item.MenuItem.Name} ", "Confrimation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show($"Are you sure you want to Mark : {Item.MenuItem.Name} ", "Confrimation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                     {
                         OrderService.UpdateReadyItem(Item);
                     }
