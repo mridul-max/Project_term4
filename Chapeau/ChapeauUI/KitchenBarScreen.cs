@@ -86,12 +86,12 @@ namespace ChapeauUI
                     });
                     item.Tag = dish;
                     listViewKitchenBar.Items.Add(item);
-                }           
-            listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
-        }
-        //Bar panel to view the orderItem
+                }
+                listViewKitchenBar.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            }
+            //Bar panel to view the orderItem
 
-    }
+        }
 
         private void KitchenBarScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -115,36 +115,41 @@ namespace ChapeauUI
         private void btnReady_Click(object sender, EventArgs e)
         {
             bool processedAction = false;
+        
             //loop over all the items in the list
-            for (int i = 0; i < listViewKitchenBar.Items.Count; i++)
+            if (MessageBox.Show($"Are you sure you want to Mark All the selected items as ready?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //if the item is checked, mark it as ready
-                if (listViewKitchenBar.Items[i].Checked)
+                for (int i = 0; i < listViewKitchenBar.Items.Count; i++)
                 {
-
-                    OrderItem Item = (OrderItem)listViewKitchenBar.Items[i].Tag;
-                    //Message for reducing the mistakes for stuffs
-                    if (MessageBox.Show($"Are you sure you want to Mark : {Item.MenuItem.Name} ", "Confrimation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                    {
-                        OrderService.UpdateReadyItem(Item);
+                    
+                    if (listViewKitchenBar.Items[i].Checked)
+                    {                 
+                        //Message for reducing the mistakes for stuffs
+                        OrderService.UpdateReadyItem((OrderItem)listViewKitchenBar.Items[i].Tag);
+                        processedAction = true;                  
                     }
-                    processedAction = true;
+
                 }
+                RefreshTheListView();
             }
+
             //user need to select an item first
-            if (!processedAction)
+            if (listViewKitchenBar.SelectedItems.Count<1)
             {
                 MessageBox.Show("Please select an Item first");
             }
-            else
-            {
-                btnRefresh_Click(sender, e);
-            }
+            
         }
         //Refresh can help to disapear the order item 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            RefreshTheListView();
+        }
+
+        private void RefreshTheListView()
+        {
             SelectRole(Session.Instance.LoggedEmployee.EmployeeType);
+
         }
         //Manager can navigate the bar
         private void barToolStripMenuItem_Click(object sender, EventArgs e)
