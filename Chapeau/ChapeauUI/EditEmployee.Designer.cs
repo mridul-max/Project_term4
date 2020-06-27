@@ -79,39 +79,39 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(784, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // addEmployeeToolStripMenuItem
             // 
-            this.addEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(133, 25);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(152, 29);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.AddEmployeeToolStripMenuItem_Click);
             // 
             // editEmployeeToolStripMenuItem
             // 
-            this.editEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editEmployeeToolStripMenuItem.Name = "editEmployeeToolStripMenuItem";
-            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(132, 25);
+            this.editEmployeeToolStripMenuItem.Size = new System.Drawing.Size(149, 29);
             this.editEmployeeToolStripMenuItem.Text = "Edit Employee";
             this.editEmployeeToolStripMenuItem.Click += new System.EventHandler(this.EditEmployeeToolStripMenuItem_Click);
             // 
             // removeEmployeeToolStripMenuItem
             // 
-            this.removeEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeEmployeeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeEmployeeToolStripMenuItem.Name = "removeEmployeeToolStripMenuItem";
-            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 25);
+            this.removeEmployeeToolStripMenuItem.Size = new System.Drawing.Size(186, 29);
             this.removeEmployeeToolStripMenuItem.Text = "Remove Employee";
             this.removeEmployeeToolStripMenuItem.Click += new System.EventHandler(this.RemoveEmployeeToolStripMenuItem_Click);
             // 
             // returnToManagementToolStripMenuItem
             // 
-            this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
-            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(199, 25);
+            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(231, 29);
             this.returnToManagementToolStripMenuItem.Text = "Return to management";
             this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.ReturnToManagementToolStripMenuItem_Click);
             // 
@@ -425,9 +425,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pnlEditEmp);
             this.Controls.Add(this.pnlAdd);
             this.Controls.Add(this.pnlRemove);
-            this.Controls.Add(this.pnlEditEmp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);

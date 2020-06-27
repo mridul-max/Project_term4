@@ -149,13 +149,15 @@ namespace ChapeauUI
             listView.Columns.Add("ID");
             listView.Columns.Add("Name");
             listView.Columns.Add("Type");
+            listView.Columns.Add("Username");
             foreach (Employee employee in employees)
             {
                 ListViewItem item = new ListViewItem(
                     new string[] {
                     employee.EmployeeID.ToString(),
                     employee.Name,
-                    employee.EmployeeType.ToString()
+                    employee.EmployeeType.ToString(),
+                    employee.Username
                 });
                 item.Tag = employee;
                 listView.Items.Add(item);

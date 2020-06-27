@@ -52,11 +52,11 @@ namespace ChapeauUI
             this.groupBox1.Controls.Add(this.lblCapacity);
             this.groupBox1.Controls.Add(this.lblTableNumber);
             this.groupBox1.Controls.Add(this.BtnOrder);
-            this.groupBox1.Location = new System.Drawing.Point(12, 84);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(9, 68);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(976, 277);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(732, 225);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -65,10 +65,10 @@ namespace ChapeauUI
             this.btnOccupy.BackColor = System.Drawing.Color.Transparent;
             this.btnOccupy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOccupy.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOccupy.Location = new System.Drawing.Point(584, 98);
-            this.btnOccupy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOccupy.Location = new System.Drawing.Point(438, 80);
+            this.btnOccupy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOccupy.Name = "btnOccupy";
-            this.btnOccupy.Size = new System.Drawing.Size(316, 69);
+            this.btnOccupy.Size = new System.Drawing.Size(237, 56);
             this.btnOccupy.TabIndex = 8;
             this.btnOccupy.Text = "Mark as occupied";
             this.btnOccupy.UseVisualStyleBackColor = false;
@@ -78,9 +78,10 @@ namespace ChapeauUI
             // 
             this.lblOccupy.AutoSize = true;
             this.lblOccupy.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOccupy.Location = new System.Drawing.Point(7, 112);
+            this.lblOccupy.Location = new System.Drawing.Point(5, 91);
+            this.lblOccupy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOccupy.Name = "lblOccupy";
-            this.lblOccupy.Size = new System.Drawing.Size(202, 38);
+            this.lblOccupy.Size = new System.Drawing.Size(169, 31);
             this.lblOccupy.TabIndex = 5;
             this.lblOccupy.Text = "Occupancy:";
             // 
@@ -90,10 +91,10 @@ namespace ChapeauUI
             this.BtnChout.Enabled = false;
             this.BtnChout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnChout.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnChout.Location = new System.Drawing.Point(584, 178);
-            this.BtnChout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnChout.Location = new System.Drawing.Point(438, 145);
+            this.BtnChout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnChout.Name = "BtnChout";
-            this.BtnChout.Size = new System.Drawing.Size(316, 69);
+            this.BtnChout.Size = new System.Drawing.Size(237, 56);
             this.BtnChout.TabIndex = 4;
             this.BtnChout.Text = "Check out";
             this.BtnChout.UseVisualStyleBackColor = false;
@@ -103,9 +104,10 @@ namespace ChapeauUI
             // 
             this.lblCapacity.AutoSize = true;
             this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCapacity.Location = new System.Drawing.Point(576, 46);
+            this.lblCapacity.Location = new System.Drawing.Point(432, 37);
+            this.lblCapacity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(163, 38);
+            this.lblCapacity.Size = new System.Drawing.Size(138, 31);
             this.lblCapacity.TabIndex = 3;
             this.lblCapacity.Text = "Capacity:";
             // 
@@ -113,9 +115,10 @@ namespace ChapeauUI
             // 
             this.lblTableNumber.AutoSize = true;
             this.lblTableNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableNumber.Location = new System.Drawing.Point(7, 46);
+            this.lblTableNumber.Location = new System.Drawing.Point(5, 37);
+            this.lblTableNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTableNumber.Name = "lblTableNumber";
-            this.lblTableNumber.Size = new System.Drawing.Size(245, 38);
+            this.lblTableNumber.Size = new System.Drawing.Size(206, 31);
             this.lblTableNumber.TabIndex = 1;
             this.lblTableNumber.Text = "Table Number:";
             // 
@@ -124,10 +127,10 @@ namespace ChapeauUI
             this.BtnOrder.BackColor = System.Drawing.Color.LimeGreen;
             this.BtnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOrder.Location = new System.Drawing.Point(15, 178);
-            this.BtnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnOrder.Location = new System.Drawing.Point(11, 145);
+            this.BtnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnOrder.Name = "BtnOrder";
-            this.BtnOrder.Size = new System.Drawing.Size(316, 69);
+            this.BtnOrder.Size = new System.Drawing.Size(237, 56);
             this.BtnOrder.TabIndex = 3;
             this.BtnOrder.Text = "Add Order";
             this.BtnOrder.UseVisualStyleBackColor = false;
@@ -141,10 +144,10 @@ namespace ChapeauUI
             this.pnlCurrentOrders.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.pnlCurrentOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlCurrentOrders.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.pnlCurrentOrders.Location = new System.Drawing.Point(-17, 420);
-            this.pnlCurrentOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlCurrentOrders.Location = new System.Drawing.Point(-13, 341);
+            this.pnlCurrentOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlCurrentOrders.Name = "pnlCurrentOrders";
-            this.pnlCurrentOrders.Size = new System.Drawing.Size(1040, 1094);
+            this.pnlCurrentOrders.Size = new System.Drawing.Size(780, 889);
             this.pnlCurrentOrders.TabIndex = 5;
             // 
             // label1
@@ -152,9 +155,10 @@ namespace ChapeauUI
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 379);
+            this.label1.Location = new System.Drawing.Point(14, 308);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 38);
+            this.label1.Size = new System.Drawing.Size(103, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "Orders";
             // 
@@ -164,10 +168,10 @@ namespace ChapeauUI
             this.btnBack.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 5);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Location = new System.Drawing.Point(9, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(316, 69);
+            this.btnBack.Size = new System.Drawing.Size(237, 56);
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Return to table view";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -175,18 +179,18 @@ namespace ChapeauUI
             // 
             // TableDisplay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1045, 1055);
+            this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlCurrentOrders);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "TableDisplay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -80,39 +80,39 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(784, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // addMenuItemToolStripMenuItem
             // 
-            this.addMenuItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addMenuItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addMenuItemToolStripMenuItem.Name = "addMenuItemToolStripMenuItem";
-            this.addMenuItemToolStripMenuItem.Size = new System.Drawing.Size(140, 25);
+            this.addMenuItemToolStripMenuItem.Size = new System.Drawing.Size(162, 29);
             this.addMenuItemToolStripMenuItem.Text = "Add Menu item";
             this.addMenuItemToolStripMenuItem.Click += new System.EventHandler(this.AddMenuItemToolStripMenuItem_Click);
             // 
             // editMenuItemToolStripMenuItem
             // 
-            this.editMenuItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editMenuItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editMenuItemToolStripMenuItem.Name = "editMenuItemToolStripMenuItem";
-            this.editMenuItemToolStripMenuItem.Size = new System.Drawing.Size(139, 25);
+            this.editMenuItemToolStripMenuItem.Size = new System.Drawing.Size(159, 29);
             this.editMenuItemToolStripMenuItem.Text = "Edit Menu item";
             this.editMenuItemToolStripMenuItem.Click += new System.EventHandler(this.EditMenuItemToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(171, 25);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(197, 29);
             this.toolStripMenuItem1.Text = "Remove Menu Item";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // returnToManagementToolStripMenuItem
             // 
-            this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnToManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnToManagementToolStripMenuItem.Name = "returnToManagementToolStripMenuItem";
-            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(199, 25);
+            this.returnToManagementToolStripMenuItem.Size = new System.Drawing.Size(231, 29);
             this.returnToManagementToolStripMenuItem.Text = "Return to management";
             this.returnToManagementToolStripMenuItem.Click += new System.EventHandler(this.ReturnToManagementToolStripMenuItem_Click);
             // 

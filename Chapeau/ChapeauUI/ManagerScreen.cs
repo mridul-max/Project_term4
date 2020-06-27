@@ -27,7 +27,7 @@ namespace ChapeauUI
 
         private void ManagerScreen_Load(object sender, EventArgs e)
         {
-
+            lblLog.Text = "Logged in as: " + Session.Instance.LoggedEmployee.Name;
         }
 
         private void btnEditEmp_Click(object sender, EventArgs e)

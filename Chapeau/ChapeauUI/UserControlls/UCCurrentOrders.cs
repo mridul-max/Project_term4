@@ -39,9 +39,12 @@ namespace ChapeauUI.UserControlls
         }
         private void StartTimer()
         {
-            timer.Tick += Timer_Tick;
-            timer.Interval = 1000;
-            timer.Start();
+            if (orderItem.orderState == OrderState.ReadyToDeliver || orderItem.orderState == OrderState.PrepairingOrder)
+            {
+                timer.Tick += Timer_Tick;
+                timer.Interval = 1000;
+                timer.Start();
+            }
 
         }
         private void UpdateLabels()

@@ -47,15 +47,15 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(784, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 37);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // logOffToolStripMenuItem
             // 
-            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOffToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOffToolStripMenuItem.Name = "logOffToolStripMenuItem";
-            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
+            this.logOffToolStripMenuItem.Size = new System.Drawing.Size(105, 33);
             this.logOffToolStripMenuItem.Text = "Log off";
             this.logOffToolStripMenuItem.Click += new System.EventHandler(this.logOffToolStripMenuItem_Click);
             // 
@@ -127,11 +127,11 @@
             // 
             this.lblLog.AutoSize = true;
             this.lblLog.BackColor = System.Drawing.Color.Transparent;
-            this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLog.Location = new System.Drawing.Point(10, 40);
+            this.lblLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLog.Location = new System.Drawing.Point(11, 59);
             this.lblLog.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLog.Name = "lblLog";
-            this.lblLog.Size = new System.Drawing.Size(117, 20);
+            this.lblLog.Size = new System.Drawing.Size(155, 26);
             this.lblLog.TabIndex = 13;
             this.lblLog.Text = "Logged in as:";
             // 
