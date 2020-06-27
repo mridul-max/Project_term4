@@ -71,6 +71,10 @@ namespace ChapeauUI
 
             service.CreateEmployee(employee);
             MessageBox.Show("Employee has been created", "Process successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txtName.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            cmbEmpType.SelectedItem = null;
         }
 
         private void EditEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
