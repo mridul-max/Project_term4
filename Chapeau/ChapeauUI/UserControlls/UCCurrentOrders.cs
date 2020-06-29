@@ -39,11 +39,17 @@ namespace ChapeauUI.UserControlls
         }
         private void StartTimer()
         {
-            if (orderItem.orderState == OrderState.ReadyToDeliver || orderItem.orderState == OrderState.PrepairingOrder)
+            
+            timer.Tick += Timer_Tick;
+            timer.Interval = 1000;
+            
+            if (orderItem.orderState != OrderState.OrderServed)
             {
-                timer.Tick += Timer_Tick;
-                timer.Interval = 1000;
                 timer.Start();
+            }
+            else
+            {
+                Timer_Tick(this, EventArgs.Empty);
             }
 
         }
@@ -54,7 +60,6 @@ namespace ChapeauUI.UserControlls
             if (orderItem.orderState == OrderState.ReadyToDeliver)
             {
                 lblStatus.Text = "Ready to deliver";
-                lblTimer.Text = string.Empty;
                 btnRemake.Visible = false;
                 btnServed.Visible = true;
                 //if this order item is ready to deliver and not something else, make the button visible.
