@@ -2,6 +2,7 @@
 using ChapeauModel;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ChapeauUI
@@ -175,6 +176,11 @@ namespace ChapeauUI
                 txtEditUser.Text = SelectedEmployee.Username;
                 txtEditPassword.Text = "";
             }
+        }
+
+        private void EditEmployee_Load(object sender, EventArgs e)
+        {
+            EditEmployeeToolStripMenuItem_Click(sender, e);
         }
     }
 }

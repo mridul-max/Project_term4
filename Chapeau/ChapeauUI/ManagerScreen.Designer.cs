@@ -35,6 +35,7 @@
             this.btnKitchen = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
             this.lblLog = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.btnEditEmp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditEmp.Location = new System.Drawing.Point(229, 194);
+            this.btnEditEmp.Location = new System.Drawing.Point(250, 294);
             this.btnEditEmp.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditEmp.Name = "btnEditEmp";
             this.btnEditEmp.Size = new System.Drawing.Size(300, 120);
@@ -82,7 +83,7 @@
             this.btnEditItems.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditItems.Location = new System.Drawing.Point(229, 348);
+            this.btnEditItems.Location = new System.Drawing.Point(250, 507);
             this.btnEditItems.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditItems.Name = "btnEditItems";
             this.btnEditItems.Size = new System.Drawing.Size(300, 120);
@@ -98,7 +99,7 @@
             this.btnKitchen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKitchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKitchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKitchen.Location = new System.Drawing.Point(229, 504);
+            this.btnKitchen.Location = new System.Drawing.Point(250, 725);
             this.btnKitchen.Margin = new System.Windows.Forms.Padding(2);
             this.btnKitchen.Name = "btnKitchen";
             this.btnKitchen.Size = new System.Drawing.Size(300, 120);
@@ -114,7 +115,7 @@
             this.btnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(229, 678);
+            this.btnTable.Location = new System.Drawing.Point(250, 934);
             this.btnTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(300, 120);
@@ -135,6 +136,18 @@
             this.lblLog.TabIndex = 13;
             this.lblLog.Text = "Logged in as:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(293, 190);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 37);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Management";
+            // 
             // ManagerScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,6 +155,7 @@
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 1241);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLog);
             this.Controls.Add(this.btnTable);
             this.Controls.Add(this.btnKitchen);
@@ -170,5 +184,6 @@
         private System.Windows.Forms.Button btnKitchen;
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Label lblLog;
+        private System.Windows.Forms.Label label1;
     }
 }

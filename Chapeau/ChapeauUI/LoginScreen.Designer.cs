@@ -42,17 +42,17 @@
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(144, 585);
+            this.txtUsername.Location = new System.Drawing.Point(142, 651);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(466, 53);
+            this.txtUsername.Size = new System.Drawing.Size(466, 44);
             this.txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(144, 694);
+            this.txtPassword.Location = new System.Drawing.Point(142, 791);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(466, 53);
+            this.txtPassword.Size = new System.Drawing.Size(466, 44);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -61,9 +61,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(281, 524);
+            this.label1.Location = new System.Drawing.Point(279, 590);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 46);
+            this.label1.Size = new System.Drawing.Size(172, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             // 
@@ -72,9 +72,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(281, 641);
+            this.label2.Location = new System.Drawing.Point(279, 738);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 46);
+            this.label2.Size = new System.Drawing.Size(166, 37);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
@@ -84,7 +84,7 @@
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Mongolian Baiti", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(144, 808);
+            this.btnLogin.Location = new System.Drawing.Point(142, 914);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(466, 69);
             this.btnLogin.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.pcPasswordIcon.BackColor = System.Drawing.Color.Transparent;
             this.pcPasswordIcon.BackgroundImage = global::ChapeauUI.Properties.Resources.OpenEye;
             this.pcPasswordIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pcPasswordIcon.Location = new System.Drawing.Point(616, 694);
+            this.pcPasswordIcon.Location = new System.Drawing.Point(614, 791);
             this.pcPasswordIcon.Name = "pcPasswordIcon";
             this.pcPasswordIcon.Size = new System.Drawing.Size(50, 50);
             this.pcPasswordIcon.TabIndex = 9;
@@ -118,11 +118,11 @@
             // 
             // LoginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ChapeauUI.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 1055);
+            this.ClientSize = new System.Drawing.Size(784, 1241);
             this.Controls.Add(this.pcPasswordIcon);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogin);

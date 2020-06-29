@@ -434,6 +434,7 @@
             this.Name = "EditEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditEmployee";
+            this.Load += new System.EventHandler(this.EditEmployee_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlAdd.ResumeLayout(false);

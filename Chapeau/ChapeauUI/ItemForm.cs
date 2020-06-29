@@ -14,6 +14,7 @@ namespace ChapeauUI
 {
     public partial class ItemForm : Form
     {
+
         MenuItemService serviceItem = new MenuItemService();
 
         public ItemForm()
@@ -104,7 +105,7 @@ namespace ChapeauUI
         /// <param name="e"></param>
         private void ItemForm_Load(object sender, EventArgs e)
         {
-
+            EditMenuItemToolStripMenuItem_Click(sender, e);
         }
 
         private void EditMenuItemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,6 +166,10 @@ namespace ChapeauUI
                     menuItem.Category,
                     menuItem.Stock.ToString()
                 });
+                if (menuItem.Stock < 10)
+                    item.ForeColor = Color.Red;
+                else
+                    item.ForeColor = Color.Black;
                 item.Tag = menuItem;
                 listView.Items.Add(item);
 
